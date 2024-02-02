@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RestoManager: {% block title %} {% endblock %}</title>
+    <!-- {% load static%} -->
+    <link rel="stylesheet" href="{% static 'style/style.css'%}"/>
+</head>
+<body>
+    <!-- HEADER -->
+    <div class="header">
+        <h1>
+            RestoManager
+        </h1>
+    </div>
+
+    <!-- PANEL DE GESTION LATERAL (IZQUIERDA) -->
+    <div class="main">
+
+        <div class="panel_gestion">
+            <div class="superior">
+                <h3 class="titulo">Gestion</h3>
+                <ul>
+                    <li class="op1 btn">Platos</li>
+                    <li class="op2 btn">Ingredientes</li>
+                    <li class="op3 btn">Mesas Interior</li>
+                    <li class="op4 btn">Mesas Exterior</li>
+                    <li class="op5 btn"><a href="/avisos/" class="enlaces">Avisos</a></li>
+                </ul>
+            </div>
+            <div class="inferior"></div>
+        </div>
+        
+        <!-- CONTENIDO -->
+        <div class="contenido">
+            {% block content %}
+            {% endblock %}
+        </div>
+        
+    </div>
+    <script src="{% static 'script/script.js'%}"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %} Avisos {% endblock %}
+{% block content %}
+<div class="avisos">
+    <div class="cabezera">
+        <h1 class="titulo">Avisar.</h1>
+        <hr class="linea_continua"/>
+    </div>
+    <div class="selector">
+        <p class="btn btn-select">
+        <input type="radio" name="avisar_a" id="aviso1">Aviso General</p>
+        <p class="btn">
+        <input type="radio" name="avisar_a" id="aviso2">Camareros</p>
+        <p class="btn">
+        <input type="radio" name="avisar_a" id="aviso3">Cocina</p>
+        <p class="btn">
+    </div>
+    <div class="aviso_input">
+        <div class="input-texto">
+            <textarea name="text" id="" cols="75" rows="20" placeholder="Inserte su mensaje aqui."></textarea>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

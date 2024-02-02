@@ -1,0 +1,195 @@
+:root {
+    --bgcolor: rgb(23, 23, 23);
+    --color: rgb(255, 255, 255);
+}
+
+body {
+    margin: 0%;
+}
+
+.header {
+    background-color: var(--bgcolor);
+    color: var(--color);
+    padding: 25px;
+}
+
+.header h1 {
+    margin: 0%;
+}
+
+.superior > ul li {
+    list-style: none;
+    margin: 5%;
+    padding: 2%;
+}
+
+.superior > ul li:hover {
+    cursor: pointer;
+    color: var(--color);
+    background-color: var(--bgcolor);
+    border-radius: 28px;
+}
+
+.titulo {
+    text-align: center;
+    padding: 5% 0%;
+    margin: 0%;
+    color: var(--color);
+}
+
+.main {
+    display: grid;
+    grid-template-areas: 
+    "Panel Contenido"
+    ;
+    gap: 2%;
+}
+
+.panel_gestion {
+    grid-area: "Panel";
+    margin: 2% 0% 0% 0%;
+    background-color: var(--bgcolor);
+    color: var(--color);
+    font-size: x-large;
+    /* width: 250px; */
+    height: 500px;
+}
+
+.contenido {
+    grid-area: "Contenido";
+    width: 1500px;
+    height: auto;
+    background-color: var(--bgcolor);
+    margin: 2% auto;
+    border-radius: 28px;
+}
+
+.superior > ul li:hover {
+    background-color: var(--color);
+    color: var(--bgcolor);
+    cursor: pointer;
+}
+
+.superior > ul li:hover > a:visited {
+    background-color: var(--color);
+    color: var(--bgcolor);
+    cursor: pointer;
+}
+
+.op5 {
+    margin-bottom: 2%;
+}
+
+.mesa-lista > ul li {
+    list-style-type: none;
+}
+
+.mesa-lista > .titulo {
+    color: var(--bgcolor);
+    
+}
+
+.mesas {
+    display: grid;
+    grid-template-areas: 
+    "Interior"
+    "Exterior"
+    ;
+    gap: 2%;
+    height: 1000px;
+}
+
+.interior {
+    /* overflow: scroll; */
+    color: var(--color);
+    display: flex;
+    flex-direction: row;
+    grid-area: "Interior";
+    overflow: auto;
+}
+
+.interior div {
+    margin: 5% 1% 0% 1%;
+    background-color: var(--color);
+    color: var(--bgcolor);
+    padding: 1%;
+    border-radius: 16px;
+    width: 400px;
+    height: 300px;
+}
+
+.int_titulo {
+    margin: 1% 2%;
+    position: absolute;
+}
+
+.exterior {
+    /* overflow: scroll; */
+    color: var(--color);
+    display: flex;
+    flex-direction: row;
+    grid-area: "Exterior";
+    overflow: auto;
+}
+.exterior div {
+    margin: 5% 1% 0% 1%;
+    background-color: var(--color);
+    color: var(--bgcolor);
+    padding: 1%;
+    border-radius: 16px;
+    width: 400px;
+    height: 300px;
+}
+
+a:link {
+    text-decoration: none;
+    color: var(--color);
+}
+
+a:visited {
+    color: var(--color);
+}
+
+/* 
+
+Algunas clases son compartidadas: 
+.titulo
+
+*/
+
+/* =+=+=+=+=+=+=+=+=+=+[ AVISOS ]+=+=+=+=+=+=+=+=+=+= */
+.avisos {
+    display: grid;
+    grid-template-areas:
+    "Titulo Titulo"
+    "Quien Input"
+    ;
+    gap: 1em;
+}
+
+.cabezera {
+    grid-area: Titulo;
+}
+
+.cabezera > h1 {
+    text-align: left;
+    margin: 1% 2%;
+    padding: 0%;
+}
+.cabezera > hr {
+    width: 99%;
+    height: 5px;
+    background-color: white;
+    margin: auto;
+}
+.selector {
+    grid-area: Quien;
+}
+
+.aviso_input {
+    grid-area: Input;
+}
+
+.btn {
+    color: var(--color);
+}

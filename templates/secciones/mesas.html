@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block title %} Mesas {% endblock %}
+
+{% block content %}
+    <div class="mesas">
+        <div class="interior">
+            <h1 class="int_titulo">Interior</h1>
+            <!-- LISTA DE MESAS EN EL ONTERIOR -->
+            {% for m in mesa1 %}
+            <div class="mesa{{m.mesaID}} mesa-lista" id="m{{m.mesaID}}">
+                <h2 class="titulo">MESA #{{m.mesaID}} </h2>
+                <hr class="linea_continua"/>
+                <ul>
+                    <!-- <li>ID: {{m.id}}</li> -->
+                    <li>PLATO: {{m.plato}}</li>
+                    <li>PREPARADO: {{m.preparado}}</li>
+                </ul>
+                <h3 class="titulo titulo-down">{{m.Camarero}}</h3>
+                <button type="button" id="btn-msa{{m.mesaID}}" onclick="del('m{{m.mesaID}}')" >Eliminar</button>
+            </div>
+
+            
+            {% endfor %}
+        </div>
+        <div class="exterior">
+            <h1 class="int_titulo">Exterior</h1>
+            <!-- LISTA DE MESAS EN EL EXTERIOR -->
+            {% for m in mesa1 %}
+            <div class="mesa{{m.mesaID}} mesa-lista" id="m{{m.mesaID}}">
+                <h2 class="titulo">MESA #{{m.mesaID}} </h2>
+                <hr class="linea_continua"/>
+                <ul>
+                    <!-- <li>ID: {{m.id}}</li> -->
+                    <li>PLATO: {{m.plato}}</li>
+                    <li>PREPARADO: {{m.preparado}}</li>
+                </ul>
+                <h3 class="titulo titulo-down">{{m.Camarero}}</h3>
+                <button type="button" id="btn-msa{{m.mesaID}}" onclick="del('m{{m.mesaID}}')" >Eliminar</button>
+            </div>
+
+            
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
