@@ -6,40 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RestoManager: {% block title %} {% endblock %}</title>
     <!-- {% load static%} -->
+    <link rel="stylesheet" href="{% static 'style/bootstrap/bootstrap.min.css'%}"/>
     <link rel="stylesheet" href="{% static 'style/style.css'%}"/>
+
 </head>
 <body>
     <!-- HEADER -->
-    <div class="header">
-        <h1>
-            RestoManager
-        </h1>
+    <div class="container-fluid bg-dark p-4 text-white">
+        <h1><strong>RestoManager</strong></h1>
     </div>
 
     <!-- PANEL DE GESTION LATERAL (IZQUIERDA) -->
-    <div class="main">
-
-        <div class="panel_gestion">
-            <div class="superior">
-                <h3 class="titulo">Gestion</h3>
-                <ul>
-                    <li class="op1 btn">Platos</li>
-                    <li class="op2 btn">Ingredientes</li>
-                    <li class="op3 btn">Mesas Interior</li>
-                    <li class="op4 btn">Mesas Exterior</li>
-                    <li class="op5 btn"><a href="/avisos/" class="enlaces">Avisos</a></li>
-                </ul>
+    <div class="d-flex mt-5 text-white">
+        <div class="p-3 mr-5 bg-dark rounded w-25">
+            <h2 class="text-center">Gestion <hr /></h2>
+            <div class="d-flex flex-column">
+                <a href="/mesas" class="btn btn-dark border mb-2 btn-nav">Mesas</a>
+                <a href="#" class="btn btn-dark border mb-2 btn-nav">Ingredientes</a>
+                <a href="#" class="btn btn-dark border mb-2 btn-nav">Mesas Interior</a>
+                <a href="#" class="btn btn-dark border mb-2 btn-nav">Mesas Exterior</a>
+                <a href="/avisos" class="btn btn-dark border mb-2 btn-nav">Avisos</a>
+                <a href="/admin" class="btn btn-dark border mb-2 btn-nav">Admin</a>
             </div>
-            <div class="inferior"></div>
+            <div class="mt-5">
+                <h1>Avisos <hr /></h1>
+                
+            </div>
         </div>
-        
         <!-- CONTENIDO -->
-        <div class="contenido">
+        <div class="m-auto">
             {% block content %}
             {% endblock %}
         </div>
+    </div>
+        
         
     </div>
     <script src="{% static 'script/script.js'%}"></script>
+    <script src="{% static 'script/bootstrap/bootstrap.min.js'%}"></script>
 </body>
 </html>

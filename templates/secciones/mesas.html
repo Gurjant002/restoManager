@@ -2,44 +2,76 @@
 {% block title %} Mesas {% endblock %}
 
 {% block content %}
-    <div class="mesas">
-        <div class="interior">
-            <h1 class="int_titulo">Interior</h1>
-            <!-- LISTA DE MESAS EN EL ONTERIOR -->
-            {% for m in mesa1 %}
-            <div class="mesa{{m.mesaID}} mesa-lista" id="m{{m.mesaID}}">
-                <h2 class="titulo">MESA #{{m.mesaID}} </h2>
-                <hr class="linea_continua"/>
-                <ul>
-                    <!-- <li>ID: {{m.id}}</li> -->
-                    <li>PLATO: {{m.plato}}</li>
-                    <li>PREPARADO: {{m.preparado}}</li>
-                </ul>
-                <h3 class="titulo titulo-down">{{m.Camarero}}</h3>
-                <button type="button" id="btn-msa{{m.mesaID}}" onclick="del('m{{m.mesaID}}')" >Eliminar</button>
-            </div>
 
-            
-            {% endfor %}
-        </div>
-        <div class="exterior">
-            <h1 class="int_titulo">Exterior</h1>
-            <!-- LISTA DE MESAS EN EL EXTERIOR -->
-            {% for m in mesa1 %}
-            <div class="mesa{{m.mesaID}} mesa-lista" id="m{{m.mesaID}}">
-                <h2 class="titulo">MESA #{{m.mesaID}} </h2>
-                <hr class="linea_continua"/>
-                <ul>
-                    <!-- <li>ID: {{m.id}}</li> -->
-                    <li>PLATO: {{m.plato}}</li>
-                    <li>PREPARADO: {{m.preparado}}</li>
-                </ul>
-                <h3 class="titulo titulo-down">{{m.Camarero}}</h3>
-                <button type="button" id="btn-msa{{m.mesaID}}" onclick="del('m{{m.mesaID}}')" >Eliminar</button>
-            </div>
-
-            
-            {% endfor %}
-        </div>
+<!-- INTERIOR -->
+<div class="container d-flex flex-row bg-dark rounded row mb-5">
+    <h1>Interior</h1>
+    {% if mesas %}
+    {% for mesa in mesas %}
+    {% if mesa.preparado == false %}
+    <div id="m{{mesa.mesaID}}" class="container rounded col p-2 m-1 mb-3 bg-white text-dark pedidos">
+        <h4 class="text-left">Mesa #{{mesa.mesaID}}<hr /></h4>
+        <p>Plato: {{mesa.plato}}</p>
+        <p>Preparado: <input type="checkbox" name="estado-plato" id="estadoPlato"></p>
+        <p>Camarero: {{mesa.Camarero}}</p>
+        <button type="button" onclick="del('m{{mesa.mesaID}}')" class="btn btn-danger">Borrar</button>
     </div>
+    {% elif mesa.preparado == none %}
+    {% endif %}
+    <div id="m{{mesa.mesaID}}" class="container rounded col p-2 m-1 mb-3 bg-white text-dark pedidos">
+        <h4 class="text-left">Mesa #{{mesa.mesaID}}<hr /></h4>
+        <p>Plato: {{mesa.plato}}</p>
+        <p>Preparado: <input type="checkbox" name="estado-plato" id="estadoPlato"></p>
+        <p>Camarero: {{mesa.Camarero}}</p>
+        <button type="button" onclick="del('m{{mesa.mesaID}}')" class="btn btn-danger">Borrar</button>
+    </div>
+    {% endfor %}
+    {% else %}
+    <div class="container rounded col p-2 m-1 bg-warning text-dark">
+        <h1>A la espera de que una mesa pida algo.</h1>
+    </div>
+    {% endif %}
+</div>
+
+<!-- EXTERIOR  -->
+<div class="container d-flex flex-row bg-dark rounded row mb-5">
+    <h1>Exterior</h1>
+    {% if mesas %}
+    {% for mesa in mesas %}
+    {% if mesa.preparado == false %}
+    <div id="m{{mesa.mesaID}}" class="container rounded col p-2 m-1 mb-3 bg-white text-dark pedidos">
+        <h4 class="text-left">Mesa #{{mesa.mesaID}}<hr /></h4>
+        <p>Plato: {{mesa.plato}}</p>
+        <p>Preparado: <input type="checkbox" name="estado-plato" id="estadoPlato"></p>
+        <p>Camarero: {{mesa.Camarero}}</p>
+        <button type="button" onclick="del('m{{mesa.mesaID}}')" class="btn btn-danger">Borrar</button>
+    </div>
+    {% elif mesa.preparado == none %}
+    {% endif %}
+    <div id="m{{mesa.mesaID}}" class="container rounded col p-2 m-1 mb-3 bg-white text-dark pedidos">
+        <h4 class="text-left">Mesa #{{mesa.mesaID}}<hr /></h4>
+        <p>Plato: {{mesa.plato}}</p>
+        <p>Preparado: <input type="checkbox" name="estado-plato" id="estadoPlato"></p>
+        <p>Camarero: {{mesa.Camarero}}</p>
+        <button type="button" onclick="del('m{{mesa.mesaID}}')" class="btn btn-danger">Borrar</button>
+    </div>
+    {% endfor %}
+    {% else %}
+    <div class="container rounded col p-2 m-1 bg-warning text-dark">
+        <h1>A la espera de que una mesa pida algo.</h1>
+    </div>
+    {% endif %}
+</div>
+
+<!-- EJEMPLO  -->
+<div class="container d-flex flex-row bg-dark rounded row mb-5">
+    <h1>EJEMPLO</h1>
+    {% for clave, elemento in diccionario.items %}
+        <div id="m{{mesa.mesaID}}" class="container rounded col p-2 m-1 mb-3 bg-white text-dark pedidos">
+            {% for item in elemento %}
+                <p> {{item.plato}} {{item.preparado}} </p>
+            {% endfor %}
+        </div>
+    {% endfor %}
+</div>
 {% endblock %}

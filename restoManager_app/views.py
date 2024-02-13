@@ -3,24 +3,23 @@ from restoManager_app.models import Servicio
 from restoManager_app.models import ServiEjemplo
 # Create your views here.
 
-""" 
-mesa += {
-    "mesa"+i: [mesaID, [Plato],  ],
-}
- """
-
 def mesas(request):
-    totalDeMEsas = ServiEjemplo.objects.filter(max)
+    query = ServiEjemplo.objects.all()
     diccionario = {}
-    # while (totalDeMesas)
-    for i in range(totalDeMEsas):
-        query = ServiEjemplo.objects.filter(mesaID=i+1)
-        for i in query:
-            print(i)
-        print(query)
-        diccionario["mesa"+str(i+1)] = query
+    # diccionario["mesas"] = query
 
-    return render(request, "secciones/mesas.html", diccionario)
+    mesas = []
+    for i in query:
+        num = i.mesaID
+        mesas.append(num)
+    
+    mesas = list(dict.fromkeys(mesas))
+    for i in mesas:
+        diccionario["query"+str(i)] = ServiEjemplo.objects.filter(mesaID = i)
+    print(diccionario)
+    variables = {}
+    variables["diccionario"] = diccionario
+    return render(request, "secciones/mesas.html", variables)
 
 
 """ def activarPlatos(request):
