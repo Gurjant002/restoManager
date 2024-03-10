@@ -39,3 +39,7 @@
     min-width: 200px;
     max-width: 200px;
 }
+
+.panel-nav {
+    width: 15%;
+}
