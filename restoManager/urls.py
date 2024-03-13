@@ -16,9 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from cocina_app.views import *
 from restoManager_app.views import *
 
 urlpatterns = [
+    path('administrador/', administrar),
     path('admin/', admin.site.urls),
     path('mesas/', mesas),
     path('avisos/', avisos),
