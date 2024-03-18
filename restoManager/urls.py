@@ -20,7 +20,7 @@ from cocina_app.views import *
 from restoManager_app.views import *
 
 urlpatterns = [
-    path('administrador/', administrar),
+    path('platos/', platos, name='crear-plato'),
     path('admin/', admin.site.urls),
     path('mesas/', mesas),
     path('avisos/', avisos),

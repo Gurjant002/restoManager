@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'cocina/base/base.html' %}
 {% block title %} Mesas {% endblock %}
 
 {% block content %}
@@ -7,15 +7,15 @@
 <div class="container d-flex flex-row bg-dark rounded row mb-3">
     <h1>Interior</h1>
     {% if mesas %}
-    {% for servicio in mesas %}
-    {% if servicio.preparado == false %}
-    <div id="m{{servicio.id}}" class="container rounded col p-2 m-1 mb-3 bg-white text-dark pedidos">
-        <h4 class="text-left">Mesa #{{servicio.id}}<hr /></h4>
-        <p>Plato: {{servicio.is_plato_ready}}</p>
-        <p>Preparado: <input type="checkbox" name="estado-plato" id="estadoPlato"></p>
-        <p>Camarero: {{servicio.Camarero}}</p>
-        <button type="button" onclick="del('m{{servicio.id}}')" class="btn btn-danger">Borrar</button>
-    </div>
+        {% for servicio in mesas %}
+            {% if servicio.preparado == false %}
+                <div id="m{{servicio.id}}" class="container rounded col p-2 m-1 mb-3 bg-white text-dark pedidos">
+                    <h4 class="text-left">Mesa #{{servicio.id}}<hr /></h4>
+                    <p>Plato: {{servicio.is_plato_ready}}</p>
+                    <p>Preparado: <input type="checkbox" name="estado-plato" id="estadoPlato"></p>
+                    <p>Camarero: {{servicio.Camarero}}</p>
+                    <button type="button" onclick="del('m{{servicio.id}}')" class="btn btn-danger">Borrar</button>
+                </div>
     {% elif servicio.preparado == none %}
     {% endif %}
     <div id="m{{servicio.id}}" class="container rounded col p-2 m-1 mb-3 bg-white text-dark pedidos">

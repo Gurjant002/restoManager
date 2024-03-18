@@ -8,10 +8,10 @@
 from django.db import models
 
 class Camarero(models.Model):
-    nombre = models.CharField(max_length=100)
-    apellidos = models.CharField(max_length=200)
-    fecha_nacimiento = models.DateField()
-    fecha_alta_camarero = models.DateField()
+    nombre = models.CharField(max_length=100, blank=True, null=True)
+    apellidos = models.CharField(max_length=200, blank=True, null=True)
+    fecha_nacimiento = models.DateField(blank=True, null=True)
+    fecha_alta_camarero = models.DateField(blank=True, null=True)
 
     def __str__(self):
         return self.nombre
@@ -43,8 +43,8 @@ class Mesa(models.Model):
         verbose_name_plural = 'Mesas'
 
 class Plato(models.Model):
-    nombre = models.CharField(max_length=100)
-    descripcion = models.TextField()
+    nombre = models.CharField(max_length=100, blank=True, null=True)
+    descripcion = models.TextField(blank=True, null=True)
 
     def __str__(self):
         return self.nombre
@@ -58,8 +58,20 @@ class Plato(models.Model):
         verbose_name = 'Plato'
         verbose_name_plural = 'Platos'
 
+class Categoria(models.Model):
+    nombre = models.CharField(max_length=100, blank=True, null=True)
+
+    def __str__(self):
+        return self.nombre;
+
+    class Meta:
+        db_table = ''
+        managed = True
+        verbose_name = 'Categoria'
+        verbose_name_plural = 'Categorias'
+
 class Bebida(models.Model):
-    nombre = models.CharField(max_length=100)
+    nombre = models.CharField(max_length=100, blank=True, null=True)
     descripcion = models.TextField()
     contiene_alcohol = models.BooleanField(default=False);
 
@@ -116,3 +128,18 @@ class Servicio_Barra(models.Model):
         managed = True
         verbose_name = 'Servicio_Barra'
         verbose_name_plural = 'Servicio_Barras'
+
+class Plato_Categoria(models.Model):
+    numero_menu = models.IntegerField(unique=True)
+    plato = models.ForeignKey(Plato, on_delete=models.CASCADE, blank=True, null=True)
+    categoria = models.ForeignKey(Categoria, on_delete=models.DO_NOTHING, blank=True, null=True)
+    habilitado = models.BooleanField(blank=True, null=True, default=True)
+
+    def __str__(self):
+        pass
+
+    class Meta:
+        db_table = ''
+        managed = True
+        verbose_name = 'Plato_Categoria'
+        verbose_name_plural = 'Plato_Categorias'

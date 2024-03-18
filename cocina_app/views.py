@@ -19,7 +19,7 @@ def mesas(request):
     # print(diccionario)
     variables = {}
     variables["diccionario"] = diccionario
-    return render(request, "cocina_secciones/mesas.html", variables)
+    return render(request, "cocina/secciones/mesas.html", variables)
 
 
 """ def activarPlatos(request):
@@ -33,4 +33,4 @@ def activarPlatos(request):
 """
 
 def avisos(request):
-    return render(request, "cocina_secciones/avisos.html")
+    return render(request, "cocina/secciones/avisos.html")

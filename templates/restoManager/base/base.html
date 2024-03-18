@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RestoManager: {% block title %} {% endblock %}</title>
+    <!-- {% load static%} -->
+    <link rel="stylesheet" href="{% static 'style/bootstrap/bootstrap.min.css'%}"/>
+    <link rel="stylesheet" href="{% static 'style/style.css'%}"/>
+
+</head>
+<body>
+    <!-- HEADER -->
+    <div class="container-fluid bg-dark p-4 text-white">
+        <h1><strong>RestoManager</strong></h1>
+    </div>
+     <!-- PANEL DE GESTION LATERAL (IZQUIERDA) -->
+    <div class="d-flex mt-2 text-white">
+        <div class="p-2 bg-dark rounded-end panel-nav">
+            <h2 class="text-center">Administrar<hr /></h2>
+            <div class="d-flex flex-column ">
+                <a href="#" class="btn btn-dark border mb-3 btn-nav">Platos</a>
+                <a href="#" class="btn btn-dark border mb-3 btn-nav">Bebidas</a>
+                <a href="#" class="btn btn-dark border mb-3 btn-nav">Trabajadores</a>
+            </div>
+        </div>
+        <!-- CONTENIDO -->
+        <div class="m-auto w-75">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+
+    {% if resultado_new_plato %}
+    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <img src="..." class="rounded me-2" alt="...">
+            <strong class="me-auto">Nuevo plato.</strong>
+            <small>{{ resultado_new_plato.tiempo }}</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            {{resultado_new_plato.resultado}}
+        </div>
+    </div>
+    {% endif %}
+    <script src="{% static 'script/restoManager-script.js'%}"></script>
+    <script src="{% static 'script/bootstrap/bootstrap.min.js'%}"></script>
+</body>
+</html>

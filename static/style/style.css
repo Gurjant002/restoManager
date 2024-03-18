@@ -47,3 +47,11 @@
 .home_main_div {
     width: 75%;
 }
+
+.panel_insertar {
+    width: auto;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
