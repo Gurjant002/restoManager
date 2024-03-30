@@ -5,11 +5,20 @@
 <!-- INSERTAR -->
 <!-- EN ESTE 'PANEL' SE INSERTARAN LOS PLATOS -->
 <div class="panel_insertar bg-dark rounded row mb-3">
-    <h1>Nuevo Plato</h1>
+    <h1 id="titulo-seccion-superior">Nuevo Plato</h1>
     <form method="post" action="{% url 'crear-plato' %}">
         {% csrf_token %}
-
         <div class="row">
+            <div class="col-sm-auto">
+                <div id="inptNumId"></div>
+                <div class="form-floating">
+                    <div class="form-floating mb-3 d-flex flex-row">
+                      <!-- <input type="number" id="id-plato" required="false" name="id-plato" hidden> -->
+                      <input type="number" class="form-control" id="floatingNum" required="true" name="numero-plato" placeholder="Numero">
+                      <label for="floatingNum" class="text-dark">Num#</label>
+                  </div>
+                </div>
+              </div>
             <div class="col-md">
               <div class="form-floating">
                 <div class="form-floating mb-3 d-flex flex-row">
@@ -18,18 +27,19 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-auto">
-                <div class="form-floating">
-                  <div class="form-floating mb-3 d-flex flex-row">
-                      <input type="number" class="form-control" id="floatingNum" required="true" name="numero-plato" placeholder="Numero">
-                      <label for="floatingNum" class="text-dark">Num#</label>
-                  </div>
-                </div>
-              </div>
             <div class="col-md">
                 <div class="form-floating">
                     <input type="text" class="form-control mb-3" id="floatingCategoria" required="true" name="categoria" placeholder="Categoria">
                     <label for="floatingCategoria" class="text-dark">Categoria</label>
+                </div>
+            </div>
+            <div class="col-sm-auto">
+                <div class="form-floating">
+                    <select class="form-select" id="floatingEstado" name="estado">
+                        <option value="0">Desactivado</option>
+                        <option value="1" selected>Activado</option>
+                    </select>
+                    <label for="floatingEstado" class="text-dark">Estado</label>
                 </div>
             </div>
         </div>
@@ -38,7 +48,8 @@
             <label for="floatingDescripcion" class="text-dark">Descripcion</label>
         </div>
         <div class="p-3">
-            <button class="btn btn-primary" name="new-plato-btn" value="save_new" type="submit">Guardar Plato</button>
+            <button class="btn btn-primary" name="new-plato-btn" id="btn-submit" value="save_new" type="submit">Guardar Plato</button>
+            <button class="btn btn-primary" name="update-plate-btn" id="btn-update_plate" value="update_plate" type="submit" style="display: none;">Actualizar Plato</button>
         </div>
     </form>
 </div>
@@ -48,30 +59,34 @@
 <div class="panel_listado bg-dark rounded row">
     <h1>LISTADO</h1>
     <div class="p-5">
-        <table id="listado" class="table table-dark table-striped">
+        <table id="listado" class="text-center table table-dark table-striped">
             <tr>
                 <th>ID</th>
                 <th>Num#</th>
                 <th>Nombre</th>
                 <th>Descripcion</th>
                 <th>Categoria</th>
+                <th>Activado/Desactivado</th>
                 <th>Editar</th>
-                <th>On/Off</th>
                 <th>Eliminar</th>
             </tr>
             {% if lista %}
             {% for elemento in lista %}
-                <tr class="text-white">
-                    <td>{{ elemento.id}}</td>
-                    <td id="col-num">{{ elemento.numero_menu }}</td>
-                    <td>{{ elemento.plato.nombre }}</td>
-                    <td><p class="overflow-hidden">{{ elemento.plato.descripcion}}</p></td>
-                    <td>{{ elemento.categoria.nombre }}</td>
+                <tr class="text-white" id="fila-{{ elemento.id }}">
+                    <td id="campo-id-{{ elemento.id }}">{{ elemento.id}}</td>
+                    <td class="col-num" id="campo-num-{{ elemento.id }}">{{ elemento.numero_menu }}</td>
+                    <td id="campo-nombre-{{ elemento.id }}">{{ elemento.plato.nombre }}</td>
+                    <td id="campo-descripcion-{{ elemento.id }}"><p class="overflow-hidden">{{ elemento.plato.descripcion}}</p></td>
+                    <td id="campo-categoria-{{ elemento.id }}">{{ elemento.categoria.nombre }}</td>
                     <form method="POST">
                         {% csrf_token %}
-                        <td><button class="btn btn-success" type="submit" value="editar|{{ elemento.id}}" name="editar-btn">Editar</button></td>
-                        <td><button class="btn btn-warning" type="submit" value="desactivar|{{ elemento.id}}" name="desactivar-btn">Desactivas</button></td>
-                        <td><button class="btn btn-danger" type="submit" value="eliminar|{{ elemento.id}}" name="eliminar-btn">Eliminar</button></td>
+                        {% if elemento.habilitado %}
+                            <td><p id="campo-estado-{{ elemento.id }}" class="p-2 w-auto text-center rounded mb-2 bg-success text-white">Activado</p></td>
+                        {% else %}
+                            <td><p id="campo-estado-{{ elemento.id }}" class="p-2 w-auto text-center rounded mb-2 bg-danger text-white">Desactivado</p></td>
+                        {% endif %}
+                        <td id="boton-editar-{{ elemento.id }}"><button class="btn btn-info" type="button" id="editar|{{ elemento.id}}" name="editar-btn" onclick="editarFila('fila-{{ elemento.id }}')">Editar</button></td>
+                        <td id="boton-borrar-{{ elemento.id }}"><button class="btn btn-danger" type="submit" value="eliminar|{{ elemento.id}}" name="eliminar-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Se aconseja desactivar el plato, en vez de borrarlo, permanentemente">Eliminar</button></td>
                     </form>
                 </tr>
             {% endfor %}
