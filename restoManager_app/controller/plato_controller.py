@@ -2,22 +2,36 @@ from django.http import HttpRequest
 from datetime import datetime
 
 from ..models import Categoria, Plato, Plato_Categoria
-from ..service.platoServices import *
-from ..service.categoriaServices import *
+from ..service.plato_services import *
+from ..service.categoria_services import *
 
 class PlatoController:
-    def get_plato_by_name(nombrePlato):
-        plato = PlatoService.get_plato_by_name(nombrePlato)
+    _platoService: PlatoService
+    
+    def __init__(self):
+        self._platoService = PlatoService()
+
+    def get_plato_by_name(self, nombre_plato: str) -> Plato | None:
+        print(nombre_plato)
+        plato = self._platoService.get_plato_by_name(nombre_plato)
         return plato
 
-    def get_plato_by_id(idPlato):
-        plato = PlatoService.get_plato_by_id(id=idPlato)
+    def get_plato_by_id(self, idPlato):
+        plato = self._platoService.get_plato_by_id(idPlato)
         return plato
 
-    def crear_plato(nombrePlato, descripcion):
-        plato = PlatoService.crear_plato(nombre=nombrePlato, descripcion=descripcion)
+    def crear_plato(self, nombrePlato, descripcion) -> Plato | None:
+        plato = self._platoService.crear_plato(nombre=nombrePlato, descripcion=descripcion)
         return plato
+    
+    def actualizar_plato(self, id_plato: int,  nombre_plato: str, descripcion: str):
+        plato=self._platoService.actualizar_plato(id_plato, nombre_plato, descripcion)
+        return plato
+    
+    def dimeAlgo(self):
+        return 'Hola Wacho'
 
+""" 
 def crear_platoXD(post_request:HttpRequest):
     new_plato = ""
     new_cat = ""
@@ -62,3 +76,4 @@ def eliminar_plato_cat_relacion(post_request:HttpRequest):
         result = "El plato que intentas borrar, no existe"
     return result
 
+ """

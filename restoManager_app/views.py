@@ -2,8 +2,8 @@ from django.http import HttpRequest
 from django.shortcuts import render
 from datetime import datetime
 
-from restoManager_app.models import Categoria, Plato, Plato_Categoria
-from .controller.plato_categoria_controller import *
+# from restoManager_app.models import Plato_Categoria
+from .controller.relacion_plato_categoria_controller import RelacionController
 
 # Create your views here.
 
@@ -66,23 +66,10 @@ def crear_plato_cat_relacion(plato, numero, categoria, estado):
 
 
 # Funciones para vistas
-def listar():
-    lista = Plato_Categoria.objects.all()
-    lista_platos = []
-    lista_categoria = []
+""" def listar():
 
-    if lista != None:
-        for elements in lista:
-            lista_platos.append(elements.plato)
-            lista_categoria.append(elements.categoria)
-
-    diccionario = {
-        'lista': lista,
-        'lista_platos': lista_platos,
-        'lista_categoria': lista_categoria
-        }
     return diccionario
-
+ """
 def crear_alerta():
     ahora = datetime.now()
     tiempo = ahora.strftime("%H:%M")
@@ -96,31 +83,39 @@ def actualizar_cat_plato(post_request: HttpRequest):
     descripcion = post_request.POST.get("descripcion")
     estado = int(post_request.POST.get("estado"))
     
+def crear_plato(request):
+    print("Hola")
 
 # Views
 def platos(request):
     diccionario = {}
+    relacionController = RelacionController()
     if request.method == "POST":
         if request.POST.get('new-plato-btn'):
             print("IN")
             result = {}
             tiempo = crear_alerta()
             result = {
-                'resultado':crear_plato(request),
+                'resultado':relacionController.tipos_de_peticiones(request),
                 'tiempo':tiempo
             }
+            print(result.keys('resultado'))
             diccionario.update({'resultado_new_plato':result})
         
         elif request.POST.get('update-plate-btn'):
             print('editar-btn')
-            # actualizar_cat_plato(request)
+            relacionController.tipos_de_peticiones(request)
             
         elif request.POST.get('eliminar-btn'):
-            result = eliminar_plato_cat_relacion(request)
+            result = relacionController.tipos_de_peticiones(request)
             diccionario.update({'resultado_plato_eliminado': result})
         
-        diccionario.update(listar())
+        diccionario.update(relacionController.get_lista_relacion())
         return render(request, "restoManager/secciones/platos.html", diccionario)
 
-    diccionario = listar()
+    diccionario = relacionController.get_lista_relacion()
     return render(request, "restoManager/secciones/platos.html", diccionario)
+
+def test(request):
+    print("Hola mundo")
+    return render(request, "restoManager/base/base.html")

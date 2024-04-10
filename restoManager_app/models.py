@@ -48,8 +48,11 @@ class Plato(models.Model):
 
     def __str__(self):
         return self.nombre
-    
-    def get_mesas():
+
+    def get_by_name(self, name:str):
+        return self.objects.filter(nombre=name)
+
+    def get_all_plato():
         return Plato.objects.all()
 
     class Meta:
