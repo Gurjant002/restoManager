@@ -16,51 +16,98 @@ class RelacionController:
         # print(self.plato_controller.dimeAlgo())
         self.__categoria_controller=CategoriaController()
     
-    def tipos_de_peticiones(self, req: HttpRequest):
-        if req.POST.get('new-plato-btn'):
-            # CREAR
-            nombre_plato = req.POST.get("nombre-plato")
-            numero_plato = req.POST.get("numero-plato")
-            nombre_categoria = req.POST.get("categoria")
-            estado = int(req.POST.get("estado"))
-            descripcion = req.POST.get("descripcion")
-            self.crear_relacion(nombre_plato, numero_plato, nombre_categoria, estado, descripcion)
+    def tipos_de_peticiones(self, req: HttpRequest) :
+        btn_update=req.POST.get("update-plate-btn")
+        btn_create=req.POST.get("new-plato-btn")
+        btn_eliminar=req.POST.get("eliminar-btn")
+        try:
+            id_relacion=int(btn_update.split("_")[2])
+        except:
+            id_relacion=0
+            print("ERROR EN EL ID DE LA RELACION")
+        nombre_plato=req.POST.get("nombre-plato")
+        numero_menu=req.POST.get("numero-menu")
+        nombre_categoria=req.POST.get("categoria")
+        estado=req.POST.get("estado")
+        descripcion=req.POST.get("descripcion")
+        if btn_eliminar:
+            eliminar=btn_eliminar.split("|")[1]
+        else:
+            eliminar=""
         
+        print("====[ VARIABLES ]====")
+        print("ID RELACION: ", id_relacion)
+        print("NOMBRE PLATO: ", nombre_plato)
+        print("NUMERO MENU: ", numero_menu)
+        print("NOMBRE CATEGORIA: ", nombre_categoria)
+        print("ESTADO: ", estado)
+        print("DESCRIPCION: ", descripcion)
+        print("ELIMINAR: ", eliminar)
+        print("=====================")
+        
+        # CREAR
+        if req.POST.get('new-plato-btn'):
+            print("CREAR")
+            return self.crear_relacion(nombre_plato, numero_menu, nombre_categoria, estado, descripcion)
+
+        # ACTUALIZA 
         elif req.POST.get('update-plate-btn'):
-            # ACTUALIZA 
-            btn_value=req.POST.get("update-plate-btn")
-            id_relacion=btn_value.split("_")[2]
-            nombre_plato=req.POST.get("nombre-plato")
-            numero_plato=req.POST.get("numero-plato")
-            nombre_categoria=req.POST.get("nombre-categoria")
-            estado=req.POST.get("estado")
-            descripcion=req.POST.get("descripcion")
+            print("ACTUALIZA")
+            
+            rel=self.get_relacion_by_id(id_relacion)
+            
+            plato=rel[rel.count()-1].plato
+            plato=self.plato_controller.actualizar_plato(plato.id, nombre_plato, descripcion)
+            
+            categoria=rel[rel.count()-1].categoria
+            categoria=self.__categoria_controller.actualizar_categoria(categoria.id, nombre_categoria)
+            self.actualizar_relacion(id_relacion, numero_menu, estado)
+        
+        # ELIMINAR
+        elif req.POST.get('eliminar-btn'):
+            print("ELIMINAR")
+            relacion = self.get_relacion_by_id(int(eliminar))
+            plato = relacion[relacion.count()-1].plato
+            categoria = relacion[relacion.count()-1].categoria
+            self.borrar_relacion(relacion[relacion.count()-1].id)
+            self.plato_controller.eliminar_plato(plato.id)
+            self.__categoria_controller.eliminar_categoria(categoria.id)
 
-            plato=self.plato_controller.actualizar_plato(nombre_plato, descripcion)
-            categoria=self.__categoria_controller.actualizar_categoria(id_relacion, nombre_categoria)
-
-            self.actualizar_relacion(id_relacion, numero_plato, estado)
-
-    def crear_relacion(self, nombre_plato: str, numero_plato: int, nombre_categoria: str, estado:int, descripcion: str) -> str:
+    def crear_relacion(self, nombre_plato: str, numero_menu: int, nombre_categoria: str, estado:int, descripcion: str) -> str:
         plato=self.plato_controller.get_plato_by_name(nombre_plato)
-        if plato is None:
+        if not plato:
             plato=self.plato_controller.crear_plato(nombre_plato, descripcion)
 
         categoria=self.__categoria_controller.get_categoria_by_name(nombre_categoria)
-        if categoria is None:
+        if not categoria:
             categoria=self.__categoria_controller.crear_categoria(nombre_categoria)
 
-        resultado: str
         relacion=self.get_relacion_by_plato_and_categoria(plato, categoria)
-        if relacion is None:
-            relacion=self.__relacion_service.crear_relacion(plato, numero_plato, categoria, estado)
-            resultado = "Nuevo plato y categoria creada."
+        if not relacion:
+            if numero_menu == 0:
+                num = self.__relacion_service.get_lista_relacion_plato_categoria()
+                if num is not None:
+                    numero_menu = num[num.count()-1].numero_menu + 1
+            relacion=self.__relacion_service.crear_relacion(plato, numero_menu, categoria, estado)
+            resultado = "> Nuevo plato y categoria creada."
+            print("relacion_controller > crear_relacion > NUEVA RELACION")
         else:
-            result = "El plato", nombre_plato, " en la categoria",nombre_categoria,"ya existe"
+            resultado = "El plato", nombre_plato, " en la categoria",nombre_categoria,"ya existe"
+        print("relacion_controller > crear_relacion > resultado:", resultado)
         return resultado
+
+    def get_relacion_by_id(self, id_relacion: int) -> Plato_Categoria:
+        relacion = self.__relacion_service.get_relacion_by_id(id_relacion)
+        return relacion
 
     def get_relacion_by_plato_and_categoria(self, plato: Plato, categoria: Categoria) -> Plato_Categoria | None:
         relacion=self.__relacion_service.get_relacion_by_plato_and_categoria(plato, categoria)
+        print("get_relacion_by_plato_and_categoria > relacion:", relacion)
+        return relacion
+
+    def get_relacion_by_numero_menu(self, numero_menu: int):
+        print("> NUMERO MENU ", numero_menu)
+        relacion = self.__relacion_service.get_relacion_by_numero_menu(numero_menu)
         return relacion
 
     def get_lista_relacion(self) -> dict:
@@ -86,29 +133,3 @@ class RelacionController:
 
     def borrar_relacion(self, id_relacion:int) -> None:
         self.__relacion_service.eliminar_relacion(id_relacion)
-
-""" 
-def crear_plato_categoria(req: HttpRequest):
-    nombre_plato = req.POST.get("nombre-plato")
-    numero_plato = req.POST.get("numero-plato")
-    nombre_categoria = req.POST.get("categoria")
-    estado = int(req.POST.get("estado"))
-    descripcion = req.POST.get("descripcion")
-    
-    plato=PlatoController.get_plato_by_name(nombre_plato)
-    if plato is None:
-        plato=PlatoController.crear_plato(nombre_plato, descripcion)
-
-    categoria = CategoriaController.get_categoria_by_name(nombre_categoria)
-    if categoria is None:
-        categoria=CategoriaController.crear_categoria(nombre_categoria)
-
-    relacion_plato_cat = get_relacion_by_plato_cat(plato, categoria)
-    
-    if relacion_plato_cat is None:
-        relacion_plato_cat
-
-
-def get_relacion_by_plato_cat(plato: Plato, categoria: Categoria):
-    relacion = Plato_Categoria.objects.filter(plato=plato, categoria=categoria)
-    return relacion """

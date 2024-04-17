@@ -92,14 +92,13 @@ def platos(request):
     relacionController = RelacionController()
     if request.method == "POST":
         if request.POST.get('new-plato-btn'):
-            print("IN")
             result = {}
             tiempo = crear_alerta()
             result = {
                 'resultado':relacionController.tipos_de_peticiones(request),
                 'tiempo':tiempo
             }
-            print(result.keys('resultado'))
+            print(result)
             diccionario.update({'resultado_new_plato':result})
         
         elif request.POST.get('update-plate-btn'):

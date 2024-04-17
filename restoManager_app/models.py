@@ -65,7 +65,13 @@ class Categoria(models.Model):
     nombre = models.CharField(max_length=100, blank=True, null=True)
 
     def __str__(self):
-        return self.nombre;
+        return self.nombre
+    
+    def get_by_name(self, name:str):
+        return self.objects.filter(nombre=name)
+
+    def get_all_categorias(self):
+        return self.objects.all()
 
     class Meta:
         db_table = ''
@@ -79,7 +85,7 @@ class Bebida(models.Model):
     contiene_alcohol = models.BooleanField(default=False);
 
     def __str__(self):
-        return self.nombre
+        return f'Nombre Categoria: {self.nombre}'
 
     class Meta:
         db_table = ''
@@ -139,7 +145,7 @@ class Plato_Categoria(models.Model):
     habilitado = models.BooleanField(blank=True, null=True, default=True)
 
     def __str__(self):
-        pass
+        return f'Numero de menu: {self.numero_menu}, Plato: {self.plato}, Categoría: {self.categoria}, Habilitado: {self.habilitado}'
 
     class Meta:
         db_table = ''
