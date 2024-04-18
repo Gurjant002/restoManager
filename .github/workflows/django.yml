@@ -2,9 +2,9 @@ name: Django CI
 
 on:
   push:
-    branches: [ "django_workflow" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "django_workflow" ]
+    branches: [ "main" ]
 
 jobs:
   build:
