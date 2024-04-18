@@ -1,5 +1,7 @@
 ## TODO:
     Platos: Echo 👍
+        Pero un hay mejoras que implementar:
+            - Notificar si algun plato ha sufrido alguna modificacion
     BEBIDAS:
         Crear un apartado para bebidas con estas funciones:
             - Insertar bebidas nuevas.

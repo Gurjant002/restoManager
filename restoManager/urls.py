@@ -21,7 +21,8 @@ from restoManager_app.views import *
 
 urlpatterns = [
     # path('', home),
-    path('platos/', platos),
+    path('confi/platos/', platos, name='platos'),
+    path('confi/bebidas/', bebidas, name='bebidas'),
     path('admin/', admin.site.urls),
     path('mesas/', mesas),
     path('avisos/', avisos),

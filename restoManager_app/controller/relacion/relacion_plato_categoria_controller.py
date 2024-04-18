@@ -1,9 +1,9 @@
 from django.http import HttpRequest
 
 from restoManager_app.models import Plato, Categoria, Plato_Categoria
-from .plato_controller import PlatoController
-from .categoria_controller import CategoriaController
-from ..service.relacion_plato_categoria_service import PlatoCategoriaService
+from ..plato.plato_controller import PlatoController
+from ..categoria.categoria_controller import CategoriaController
+from ...service.relacion.relacion_plato_categoria_service import PlatoCategoriaService
 
 class RelacionController:
     __relacion_service: PlatoCategoriaService

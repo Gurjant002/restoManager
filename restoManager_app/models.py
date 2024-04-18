@@ -83,9 +83,10 @@ class Bebida(models.Model):
     nombre = models.CharField(max_length=100, blank=True, null=True)
     descripcion = models.TextField()
     contiene_alcohol = models.BooleanField(default=False);
+    estado = models.BooleanField(blank=True, null=True, default=True)
 
     def __str__(self):
-        return f'Nombre Categoria: {self.nombre}'
+        return f'Nombre Categoria: {self.nombre}, Descripcion: {self.descripcion}, Contiene Alcohol: {self.contiene_alcohol}, Estado: {self.estado}'
 
     class Meta:
         db_table = ''
