@@ -1,2 +1,3 @@
-/.vscode
-/_testeo
+.vscode
+_testeo
+db.sqlite3

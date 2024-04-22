@@ -1,4 +1,6 @@
 from restoManager_app.admin import Plato_Categoria, Plato, Categoria
+import logging
+log = logging.getLogger(__name__)
 
 class PlatoCategoriaService:
     __relacion: Plato_Categoria
@@ -47,8 +49,12 @@ class PlatoCategoriaService:
         return relacion
 
     def actualizar_relacion(self, id_relacion:int ,numero_menu: int, estado) -> Plato_Categoria | None:
-        relacion=Plato_Categoria.objects.filter(id=id_relacion).update(numero_menu=numero_menu, habilitado=estado)
-        return relacion
+        try:
+            log.info("service.actualizar_relacion> ACTUALIZANDO RELACION")
+            relacion=Plato_Categoria.objects.filter(id=id_relacion).update(numero_menu=numero_menu, habilitado=estado)
+        except Exception as e:
+            log.error(e)
+        # return relacion
 
     def eliminar_relacion(self, id_relacion) -> Plato_Categoria:
         relacion=Plato_Categoria.objects.filter(id=id_relacion).delete()

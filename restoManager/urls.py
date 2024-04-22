@@ -18,7 +18,11 @@ from django.contrib import admin
 from django.urls import path
 from cocina_app.views import *
 from restoManager_app.views import *
+import logging
 
+logger = logging.getLogger('tuna')
+logger.debug("Hello, world. I'm fine.")
+logger.info("Hello, world. I'm fine.")
 urlpatterns = [
     # path('', home),
     path('platos/', platos),

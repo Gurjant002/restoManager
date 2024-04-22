@@ -13,7 +13,6 @@ class RelacionController:
     def __init__(self):
         self.__relacion_service=PlatoCategoriaService()
         self.plato_controller=PlatoController()
-        # print(self.plato_controller.dimeAlgo())
         self.__categoria_controller=CategoriaController()
     
     def tipos_de_peticiones(self, req: HttpRequest) :
@@ -34,17 +33,7 @@ class RelacionController:
             eliminar=btn_eliminar.split("|")[1]
         else:
             eliminar=""
-        
-        print("====[ VARIABLES ]====")
-        print("ID RELACION: ", id_relacion)
-        print("NOMBRE PLATO: ", nombre_plato)
-        print("NUMERO MENU: ", numero_menu)
-        print("NOMBRE CATEGORIA: ", nombre_categoria)
-        print("ESTADO: ", estado)
-        print("DESCRIPCION: ", descripcion)
-        print("ELIMINAR: ", eliminar)
-        print("=====================")
-        
+
         # CREAR
         if req.POST.get('new-plato-btn'):
             print("CREAR")
