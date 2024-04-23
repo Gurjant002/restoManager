@@ -1,9 +1,11 @@
 from django.http import HttpRequest
 from django.shortcuts import render
 from datetime import datetime
+from asgiref.sync import sync_to_async
 
 # from restoManager_app.models import Plato_Categoria
-from .controller.relacion_plato_categoria_controller import RelacionController
+from .controller.relacion.relacion_plato_categoria_controller import RelacionController
+from .controller.bebida.bebida_controller import BebidaController
 
 # Create your views here.
 
@@ -15,19 +17,8 @@ def crear_alerta():
     tiempo = ahora.strftime("%H:%M")
     return tiempo
 
-def actualizar_cat_plato(post_request: HttpRequest):
-    idPlato = post_request.POST.get("id-plato")
-    numeroPlato = post_request.POST.get("numero-plato")
-    nombrePlato = post_request.POST.get("nombre-plato")
-    categoria = post_request.POST.get("categoria")
-    descripcion = post_request.POST.get("descripcion")
-    estado = int(post_request.POST.get("estado"))
-    
-def crear_plato(request):
-    print("Hola")
-
-# Views
-def platos(request):
+@sync_to_async
+def platos(request: HttpRequest):
     diccionario = {}
     relacionController = RelacionController()
     if request.method == "POST":
@@ -54,6 +45,14 @@ def platos(request):
     diccionario = relacionController.get_lista_relacion()
     return render(request, "restoManager/secciones/platos.html", diccionario)
 
+@sync_to_async
 def test(request):
     print("Hola mundo")
     return render(request, "restoManager/base/base.html")
+
+@sync_to_async
+def bebidas(request: HttpRequest):
+    bebida_controller = BebidaController(request)
+    diccionario = {}
+    bebida_controller.peticiones()
+    return render(request, "restoManager/secciones/bebidas.html", diccionario)

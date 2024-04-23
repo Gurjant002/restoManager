@@ -1,9 +1,9 @@
 from django.http import HttpRequest
 from datetime import datetime
 
-from ..models import Categoria, Plato, Plato_Categoria
-from ..service.plato_services import *
-from ..service.categoria_services import *
+from ...models import Categoria, Plato, Plato_Categoria
+from ...service.plato.plato_services import *
+from ...service.categoria.categoria_services import *
 
 class PlatoController:
     _platoService: PlatoService

@@ -1,7 +1,7 @@
 from django.http import HttpRequest
 
-from ..models import Categoria
-from ..service.categoria_services import CategoriaService
+from ...models import Categoria
+from ...service.categoria.categoria_services import CategoriaService
 
 class CategoriaController:
     _categoria_service: CategoriaService
