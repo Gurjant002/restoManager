@@ -1,4 +1,4 @@
-function editarFila(params) {
+function editarPlato(params) {
     var fila = document.getElementById(params);
 
     const spliteParam = params.split("-")
@@ -17,7 +17,7 @@ function editarFila(params) {
     btnUpdate.value = "update_plate_"+campoId.textContent
     btnUpdate.style.display = "block"
 
-    // En esta seccion añadimos los datos de la tabla a las etiquetas Inputs para que luego el usuario pueda editarlas.
+    // En esta seccion añadimos los datos de la tabla a las etiquetas Inputs para que luego el usuario pueda editarlas
     const inptNumPlato = document.getElementById("floatingNum")
     inptNumPlato.value = campoNumPlato.innerText
 
@@ -49,6 +49,44 @@ function editarFila(params) {
     inptId.value = campoId.innerText 
 
     // console.log(campoEstado.innerText);
+}
+
+function editarBebida(params) {
+    const campoId = document.getElementById("campo-id-"+params)
+    const campoNombre = document.getElementById("campo-nombre-"+params)
+    const campoDescripcion = document.getElementById("campo-descripcion-"+params)
+    const campoAlcohol = document.getElementById("campo-alcohol-"+params)
+    const campoEstado = document.getElementById("campo-estado-"+params)
+
+    // Esta seccion hace desaparecer el boton de añadir y activar el de actualizar.
+    const btnSave = document.getElementById("btn-submit")
+    btnSave.style.display = "none"
+    const btnUpdate = document.getElementById("btn_update_bebida")
+    btnUpdate.value = "update_bebida_"+campoId.textContent
+    btnUpdate.style.display = "block"
+
+    // En esta seccion añadimos los datos de la tabla a las etiquetas Inputs para que luego el usuario pueda editarlas
+    const inptNombre = document.getElementById("floatingBebida")
+    inptNombre.value = campoNombre.innerText
+    
+    const inptEstado = document.getElementById("floatingEstado")
+    if (campoEstado.innerText === "Activado")
+        inptEstado.value = 1
+    else
+        inptEstado.value = 0
+    
+    const inptAlcohol = document.getElementById("floatingAlcohol")
+    if (campoAlcohol.innerText === "Si")
+        inptAlcohol.value = 1
+    else
+        inptAlcohol.value = 0
+    
+    const inptDescripcion = document.getElementById("floatingDescripcion")
+    inptDescripcion.value = campoDescripcion.innerText
+
+    // Esta seccion cambia el titulo a Actualizar bebida...
+    const titulo = document.getElementById("titulo-seccion-superior")
+    titulo.innerText = "Actualizar bebida: #" + campoId.innerText
 }
 
 columna = document.querySelectorAll('.col-num')

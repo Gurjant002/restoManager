@@ -1,3 +1,5 @@
 .vscode
 _testeo
 db.sqlite3
+restoManager.log
+.gitignore

@@ -7,10 +7,10 @@ from asgiref.sync import sync_to_async
 from .controller.relacion.relacion_plato_categoria_controller import RelacionController
 from .controller.bebida.bebida_controller import BebidaController
 
-# Create your views here.
 
 import logging
 logger = logging.getLogger(__name__)
+# Create your views here.
 
 def crear_alerta():
     ahora = datetime.now()
@@ -53,6 +53,6 @@ def test(request):
 @sync_to_async
 def bebidas(request: HttpRequest):
     bebida_controller = BebidaController(request)
-    diccionario = {}
-    bebida_controller.peticiones()
+    diccionario = bebida_controller.peticiones()
+    # logger.info(diccionario)
     return render(request, "restoManager/secciones/bebidas.html", diccionario)

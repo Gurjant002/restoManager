@@ -85,7 +85,7 @@
                         {% else %}
                             <td><p id="campo-estado-{{ elemento.id }}" class="p-2 w-auto text-center rounded mb-2 bg-danger text-white">Desactivado</p></td>
                         {% endif %}
-                        <td id="boton-editar-{{ elemento.id }}"><button class="btn btn-info" type="button" id="editar|{{ elemento.id}}" name="editar-btn" onclick="editarFila('fila-{{ elemento.id }}')">Editar</button></td>
+                        <td id="boton-editar-{{ elemento.id }}"><button class="btn btn-info" type="button" id="editar|{{ elemento.id}}" name="editar-btn" onclick="editarPlato('fila-{{ elemento.id }}')">Editar</button></td>
                         <td id="boton-borrar-{{ elemento.id }}"><button class="btn btn-danger" type="submit" value="eliminar|{{ elemento.id}}" name="eliminar-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Se aconseja desactivar el plato, en vez de borrarlo, permanentemente">Eliminar</button></td>
                     </form>
                 </tr>
