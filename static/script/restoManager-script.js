@@ -89,6 +89,10 @@ function editarBebida(params) {
     titulo.innerText = "Actualizar bebida: #" + campoId.innerText
 }
 
+function goHome() {
+    window.location = '/'
+}
+
 columna = document.querySelectorAll('.col-num')
 
 // for (var i = 0; i < columna.length; i++)

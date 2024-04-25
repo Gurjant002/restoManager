@@ -33,6 +33,10 @@
 .btn-nav {
     text-align: left;
 }
+.panel-nav a:hover {
+    background-color: white !important;
+    color: black !important;
+}
 
 .pedidos {
     min-height: 200px;

@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>RestoManager: {% block title %} {% endblock %}</title>
+        <link rel="stylesheet" href="{% static 'style/bootstrap/bootstrap.min.css'%}"/>
+        <link rel="stylesheet" href="{% static 'style/style.css'%}"/>
+        <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}" type="image/x-icon">
+    
+    </head>
+    <body>
+        {% block content %}
+        {% endblock content %}
+        {% include 'global/footer.html' %}
+    <script src="{% static 'script/restoManager-script.js'%}"></script>
+    <script src="{% static 'script/bootstrap/bootstrap.min.js'%}"></script>
+    </body>
+</html>

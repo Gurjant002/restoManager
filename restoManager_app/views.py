@@ -40,19 +40,27 @@ def platos(request: HttpRequest):
             diccionario.update({'resultado_plato_eliminado': result})
         
         diccionario.update(relacionController.get_lista_relacion())
-        return render(request, "restoManager/secciones/platos.html", diccionario)
+        return render(request, "restoManager_app/secciones/platos.html", diccionario)
 
     diccionario = relacionController.get_lista_relacion()
-    return render(request, "restoManager/secciones/platos.html", diccionario)
+    return render(request, "restoManager_app/secciones/platos.html", diccionario)
 
 @sync_to_async
 def test(request):
     print("Hola mundo")
-    return render(request, "restoManager/base/base.html")
+    return render(request, "restoManager_app/base/base.html")
 
 @sync_to_async
 def bebidas(request: HttpRequest):
     bebida_controller = BebidaController(request)
     diccionario = bebida_controller.peticiones()
     # logger.info(diccionario)
-    return render(request, "restoManager/secciones/bebidas.html", diccionario)
+    return render(request, "restoManager_app/secciones/bebidas.html", diccionario)
+
+@sync_to_async
+def mesas(request: HttpRequest):
+    return render(request, "restoManager_app/secciones/mesas.html", {})
+
+@sync_to_async
+def home(request: HttpRequest):
+    return render(request, "restoManager_app/config.html")

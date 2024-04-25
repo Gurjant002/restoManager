@@ -15,18 +15,18 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from cocina_app.views import *
-from restoManager_app.views import *
-import logging
 
+from restoManager.views import home
+
+import logging
 logger = logging.getLogger('tuna')
 logger.debug("Hello, world. I'm fine.")
 logger.info("Hello, world. I'm fine.")
 urlpatterns = [
-    # path('', home),
-    path('confi/platos/', platos, name='platos'),
-    path('confi/bebidas/', bebidas, name='bebidas'),
+    path('', home),
+    path('config/', include('restoManager_app.urls')),
     path('admin/', admin.site.urls),
     path('mesas/', mesas),
     path('avisos/', avisos),

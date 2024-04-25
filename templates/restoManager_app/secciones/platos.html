@@ -1,11 +1,12 @@
-{% extends 'restoManager/base/base.html' %}
+{% extends 'restoManager_app/base/base.html' %}
 {% block title %} Platos {% endblock %}
 {% block content %}
 
 <!-- INSERTAR -->
 <!-- EN ESTE 'PANEL' SE INSERTARAN LOS PLATOS -->
-<div class="panel_insertar bg-dark rounded row mb-3">
-    <h1 id="titulo-seccion-superior">Nuevo Plato</h1>
+<div class="pb-5">
+    <div class="panel_insertar bg-dark rounded row mb-3">
+        <h1 id="titulo-seccion-superior">Nuevo Plato</h1>
     <form method="post">
         {% csrf_token %}
         <div class="row">
@@ -13,19 +14,19 @@
                 <div id="inptNumId"></div>
                 <div class="form-floating">
                     <div class="form-floating mb-3 d-flex flex-row">
-                      <!-- <input type="number" id="id-plato" required="false" name="id-plato" hidden> -->
-                      <input type="number" class="form-control" id="floatingNum" required="false" name="numero-menu" placeholder="Numero">
+                        <!-- <input type="number" id="id-plato" required="false" name="id-plato" hidden> -->
+                        <input type="number" class="form-control" id="floatingNum" required="false" name="numero-menu" placeholder="Numero">
                       <label for="floatingNum" class="text-dark">Num#</label>
-                  </div>
+                    </div>
                 </div>
-              </div>
+            </div>
             <div class="col-md">
-              <div class="form-floating">
-                <div class="form-floating mb-3 d-flex flex-row">
-                    <input type="text" class="form-control" id="floatingPlato" required="true" name="nombre-plato" placeholder="Nombre">
-                    <label for="floatingPlato" class="text-dark">Nombre del plato</label>
+                <div class="form-floating">
+                    <div class="form-floating mb-3 d-flex flex-row">
+                        <input type="text" class="form-control" id="floatingPlato" required="true" name="nombre-plato" placeholder="Nombre">
+                        <label for="floatingPlato" class="text-dark">Nombre del plato</label>
+                    </div>
                 </div>
-              </div>
             </div>
             <div class="col-md">
                 <div class="form-floating">
@@ -72,28 +73,29 @@
             </tr>
             {% if lista %}
             {% for elemento in lista %}
-                <tr class="text-white" id="fila-{{ elemento.id }}">
-                    <td id="campo-id-{{ elemento.id }}">{{ elemento.id}}</td>
-                    <td class="col-num" id="campo-num-{{ elemento.id }}">{{ elemento.numero_menu }}</td>
-                    <td id="campo-nombre-{{ elemento.id }}">{{ elemento.plato.nombre }}</td>
-                    <td id="campo-descripcion-{{ elemento.id }}"><p class="overflow-hidden">{{ elemento.plato.descripcion}}</p></td>
-                    <td id="campo-categoria-{{ elemento.id }}">{{ elemento.categoria.nombre }}</td>
-                    <form method="POST">
-                        {% csrf_token %}
-                        {% if elemento.habilitado %}
-                            <td><p id="campo-estado-{{ elemento.id }}" class="p-2 w-auto text-center rounded mb-2 bg-success text-white">Activado</p></td>
-                        {% else %}
-                            <td><p id="campo-estado-{{ elemento.id }}" class="p-2 w-auto text-center rounded mb-2 bg-danger text-white">Desactivado</p></td>
-                        {% endif %}
-                        <td id="boton-editar-{{ elemento.id }}"><button class="btn btn-info" type="button" id="editar|{{ elemento.id}}" name="editar-btn" onclick="editarPlato('fila-{{ elemento.id }}')">Editar</button></td>
-                        <td id="boton-borrar-{{ elemento.id }}"><button class="btn btn-danger" type="submit" value="eliminar|{{ elemento.id}}" name="eliminar-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Se aconseja desactivar el plato, en vez de borrarlo, permanentemente">Eliminar</button></td>
-                    </form>
-                </tr>
+            <tr class="text-white" id="fila-{{ elemento.id }}">
+                <td id="campo-id-{{ elemento.id }}">{{ elemento.id}}</td>
+                <td class="col-num" id="campo-num-{{ elemento.id }}">{{ elemento.numero_menu }}</td>
+                <td id="campo-nombre-{{ elemento.id }}">{{ elemento.plato.nombre }}</td>
+                <td id="campo-descripcion-{{ elemento.id }}"><p class="overflow-hidden">{{ elemento.plato.descripcion}}</p></td>
+                <td id="campo-categoria-{{ elemento.id }}">{{ elemento.categoria.nombre }}</td>
+                <form method="POST">
+                    {% csrf_token %}
+                    {% if elemento.habilitado %}
+                    <td><p id="campo-estado-{{ elemento.id }}" class="p-2 w-auto text-center rounded mb-2 bg-success text-white">Activado</p></td>
+                    {% else %}
+                    <td><p id="campo-estado-{{ elemento.id }}" class="p-2 w-auto text-center rounded mb-2 bg-danger text-white">Desactivado</p></td>
+                    {% endif %}
+                    <td id="boton-editar-{{ elemento.id }}"><button class="btn btn-info" type="button" id="editar|{{ elemento.id}}" name="editar-btn" onclick="editarPlato('fila-{{ elemento.id }}')">Editar</button></td>
+                    <td id="boton-borrar-{{ elemento.id }}"><button class="btn btn-danger" type="submit" value="eliminar|{{ elemento.id}}" name="eliminar-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Se aconseja desactivar el plato, en vez de borrarlo, permanentemente">Eliminar</button></td>
+                </form>
+            </tr>
             {% endfor %}
         </table>
         {% else %}
             <h3 class="text-warning">¡No hay platos en tu menu!</h3>
-        {% endif %}
+            {% endif %}
+        </div>
     </div>
 </div>
 {% endblock %}
