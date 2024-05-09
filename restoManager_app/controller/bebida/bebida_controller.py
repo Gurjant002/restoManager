@@ -68,12 +68,9 @@ class BebidaController:
 
     def get_lista_bebidas(self) -> dict:
         lista = self._bebidaService.get_bebidas()
-        
         if lista is None:
             return render(self.req, 'error.html', {'error': 'No se encontraron bebidas'})
-        
         diccionario = {
             'bebidas': lista
         }
-        
         return diccionario

@@ -37,7 +37,9 @@
     background-color: white !important;
     color: black !important;
 }
-
+.titulo-seccion-superior {
+    color: var(--bs-light);
+}
 .pedidos {
     min-height: 200px;
     min-width: 200px;
@@ -59,3 +61,16 @@
 input[type=number] {
     -moz-appearance:textfield;
 }
+
+footer {
+    padding-top: 60px;
+}
+
+.list-group-item {
+    border: 1px solid var(--bs-light) !important;
+}
+
+.panel_nav_opc {
+    border-top: var(--bs-light) 1px solid;
+}
+

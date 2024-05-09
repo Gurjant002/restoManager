@@ -7,10 +7,10 @@
 {% block content %}
     {% include 'global/header.html' %}
     {% include 'global/panel_nav.html' %}
-    <div class="container mt-5">
+    <div class="container">
         <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-4">
             <div class="col h-100 mb-4">
-                <div class="card h-100 bg-dark text-white">
+                <div class="card h-100 bg-dark text-light">
                     <div class="card-body">
                         <h5 class="card-title">Platos</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
@@ -23,11 +23,22 @@
             <div class="col">
                 <div class="card bg-dark text-light">
                     <div class="card-body">
+                        <h5 class="card-title">Bebida</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                        <a href="{% url 'admin_bebidas' %}" class="btn btn-outline-light">Bebida</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card bg-dark text-light">
+                    <div class="card-body">
                         <h5 class="card-title">Categorias</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the
                             card's content.</p>
-                        <a href="#" class="btn btn-outline-light">Categorias</a>
+                        <a href="{% url 'admin_categorias' %}" class="btn btn-outline-light">Categorias</a>
                     </div>
                 </div>
             </div>
@@ -38,7 +49,7 @@
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the
                             card's content.</p>
-                        <a href="#" class="btn btn-outline-light">Mesas</a>
+                        <a href="{% url 'admin_mesas' %}" class="btn btn-outline-light">Mesas</a>
                     </div>
                 </div>
             </div>

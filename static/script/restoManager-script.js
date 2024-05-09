@@ -89,6 +89,20 @@ function editarBebida(params) {
     titulo.innerText = "Actualizar bebida: #" + campoId.innerText
 }
 
+function editarCategoria(params) {
+    const campoId = document.getElementById("campo-id-"+params)
+    const campoNombre = document.getElementById("campo-nombre-"+params)
+
+    const inptNombre = document.getElementById("floatingCategoria")
+    inptNombre.value = campoNombre.innerText
+
+    const btnSave = document.getElementById("btn-submit")
+    btnSave.style.display = "none"
+    const btnUpdate = document.getElementById("btn_update_categoria")
+    btnUpdate.value = "update_categoria_"+campoId.textContent
+    btnUpdate.style.display = "block"
+}
+
 function goHome() {
     window.location = '/'
 }

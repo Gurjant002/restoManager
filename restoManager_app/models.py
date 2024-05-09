@@ -34,7 +34,7 @@ class Mesa(models.Model):
     lugar = models.CharField(max_length=20, choices=OPCIONES)
 
     def __str__(self):
-        pass
+        return self.lugar
 
     class Meta:
         db_table = ''

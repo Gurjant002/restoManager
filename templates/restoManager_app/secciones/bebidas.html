@@ -1,114 +1,120 @@
-{% extends 'restoManager_app/base/base.html' %}
+{% extends 'index.html' %}
 {% block title %} Bebidas {% endblock title %}
 {% block content %}
 
-<div class="panel_insertar bg-dark rounded row mb-3">
-    <h1 id="titulo-seccion-superior">Nueva bebida</h1>
-    <form method="post">
-        {% csrf_token %}
-        <div class="row">
-            <div class="col-md-auto">
-                <div class="form-floating">
-                    <div class="form-floating mb-3 d-flex flex-row">
-                        <input type="text" class="form-control" id="floatingBebida" required="true" name="nombre"
-                            placeholder="Nombre">
-                        <label for="floatingBebida" class="text-dark">Nombre de bebida</label>
+{% include 'global/header.html' %}
+{% include 'global/panel_nav.html' %}
+<div class="container pb-5 mb-5">
+    <div class="panel_insertar bg-dark rounded row mb-3">
+        <h1 id="titulo-seccion-superior" class="text-light">Nueva bebida</h1>
+        <form method="post">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-md-auto">
+                    <div class="form-floating">
+                        <div class="form-floating mb-3 d-flex flex-row">
+                            <input type="text" class="form-control" id="floatingBebida" required="true" name="nombre"
+                                placeholder="Nombre">
+                            <label for="floatingBebida" class="text-dark">Nombre de bebida</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-floating">
+                        <select class="form-select" id="floatingEstado" name="estado">
+                            <option value="0">Desactivado</option>
+                            <option value="1" selected>Activado</option>
+                        </select>
+                        <label for="floatingEstado" class="text-dark">Estado</label>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-floating">
+                        <select class="form-select" id="floatingAlcohol" name="alcohol">
+                            <option value="1">Si</option>
+                            <option value="0" selected>No</option>
+                        </select>
+                        <label for="floatingAlcohol" class="text-dark">Contiene Alcohol</label>
                     </div>
                 </div>
             </div>
-            <div class="col-md">
-                <div class="form-floating">
-                    <select class="form-select" id="floatingEstado" name="estado">
-                        <option value="0">Desactivado</option>
-                        <option value="1" selected>Activado</option>
-                    </select>
-                    <label for="floatingEstado" class="text-dark">Estado</label>
-                </div>
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Descripcion del plato" id="floatingDescripcion"
+                    name="descripcion" maxlength="250" style="height: 100px"></textarea>
+                <label for="floatingDescripcion" class="text-dark">Descripcion de la bebida</label>
             </div>
-            <div class="col-md">
-                <div class="form-floating">
-                    <select class="form-select" id="floatingAlcohol" name="alcohol">
-                        <option value="1">Si</option>
-                        <option value="0" selected>No</option>
-                    </select>
-                    <label for="floatingAlcohol" class="text-dark">Contiene Alcohol</label>
-                </div>
+            <div class="p-3">
+                <button class="btn btn-primary" name="new-bebida" id="btn-submit" value="insertar_bebida"
+                    type="submit">Guardar Bebida</button>
+                <button class="btn btn-primary" name="update-bebida" id="btn_update_bebida" value="update_bebida_"
+                    type="submit" style="display: none;">Actualizar bebida</button>
             </div>
-        </div>
-        <div class="form-floating">
-            <textarea class="form-control" placeholder="Descripcion del plato" id="floatingDescripcion"
-                name="descripcion" maxlength="250" style="height: 100px"></textarea>
-            <label for="floatingDescripcion" class="text-dark">Descripcion de la bebida</label>
-        </div>
-        <div class="p-3">
-            <button class="btn btn-primary" name="new-bebida" id="btn-submit" value="insertar_bebida"
-                type="submit">Guardar Bebida</button>
-            <button class="btn btn-primary" name="update-bebida" id="btn_update_bebida" value="update_bebida_"
-                type="submit" style="display: none;">Actualizar bebida</button>
-        </div>
-    </form>
-</div>
+        </form>
+    </div>
 
-<div class="panel_listado bg-dark rounded row">
-    <h1>LISTADO</h1>
-    {% if bebidas %}
-    <div class="p-2">
-        <table id="listado" class="text-center table table-dark table-striped">
-            <tr>
-                <th>ID</th>
-                <th>Nombre</th>
-                <th>Descripcion</th>
-                <th>Alcohol</th>
-                <th>Estado</th>
-                <th>Editar</th>
-                <th>Eliminar</th>
-            </tr>
-            {% for item in bebidas %}
-            <tr class="text-white" id="fila-{{ item.id }}">
-                <td id="campo-id-{{ item.id }}">{{ item.id}}</td>
-                <td id="campo-nombre-{{ item.id }}">{{ item.nombre }}</td>
-                <td id="campo-descripcion-{{ item.id }}">
-                    <p class="overflow-hidden">{{ item.descripcion}}</p>
-                </td>
-                {% if item.contiene_alcohol %}
-                <td>
-                    <p id="campo-alcohol-{{ item.id }}"
-                        class="p-2 w-auto text-center rounded mb-2 bg-warning text-dark">Si</p>
-                </td>
-                {% else %}
-                <td>
-                    <p id="campo-alcohol-{{ item.id }}"
-                        class="p-2 w-auto text-center rounded mb-2 bg-success text-white">No</p>
-                </td>
-                {% endif %}
-                <form method="POST">
-                    {% csrf_token %}
-                    {% if item.estado %}
+    <div class="panel_listado bg-dark rounded row">
+        <h1 class="text-light">LISTADO</h1>
+        <div class="p-2">
+            <table id="listado" class="text-center table table-dark table-striped">
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Descripcion</th>
+                    <th>Alcohol</th>
+                    <th>Estado</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
+                </tr>
+                {% if bebidas %}
+                {% for item in bebidas %}
+                <tr class="text-white" id="fila-{{ item.id }}">
+                    <td id="campo-id-{{ item.id }}">{{ item.id}}</td>
+                    <td id="campo-nombre-{{ item.id }}">{{ item.nombre }}</td>
+                    <td id="campo-descripcion-{{ item.id }}">
+                        <p class="overflow-hidden">{{ item.descripcion}}</p>
+                    </td>
+                    {% if item.contiene_alcohol %}
                     <td>
-                        <p id="campo-estado-{{ item.id }}"
-                            class="p-2 w-auto text-center rounded mb-2 bg-success text-white">Activado</p>
+                        <p id="campo-alcohol-{{ item.id }}"
+                            class="p-2 w-auto text-center rounded mb-2 bg-warning text-dark">Si</p>
                     </td>
                     {% else %}
                     <td>
-                        <p id="campo-estado-{{ item.id }}"
-                            class="p-2 w-auto text-center rounded mb-2 bg-danger text-white">Desactivado</p>
+                        <p id="campo-alcohol-{{ item.id }}"
+                            class="p-2 w-auto text-center rounded mb-2 bg-success text-white">No</p>
                     </td>
                     {% endif %}
-                    <td id="boton-editar-{{ item.id }}"><button class="btn btn-info" type="button"
-                            id="editar|{{ item.id}}" name="editar-btn"
-                            onclick="editarBebida('{{ item.id }}')">Editar</button></td>
-                    <td id="boton-borrar-{{ item.id }}"><button class="btn btn-danger" type="submit"
-                            value="eliminar|{{ item.id}}" name="eliminar" data-bs-toggle="tooltip"
-                            data-bs-placement="top"
-                            title="Se aconseja desactivar el plato, en vez de borrarlo, permanentemente">Eliminar</button>
-                    </td>
-                </form>
-            </tr>
-            {% endfor %}
-        </table>
-        {% else %}
-        <h3 class="text-warning p-auto">¡No hay platos en tu menu!</h3>
-        {% endif %}
+                    <form method="POST">
+                        {% csrf_token %}
+                        {% if item.estado %}
+                        <td>
+                            <p id="campo-estado-{{ item.id }}"
+                                class="p-2 w-auto text-center rounded mb-2 bg-success text-white">Activado</p>
+                        </td>
+                        {% else %}
+                        <td>
+                            <p id="campo-estado-{{ item.id }}"
+                                class="p-2 w-auto text-center rounded mb-2 bg-danger text-white">Desactivado</p>
+                        </td>
+                        {% endif %}
+                        <td id="boton-editar-{{ item.id }}"><button class="btn btn-info" type="button"
+                                id="editar|{{ item.id}}" name="editar-btn"
+                                onclick="editarBebida('{{ item.id }}')">Editar</button></td>
+                        <td id="boton-borrar-{{ item.id }}"><button class="btn btn-danger" type="submit"
+                                value="eliminar|{{ item.id}}" name="eliminar" data-bs-toggle="tooltip"
+                                data-bs-placement="top"
+                                title="Se aconseja desactivar el plato, en vez de borrarlo, permanentemente">Eliminar</button>
+                        </td>
+                    </form>
+                </tr>
+                {% endfor %}
+                {% else %}
+                <div class="container my-auto">
+                    <h3 class="text-warning">¡No hay bebidas en tu menu!</h3>
+                </div>
+                {% endif %}
+            </table>
+        </div>
     </div>
 </div>
 {% endblock content %}

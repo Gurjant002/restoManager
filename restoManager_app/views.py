@@ -6,11 +6,13 @@ from asgiref.sync import sync_to_async
 # from restoManager_app.models import Plato_Categoria
 from .controller.relacion.relacion_plato_categoria_controller import RelacionController
 from .controller.bebida.bebida_controller import BebidaController
+from .controller.categoria.categoria_controller import CategoriaController
+from .controller.mesa.mesa_controller import MesaController
 
 
 import logging
 logger = logging.getLogger(__name__)
-# Create your views here.
+
 
 def crear_alerta():
     ahora = datetime.now()
@@ -54,12 +56,18 @@ def test(request):
 def bebidas(request: HttpRequest):
     bebida_controller = BebidaController(request)
     diccionario = bebida_controller.peticiones()
-    # logger.info(diccionario)
     return render(request, "restoManager_app/secciones/bebidas.html", diccionario)
+
+def categorias(request: HttpRequest):
+    categoria_controller = CategoriaController(request);
+    diccionario = categoria_controller.peticiones()
+    return render(request, "restoManager_app/secciones/categorias.html", diccionario)
 
 @sync_to_async
 def mesas(request: HttpRequest):
-    return render(request, "restoManager_app/secciones/mesas.html", {})
+    mesas_controller = MesaController(request)
+    diccionario = mesas_controller.peticiones()
+    return render(request, "restoManager_app/secciones/mesas.html", diccionario)
 
 @sync_to_async
 def home(request: HttpRequest):
