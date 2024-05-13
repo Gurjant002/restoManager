@@ -18,15 +18,13 @@ from django.contrib import admin
 from django.urls import path, include
 from cocina_app.views import *
 
-from restoManager.views import home
+from restoManager.views import home, puestos
 
-import logging
-logger = logging.getLogger('tuna')
-logger.debug("Hello, world. I'm fine.")
-logger.info("Hello, world. I'm fine.")
 urlpatterns = [
     path('', home),
     path('config/', include('restoManager_app.urls')),
+    path('puestos/', puestos, name='puestos'),
+    path('puestos/camarero/', include('camarero_app.urls')),
     path('admin/', admin.site.urls),
     path('mesas/', mesas),
     path('avisos/', avisos),

@@ -1,4 +1,4 @@
-from django.urls import path, include
+from django.urls import path
 from .views import *
 urlpatterns = [
     path('', home, name='admin_home'),
@@ -6,6 +6,6 @@ urlpatterns = [
     path('bebidas/', bebidas, name='admin_bebidas'),
     path('categorias/', categorias, name='admin_categorias'),
     path('mesas/', mesas, name='admin_mesas'),
-    path('categorias/', mesas, name='admin_trabajadores'),
+    path('trabajadores/', trabajadores, name='admin_trabajadores'),
     path('categorias/', mesas, name='admin_config'),
 ]

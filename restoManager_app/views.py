@@ -8,6 +8,7 @@ from .controller.relacion.relacion_plato_categoria_controller import RelacionCon
 from .controller.bebida.bebida_controller import BebidaController
 from .controller.categoria.categoria_controller import CategoriaController
 from .controller.mesa.mesa_controller import MesaController
+from .controller.trabajadores.trabajador_controller import TrabajadorController
 
 
 import logging
@@ -58,6 +59,7 @@ def bebidas(request: HttpRequest):
     diccionario = bebida_controller.peticiones()
     return render(request, "restoManager_app/secciones/bebidas.html", diccionario)
 
+@sync_to_async
 def categorias(request: HttpRequest):
     categoria_controller = CategoriaController(request);
     diccionario = categoria_controller.peticiones()
@@ -68,6 +70,12 @@ def mesas(request: HttpRequest):
     mesas_controller = MesaController(request)
     diccionario = mesas_controller.peticiones()
     return render(request, "restoManager_app/secciones/mesas.html", diccionario)
+
+@sync_to_async
+def trabajadores(request: HttpRequest):
+    trabajadores_controller = TrabajadorController(request)
+    diccionario = trabajadores_controller.peticiones()
+    return render(request, "restoManager_app/secciones/trabajadores.html", diccionario)
 
 @sync_to_async
 def home(request: HttpRequest):
