@@ -1,0 +1,25 @@
+{% extends 'camarero/index.html' %}
+
+
+{% block title %}
+    Camarero
+{% endblock title %}
+{% block content %}
+<div class="bg-dark text-light">
+    <h1>Mesa</h1>
+    <form method="GET">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" name="q" value="HOLA" placeholder="Buscar mesa" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="submit">Buscar</button>
+            </div>
+        </div>
+    </form>
+    <ul class="list-group">
+        {% for mesa in mesas %}
+        <li class="list-group-item">{{ mesa.nombre }}</li>
+        {% endfor %}
+    </ul>
+</div>
+</div>
+{% endblock content %}

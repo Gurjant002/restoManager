@@ -1,0 +1,25 @@
+@media (max-width: 767px ) {
+    /* h1 {
+        color: red;
+    } */
+    .login-responsive {
+        width: 98% !important;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+}
+
+@media screen and (max-width: 830px) {
+    .login-responsive {
+        width: 75% !important;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    .login-responsive-footer {
+        display: none;
+    }
+}

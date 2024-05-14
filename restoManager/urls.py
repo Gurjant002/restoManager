@@ -21,10 +21,12 @@ from cocina_app.views import *
 from restoManager.views import home, puestos
 
 urlpatterns = [
-    path('', home),
+    path('', home, name='home'),
     path('config/', include('restoManager_app.urls')),
-    path('puestos/', puestos, name='puestos'),
     path('puestos/camarero/', include('camarero_app.urls')),
+    path('accounts/login/', include('django.contrib.auth.urls')),
+    path('accounts/login/', include('login.urls')),
+    path('puestos/', puestos, name='puestos'),
     path('admin/', admin.site.urls),
     path('mesas/', mesas),
     path('avisos/', avisos),

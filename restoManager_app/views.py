@@ -1,6 +1,7 @@
 from django.http import HttpRequest
 from django.shortcuts import render
 from datetime import datetime
+from django.contrib.auth.decorators import login_required
 from asgiref.sync import sync_to_async
 
 # from restoManager_app.models import Plato_Categoria
@@ -21,6 +22,7 @@ def crear_alerta():
     return tiempo
 
 @sync_to_async
+@login_required
 def platos(request: HttpRequest):
     diccionario = {}
     relacionController = RelacionController()
@@ -49,34 +51,40 @@ def platos(request: HttpRequest):
     return render(request, "restoManager_app/secciones/platos.html", diccionario)
 
 @sync_to_async
+@login_required
 def test(request):
     print("Hola mundo")
     return render(request, "restoManager_app/base/base.html")
 
 @sync_to_async
+@login_required
 def bebidas(request: HttpRequest):
     bebida_controller = BebidaController(request)
     diccionario = bebida_controller.peticiones()
     return render(request, "restoManager_app/secciones/bebidas.html", diccionario)
 
 @sync_to_async
+@login_required
 def categorias(request: HttpRequest):
     categoria_controller = CategoriaController(request);
     diccionario = categoria_controller.peticiones()
     return render(request, "restoManager_app/secciones/categorias.html", diccionario)
 
 @sync_to_async
+@login_required
 def mesas(request: HttpRequest):
     mesas_controller = MesaController(request)
     diccionario = mesas_controller.peticiones()
     return render(request, "restoManager_app/secciones/mesas.html", diccionario)
 
 @sync_to_async
+@login_required
 def trabajadores(request: HttpRequest):
     trabajadores_controller = TrabajadorController(request)
     diccionario = trabajadores_controller.peticiones()
     return render(request, "restoManager_app/secciones/trabajadores.html", diccionario)
 
 @sync_to_async
+@login_required
 def home(request: HttpRequest):
     return render(request, "restoManager_app/config.html")
