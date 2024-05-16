@@ -107,12 +107,10 @@ function goHome() {
     window.location = '/'
 }
 
-columna = document.querySelectorAll('.col-num')
-
-// for (var i = 0; i < columna.length; i++)
-//     newNum = parseInt(columna[i].textContent)
-
-newNum = parseInt(columna[columna.length - 1].textContent)
-
-inputNum = document.querySelector('#floatingNum')
-inputNum.value = 1+newNum
+const url = window.location.pathname
+if (url === '/config/platos/' ) {
+    columna = document.querySelectorAll('.col-num')
+    newNum = parseInt(columna[columna.length - 1].textContent)
+    inputNum = document.querySelector('#floatingNum')
+    inputNum.value = 1+newNum
+}

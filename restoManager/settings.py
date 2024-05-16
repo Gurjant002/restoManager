@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'cocina_app',
     'camarero_app',
     'login',
+    'restoManager',
 ]
 
 MIDDLEWARE = [
@@ -84,8 +85,8 @@ DATABASES = {
         
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'restomanager',
-        'USER': 'root',
-        'PASSWORD': 'root',
+        'USER': 'restoManagerSql',
+        'PASSWORD': 'restoManager245',
         'HOST': 'localhost',
         'PORT': '3306',
 
@@ -154,6 +155,22 @@ LOGGING = {
     },
     'loggers': {
         'restoManager_app': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+        },
+        'cocina_app': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+        },
+        'camarero_app': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+        },
+        'restomanager': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+        },
+        'login': {
             'handlers': ['console'],
             'level': 'DEBUG',
         },

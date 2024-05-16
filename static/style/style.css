@@ -26,20 +26,23 @@
 }
 
 .btn-nav:hover {
-    background-color: var(--bs-white);
-    color: var(--bs-dark);
+    background-color: var(--bs-white) !important;
+    color: var(--bs-dark) !important;
 }
 
 .btn-nav {
     text-align: left;
 }
+
 .panel-nav a:hover {
     background-color: white !important;
     color: black !important;
 }
+
 .titulo-seccion-superior {
     color: var(--bs-light);
 }
+
 .pedidos {
     min-height: 200px;
     min-width: 200px;
@@ -52,6 +55,14 @@
 
 .home_main_div {
     width: 75%;
+}
+
+.bg-interior {
+    background-color: #3f474f !important;
+}
+
+.bg-exterior {
+    background-color: #7c8b9b !important;
 }
 
 .panel_insertar {

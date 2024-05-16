@@ -48,6 +48,7 @@ def platos(request: HttpRequest):
         return render(request, "restoManager_app/secciones/platos.html", diccionario)
 
     diccionario = relacionController.get_lista_relacion()
+    logger.info(diccionario)
     return render(request, "restoManager_app/secciones/platos.html", diccionario)
 
 @sync_to_async

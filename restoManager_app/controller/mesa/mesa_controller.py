@@ -52,6 +52,12 @@ class MesaController:
     def eliminar_mesas_terraza(self, numero: int):
         self._mesa_service.eliminar_mesas_terraza(numero)
 
+    def get_mesas_interior(self):
+        return self._mesa_service.get_mesas_interior()
+
+    def get_mesas_terraza(self):
+        return self._mesa_service.get_mesas_terraza()
+
     def get_numero_de_mesas(self):
         lista = self._mesa_service.get_mesas()
         diccionario = {

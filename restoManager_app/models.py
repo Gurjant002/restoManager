@@ -25,13 +25,12 @@ class Camarero(models.Model):
         verbose_name = 'Camarero'
         verbose_name_plural = 'Camareros'
 
-class Mesa(models.Model):
+class Ubicacion(models.Model):
     OPCIONES = (
         ('0', 'Interior'),
         ('1', 'Exterior')
     )
-
-    lugar = models.CharField(max_length=20, choices=OPCIONES)
+    lugar = models.CharField(max_length=30, choices=OPCIONES)
 
     def __str__(self):
         return self.lugar
@@ -39,8 +38,8 @@ class Mesa(models.Model):
     class Meta:
         db_table = ''
         managed = True
-        verbose_name = 'Mesa'
-        verbose_name_plural = 'Mesas'
+        verbose_name = 'Ubicacion'
+        verbose_name_plural = 'Ubicaciones'
 
 class Plato(models.Model):
     nombre = models.CharField(max_length=100, blank=True, null=True)

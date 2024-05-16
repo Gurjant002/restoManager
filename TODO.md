@@ -9,11 +9,11 @@
             - Borrar Bebidas.
             - Mostrar todas las bebidas.
 
-    CREAR UN APP PARA LOGIN:
+    CREAR UN APP PARA LOGIN: Echo 👍
         Crear un apartado logging con estos propositos:
             - Dependiendo de tu cuenta, tendras acceso a la [Barra, Camarero, Cocina y/o Administrador]
 
-    TRABAJADORES: 
+    TRABAJADORES: Echo 👍
         Este apartado esta por trabajar*
         En un principio guardaremos la informacion de los trabajadores.
 
@@ -22,3 +22,8 @@
         En este apartado se configurara toda la palicacion web, el clinete podra,
         eleguir los colores, el tipo de letra, titulo y mas...
 
+    BACKEND:
+        Devuelva un diccionario con los siguientes datos como minimo.
+        
+
+    INTERFAZ CAMARERO:
