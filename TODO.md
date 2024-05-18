@@ -27,3 +27,7 @@
         
 
     INTERFAZ CAMARERO:
+    
+    EXCEPCIONES Y MENSAJES DE ERROR:
+        - Codificar y definir las excepciones que se pueden lanzar en el backend
+        - Definir mensajes de error que se mostraran al usuario

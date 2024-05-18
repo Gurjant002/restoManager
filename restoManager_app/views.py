@@ -8,7 +8,7 @@ from asgiref.sync import sync_to_async
 from .controller.relacion.relacion_plato_categoria_controller import RelacionController
 from .controller.bebida.bebida_controller import BebidaController
 from .controller.categoria.categoria_controller import CategoriaController
-from .controller.mesa.mesa_controller import MesaController
+from .controller.ubicacion.ubicacion_controller import UbicacionController
 from .controller.trabajadores.trabajador_controller import TrabajadorController
 
 
@@ -73,10 +73,10 @@ def categorias(request: HttpRequest):
 
 @sync_to_async
 @login_required
-def mesas(request: HttpRequest):
-    mesas_controller = MesaController(request)
-    diccionario = mesas_controller.peticiones()
-    return render(request, "restoManager_app/secciones/mesas.html", diccionario)
+def ubicaciones(request: HttpRequest):
+    ubicaciones_controller = UbicacionController(request)
+    diccionario = ubicaciones_controller.peticiones()
+    return render(request, "restoManager_app/secciones/ubicaciones.html", diccionario)
 
 @sync_to_async
 @login_required

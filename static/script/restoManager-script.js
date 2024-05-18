@@ -103,6 +103,21 @@ function editarCategoria(params) {
     btnUpdate.style.display = "block"
 }
 
+function editarUbicacion(params) {
+    const campoId = document.getElementById("campo-id-"+params)
+    const campoNombre = document.getElementById("campo-lugar-"+params)
+
+    const inptNombre = document.getElementById("floatingUbicacion")
+    inptNombre.value = campoNombre.innerText
+
+    const btnSave = document.getElementById("btn-submit")
+    btnSave.style.display = "none"
+
+    const btnUpdate = document.getElementById("btn_update_ubicacion")
+    btnUpdate.value = params
+    btnUpdate.style.display = "block"
+}
+
 function goHome() {
     window.location = '/'
 }
@@ -114,3 +129,8 @@ if (url === '/config/platos/' ) {
     inputNum = document.querySelector('#floatingNum')
     inputNum.value = 1+newNum
 }
+
+
+let timer = setInterval(function(time) {
+    document.getElementById('error-msg').style.display = 'none';
+}, 10000);

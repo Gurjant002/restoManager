@@ -26,14 +26,10 @@ class Camarero(models.Model):
         verbose_name_plural = 'Camareros'
 
 class Ubicacion(models.Model):
-    OPCIONES = (
-        ('0', 'Interior'),
-        ('1', 'Exterior')
-    )
-    lugar = models.CharField(max_length=30, choices=OPCIONES)
+    lugar = models.CharField(max_length=30, unique=True)
 
     def __str__(self):
-        return self.lugar
+        return f'Lugar: {self.lugar}'
 
     class Meta:
         db_table = ''
