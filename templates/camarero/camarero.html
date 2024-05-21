@@ -5,99 +5,34 @@
     Camarero
 {% endblock title %}
 {% block content %}
-<div class="bg-dark p-2 border-bottom border-secondary">
+{% if es_camarero %}
+<div class="bg-dark p-2 border-bottom border-secondary border-3">
     <form method="post">
         {% csrf_token %}
-        <button type="button" class="position-absolute btn btn-outline-light" data-bs-toggle="collapse" data-bs-target="#mesas-collapse" aria-expanded="false" aria-controls="mesas-collapse">Mesas</button>
+        <button type="button" class="position-absolute btn btn-outline-light mt-2" data-bs-toggle="collapse" data-bs-target="#mesas-collapse" aria-expanded="false" aria-controls="mesas-collapse">Mesas</button>
         <div class="d-flex justify-content-end align-items-center">
-            <div class="btn-group" role="group" aria-label="Horizontal button group">
-                <input type="radio" class="btn-check" name="estado" id="btn-in" autocomplete="off" value="in">
-                <label class="btn btn-outline-primary" for="btn-in">In</label>
-                
-                <input type="radio" class="btn-check" name="estado" id="btn-out" autocomplete="off" value="out">
-                <label class="btn btn-outline-primary" for="btn-out">Out</label>
-                
-                <input type="radio" class="btn-check" name="estado" id="btn-all" autocomplete="off" value="all" checked>
-                <label class="btn btn-outline-primary" for="btn-all">All</label>
-            </div>
+            <h3 class="text-center w-75 text-dark bg-white mb-0 mt-2 rounded" id="mesa-seleccionada">No se ha seleccionado una mesa aun</h3>
         </div>
     </form>
     <div class="collapse " id="mesas-collapse">
-        <div class="mt-2 p-2 border border-secondary rounded">
-            <table class="table table-striped table-dark table-bordered">
-                <thead>
-                    <tr>
-                        <th>Num#</th>
-                        <th>Lugar</th>
-                        <th>Asignacion</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><button type="submit" name="mesas" value="1" class="btn btn-outline-primary me-2">1</button></td>
-                        <td>Mesa 1</td>
-                        <td>{{ mesas.1 }}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        {% include 'camarero/contenido/mesas.html' %}
     </div>
 </div>
-<div class="bg-dark p-2 border-bottom border-secondary">
+<div class="bg-dark p-2 border-bottom border-secondary border-3">
+    <button type="button" class="position-absolute btn btn-outline-light" data-bs-toggle="collapse" data-bs-target="#platos-collapse" aria-expanded="false" aria-controls="platos-collapse">Platos</button>
     <div class="d-flex justify-content-end">
-        <h1 class="btn btn-outline-light">Platos</h1>
         <div class="overflow-auto bg-interior rounded ms-auto w-50 h-100">
             <div class="btn-group p-1" role="group" aria-label="Horizontal button group">
-                <input type="radio" class="btn-check" name="categoria" id="btn-in-desayuno" autocomplete="off" value="Tapas">
-                <label class="btn btn-outline-primary" for="btn-in-desayuno">Tapas</label>
-
-                <input type="radio" class="btn-check" name="categoria" id="btn-in-almuerzo" autocomplete="off" value="Ensaladas">
-                <label class="btn btn-outline-primary" for="btn-in-almuerzo">Ensaladas</label>
-
-                <input type="radio" class="btn-check" name="categoria" id="btn-in-cena" autocomplete="off" value="Piadinas">
-                <label class="btn btn-outline-primary" for="btn-in-cena">Piadinas</label>
-
-                <input type="radio" class="btn-check" name="categoria" id="btn-in-aperitivo" autocomplete="off" value="Pizzas">
-                <label class="btn btn-outline-primary" for="btn-in-aperitivo">Pizzas</label>
-
-                <input type="radio" class="btn-check" name="categoria" id="btn-in-postre" autocomplete="off" value="Riggattoni">
-                <label class="btn btn-outline-primary" for="btn-in-postre">Riggattoni</label>
-
-                <input type="radio" class="btn-check" name="categoria" id="btn-in-bebida" autocomplete="off" value="Espagetti">
-                <label class="btn btn-outline-primary" for="btn-in-bebida">Espagetti</label>
-
-                <input type="radio" class="btn-check" name="categoria" id="btn-in-entrada" autocomplete="off" value="Tagliatele">
-                <label class="btn btn-outline-primary" for="btn-in-entrada">Tagliatele</label>
-
-                <input type="radio" class="btn-check" name="categoria" id="btn-in-tapas" autocomplete="off" value="Ravioli">
-                <label class="btn btn-outline-primary" for="btn-in-tapas">Ravioli</label>
-
-                <input type="radio" class="btn-check" name="categoria" id="btn-in-snack" autocomplete="off" value="Tortolloni">
-                <label class="btn btn-outline-primary" for="btn-in-snack">Tortolloni</label>
-
-                <input type="radio" class="btn-check" name="categoria" id="btn-in-otro" autocomplete="off" value="Gnocci">
-                <label class="btn btn-outline-primary" for="btn-in-otro">Gnocci</label>
-
-                <input type="radio" class="btn-check" name="categoria" id="btn-in-alhorno" autocomplete="off" value="AlHorno">
-                <label class="btn btn-outline-primary" for="btn-in-alhorno">Al&nbsp;Horno</label>
-                
-                <input type="radio" class="btn-check" name="categoria" id="btn-in-bocadillos" autocomplete="off" value="Bocadillos">
-                <label class="btn btn-outline-primary" for="btn-in-bocadillos">Bocadillos</label>
-                
-                <input type="radio" class="btn-check" name="categoria" id="btn-in-platos" autocomplete="off" value="Platos">
-                <label class="btn btn-outline-primary" for="btn-in-platos">Platos</label>
-                
-                <input type="radio" class="btn-check" name="categoria" id="btn-in-sandwich" autocomplete="off" value="Sandwich">
-                <label class="btn btn-outline-primary" for="btn-in-sandwich">Sandwich</label>
-                
-                <input type="radio" class="btn-check" name="categoria" id="btn-in-hamburguesas" autocomplete="off" value="Hamburguesas">
-                <label class="btn btn-outline-primary" for="btn-in-hamburguesas">Hamburguesas</label>
+                {% include 'camarero/contenido/filtro_categorias.html' %}
             </div>
         </div>
     </div>
+    <div class="collapse " id="platos-collapse">
+        {% include 'camarero/contenido/platos.html' %}
+    </div>
 </div>
-<div class="bg-dark p-2 border-bottom border-secondary">
-    <h1 class="position-absolute btn btn-outline-light">Bebidas</h1>
+<div class="bg-dark p-2 border-bottom border-secondary border-3">
+    <button type="button" class="position-absolute btn btn-outline-light" data-bs-toggle="collapse" data-bs-target="#bebidas-collapse" aria-expanded="false" aria-controls="bebidas-collapse">Bebidas</button>
     <div class="d-flex justify-content-end align-items-center">
         <div class="btn-group" role="group" aria-label="Horizontal button group">
             <input type="radio" class="btn-check" name="estado" id="btn-in" autocomplete="off" value="in">
@@ -110,5 +45,24 @@
             <label class="btn btn-outline-primary" for="btn-all">All</label>
         </div>
     </div>
+    <div class="collapse" id="bebidas-collapse">
+        {% include 'camarero/contenido/bebidas.html' %}
+    </div>
 </div>
+
+<div class="container mt-5 bg-dark text-white">
+    <div class="panel" id="resizable-panel">
+        <div class="resizer" id="resizer">
+            <h1>Hola</h1>
+        </div>
+    </div>
+</div>
+
+{% else %}
+    <div class="d-flex justify-content-center align-items-center" style="height: 100px;">
+        <div class="alert alert-danger" role="alert">
+            {{ error }}
+        </div>
+    </div>
+{% endif %}
 {% endblock content %}

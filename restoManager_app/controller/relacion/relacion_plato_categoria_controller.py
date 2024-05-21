@@ -4,6 +4,9 @@ from restoManager_app.models import Plato, Categoria, Plato_Categoria
 from ..plato.plato_controller import PlatoController
 from ..categoria.categoria_controller import CategoriaController
 from ...service.relacion.relacion_plato_categoria_service import PlatoCategoriaService
+import logging
+
+logger = logging.getLogger(__name__)
 
 class RelacionController:
     __relacion_service: PlatoCategoriaService
@@ -82,7 +85,7 @@ class RelacionController:
             print("relacion_controller > crear_relacion > NUEVA RELACION")
         else:
             resultado = "El plato", nombre_plato, " en la categoria",nombre_categoria,"ya existe"
-        print("relacion_controller > crear_relacion > resultado:", resultado)
+        logging.info(resultado)
         return resultado
 
     def get_relacion_by_id(self, id_relacion: int) -> Plato_Categoria:

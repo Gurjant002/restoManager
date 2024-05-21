@@ -17,7 +17,7 @@ class UbicacionService:
 
     def get_ubicacion_by_id(self, id_ubicacion: int) -> str | Ubicacion:
         try:
-            ubicacion = Ubicacion.objects.filter(id=id_ubicacion)
+            ubicacion = Ubicacion.objects.filter(id=id_ubicacion).first()
             return ubicacion
         except Ubicacion.DoesNotExist:
             logger.error(f"No se encontro la ubicacion '{id_ubicacion}'")

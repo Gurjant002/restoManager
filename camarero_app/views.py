@@ -13,5 +13,4 @@ logger = logging.getLogger(__name__)
 def home(request: HttpRequest):
     camarero = CamareroController(request)
     diccionario = camarero.peticiones()
-    # logger.info(diccionario['error'])
     return render(request, "camarero/camarero.html", diccionario)

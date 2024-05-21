@@ -19,7 +19,7 @@ class Servicio_Cocina(models.Model):
         return f'plato {self.plato} servido: {self.servido} mesa: {self.camarero_mesa} hora: {self.hora_dia}'
  
     class Meta:
-        db_table = ''
+        db_table = 'servicio_cocina'
         managed = True
         verbose_name = 'Servicio_Cocina'
         verbose_name_plural = 'Servicio_Cocinas'
@@ -34,7 +34,7 @@ class Servicio_Barra(models.Model):
         return f'bebida {self.bebida} servido: {self.servido} mesa: {self.camarero_mesa} hora: {self.hora_dia}'
  
     class Meta:
-        db_table = ''
+        db_table = 'servicio_barra'
         managed = True
         verbose_name = 'Servicio_Barra'
         verbose_name_plural = 'Servicio_Barras'

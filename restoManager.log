@@ -1,1 +1,100 @@
 [18/May/2024 16:31:09] ERROR [restoManager_app.service.ubicacion.ubicacion_services:38] No se puedo crear la ubicacion 'Salon Planta 0' porque ya existe
+[18/May/2024 17:30:17] INFO [restoManager_app.views:51] {'lista': None, 'lista_platos': [], 'lista_categoria': []}
+[18/May/2024 17:33:16] INFO [restoManager_app.views:51] {'lista': None, 'lista_platos': [], 'lista_categoria': []}
+[18/May/2024 17:33:16] INFO [restoManager_app.views:51] {'lista': None, 'lista_platos': [], 'lista_categoria': []}
+[18/May/2024 17:33:16] INFO [restoManager_app.views:51] {'lista': None, 'lista_platos': [], 'lista_categoria': []}
+[18/May/2024 17:45:51] INFO [restoManager_app.views:51] {'lista': None, 'lista_platos': [], 'lista_categoria': []}
+[18/May/2024 17:55:26] INFO [restoManager_app.views:51] {'lista': None, 'lista_platos': [], 'lista_categoria': []}
+[18/May/2024 17:55:36] INFO [restoManager_app.views:51] {'lista': None, 'lista_platos': [], 'lista_categoria': []}
+[18/May/2024 17:59:39] INFO [restoManager_app.views:51] {'lista': None, 'lista_platos': [], 'lista_categoria': []}
+[18/May/2024 18:00:48] INFO [restoManager_app.views:51] {'lista': None, 'lista_platos': [], 'lista_categoria': []}
+[18/May/2024 18:05:53] INFO [restoManager_app.views:51] {'lista': None, 'lista_platos': [], 'lista_categoria': []}
+[18/May/2024 18:06:04] INFO [restoManager_app.views:51] {'lista': None, 'lista_platos': [], 'lista_categoria': []}
+[18/May/2024 19:54:47] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[18/May/2024 19:55:24] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[18/May/2024 19:55:42] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[18/May/2024 19:56:13] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 00:36:43] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 00:41:47] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 01:16:30] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 01:17:01] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 01:21:40] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 01:23:21] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 01:23:40] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:13:53] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:14:29] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:14:31] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:14:32] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:15:05] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:15:11] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:15:36] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:15:53] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:17:06] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:18:13] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:19:16] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:20:26] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:20:36] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:21:38] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:28:43] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:29:25] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:29:57] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:39:12] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:39:15] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:40:52] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:41:22] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:42:10] INFO [restoManager_app.controller.categoria.categoria_controller:46] Tapa
+[19/May/2024 12:42:10] INFO [restoManager_app.views:38] New Relation Created.
+[19/May/2024 12:43:17] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:44:19] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 23:10:39] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 23:10:40] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 23:11:28] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 23:23:54] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 23:23:58] ERROR [restoManager_app.service.trabajadores.camarero_service:24] Error al crear el camarero: Cannot assign "1": "Camarero.id_user" must be a "User" instance.
+[19/May/2024 23:23:58] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 23:28:39] ERROR [restoManager_app.service.trabajadores.camarero_service:24] Error al crear el camarero: Cannot assign "1": "Camarero.id_user" must be a "User" instance.
+[19/May/2024 23:28:39] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 23:34:06] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 23:41:13] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 23:41:16] ERROR [restoManager_app.service.trabajadores.camarero_service:24] Error al crear el camarero: Cannot assign "1": "Camarero.id_user" must be a "User" instance.
+[19/May/2024 23:41:16] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 23:41:51] ERROR [restoManager_app.service.trabajadores.camarero_service:24] Error al crear el camarero: Cannot assign "1": "Camarero.id_user" must be a "User" instance.
+[19/May/2024 23:42:22] ERROR [restoManager_app.service.trabajadores.camarero_service:24] Error al crear el camarero: Cannot assign "1": "Camarero.id_user" must be a "User" instance.
+[19/May/2024 23:43:19] ERROR [restoManager_app.service.trabajadores.camarero_service:24] Error al crear el camarero: Cannot assign "1": "Camarero.id_user" must be a "User" instance.
+[19/May/2024 23:56:48] ERROR [restoManager_app.service.trabajadores.camarero_service:24] Error al crear el camarero: (1062, "Duplicate entry '1' for key 'camarero.camarero_id_user_id_9d2d8d40_uniq'")
+[19/May/2024 23:58:45] ERROR [restoManager_app.service.trabajadores.camarero_service:25] Error al crear el camarero: (1062, "Duplicate entry '1' for key 'camarero.camarero_id_user_id_9d2d8d40_uniq'")
+[19/May/2024 23:59:01] ERROR [restoManager_app.service.trabajadores.camarero_service:25] Error al crear el camarero: (1062, "Duplicate entry '1' for key 'camarero.camarero_id_user_id_9d2d8d40_uniq'")
+[19/May/2024 23:59:29] ERROR [restoManager_app.service.trabajadores.camarero_service:25] Error al crear el camarero: (1062, "Duplicate entry '1' for key 'camarero.camarero_id_user_id_9d2d8d40_uniq'")
+[19/May/2024 23:59:53] ERROR [restoManager_app.service.trabajadores.camarero_service:25] Error al crear el camarero: (1062, "Duplicate entry '1' for key 'camarero.camarero_id_user_id_9d2d8d40_uniq'")
+[20/May/2024 00:00:06] ERROR [restoManager_app.service.trabajadores.camarero_service:25] Error al crear el camarero: (1062, "Duplicate entry '1' for key 'camarero.camarero_id_user_id_9d2d8d40_uniq'")
+[20/May/2024 00:22:55] WARNING [restoManager_app.service.trabajadores.camarero_service:14] No se encontraron camareros
+[20/May/2024 00:23:00] ERROR [restoManager_app.service.trabajadores.camarero_service:28] Error al crear el camarero: Camarero() got unexpected keyword arguments: 'id_user'
+[20/May/2024 00:23:00] WARNING [restoManager_app.service.trabajadores.camarero_service:14] No se encontraron camareros
+[20/May/2024 00:24:55] ERROR [restoManager_app.service.trabajadores.camarero_service:28] Error al crear el camarero: Camarero() got unexpected keyword arguments: 'id_user'
+[20/May/2024 00:25:11] WARNING [restoManager_app.service.trabajadores.camarero_service:14] No se encontraron camareros
+[20/May/2024 00:25:18] ERROR [restoManager_app.service.trabajadores.camarero_service:25] Error al crear el camarero: (1062, "Duplicate entry '1' for key 'camarero.camarero_id_user_id_9d2d8d40_uniq'")
+[20/May/2024 00:25:42] WARNING [restoManager_app.service.trabajadores.camarero_service:14] No se encontraron camareros
+[20/May/2024 00:47:39] ERROR [restoManager_app.service.trabajadores.camarero_service:25] No se encontro el camarero 'ramon'
+[20/May/2024 00:48:49] ERROR [restoManager_app.service.trabajadores.camarero_service:25] No se encontro el camarero 'ramon'
+[20/May/2024 00:50:18] ERROR [restoManager_app.service.trabajadores.camarero_service:25] No se encontro el camarero 'ramon'
+[20/May/2024 00:50:43] ERROR [restoManager_app.service.trabajadores.camarero_service:25] No se encontro el camarero 'ramon'
+[20/May/2024 01:58:32] ERROR [camarero_app.service.camarero_mesa_service:46] Ocurrio un error inesperado. (1452, 'Cannot add or update a child row: a foreign key constraint fails (`restomanager`.`camarero_mesa`, CONSTRAINT `camarero_app_camarer_camarero_id_860174ee_fk_restoMana` FOREIGN KEY (`camarero_id`) REFERENCES `camarero` (`id`))')
+[20/May/2024 02:14:19] ERROR [camarero_app.service.camarero_mesa_service:46] Ocurrio un error inesperado. (1452, 'Cannot add or update a child row: a foreign key constraint fails (`restomanager`.`camarero_mesa`, CONSTRAINT `camarero_app_camarer_camarero_id_860174ee_fk_restoMana` FOREIGN KEY (`camarero_id`) REFERENCES `camarero` (`id`))')
+[20/May/2024 02:15:30] ERROR [camarero_app.service.camarero_mesa_service:46] Ocurrio un error inesperado. (1452, 'Cannot add or update a child row: a foreign key constraint fails (`restomanager`.`camarero_mesa`, CONSTRAINT `camarero_app_camarer_camarero_id_860174ee_fk_restoMana` FOREIGN KEY (`camarero_id`) REFERENCES `camarero` (`id`))')
+[20/May/2024 02:15:51] ERROR [camarero_app.service.camarero_mesa_service:46] Ocurrio un error inesperado. (1452, 'Cannot add or update a child row: a foreign key constraint fails (`restomanager`.`camarero_mesa`, CONSTRAINT `camarero_app_camarer_camarero_id_860174ee_fk_restoMana` FOREIGN KEY (`camarero_id`) REFERENCES `camarero` (`id`))')
+[20/May/2024 02:19:47] ERROR [camarero_app.service.camarero_mesa_service:46] Ocurrio un error inesperado. Cannot assign "<QuerySet [<Ubicacion: Lugar: Salon Planta 0>]>": "Camarero_Mesa.ubicacion" must be a "Ubicacion" instance.
+[20/May/2024 02:22:24] ERROR [camarero_app.service.camarero_mesa_service:46] Ocurrio un error inesperado. Cannot assign "<QuerySet [<Ubicacion: Lugar: Salon Planta 0>]>": "Camarero_Mesa.ubicacion" must be a "Ubicacion" instance.
+[20/May/2024 02:24:06] ERROR [camarero_app.service.camarero_mesa_service:46] Ocurrio un error inesperado. QuerySet.create() takes 1 positional argument but 4 were given
+[20/May/2024 02:26:59] ERROR [camarero_app.service.camarero_mesa_service:46] Ocurrio un error inesperado. QuerySet.create() takes 1 positional argument but 4 were given
+[20/May/2024 19:45:08] INFO [restoManager_app.views:37] New Relation Created.
+[20/May/2024 19:45:52] INFO [restoManager_app.views:37] New Relation Created.
+[20/May/2024 19:46:50] INFO [restoManager_app.controller.bebida.bebida_controller:36] Nombre bebida: Coca Cola, Alcohol: 0, Estado: 1, Descripcion: Refresco
+[20/May/2024 19:46:50] INFO [restoManager_app.controller.bebida.bebida_controller:41] Nombre Categoria: Coca Cola, Descripcion: Refresco, Contiene Alcohol: 0, Estado: 1
+[20/May/2024 19:47:03] INFO [restoManager_app.controller.bebida.bebida_controller:36] Nombre bebida: Coca Cola Zero, Alcohol: 0, Estado: 1, Descripcion: Refresco
+[20/May/2024 19:47:03] INFO [restoManager_app.controller.bebida.bebida_controller:41] Nombre Categoria: Coca Cola Zero, Descripcion: Refresco, Contiene Alcohol: 0, Estado: 1
+[20/May/2024 19:47:23] INFO [restoManager_app.controller.bebida.bebida_controller:36] Nombre bebida: Coca Cola Zero Zero, Alcohol: 0, Estado: 1, Descripcion: Refresco
+[20/May/2024 19:47:23] INFO [restoManager_app.controller.bebida.bebida_controller:41] Nombre Categoria: Coca Cola Zero Zero, Descripcion: Refresco, Contiene Alcohol: 0, Estado: 1
+[20/May/2024 19:47:44] INFO [restoManager_app.controller.bebida.bebida_controller:36] Nombre bebida: Estrella Galicia 3, Alcohol: 1, Estado: 1, Descripcion: Cerveza
+[20/May/2024 19:47:44] INFO [restoManager_app.controller.bebida.bebida_controller:41] Nombre Categoria: Estrella Galicia 3, Descripcion: Cerveza, Contiene Alcohol: 1, Estado: 1
+[20/May/2024 19:48:05] INFO [restoManager_app.controller.bebida.bebida_controller:36] Nombre bebida: Estrella Galicia 5, Alcohol: 1, Estado: 1, Descripcion: Cerveza
+[20/May/2024 19:48:05] INFO [restoManager_app.controller.bebida.bebida_controller:41] Nombre Categoria: Estrella Galicia 5, Descripcion: Cerveza, Contiene Alcohol: 1, Estado: 1

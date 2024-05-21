@@ -10,7 +10,7 @@ from .controller.bebida.bebida_controller import BebidaController
 from .controller.categoria.categoria_controller import CategoriaController
 from .controller.ubicacion.ubicacion_controller import UbicacionController
 from .controller.trabajadores.trabajador_controller import TrabajadorController
-
+from .controller.trabajadores.camarero_controller import CamareroController
 
 import logging
 logger = logging.getLogger(__name__)
@@ -48,14 +48,8 @@ def platos(request: HttpRequest):
         return render(request, "restoManager_app/secciones/platos.html", diccionario)
 
     diccionario = relacionController.get_lista_relacion()
-    logger.info(diccionario)
+    # logger.info(diccionario)
     return render(request, "restoManager_app/secciones/platos.html", diccionario)
-
-@sync_to_async
-@login_required
-def test(request):
-    print("Hola mundo")
-    return render(request, "restoManager_app/base/base.html")
 
 @sync_to_async
 @login_required
@@ -84,6 +78,11 @@ def trabajadores(request: HttpRequest):
     trabajadores_controller = TrabajadorController(request)
     diccionario = trabajadores_controller.peticiones()
     return render(request, "restoManager_app/secciones/trabajadores.html", diccionario)
+
+def camareros(request: HttpRequest):
+    camareros_controller = CamareroController(request)
+    diccionario = camareros_controller.peticiones()
+    return render(request, "restoManager_app/secciones/trabajadores/camareros.html", diccionario)
 
 @sync_to_async
 @login_required

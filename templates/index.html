@@ -15,10 +15,14 @@
 </head>
 
 <body>
-    {% block content %}
-    {% endblock content %}
-
-    {% include 'global/footer.html' %}
+    <section style="margin-bottom: 100px;">
+        {% block content %}
+        {% endblock content %}
+    </section>
+    <footer class="mt-5 bg-dark text-center text-white bottom-0">
+        {% include 'global/footer.html' %}
+    </footer>
+</footer>
     <script src="{% static 'script/restoManager-script.js'%}"></script>
     <script src="{% static 'script/bootstrap/bootstrap.min.js'%}"></script>
 </body>

@@ -1,0 +1,162 @@
+{% extends 'index.html' %} {% block title %} Camarero {% endblock %} {% block content %} {% include 'global/header.html'%} {% include 'global/panel_nav.html'%}
+
+<div class="container pb-5 mt-5">
+  <div class="panel_insertar bg-dark rounded row mb-3">
+    <h1 id="titulo-seccion-superior" class="text-light">Camarero</h1>
+    <form method="post">
+      {% csrf_token %}
+      <div class="row">
+        <div class="col-lg">
+          <table
+            id="listado"
+            class="text-center table table-dark table-striped"
+          >
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Usuario</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for trabajador in trabajadores %}
+              {% if trabajador.is_staff %}
+              <tr class="text-white" id="fila-{{ trabajador.id }}">
+                <td id="campo-id-{{trabajador.id}}">{{trabajador.id}}</td>
+                <td
+                  id="campo-usuario-{{trabajador.id}}"
+                  class="{% if trabajador.is_superuser %} bg-success {% elif trabajador.is_staff %} bg-warning {% endif %}"
+                >
+                  {{ trabajador.username }}
+                </td>
+                <td id="campo-nombre-{{trabajador.id}}">
+                  {{trabajador.first_name}}
+                </td>
+                <td id="campo-apellido-{{trabajador.id}}">
+                  {{trabajador.last_name}}
+                </td>
+                <td id="campo-email-{{trabajador.id}}">{{trabajador.email}}</td>
+                <td>
+                  <button
+                    class="btn btn-warning btn-sm"
+                    type="submit"
+                    id="{{trabajador.id}}"
+                    name="add_camarero"
+                    value="{{ trabajador.id }}"`
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    title="Añadir este trabajador como camarero"
+                  >
+                    Añadir
+                  </button>
+                </td>
+              </tr>
+              {% endif %}
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="p-3">
+        <button
+          class="btn btn-primary"
+          name="crear"
+          id="btn-submit"
+          value="insertar_ubicacion"
+          type="submit"
+        >
+          Guardar Camarero
+        </button>
+        <button
+          class="btn btn-primary"
+          name="update"
+          id="btn_update_ubicacion"
+          type="submit"
+          style="display: none"
+        >
+          Actualizar ubicacion
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <div class="panel_listado bg-dark rounded row">
+    <h1 class="text-light m-3">Listado de camareros</h1>
+    {% if error or warning %}
+    <div class="container my-auto" id="error-msg">
+      <div class="alert alert-warning" role="alert">
+        <div
+          class="alert-dark rounded"
+          id="cuenta-atras"
+          style="
+            background-color: rgb(219, 152, 70);
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            float: right;
+          "
+        ></div>
+        <h4 class="alert-heading">¡Atención!</h4>
+        <p>{{ error }}</p>
+        <p>{{ warning }}</p>
+      </div>
+    </div>
+    {% endif %}
+    <div class="p-2">
+      <table id="listado" class="text-center table table-dark table-striped">
+        <tr>
+          <!-- <th>ID</th> -->
+          <th>ID</th>
+          <th>Usuario</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Email</th>
+          <th>Acciones</th>
+        </tr>
+        {% if camareros %} {% for item in camareros %}
+        <tr class="text-white" id="fila-{{ item.id }}">
+          <!-- <td id="campo-id-{{ item.id }}">{{ item.id}}</td> -->
+          <td id="campo-lugar-{{ item.id }}">{{ item.id }}</td>
+          <td
+          id="campo-usuario-{{item.user.id}}"
+          class="{% if item.user.is_superuser %} bg-success {% elif item.user.is_staff %} bg-warning {% endif %}"
+        >
+          {{ item.user.username }}
+        </td>
+        <td id="campo-nombre-{{item.user.id}}">
+          {{item.user.first_name}}
+        </td>
+        <td id="campo-apellido-{{item.user.id}}">
+          {{item.user.last_name}}
+        </td>
+        <td id="campo-email-{{item.user.id}}">{{item.user.email}}</td>
+
+          <form method="POST">
+            {% csrf_token %}
+            <td class="text-center">
+              <button
+                class="btn btn-danger m-1"
+                type="submit"
+                value="{{ item.id}}"
+                name="eliminar"
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                title="Se aconseja desactivar la ubicacion, en vez de borrarlo, permanentemente."
+              >
+                Eliminar
+              </button>
+            </td>
+          </form>
+        </tr>
+        {% endfor %} {% endif %}
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock content %}

@@ -118,19 +118,63 @@ function editarUbicacion(params) {
     btnUpdate.style.display = "block"
 }
 
+function addMesas() {
+    const mesaNueva = document.querySelectorAll("#mesa-nueva")
+    mesaNueva.forEach(element => {
+        element.classList.toggle("d-none");
+        element.classList.toggle("d-block");
+    });
+}
+
 function goHome() {
     window.location = '/'
 }
 
+function seleccionarMesa(id, numMesa, ubicacion) {
+    const mesa = document.querySelector("#mesa-seleccionada")
+    mesa.innerText = `#${numMesa}: ${ubicacion}`
+    mesa.insertAdjacentHTML('beforeend', `<input type="hidden" name="mesa" value="${id}">`);
+}
+
 const url = window.location.pathname
-if (url === '/config/platos/' ) {
+if (url == '/config/platos/' ) {
     columna = document.querySelectorAll('.col-num')
     newNum = parseInt(columna[columna.length - 1].textContent)
     inputNum = document.querySelector('#floatingNum')
     inputNum.value = 1+newNum
 }
 
+if (url != '/puestos/camarero/' ) {
+    let timer = setInterval(function(time) {
+        document.getElementById('error-msg').style.display = 'none';
+    }, 10000);
+}
 
-let timer = setInterval(function(time) {
-    document.getElementById('error-msg').style.display = 'none';
-}, 10000);
+document.addEventListener('DOMContentLoaded', function() {
+    const resizer = document.getElementById('resizer');
+    const panel = document.getElementById('resizable-panel');
+    console.log(`resizer: ${resizer}, panel: ${panel}`);
+    let isResizing = false;
+
+    resizer.addEventListener('touchstart', function(e) {
+        isResizing = true;
+        document.addEventListener('touchmove', onTouchMove);
+        document.addEventListener('touchend', onTouchEnd);
+    });
+
+    function onTouchMove(e) {
+        if (!isResizing) return;
+        let newHeight = panel.getBoundingClientRect().bottom - e.touches[0].clientY;
+        if (newHeight > 50) { // Minimum height to prevent it from being too small
+            panel.style.height = newHeight + 'px';
+        }
+    }
+
+    function onTouchEnd(e) {
+        isResizing = false;
+        document.removeEventListener('touchmove', onTouchMove);
+        document.removeEventListener('touchend', onTouchEnd);
+    }
+});
+
+

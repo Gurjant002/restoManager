@@ -1,4 +1,8 @@
-{% extends 'index.html' %} {% block title %} Ubicacion {% endblock %} {% block content %} {% include 'global/header.html'%} {% include 'global/panel_nav.html'%}
+{% extends 'index.html' %}
+{% block title %} Ubicacion {% endblock %}
+{% block content %}
+{% include 'global/header.html'%}
+{% include 'global/panel_nav.html'%}
 
 <div class="container pb-5 mt-5">
   <div class="panel_insertar bg-dark rounded row mb-3">
@@ -48,7 +52,7 @@
   </div>
 
   <div class="panel_listado bg-dark rounded row">
-    <h1 class="text-light">LISTADO</h1>
+    <h1 class="text-light m-3">Listado de ubicaciones</h1>
     {% if error or warning %}
     <div class="container my-auto" id="error-msg">
       <div class="alert alert-warning" role="alert">
@@ -109,8 +113,8 @@
           </form>
         </tr>
         {% endfor %}
+        {% endif %}
       </table>
-      {% endif %}
     </div>
   </div>
 </div>

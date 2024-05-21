@@ -1,10 +1,10 @@
 {% extends 'index.html' %}
-{% block title %} Trabajadores {% endblock %} 
+{% block title %} Trabajadores {% endblock title %} 
 {% block content %}
 {% include 'global/header.html' %}
 {% include 'global/panel_nav.html'%}
 
-<div class="container pb-5 mt-5">
+<div class="container pb-5 mb-5">
   <div class="panel_insertar bg-dark rounded row mb-3">
     <h1 id="titulo-seccion-superior" class="text-light m-3">
       Añadir nuevo trabajador
@@ -133,6 +133,15 @@
             </div>
           </div>
         </div>
+        <div class="col-sm-auto">
+          <div class="form-floating">
+              <select class="form-select" id="floatingEsTrabajadore" name="is_staff">
+                  <option value="0">No</option>
+                  <option value="1" selected>Si</option>
+              </select>
+              <label for="floatingEsTrabajadore" class="text-dark">Trabajador</label>
+          </div>
+      </div>
       </div>
       <div class="row m-3">
         <div class="col-sm">
@@ -152,7 +161,7 @@
   <!-- EN ESTE PANEL SE MOSTRARAN TODOS LOS PLATOS LISTADO QUE HAY. -->
   <div class="panel_listado bg-dark rounded row">
     <h1 class="text-light m-3">Listado de trabajadores</h1>
-    <div class="table-responsive">
+    <div class="p-2">
       <table id="listado" class="text-center table table-dark table-striped">
         <tr>
           <th>ID</th>
@@ -165,27 +174,29 @@
           <th>Utiima sesion</th>
           <th>Acciones</th>
         </tr>
-        {% if trabajadores %} {% for trabajador in trabajadores %}
+        {% if trabajadores %}
+        {% for trabajador in trabajadores %}
         <tr class="text-white" id="fila-{{ trabajador.id }}">
-            <td id="campo-id-{{trabajador.id}}">{{trabajador.id}}</td>
-            <td id="campo-usuario-{{trabajador.id}}" class="{% if trabajador.is_superuser %} bg-success {% elif trabajador.is_staff %} bg-warning {% endif %}">{{ trabajador.username }}</td>
-            <!-- <td id="campo-password-{{trabajador.id}}">{{trabajador.password}}</td> -->
-            <td id="campo-nombre-{{trabajador.id}}">{{trabajador.first_name}}</td>
-            <td id="campo-apellido-{{trabajador.id}}">{{trabajador.last_name}}</td>
-            <td id="campo-email-{{trabajador.id}}">{{trabajador.email}}</td>
-            <td id="campo-fecha-{{trabajador.id}}">{{trabajador.date_joined}}</td>
-            <td id="campo-ultima-{{trabajador.id}}">{{trabajador.last_login}}</td>
-            <td>
-              <button 
-                class="btn btn-warning btn-sm"
-                type="button"
-                id="editar|{{trabajador.id}}"
-                name="editar-trabajador"
-                onclick="editarTrabajador('{{trabajador.id}}')" disabled> Editar </button>
-            </td>
+          <td id="campo-id-{{trabajador.id}}">{{trabajador.id}}</td>
+          <td id="campo-usuario-{{trabajador.id}}" class="{% if trabajador.is_superuser %} bg-success {% elif trabajador.is_staff %} bg-warning {% endif %}">{{ trabajador.username }}</td>
+          <!-- <td id="campo-password-{{trabajador.id}}">{{trabajador.password}}</td> -->
+          <td id="campo-nombre-{{trabajador.id}}">{{trabajador.first_name}}</td>
+          <td id="campo-apellido-{{trabajador.id}}">{{trabajador.last_name}}</td>
+          <td id="campo-email-{{trabajador.id}}">{{trabajador.email}}</td>
+          <td id="campo-fecha-{{trabajador.id}}">{{trabajador.date_joined}}</td>
+          <td id="campo-ultima-{{trabajador.id}}">{{trabajador.last_login}}</td>
+          <td>
+            <button 
+            class="btn btn-warning btn-sm"
+            type="button"
+            id="editar|{{trabajador.id}}"
+            name="editar-trabajador"
+            onclick="editarTrabajador('{{trabajador.id}}')" disabled> Editar </button>
+          </td>
         </tr>
-        {% endfor %} {% else %}
+        {% endfor %}
       </table>
+        {% else %}
       <div class="alert alert-warning d-flex align-items-center" role="alert">
         <svg
           class="d-none"
@@ -193,7 +204,7 @@
           height="24"
           role="img"
           aria-label="Warning:"
-        >
+          >
           <use xlink:href="#exclamation-triangle-fill" />
         </svg>
         <div>
@@ -205,4 +216,4 @@
     </div>
   </div>
 </div>
-{% endblock %}
+{% endblock content %}

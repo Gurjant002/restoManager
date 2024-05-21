@@ -24,6 +24,7 @@ class TrabajadorController:
             email = peticion.get('email')
             password1 = peticion.get('password1')
             password2 = peticion.get('password2')
+            is_staff = peticion.get('is_staff')
             if password1 != password2:
                 return self.response(error="Las contraseñas no coinciden")
             if not re.search(regex, email):
@@ -31,12 +32,12 @@ class TrabajadorController:
             if self.get_trabajadores().filter(username=usuario).exists():
                 return self.response(error="El usuario ya existe")
 
-            self.crear_usuario(usuario, nombre, apellido, email, password1)
+            self.crear_usuario(usuario, nombre, apellido, email, password1, is_staff)
         
         return self.response()
 
-    def crear_usuario(self, usuario: str, nombre: str, apellido: str, email: str, password: str):
-        return self._trabajadorService.crear_trabajador(usuario, nombre, apellido, email, password)
+    def crear_usuario(self, usuario: str, nombre: str, apellido: str, email: str, password: str, is_staff: bool):
+        return self._trabajadorService.crear_trabajador(usuario, nombre, apellido, email, password, is_staff)
     
     def get_trabajadores(self):
         return self._trabajadorService.get_trabajadores()

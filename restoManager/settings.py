@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'channels',
     'restoManager_app',
     'cocina_app',
     'camarero_app',
@@ -73,6 +74,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'restoManager.wsgi.application'
+ASGI_APPLICATION = 'restoManager.asgi.application'
 
 
 # Database
