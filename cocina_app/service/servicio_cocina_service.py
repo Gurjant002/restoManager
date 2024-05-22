@@ -4,7 +4,7 @@ import logging
 import datetime
 
 logger = logging.getLogger(__name__)
-class ServicioCocinaController:
+class ServicioCocinaService:
     def get_servicio_cocina_by_id(self, id: int):
         try:
             servicio = Servicio_Cocina.objects.get(id=id)
@@ -13,7 +13,7 @@ class ServicioCocinaController:
                 return 'No se encontro ningun servicio de cocina'
             return servicio
         except Exception as e:
-            logger.error(f'Error en ServicioCocinaController.get_servicio_cocina_by_id: {e}')
+            logger.error(f'Error en ServicioCocinaService.get_servicio_cocina_by_id: {e}')
             return 'Ha ocurrido un error inesperado.'
 
     def get_servicio_by_camarero(self, camarero):
@@ -24,7 +24,7 @@ class ServicioCocinaController:
                 return 'No se encontro ningun servicio de cocina'
             return servicio
         except Exception as e:
-            logger.error(f'Error en ServicioCocinaController.get_servicio_by_camarero: {e}')
+            logger.error(f'Error en ServicioCocinaService.get_servicio_by_camarero: {e}')
             return 'Ha ocurrido un error inesperado.'
     
     def get_servicio_by_mesa(self, mesa):
@@ -35,7 +35,7 @@ class ServicioCocinaController:
                 return 'No se encontro ningun servicio de cocina'
             return servicio
         except Exception as e:
-            logger.error(f'Error en ServicioCocinaController.get_servicio_by_mesa: {e}')
+            logger.error(f'Error en ServicioCocinaService.get_servicio_by_mesa: {e}')
             return 'Ha ocurrido un error inesperado.'
     
     def get_servicio_by_hora(self, hora):
@@ -46,7 +46,7 @@ class ServicioCocinaController:
                 return 'No se encontro ningun servicio de cocina'
             return servicio
         except Exception as e:
-            logger.error(f'Error en ServicioCocinaController.get_servicio_by_hora: {e}')
+            logger.error(f'Error en ServicioCocinaService.get_servicio_by_hora: {e}')
             return 'Ha ocurrido un error inesperado.'
 
     def crear_servicio(
@@ -67,7 +67,7 @@ class ServicioCocinaController:
             logger.error(f'No se puedo crear el servicio de cocina porque ya existe')
             return f'No se puedo crear el servicio de cocina porque ya existe'
         except Exception as e:
-            logger.error(f'Error en ServicioCocinaController.crear_servicio: {e}')
+            logger.error(f'Error en ServicioCocinaService.crear_servicio: {e}')
             return 'Ha ocurrido un error inesperado.'
         
     def crear_actualizar_servicio(
@@ -90,5 +90,5 @@ class ServicioCocinaController:
             servicio.save()
             return 'Servicio de cocina actualizado'
         except Exception as e:
-            logger.error(f'Error en ServicioCocinaController.crear_actualizar_servicio: {e}')
+            logger.error(f'Error en ServicioCocinaService.crear_actualizar_servicio: {e}')
             return 'Ha ocurrido un error inesperado.'

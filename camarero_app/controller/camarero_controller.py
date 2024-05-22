@@ -6,7 +6,7 @@ from restoManager_app.service.relacion.relacion_plato_categoria_service import P
 from restoManager_app.service.bebida.bebida_service import BebidaService
 from .camarero_mesa_controller import CamareroMesaController
 from camarero_app.models import Camarero_Mesa
-from cocina_app.service.servicio_cocina_service import ServicioCocinaController
+from cocina_app.service.servicio_cocina_service import ServicioCocinaService
 import logging
 
 logger = logging.getLogger(__name__)
@@ -17,6 +17,7 @@ class CamareroController:
         self.req = request
         self.camareroService = CamareroService()
         self.camareroMesaController = CamareroMesaController()
+        self.servicioCocinaService = ServicioCocinaService()
         self.ubicacionController = UbicacionController()
 
     def peticiones(self) -> dict:
@@ -31,7 +32,7 @@ class CamareroController:
             elif 'mesa-seleccionada' in peticion:
                 id_mesa = int(peticion.get('mesa-seleccionada'))
                 mesa = self.camareroMesaController.get_relacion_by_id(id_mesa)
-                nota = ServicioCocinaController.crear_servicio(mesa, )
+                nota = self.servicioCocinaService.crear_servicio(mesa_camarero=mesa)
                 return self.respuestas(nota=nota)
                 
 

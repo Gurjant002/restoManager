@@ -16,7 +16,7 @@
                     <button type="button" class="position-fixed btn btn-outline-light bg-dark" data-bs-toggle="collapse" id="mesa" data-bs-target="#mesas-collapse" aria-expanded="false" aria-controls="mesas-collapse">Mesas</button>
                 </div>
                 <div class="w-75">
-                    <h3 class="text-center text-dark bg-white mb-0 mt-2 rounded" id="mesa-seleccionada">No se ha seleccionado una mesa aun</h3>
+                    <h3 class="text-center text-dark bg-white mb-0 mt-2 rounded" id="mesa-seleccionada">{% if nota.camarero_mesa.numero_mesa %} {{ nota.camarero_mesa.numero_mesa }} {% else %} No se ha seleccionado una mesa aun {% endif %} </h3>
                 </div>
             </div>
         </form>
