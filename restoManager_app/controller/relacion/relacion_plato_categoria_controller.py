@@ -104,18 +104,9 @@ class RelacionController:
 
     def get_lista_relacion(self) -> dict:
         lista = self.__relacion_service.get_lista_relacion_plato_categoria()
-        lista_platos = []
-        lista_categoria = []
-
-        if lista != None:
-            for elements in lista:
-                lista_platos.append(elements.plato)
-                lista_categoria.append(elements.categoria)
-        
         diccionario = {
             'lista': lista,
-            'lista_platos': lista_platos,
-            'lista_categoria': lista_categoria
+            # 'lista_platos': lista,
         }
         return diccionario
 

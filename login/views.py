@@ -8,7 +8,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 # Create your views here.
-# @sync_to_async
+@sync_to_async
 def login_view(request):
     if request.method == 'POST':
         username = request.POST.get('usuario')

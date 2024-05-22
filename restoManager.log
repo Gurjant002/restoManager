@@ -99,3 +99,18 @@
 [20/May/2024 19:48:05] INFO [restoManager_app.controller.bebida.bebida_controller:36] Nombre bebida: Estrella Galicia 5, Alcohol: 1, Estado: 1, Descripcion: Cerveza
 [20/May/2024 19:48:05] INFO [restoManager_app.controller.bebida.bebida_controller:41] Nombre Categoria: Estrella Galicia 5, Descripcion: Cerveza, Contiene Alcohol: 1, Estado: 1
 [21/May/2024 22:02:41] INFO [camarero_app.controller.camarero_controller:33] mesa seleccionada: <QuerySet [<Camarero_Mesa: camarero: gurjant ubicacion: Lugar: Salon Planta 0 numero_mesa: 2>]>
+[22/May/2024 11:18:52] WARNING [restoManager_app.service.trabajadores.camarero_service:14] No se encontraron camareros
+[22/May/2024 11:18:58] WARNING [restoManager_app.service.trabajadores.camarero_service:14] No se encontraron camareros
+[22/May/2024 11:19:09] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[22/May/2024 11:19:09] ERROR [restoManager_app.service.trabajadores.camarero_service:25] No se encontro el camarero 'gurjant'
+[22/May/2024 11:19:29] WARNING [restoManager_app.service.trabajadores.camarero_service:14] No se encontraron camareros
+[22/May/2024 11:19:49] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[22/May/2024 11:20:30] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[22/May/2024 11:31:04] INFO [restoManager_app.controller.categoria.categoria_controller:46] Tapa
+[22/May/2024 11:31:04] INFO [restoManager_app.views:37] New Relation Created.
+[22/May/2024 11:31:23] INFO [restoManager_app.views:37] New Relation Created.
+[22/May/2024 11:32:00] INFO [restoManager_app.views:37] New Relation Created.
+[22/May/2024 11:33:33] INFO [restoManager_app.controller.categoria.categoria_controller:46] Pizza
+[22/May/2024 11:33:33] INFO [restoManager_app.views:37] New Relation Created.
+[22/May/2024 11:33:58] INFO [restoManager_app.controller.categoria.categoria_controller:46] Tagliatela
+[22/May/2024 11:33:58] INFO [restoManager_app.views:37] New Relation Created.

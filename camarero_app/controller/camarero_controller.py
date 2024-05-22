@@ -6,7 +6,7 @@ from restoManager_app.service.relacion.relacion_plato_categoria_service import P
 from restoManager_app.service.bebida.bebida_service import BebidaService
 from .camarero_mesa_controller import CamareroMesaController
 from camarero_app.models import Camarero_Mesa
-from cocina_app.
+# from cocina_app.
 import logging
 
 logger = logging.getLogger(__name__)

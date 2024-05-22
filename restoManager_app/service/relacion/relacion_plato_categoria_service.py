@@ -10,13 +10,10 @@ class PlatoCategoriaService:
     def get_lista_relacion_plato_categoria(self) -> Plato_Categoria | None:
         try:
             relacion = Plato_Categoria.objects.all()
+            return relacion
         except Exception as e:
             log.error('Algo salio mal al obtener las relaciones', exc_info=True)
             return 'Algo salio mal al obtener las relaciones'
-        if relacion.count() == 0:
-            logging.warning('La lista que estas intetando, acceder esta vacia.')
-            return 'La lista que estas intetando, acceder esta vacia.'
-        return relacion
     
     def get_relacion_by_plato(self, plato: Plato) -> Plato_Categoria:
         relacion=Plato_Categoria.filter(plato=plato).first

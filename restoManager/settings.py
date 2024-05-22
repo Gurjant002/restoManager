@@ -25,8 +25,8 @@ SECRET_KEY = 'django-insecure-!e0h&6kud$@4++fg258hr1+zderq5l1^24z)@ik_z8(dmseq0%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["192.168.1.14", "localhost", "127.0.0.1"]	
-
+# ALLOWED_HOSTS = ["192.168.1.14", "localhost", "127.0.0.1"]
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -56,11 +56,14 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'restoManager.urls'
+import os
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['C:/Users/gurja/OneDrive/workstation/restoManager/templates'],
+        'DIRS': [os.path.join(BASE_DIR, 'restoManager/templates'),'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
