@@ -15,7 +15,7 @@
                 {% csrf_token %}
             {% for plato in platos %}
             <tr>
-                <td><button type="button" onclick="seleccionarElemento('{{ plato.numero_menu }}','{{ plato.plato }}', '{{ plato.categoria }}')" class="btn btn-outline-light me-2">{{ plato.numero_menu }}</button></td>
+                <td><button type="submit" name='seleccionar-plato' value='{{plato.id}}'  class="btn btn-outline-light me-2">{{ plato.numero_menu }}</button></td>
                 <td>{{ plato.plato.nombre }}</td>
                 <td>{{ plato.categoria.nombre }}</td>
             </tr>

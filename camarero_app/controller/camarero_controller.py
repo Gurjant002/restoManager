@@ -6,7 +6,7 @@ from restoManager_app.service.relacion.relacion_plato_categoria_service import P
 from restoManager_app.service.bebida.bebida_service import BebidaService
 from .camarero_mesa_controller import CamareroMesaController
 from camarero_app.models import Camarero_Mesa
-# from cocina_app.
+from cocina_app.service.servicio_cocina_service import ServicioCocinaController
 import logging
 
 logger = logging.getLogger(__name__)
@@ -31,6 +31,9 @@ class CamareroController:
             elif 'mesa-seleccionada' in peticion:
                 id_mesa = int(peticion.get('mesa-seleccionada'))
                 mesa = self.camareroMesaController.get_relacion_by_id(id_mesa)
+                nota = ServicioCocinaController.crear_servicio(mesa, )
+                return self.respuestas(nota=nota)
+                
 
         
         except MultiValueDictKeyError:
@@ -47,9 +50,15 @@ class CamareroController:
     def get_mesas(self):
         return self.camareroMesaController.get_relaciones()
 
+    def chech_isinstance(self, element_to_check):
+        error = ''
+        if isinstance(element_to_check, str):
+            error = element_to_check
+            element_to_check = False
+        
+        return element_to_check, error
 
-
-    def respuestas(self, error: str = None, warning: str = None) -> dict:
+    def respuestas(self, error: str = None, warning: str = None, nota = None) -> dict:
         usuario = self.req.user
         mesas = self.get_mesas()
         ubicaciones = UbicacionController().get_ubicaciones()
@@ -57,16 +66,10 @@ class CamareroController:
         platos = PlatoCategoriaService().get_lista_relacion_plato_categoria()
         bebidas = BebidaService().get_bebidas()
 
-        if isinstance(camarero, str):
-            error = 'Usted no esta asignado como camarero.'
-            camarero = False
-        else:
-            camarero = True
-
-        if isinstance(mesas, str):
-            warning = mesas
-            mesas = []
-
+        camarero, error = self.chech_isinstance(camarero)
+        mesas, error = self.chech_isinstance(mesas)
+        nota, error = self.chech_isinstance(nota)
+        
         diccionario = {
             'error': error,
             'warning': warning,
@@ -75,5 +78,6 @@ class CamareroController:
             'ubicaciones': ubicaciones,
             'platos': platos,
             'bebidas': bebidas,
+            'nota': nota,
         }
         return diccionario

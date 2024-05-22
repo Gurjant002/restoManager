@@ -19,7 +19,10 @@ class CamareroMesaService:
 
     def get_relacion_by_id(self, id_relacion: int):
         try:
-            relacion = Camarero_Mesa.objects.filter(id=id_relacion)
+            relacion = Camarero_Mesa.objects.filter(id=id_relacion).first()
+            if not relacion:
+                logger.error(f"No se encontro la relacion '{id_relacion}'")
+                return f"No se encontro la relacion '{id_relacion}'"
             return relacion
         except Camarero_Mesa.DoesNotExist:
             logger.error(f"No se encontro la relacion '{id_relacion}'")

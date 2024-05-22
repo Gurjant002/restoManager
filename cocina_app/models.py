@@ -8,12 +8,13 @@
 from django.db import models
 from restoManager_app.models import Camarero, Ubicacion, Plato, Bebida
 from camarero_app.models import Camarero_Mesa
+import datetime
 
 class Servicio_Cocina(models.Model):
-    plato = models.ForeignKey(Plato, on_delete=models.DO_NOTHING)
-    servido = models.BooleanField(default=False)
+    plato = models.ForeignKey(Plato, null=True, default=None, on_delete=models.DO_NOTHING)
+    servido = models.BooleanField(null=True, default=None)
     camarero_mesa = models.ForeignKey(Camarero_Mesa, on_delete=models.DO_NOTHING)
-    hora_dia = models.DateTimeField()
+    hora_dia = models.DateTimeField(null=False, default=datetime.datetime.now())
 
     def __str__(self):
         return f'plato {self.plato} servido: {self.servido} mesa: {self.camarero_mesa} hora: {self.hora_dia}'

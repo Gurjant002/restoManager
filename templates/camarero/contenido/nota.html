@@ -1,11 +1,11 @@
 <div class="row bg-light text-dark my-3 rounded">
     <div class="col">
-        <h2>Mesa</h2>
+        <h2>{% if notar %} Num#{{ notar.camarero_mesa.numero_mesa }} {% else %} Seleccione una mesa {% endif %}</h2>
     </div>
 </div>
 <div class="row bg-light text-dark my-3 rounded">
     <div class="col">
-        <h2>Plato</h2>
+        <h2>{% if notar %} Num#{{ notar.camarero_mesa.numero_mesa }} {% else %} Seleccione una mesa {% endif %}</h2>
     </div>
 </div>
 <div class="row bg-light text-dark mt-3 rounded">
