@@ -130,12 +130,6 @@ function goHome() {
     window.location = '/'
 }
 
-function seleccionarMesa(id, numMesa, ubicacion) {
-    const mesa = document.querySelector("#mesa-seleccionada")
-    mesa.innerText = `#${numMesa}: ${ubicacion}`
-    mesa.insertAdjacentHTML('beforeend', `<input type="hidden" name="mesa" value="${id}">`);
-}
-
 const url = window.location.pathname
 if (url == '/config/platos/' ) {
     columna = document.querySelectorAll('.col-num')
@@ -153,20 +147,29 @@ if (url != '/puestos/camarero/' ) {
 document.addEventListener('DOMContentLoaded', function() {
     const resizer = document.getElementById('resizer');
     const panel = document.getElementById('resizable-panel');
-    console.log(`resizer: ${resizer}, panel: ${panel}`);
     let isResizing = false;
+    let initialHeight = 0;
+    let startY = 0;
+    const resizerHeight = 7.5;
+    resizer.style.height = resizerHeight+'px';
 
     resizer.addEventListener('touchstart', function(e) {
         isResizing = true;
+        initialHeight = panel.getBoundingClientRect().height;
+        startY = e.touches[0].clientY;
+        resizer.style.height = resizerHeight+'px';
         document.addEventListener('touchmove', onTouchMove);
         document.addEventListener('touchend', onTouchEnd);
     });
 
     function onTouchMove(e) {
         if (!isResizing) return;
-        let newHeight = panel.getBoundingClientRect().bottom - e.touches[0].clientY;
-        if (newHeight > 50) { // Minimum height to prevent it from being too small
+        let currentY = e.touches[0].clientY;
+        let newHeight = initialHeight + (startY - currentY); // Cambiar la lógica
+        if (newHeight > 50 && newHeight < 625) {
+            console.log(newHeight);
             panel.style.height = newHeight + 'px';
+            resizer.style.height = resizerHeight+'px';
         }
     }
 
@@ -174,7 +177,6 @@ document.addEventListener('DOMContentLoaded', function() {
         isResizing = false;
         document.removeEventListener('touchmove', onTouchMove);
         document.removeEventListener('touchend', onTouchEnd);
+        resizer.style.height = resizerHeight+'px';
     }
 });
-
-

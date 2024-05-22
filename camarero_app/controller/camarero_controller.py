@@ -6,6 +6,7 @@ from restoManager_app.service.relacion.relacion_plato_categoria_service import P
 from restoManager_app.service.bebida.bebida_service import BebidaService
 from .camarero_mesa_controller import CamareroMesaController
 from camarero_app.models import Camarero_Mesa
+from cocina_app.
 import logging
 
 logger = logging.getLogger(__name__)
@@ -27,6 +28,11 @@ class CamareroController:
                 lugar = int(peticion.get('lugar'))
                 camarero = int(peticion.get('camarero'))
                 errores = self.crear_mesa(numero_mesa, camarero, lugar)
+            elif 'mesa-seleccionada' in peticion:
+                id_mesa = int(peticion.get('mesa-seleccionada'))
+                mesa = self.camareroMesaController.get_relacion_by_id(id_mesa)
+
+        
         except MultiValueDictKeyError:
             logger.error(f'Error al obtener la peticion en CamareroController.peticiones: {peticion}')
             errores = f'Error al obtener la peticion en CamareroController.peticiones: {peticion}'

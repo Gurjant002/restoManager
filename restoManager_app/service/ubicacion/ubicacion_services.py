@@ -8,6 +8,7 @@ class UbicacionService:
         try:
             ubicacion = Ubicacion.objects.all()
             if not ubicacion:
+                logger.warning("No se encontro ninguna ubicacion")
                 return "No se encontro ninguna ubicacion"
             
             return ubicacion

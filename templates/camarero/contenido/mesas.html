@@ -27,14 +27,14 @@
                 <tr class="d-none d-block" id="mesa-nueva">
                     <td colspan="3"><button type="submit" class="btn btn-primary w-100" name="add-mesa">Submit</button></td>
                 </tr>
+                {% for mesa in mesas %}
+                <tr>
+                    <td><button type="submit" name="mesa-seleccionada" value="{{ mesa.id }}" class="btn btn-outline-light me-2">{{ mesa.numero_mesa }}</button></td>
+                    <td>{{ mesa.ubicacion.lugar }}</td>
+                    <td>{{ mesa.camarero.user.first_name }}</td>
+                </tr>
+                {% endfor %}
             </form>
-            {% for mesa in mesas %}
-            <tr>
-                <td><button type="button" onclick="seleccionarMesa('{{ mesa.id }}','{{ mesa.numero_mesa }}', '{{ mesa.ubicacion.lugar }}')" class="btn btn-outline-light me-2">{{ mesa.numero_mesa }}</button></td>
-                <td>{{ mesa.ubicacion.lugar }}</td>
-                <td>{{ mesa.camarero.user.first_name }}</td>
-            </tr>
-            {% endfor %}
         </tbody>
     </table>
 </div>

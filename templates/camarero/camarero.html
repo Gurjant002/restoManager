@@ -6,63 +6,71 @@
 {% endblock title %}
 {% block content %}
 {% if es_camarero %}
-<div class="bg-dark p-2 border-bottom border-secondary border-3">
-    <form method="post">
-        {% csrf_token %}
-        <button type="button" class="position-absolute btn btn-outline-light mt-2" data-bs-toggle="collapse" data-bs-target="#mesas-collapse" aria-expanded="false" aria-controls="mesas-collapse">Mesas</button>
-        <div class="d-flex justify-content-end align-items-center">
-            <h3 class="text-center w-75 text-dark bg-white mb-0 mt-2 rounded" id="mesa-seleccionada">No se ha seleccionado una mesa aun</h3>
+<div class="container-fluid w-100 p-0 m-0 overflow-auto contenedor-camarero">
+
+    <div class="bg-dark p-2 border-bottom border-secondary border-3">
+        <form method="post">
+            {% csrf_token %}
+            <div class="d-flex justify-content-between">
+                <div>
+                    <button type="button" class="position-fixed btn btn-outline-light bg-dark" data-bs-toggle="collapse" id="mesa" data-bs-target="#mesas-collapse" aria-expanded="false" aria-controls="mesas-collapse">Mesas</button>
+                </div>
+                <div class="w-75">
+                    <h3 class="text-center text-dark bg-white mb-0 mt-2 rounded" id="mesa-seleccionada">No se ha seleccionado una mesa aun</h3>
+                </div>
+            </div>
+        </form>
+        <div class="collapse " id="mesas-collapse">
+            {% include 'camarero/contenido/mesas.html' %}
         </div>
-    </form>
-    <div class="collapse " id="mesas-collapse">
-        {% include 'camarero/contenido/mesas.html' %}
     </div>
-</div>
-<div class="bg-dark p-2 border-bottom border-secondary border-3">
-    <button type="button" class="position-absolute btn btn-outline-light" data-bs-toggle="collapse" data-bs-target="#platos-collapse" aria-expanded="false" aria-controls="platos-collapse">Platos</button>
-    <div class="d-flex justify-content-end">
-        <div class="overflow-auto bg-interior rounded ms-auto w-50 h-100">
-            <div class="btn-group p-1" role="group" aria-label="Horizontal button group">
-                {% include 'camarero/contenido/filtro_categorias.html' %}
+    <div class="bg-dark p-2 border-bottom border-secondary border-3">
+        <button type="button" class="position-fixed btn btn-outline-light bg-dark" data-bs-toggle="collapse" id="plato" data-bs-target="#platos-collapse" aria-expanded="false" aria-controls="platos-collapse">Platos</button>
+        <div class="d-flex justify-content-end">
+            <div class="overflow-auto bg-interior rounded ms-auto w-50 h-100">
+                <div class="btn-group p-1" role="group" aria-label="Horizontal button group">
+                    {% include 'camarero/contenido/filtro_categorias.html' %}
+                </div>
+            </div>
+        </div>
+        <div class="collapse " id="platos-collapse">
+            {% include 'camarero/contenido/platos.html' %}
+        </div>
+    </div>
+    <div class="bg-dark p-2 border-bottom border-secondary border-3">
+        <button type="button" class="position-fixed btn btn-outline-light bg-dark" data-bs-toggle="collapse" id="bebida" data-bs-target="#bebidas-collapse" aria-expanded="false" aria-controls="bebidas-collapse">Bebidas</button>
+        <div class="d-flex justify-content-end align-items-center">
+            <div class="btn-group" role="group" aria-label="Horizontal button group">
+                <input type="radio" class="btn-check" name="estado" id="btn-in" autocomplete="off" value="in">
+                <label class="btn btn-outline-primary" for="btn-in">In</label>
+                
+                <input type="radio" class="btn-check" name="estado" id="btn-out" autocomplete="off" value="out">
+                <label class="btn btn-outline-primary" for="btn-out">Out</label>
+                
+                <input type="radio" class="btn-check" name="estado" id="btn-all" autocomplete="off" value="all" checked>
+                <label class="btn btn-outline-primary" for="btn-all">All</label>
+            </div>
+        </div>
+        <div class="collapse" id="bebidas-collapse">
+            {% include 'camarero/contenido/bebidas.html' %}
+        </div>
+    </div>
+    <div class="container fixed-bottom mt-5 bg-dark text-white bg-warning">
+        <div class="panel overflow-auto" id="resizable-panel">
+            <div class="resizer position-sticky max text-center rounded my-1 top-0" style="background-color: gray;" id="resizer">
+            </div>
+            <div class="container-fluid">
+                {% include 'camarero/contenido/nota.html' %}
             </div>
         </div>
     </div>
-    <div class="collapse " id="platos-collapse">
-        {% include 'camarero/contenido/platos.html' %}
-    </div>
-</div>
-<div class="bg-dark p-2 border-bottom border-secondary border-3">
-    <button type="button" class="position-absolute btn btn-outline-light" data-bs-toggle="collapse" data-bs-target="#bebidas-collapse" aria-expanded="false" aria-controls="bebidas-collapse">Bebidas</button>
-    <div class="d-flex justify-content-end align-items-center">
-        <div class="btn-group" role="group" aria-label="Horizontal button group">
-            <input type="radio" class="btn-check" name="estado" id="btn-in" autocomplete="off" value="in">
-            <label class="btn btn-outline-primary" for="btn-in">In</label>
-
-            <input type="radio" class="btn-check" name="estado" id="btn-out" autocomplete="off" value="out">
-            <label class="btn btn-outline-primary" for="btn-out">Out</label>
-
-            <input type="radio" class="btn-check" name="estado" id="btn-all" autocomplete="off" value="all" checked>
-            <label class="btn btn-outline-primary" for="btn-all">All</label>
-        </div>
-    </div>
-    <div class="collapse" id="bebidas-collapse">
-        {% include 'camarero/contenido/bebidas.html' %}
-    </div>
-</div>
-
-<div class="container mt-5 bg-dark text-white">
-    <div class="panel" id="resizable-panel">
-        <div class="resizer" id="resizer">
-            <h1>Hola</h1>
-        </div>
-    </div>
-</div>
-
-{% else %}
+    
+    {% else %}
     <div class="d-flex justify-content-center align-items-center" style="height: 100px;">
         <div class="alert alert-danger" role="alert">
             {{ error }}
         </div>
     </div>
-{% endif %}
+    {% endif %}
+</div>
 {% endblock content %}

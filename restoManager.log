@@ -98,3 +98,4 @@
 [20/May/2024 19:47:44] INFO [restoManager_app.controller.bebida.bebida_controller:41] Nombre Categoria: Estrella Galicia 3, Descripcion: Cerveza, Contiene Alcohol: 1, Estado: 1
 [20/May/2024 19:48:05] INFO [restoManager_app.controller.bebida.bebida_controller:36] Nombre bebida: Estrella Galicia 5, Alcohol: 1, Estado: 1, Descripcion: Cerveza
 [20/May/2024 19:48:05] INFO [restoManager_app.controller.bebida.bebida_controller:41] Nombre Categoria: Estrella Galicia 5, Descripcion: Cerveza, Contiene Alcohol: 1, Estado: 1
+[21/May/2024 22:02:41] INFO [camarero_app.controller.camarero_controller:33] mesa seleccionada: <QuerySet [<Camarero_Mesa: camarero: gurjant ubicacion: Lugar: Salon Planta 0 numero_mesa: 2>]>
