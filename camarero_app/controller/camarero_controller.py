@@ -31,14 +31,10 @@ class CamareroController:
                 lugar = int(peticion.get('lugar'))
                 camarero = int(peticion.get('camarero'))
                 errores = self.crear_mesa(numero_mesa, camarero, lugar)
-
-            elif 'mesa-seleccionada' in peticion:
-                id_mesa = int(peticion.get('mesa-seleccionada'))
-                mesa = self.camareroMesaController.get_relacion_by_id(id_mesa)
-                nota = self.servicioCocinaService.crear_servicio(mesa_camarero=mesa)
-                return self.respuestas(nota=nota)
-                
-
+            elif 'borrar-mesa' in peticion:
+                print(peticion)
+            elif 'solicitar-cocina' in peticion:
+                print(peticion)
         
         except MultiValueDictKeyError:
             logger.error(f'Error al obtener la peticion en CamareroController.peticiones: {peticion}')

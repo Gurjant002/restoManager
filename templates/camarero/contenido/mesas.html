@@ -44,7 +44,16 @@
                         {{ mesa.ubicacion.lugar }}
                     </td>
                     <td>
-                        {{ mesa.camarero.user.first_name }}
+                        <div class="d-flex justify-content-between align-align-items-center">
+                            {{ mesa.camarero.user.first_name }}
+                            <form method="post" style="display: inline;">
+                                {% csrf_token %}
+                                <button type="submit" name="borrar-mesa" value="{{ mesa.id }}" class="btn btn-danger btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Borrar Mesa">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </form>
+
+                        </div>
                     </td>
                 </tr>
                 {% endfor %}

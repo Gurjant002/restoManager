@@ -1,6 +1,8 @@
 from cocina_app.service.servicio_cocina_service import ServicioCocinaService
 import logging
-import datetime
+from datetime import datetime, timezone
+
+utc_dt = datetime.now(timezone.utc)
 
 logger = logging.getLogger(__name__)
 class ServicioCocinaController:
@@ -14,7 +16,7 @@ class ServicioCocinaController:
       
   def get_servicio_by_hora(self, hora: datetime):
     return ServicioCocinaService.get_servicio_by_hora(hora)
-  def crear_servicio(self, mesa, camarero, plato, servido: bool = None , hora: datetime = datetime.datetime.now()):
+  def crear_servicio(self, mesa, camarero, plato, servido: bool = None , hora: datetime = utc_dt):
     return ServicioCocinaService.crear_servicio(mesa, camarero, plato, servido, hora)
   
   def crear_actualizar_servicio(
@@ -23,6 +25,6 @@ class ServicioCocinaController:
     mesa_camarero,
     plato,
     servido: bool = None ,
-    date: datetime = datetime.datetime.now()
+    date: datetime = utc_dt
     ):
     return ServicioCocinaService.crear_actualizar_servicio(id, plato, servido, mesa_camarero, date)

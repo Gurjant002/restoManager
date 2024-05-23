@@ -10,10 +10,19 @@
         <tbody>
             {% for bebida in bebidas %}
             <tr>
-                <td><button type="button" onclick="seleccionarElemento('{{ bebida.nombre }}','{{ bebida.bebida }}', '{{ bebida.categoria }}')" class="btn btn-outline-light me-2">{{ bebida.id }}</button></td>
+                <td>
+                    <button 
+                        type="button"
+                        onClick="seleccionarProducto('bebida-{{ bebida.id }}')"
+                        class="btn btn-outline-light me-2">
+                        {{ bebida.id }}
+                    </button>
+                </td>
                 <td class="overflow-hidden">
                     <p id="campo-alcohol-{{ item.id }}"
-                        class="p-2 w-auto text-center rounded mb-2 {% if bebida.contiene_alcohol %}bg-warning text-dark{% else %}bg-success text-white{% endif %}">{{ bebida.nombre }}</p>
+                        class="p-2 w-auto text-center rounded mb-2 {% if bebida.contiene_alcohol %}bg-warning text-dark{% else %}bg-success text-white{% endif %}">
+                        {{ bebida.nombre }}
+                    </p>
                 </td>
                 <td class="overflow-hidden"><p class="overflow-hidden">{{ bebida.descripcion }}</p></td>
             </tr>

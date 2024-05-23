@@ -18,7 +18,7 @@
                         type="button"
                         name='seleccionar-plato'
                         value='{{plato.id}}'
-                        onclick="selectPlato('{{plato.id}}', '{{plato.numero_menu}}', '{{plato.plato.nombre}}', '{{plato.categoria.nombre}}')"
+                        onClick="seleccionarProducto('plato-{{ plato.id }}')"
                         class="btn btn-outline-light me-2">
                         {{ plato.numero_menu }}
                     </button>

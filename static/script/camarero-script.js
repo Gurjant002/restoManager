@@ -1,4 +1,3 @@
-
 function addMesas() {
     const mesaNueva = document.querySelectorAll("#mesa-nueva")
     mesaNueva.forEach(element => {
@@ -51,12 +50,19 @@ function selectMesa(id, numeroMesa, lugar, camarero) {
         element.tagName = 'mesa-seleccionada'
     });
 }
-
+/* 
 function selectPlato(id, numPlato, nombre, categoria) {
     const platoSeleccionado = document.querySelector("#plato-seleccionado")
     platoSeleccionado.innerText = `#${numPlato}: ${nombre}, ${categoria}`
     platoSeleccionado.value = id
     platoSeleccionado.tagName = 'plato-seleccionado'
+    
+} */
+
+function seleccionarProducto(producto) {
+    const bebida = document.querySelector(`#${producto}`)
+    bebida.classList.toggle("d-none");
+    bebida.classList.toggle("d-block");
     
 }
 
@@ -66,3 +72,32 @@ function filterPlato(categoria) {
         console.log(element.id);
     });
 }
+
+function cantidad(id, section, op) {
+    const contador = document.querySelector(`#cantidad-${section}-${id}`)
+    if (op === 'add') {
+        contador.value = parseInt(contador.value) + 1
+    }else {
+        console.log(parseInt(contador.value));
+        if (parseInt(contador.value) > 0) {
+            contador.value = parseInt(contador.value) - 1
+        }
+    }
+    
+}
+
+/* function postSolicitud() {
+    fetch("http://127.0.0.1:8000/puestos/camarero/", {
+        method: "POST",
+        body: JSON.stringify({
+            csrfmiddlewaretoken: document.querySelector("#csrf").value,
+            userId: 1,
+            title: "Fix my bugs",
+            completed: false
+        }),
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        }
+    });
+
+} */
