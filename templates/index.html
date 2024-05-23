@@ -16,11 +16,12 @@
 </head>
 
 <body>
-    <section style="margin-bottom: 100px;">
+    
+    <div class="h-100">
         {% block content %}
         {% endblock content %}
-    </section>
-    <footer class="mt-5 bg-dark text-center text-white bottom-0">
+    </div>
+    <footer class="container fixed-bottom mt-5 bg-dark text-white bg-warning m-0 w-auto">
         {% include 'global/footer.html' %}
     </footer>
 </footer>
