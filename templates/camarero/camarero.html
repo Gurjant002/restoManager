@@ -9,24 +9,17 @@
 <div class="container-fluid w-100 p-0 m-0 overflow-auto contenedor-camarero">
 
     <div class="bg-dark p-2 border-bottom border-secondary border-3">
-        <form method="post">
-            {% csrf_token %}
-            <div class="d-flex justify-content-between">
-                <div>
-                    <button type="button" class="position-fixed btn btn-outline-light bg-dark" data-bs-toggle="collapse" id="mesa" data-bs-target="#mesas-collapse" aria-expanded="false" aria-controls="mesas-collapse">Mesas</button>
-                </div>
-                <div class="w-75">
-                    <h3 class="text-center text-dark bg-white mb-0 mt-2 rounded" id="mesa-seleccionada">{% if nota.camarero_mesa.numero_mesa %} {{ nota.camarero_mesa.numero_mesa }} {% else %} No se ha seleccionado una mesa aun {% endif %} </h3>
-                </div>
-            </div>
-        </form>
+        <div class="d-flex justify-content-between">
+            <button type="button" class="position-relative btn btn-outline-light bg-dark" data-bs-toggle="collapse" id="mesa" data-bs-target="#mesas-collapse" aria-expanded="false" aria-controls="mesas-collapse">Mesas</button>
+            <h3 class="text-dark bg-white mb-0 mt-2 pl-2 rounded w-75" id="mesa-seleccionada">{% if nota.camarero_mesa.numero_mesa %}#{{ nota.camarero_mesa.numero_mesa }}: {{ nota.camarero_mesa.camarero.user.first_name }} {% else %} No se ha seleccionado una mesa aun {% endif %} </h3>
+        </div>
         <div class="collapse " id="mesas-collapse">
             {% include 'camarero/contenido/mesas.html' %}
         </div>
     </div>
     <div class="bg-dark p-2 border-bottom border-secondary border-3">
-        <button type="button" class="position-fixed btn btn-outline-light bg-dark" data-bs-toggle="collapse" id="plato" data-bs-target="#platos-collapse" aria-expanded="false" aria-controls="platos-collapse">Platos</button>
         <div class="d-flex justify-content-end">
+            <button type="button" class="position-relative btn btn-outline-light bg-dark" data-bs-toggle="collapse" id="plato" data-bs-target="#platos-collapse" aria-expanded="false" aria-controls="platos-collapse">Platos</button>
             <div class="overflow-auto bg-interior rounded ms-auto w-50 h-100">
                 <div class="btn-group p-1" role="group" aria-label="Horizontal button group">
                     {% include 'camarero/contenido/filtro_categorias.html' %}
@@ -38,9 +31,9 @@
         </div>
     </div>
     <div class="bg-dark p-2 border-bottom border-secondary border-3">
-        <button type="button" class="position-fixed btn btn-outline-light bg-dark" data-bs-toggle="collapse" id="bebida" data-bs-target="#bebidas-collapse" aria-expanded="false" aria-controls="bebidas-collapse">Bebidas</button>
-        <div class="d-flex justify-content-end align-items-center">
-            <div class="btn-group" role="group" aria-label="Horizontal button group">
+        <div class="d-flex justify-content-between">
+            <button type="button" class="position-relative btn btn-outline-light bg-dark" data-bs-toggle="collapse" id="bebida" data-bs-target="#bebidas-collapse" aria-expanded="false" aria-controls="bebidas-collapse">Bebidas</button>
+            <!-- <div class="btn-group" role="group" aria-label="Horizontal button group">
                 <input type="radio" class="btn-check" name="estado" id="btn-in" autocomplete="off" value="in">
                 <label class="btn btn-outline-primary" for="btn-in">In</label>
                 
@@ -49,7 +42,7 @@
                 
                 <input type="radio" class="btn-check" name="estado" id="btn-all" autocomplete="off" value="all" checked>
                 <label class="btn btn-outline-primary" for="btn-all">All</label>
-            </div>
+            </div> -->
         </div>
         <div class="collapse" id="bebidas-collapse">
             {% include 'camarero/contenido/bebidas.html' %}
@@ -64,7 +57,6 @@
             </div>
         </div>
     </div>
-    
     {% else %}
     <div class="d-flex justify-content-center align-items-center" style="height: 100px;">
         <div class="alert alert-danger" role="alert">

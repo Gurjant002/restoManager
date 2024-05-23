@@ -57,7 +57,7 @@ class ServicioCocinaService:
         date: datetime = datetime.datetime.now()
         ):
         try:
-            Servicio_Cocina.objects.create(
+            return Servicio_Cocina.objects.create(
             plato=plato,
             servido=servido,
             camarero_mesa=mesa_camarero,

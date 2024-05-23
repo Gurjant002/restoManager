@@ -4,6 +4,7 @@ from restoManager_app.controller.ubicacion.ubicacion_controller import Ubicacion
 from restoManager_app.service.trabajadores.camarero_service import CamareroService
 from restoManager_app.service.relacion.relacion_plato_categoria_service import PlatoCategoriaService
 from restoManager_app.service.bebida.bebida_service import BebidaService
+from restoManager_app.service.categoria.categoria_services import CategoriaService
 from .camarero_mesa_controller import CamareroMesaController
 from camarero_app.models import Camarero_Mesa
 from cocina_app.service.servicio_cocina_service import ServicioCocinaService
@@ -19,6 +20,7 @@ class CamareroController:
         self.camareroMesaController = CamareroMesaController()
         self.servicioCocinaService = ServicioCocinaService()
         self.ubicacionController = UbicacionController()
+        self.categoriaService = CategoriaService()
 
     def peticiones(self) -> dict:
         peticion = self.req.POST
@@ -29,6 +31,7 @@ class CamareroController:
                 lugar = int(peticion.get('lugar'))
                 camarero = int(peticion.get('camarero'))
                 errores = self.crear_mesa(numero_mesa, camarero, lugar)
+
             elif 'mesa-seleccionada' in peticion:
                 id_mesa = int(peticion.get('mesa-seleccionada'))
                 mesa = self.camareroMesaController.get_relacion_by_id(id_mesa)
@@ -66,6 +69,7 @@ class CamareroController:
         camarero = CamareroService().get_camarero_by_user(usuario)
         platos = PlatoCategoriaService().get_lista_relacion_plato_categoria()
         bebidas = BebidaService().get_bebidas()
+        tapas = self.categoriaService.get_categorias()
 
         camarero, error = self.chech_isinstance(camarero)
         mesas, error = self.chech_isinstance(mesas)
@@ -80,5 +84,6 @@ class CamareroController:
             'platos': platos,
             'bebidas': bebidas,
             'nota': nota,
+            'tapas': tapas,
         }
         return diccionario

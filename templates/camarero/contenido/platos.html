@@ -11,15 +11,26 @@
             </tr>
         </thead>
         <tbody>
-            <form method="post">
-                {% csrf_token %}
             {% for plato in platos %}
-            <tr>
-                <td><button type="submit" name='seleccionar-plato' value='{{plato.id}}'  class="btn btn-outline-light me-2">{{ plato.numero_menu }}</button></td>
-                <td>{{ plato.plato.nombre }}</td>
-                <td>{{ plato.categoria.nombre }}</td>
+            <tr id="tabla-platos">
+                <td>
+                    <button 
+                        type="button"
+                        name='seleccionar-plato'
+                        value='{{plato.id}}'
+                        onclick="selectPlato('{{plato.id}}', '{{plato.numero_menu}}', '{{plato.plato.nombre}}', '{{plato.categoria.nombre}}')"
+                        class="btn btn-outline-light me-2">
+                        {{ plato.numero_menu }}
+                    </button>
+                </td>
+                <td>
+                    {{ plato.plato.nombre }}
+                </td>
+                <td>
+                    {{ plato.categoria.nombre }}
+                </td>
             </tr>
-            <tr>
+            <tr id="tabla-platos">
                 <td colspan="3">{{ plato.plato.descripcion }}</td>
             </tr>
             {% endfor %}

@@ -118,13 +118,6 @@ function editarUbicacion(params) {
     btnUpdate.style.display = "block"
 }
 
-function addMesas() {
-    const mesaNueva = document.querySelectorAll("#mesa-nueva")
-    mesaNueva.forEach(element => {
-        element.classList.toggle("d-none");
-        element.classList.toggle("d-block");
-    });
-}
 
 function goHome() {
     window.location = '/'
@@ -143,40 +136,3 @@ if (url != '/puestos/camarero/' ) {
         document.getElementById('error-msg').style.display = 'none';
     }, 10000);
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-    const resizer = document.getElementById('resizer');
-    const panel = document.getElementById('resizable-panel');
-    let isResizing = false;
-    let initialHeight = 0;
-    let startY = 0;
-    const resizerHeight = 7.5;
-    resizer.style.height = resizerHeight+'px';
-
-    resizer.addEventListener('touchstart', function(e) {
-        isResizing = true;
-        initialHeight = panel.getBoundingClientRect().height;
-        startY = e.touches[0].clientY;
-        resizer.style.height = resizerHeight+'px';
-        document.addEventListener('touchmove', onTouchMove);
-        document.addEventListener('touchend', onTouchEnd);
-    });
-
-    function onTouchMove(e) {
-        if (!isResizing) return;
-        let currentY = e.touches[0].clientY;
-        let newHeight = initialHeight + (startY - currentY); // Cambiar la lógica
-        if (newHeight > 50 && newHeight < 625) {
-            console.log(newHeight);
-            panel.style.height = newHeight + 'px';
-            resizer.style.height = resizerHeight+'px';
-        }
-    }
-
-    function onTouchEnd(e) {
-        isResizing = false;
-        document.removeEventListener('touchmove', onTouchMove);
-        document.removeEventListener('touchend', onTouchEnd);
-        resizer.style.height = resizerHeight+'px';
-    }
-});

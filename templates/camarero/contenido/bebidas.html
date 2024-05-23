@@ -8,8 +8,6 @@
             </tr>
         </thead>
         <tbody>
-            <form method="post">
-                {% csrf_token %}
             {% for bebida in bebidas %}
             <tr>
                 <td><button type="button" onclick="seleccionarElemento('{{ bebida.nombre }}','{{ bebida.bebida }}', '{{ bebida.categoria }}')" class="btn btn-outline-light me-2">{{ bebida.id }}</button></td>
@@ -20,7 +18,6 @@
                 <td class="overflow-hidden"><p class="overflow-hidden">{{ bebida.descripcion }}</p></td>
             </tr>
             {% endfor %}
-            </form>
         </tbody>
     </table>
 </div>

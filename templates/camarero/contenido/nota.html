@@ -1,21 +1,32 @@
 <div class="row bg-light text-dark my-3 rounded">
     <div class="col">
-        <h2>{% if nota %} Num#{{ nota.camarero_mesa.numero_mesa }} {% else %} Seleccione una mesa {% endif %}</h2>
+        <h3 class="my-0 text-break" id="mesa-seleccionada">No hay mesa seleccionada</h3>
     </div>
 </div>
 <div class="row bg-light text-dark my-3 rounded">
     <div class="col">
-        <h2>{% if nota %} Num#{{ nota.plato.nombre }} {% else %} Seleccione un plato {% endif %}</h2>
+        <h3 class="my-0 text-break" id="plato-seleccionado">No hay plato seleccionado</h3></h3>
     </div>
 </div>
 <div class="row bg-light text-dark mt-3 rounded">
     <div class="col">
-        <h2>Bebida</h2>
+        <h3>Bebida</h3>
     </div>
 </div>
+
+<div class="row mt-3 rounded">
+    <div class="col">
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-info">Solicitar</button>
+        </form>
+    </div>
+</div>
+
 <hr>
+
 <div class="row my-0 bg-light text-dark rounded">
     <div class="col">
-        <h1 class="my-0">PEDIDOS</h1>
+        <h3 class="my-0">PEDIDOS</h3>
     </div>
 </div>

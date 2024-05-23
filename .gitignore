@@ -25,3 +25,11 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
+
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+
+.env
+db.sqlite3

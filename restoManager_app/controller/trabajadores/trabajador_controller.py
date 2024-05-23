@@ -19,8 +19,8 @@ class TrabajadorController:
         peticion = self.req.POST
         if peticion.get('registrar'):
             usuario = peticion.get('usuario')
-            nombre = peticion.get('nombre')
-            apellido = peticion.get('apellido')
+            nombre = peticion.get('nombre').capitalize()
+            apellido = peticion.get('apellido').capitalize()
             email = peticion.get('email')
             password1 = peticion.get('password1')
             password2 = peticion.get('password2')
