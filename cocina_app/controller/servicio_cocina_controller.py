@@ -1,9 +1,10 @@
 from cocina_app.service.servicio_cocina_service import ServicioCocinaService
 import logging
-from datetime import datetime, timezone
 
-utc_dt = datetime.now(timezone.utc)
-
+from datetime import datetime
+from django.utils import timezone as jango
+#
+utc_dt = jango.now()
 logger = logging.getLogger(__name__)
 class ServicioCocinaController:
   def get_servicio_cocina_by_id(self, id: int):

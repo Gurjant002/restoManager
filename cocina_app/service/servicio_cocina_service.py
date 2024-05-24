@@ -1,7 +1,10 @@
 from django.db import IntegrityError
 from cocina_app.models import Servicio_Cocina
 import logging
-import datetime
+from datetime import datetime
+from django.utils import timezone as jango
+
+utc_dt = jango.now()
 
 logger = logging.getLogger(__name__)
 class ServicioCocinaService:
@@ -54,7 +57,7 @@ class ServicioCocinaService:
         mesa_camarero= None,
         plato = None,
         servido: bool = None ,
-        date: datetime = datetime.datetime.now()
+        date: datetime = utc_dt
         ):
         try:
             return Servicio_Cocina.objects.create(
@@ -76,7 +79,7 @@ class ServicioCocinaService:
         plato,
         servido: bool = None ,
         mesa_camarero = None,
-        date: datetime = datetime.datetime.now()
+        date: datetime = utc_dt
         ):
         try:
             servicio: Servicio_Cocina = Servicio_Cocina.objects.get(id=id)
