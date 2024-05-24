@@ -17,14 +17,13 @@
 
 <body>
     
-    <div class="h-100">
+    <div  style="min-height:calc(90vh - 140px);">
         {% block content %}
         {% endblock content %}
     </div>
-    <footer class="container fixed-bottom mt-5 bg-dark text-white bg-warning m-0 w-auto">
+    <footer class="container-fluid position-static fixed-bottom mt-5 bg-dark text-white bg-warning m-0 w-100 responsive-footer eliminar-on-teclado" style="height:auto;">
         {% include 'global/footer.html' %}
     </footer>
-</footer>
     <script src="{% static 'script/restoManager-script.js'%}"></script>
     <script src="{% static 'script/bootstrap/bootstrap.min.js'%}"></script>
 </body>

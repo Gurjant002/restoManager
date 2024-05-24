@@ -131,8 +131,35 @@ if (url == '/config/platos/' ) {
     inputNum.value = 1+newNum
 }
 
-if (url != '/puestos/camarero/' ) {
+if (url == '/config/ubicaciones/') {
     let timer = setInterval(function(time) {
         document.getElementById('error-msg').style.display = 'none';
     }, 10000);
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const footer = document.querySelectorAll('.eliminar-on-teclado');
+    function adjustFooter() {
+        const viewportHeight = window.visualViewport.height;
+        const windowHeight = window.innerHeight;
+        
+        console.log(windowHeight);
+        for (let i = 0; i < footer.length; i++) {
+            if (windowHeight < 400) { // Ajuste para el tamaño de la barra de navegación
+                // El teclado está abierto
+                footer[i].style.display = 'none';
+            } else {
+                // El teclado está cerrado
+                footer[i].style.display = 'block';
+            }
+            console.log(footer[i]);
+        }
+    }
+
+    if (window.visualViewport) {
+        window.visualViewport.addEventListener('resize', adjustFooter);
+    } else {
+        // Fallback para navegadores sin visualViewport API
+        window.addEventListener('resize', adjustFooter);
+    }
+});

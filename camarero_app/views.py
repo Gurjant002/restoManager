@@ -10,6 +10,7 @@ logger = logging.getLogger(__name__)
 # Create your views here.
 @sync_to_async
 @login_required
+
 def home(request: HttpRequest):
     camarero = CamareroController(request)
     diccionario = camarero.peticiones()

@@ -1,4 +1,5 @@
 from django.db import IntegrityError
+from django.db.models import Count, Max
 from cocina_app.models import Servicio_Cocina
 import logging
 from datetime import datetime
@@ -52,20 +53,9 @@ class ServicioCocinaService:
             logger.error(f'Error en ServicioCocinaService.get_servicio_by_hora: {e}')
             return 'Ha ocurrido un error inesperado.'
 
-    def crear_servicio(
-        self,
-        mesa_camarero= None,
-        plato = None,
-        servido: bool = None ,
-        date: datetime = utc_dt
-        ):
+    def crear_servicio(self, mesa_camarero= None, plato = None, servido: bool = None , date: datetime = utc_dt):
         try:
-            return Servicio_Cocina.objects.create(
-            plato=plato,
-            servido=servido,
-            camarero_mesa=mesa_camarero,
-            hora_dia=date
-            )
+            return Servicio_Cocina.objects.create( plato=plato, servido=servido, camarero_mesa=mesa_camarero, hora_dia=date)
         except IntegrityError:
             logger.error(f'No se puedo crear el servicio de cocina porque ya existe')
             return f'No se puedo crear el servicio de cocina porque ya existe'
@@ -94,4 +84,13 @@ class ServicioCocinaService:
             return 'Servicio de cocina actualizado'
         except Exception as e:
             logger.error(f'Error en ServicioCocinaService.crear_actualizar_servicio: {e}')
+            return 'Ha ocurrido un error inesperado.'
+
+    def get_agrupaciones(self):
+        try:
+            agrupaciones = Servicio_Cocina.objects.values('plato', 'servido', 'camarero_mesa').annotate(total=Count('id'), tiempo=Max('hora_dia'))
+            return agrupaciones
+        
+        except Exception as e:
+            logger.error(f'Error en ServicioCocinaService.get_agrupaciones: {e}')
             return 'Ha ocurrido un error inesperado.'

@@ -18,3 +18,9 @@
         overflow: auto;
     }
 }
+
+@media screen and (max-height: 500px) {
+    .responsive-footer {
+        display: none;
+    }
+}

@@ -43,7 +43,27 @@
 <hr>
 
 <div class="row my-0 bg-light text-dark rounded mb-5">
-    <div class="col">
-        <h3 class="my-0">PEDIDOS</h3>
+    <div class="row rounded my-1">
+        <div class="col">
+            <h3>Tus pedidos</h3>
+        </div>
     </div>
+    {% for pedido in pedidos %}
+        <div class="row rounded my-1">
+            <div class="col">
+                <h4 class="my-0">Mesa: {{ pedido.camarero_mesa }}</h4>
+                <p class="my-0">Platos: {{ pedido.plato }} #{{ pedido.total }}</p>
+                <p class="my-0">
+                    Servido: 
+                    {% if pedido.servido == None %}
+                        Preparandose
+                    {% elif pedido.servido == True %}
+                        Servido
+                    {% else %}
+                        Recoge
+                    {% endif %}
+                </p>
+                <p class="my-0">Tiempo: {{ pedido.tiempo|date:"H:i" }}</p>
+        </div>
+    {% endfor %}
 </div>

@@ -161,3 +161,8 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+function toggleNotas(display) {
+    const notas = document.getElementById('notas');
+    notas.style.display = display ;
+}

@@ -1,36 +1,11 @@
+from django.http import HttpRequest
 from django.shortcuts import render
-# Create your views here.
+from django.contrib.auth.decorators import login_required
+from asgiref.sync import sync_to_async
+import logging
+ 
+logger = logging.getLogger(__name__)
 
-from cocina_app.models import *
-
-def mesas(request):
-    # query = ServiEjemplo.objects.all()
+def cocina(request):
     diccionario = {}
-    # diccionario["mesas"] = query
-
-    # mesas = []
-    # for i in query:
-    #     num = i.mesaID
-    #     mesas.append(num)
-    
-    # mesas = list(dict.fromkeys(mesas))
-    # for i in mesas:
-    #     diccionario["query"+str(i)] = ServiEjemplo.objects.filter(mesaID = i)
-    # print(diccionario)
-    variables = {}
-    variables["diccionario"] = diccionario
-    return render(request, "cocina/secciones/mesas.html", variables)
-
-
-""" def activarPlatos(request):
-    return render(request)
-
-def activarPlatos(request):
-    return render(request)
-
-def activarPlatos(request):
-    return render(request)
-"""
-
-def avisos(request):
-    return render(request, "cocina/secciones/avisos.html")
+    return render(request, 'cocina/pedidos.html', diccionario)

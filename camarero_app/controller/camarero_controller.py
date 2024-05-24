@@ -1,10 +1,17 @@
 from django.http import HttpRequest
 from django.utils.datastructures import MultiValueDictKeyError
-from restoManager_app.controller.ubicacion.ubicacion_controller import UbicacionController
 from restoManager_app.service.trabajadores.camarero_service import CamareroService
+
+# Mesa
+from restoManager_app.controller.ubicacion.ubicacion_controller import UbicacionController
+
+# Cominda
 from restoManager_app.service.relacion.relacion_plato_categoria_service import PlatoCategoriaService
-from restoManager_app.service.bebida.bebida_service import BebidaService
 from restoManager_app.service.categoria.categoria_services import CategoriaService
+from restoManager_app.service.plato.plato_services import PlatoService
+
+#  Bebida
+from restoManager_app.service.bebida.bebida_service import BebidaService
 from .camarero_mesa_controller import CamareroMesaController
 from camarero_app.models import Camarero_Mesa
 from cocina_app.service.servicio_cocina_service import ServicioCocinaService
@@ -21,6 +28,8 @@ class CamareroController:
         self.servicioCocinaService = ServicioCocinaService()
         self.ubicacionController = UbicacionController()
         self.categoriaService = CategoriaService()
+        self.relacionPlatoCategoria = PlatoCategoriaService()
+        self.plato = PlatoService()
 
     def peticiones(self) -> dict:
         peticion = self.req.POST
@@ -33,15 +42,40 @@ class CamareroController:
                 errores = self.crear_mesa(numero_mesa, camarero, lugar)
             elif 'borrar-mesa' in peticion:
                 print(peticion)
-            elif 'solicitar-cocina' in peticion:
                 
-                pass
+            elif 'solicitar-cocina' in peticion:
+                id_mesa = int(peticion.get('mesa-seleccionada'))
+                id_platos = peticion.getlist('platos')
+                id_bebidas = peticion.getlist('bebidas')
+                platos = []
+                bebidas = []
+                for id_plato in id_platos:
+                    cantidad = int(peticion.get(f'cantidad-platos-{id_plato}'))
+                    for i in range(cantidad):
+                        plato = self.plato.get_plato_by_id(id_plato)
+                        platos.append(plato)
+
+                for id_bebida in id_bebidas:
+                    cantidad = int(peticion.get(f'catidad-bebidas-{id_bebida}'))
+                    for i in range(cantidad):
+                        bebida = self.ubicacionController.get_ubicacion_by_id(id_bebida)
+                        bebidas.append(bebida)
+                    
+                if platos:
+                    error = self.solicitar_pedido(id_mesa, platos, bebidas)
+                    return self.respuestas(error=error)
         
         except MultiValueDictKeyError:
             logger.error(f'Error al obtener la peticion en CamareroController.peticiones: {peticion}')
             errores = f'Error al obtener la peticion en CamareroController.peticiones: {peticion}'
 
         return self.respuestas(error=errores)
+
+    def solicitar_pedido(self, mesa_camarero, platos: list, servido: bool = False):
+        instancia_mesa = self.camareroMesaController.get_relacion_by_id(mesa_camarero)
+        for plato in platos:
+            error = self.servicioCocinaService.crear_servicio(instancia_mesa, plato, servido)
+        return error
 
     def crear_mesa(self, numero_mesa: int, camarero_id, ubicacion_id: int):
         camarero = self.camareroService.get_camarero_by_user(camarero_id)
@@ -59,6 +93,10 @@ class CamareroController:
         
         return element_to_check, error
 
+    def agrupacion_pedidos(self):
+        agrupaciones = self.servicioCocinaService.get_agrupaciones()
+        return agrupaciones
+
     def respuestas(self, error: str = None, warning: str = None, nota = None) -> dict:
         usuario = self.req.user
         mesas = self.get_mesas()
@@ -71,7 +109,9 @@ class CamareroController:
         camarero, error = self.chech_isinstance(camarero)
         mesas, error = self.chech_isinstance(mesas)
         nota, error = self.chech_isinstance(nota)
-        
+
+        pedidos = self.agrupacion_pedidos()
+
         diccionario = {
             'error': error,
             'warning': warning,
@@ -82,5 +122,6 @@ class CamareroController:
             'bebidas': bebidas,
             'nota': nota,
             'tapas': tapas,
+            'pedidos': pedidos,
         }
         return diccionario

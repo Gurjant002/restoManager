@@ -24,10 +24,9 @@ urlpatterns = [
     path('', home, name='home'),
     path('config/', include('restoManager_app.urls')),
     path('puestos/camarero/', include('camarero_app.urls')),
+    path('puestos/cocina/', include('cocina_app.urls')),
     path('accounts/login/', include('django.contrib.auth.urls')),
     path('accounts/login/', include('login.urls')),
     path('puestos/', puestos, name='puestos'),
     path('admin/', admin.site.urls),
-    path('mesas/', mesas),
-    path('avisos/', avisos),
 ]
