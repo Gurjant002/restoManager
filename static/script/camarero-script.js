@@ -44,11 +44,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function selectMesa(id, numeroMesa, lugar, camarero) {
     const mesaSeleccionada = document.querySelectorAll("#mesa-seleccionada")
+    const datosOcultosID = document.querySelector("#input-mesa-id")
     mesaSeleccionada.forEach(element => {
         element.innerText = `#${numeroMesa}: ${lugar}, ${camarero}`
         element.value = id
+        datosOcultosID.value = id
         element.tagName = 'mesa-seleccionada'
     });
+
 }
 /* 
 function selectPlato(id, numPlato, nombre, categoria) {
@@ -59,11 +62,74 @@ function selectPlato(id, numPlato, nombre, categoria) {
     
 } */
 
-function seleccionarProducto(producto) {
-    const bebida = document.querySelector(`#${producto}`)
-    bebida.classList.toggle("d-none");
-    bebida.classList.toggle("d-block");
+function seleccionarProducto(producto, idProducto, nombreProdcuto, categoria) {
+    const contenedorProducto = document.querySelector(`#lista-${producto}`);
+    const productosList = contenedorProducto.querySelector(`#${producto}-${idProducto}`);
     
+    if (!productosList) {
+        const newProduct = document.createElement('fieldset');
+        const newItem = document.createElement('li');
+        const product = document.createElement('div');
+        const inputName = document.createElement('input');
+        const quantity = document.createElement('div');
+        const addButton = document.createElement('button');
+        const subButton = document.createElement('button');
+        const deleteButton = document.createElement('button');
+        const amountInput = document.createElement('input');
+        
+        newProduct.className = 'my-1';
+        newItem.className = 'list-group-item rounded d-flex justify-content-between align-items-center';
+        newItem.id = `${producto}-${idProducto}`;
+        product.className = 'd-flex justify-content-between align-items-center rounded text-break text-dark';
+        product.id = 'producto';
+        inputName.type = 'hidden';
+        inputName.name = producto;
+        inputName.value = idProducto;
+        quantity.className = 'd-flex justify-content-between align-items-center';
+        addButton.type = 'button';
+        addButton.className = 'btn btn-outline-success';
+        addButton.textContent = '+';
+        addButton.addEventListener('click', () => {
+            cantidad(idProducto, producto, 'add');
+        });
+        subButton.type = 'button';
+        subButton.className = 'btn btn-outline-danger';
+        subButton.textContent = '-';
+        subButton.addEventListener('click', () => {
+            cantidad(idProducto, producto, 'sub');
+        });
+        deleteButton.type = 'button';
+        deleteButton.className = 'btn btn-outline-danger';
+        deleteButton.innerHTML = '<i class="bi bi-trash"></i>';
+        deleteButton.addEventListener('click', () => {
+            eliminarProducto(idProducto, producto);
+        });
+        amountInput.type = 'number';
+        amountInput.className = 'form-control';
+        amountInput.name = `cantidad-${producto}-${idProducto}`;
+        amountInput.id = `cantidad-${producto}-${idProducto}`;
+        amountInput.value = 1;
+        amountInput.min = 1;
+        amountInput.style.width = '50px';
+        
+        product.appendChild(document.createTextNode(`${nombreProdcuto}, ${categoria}`));
+        quantity.appendChild(amountInput);
+        quantity.appendChild(addButton);
+        quantity.appendChild(subButton);
+        quantity.appendChild(deleteButton);
+        newItem.appendChild(product);
+        newItem.appendChild(inputName);
+        newItem.appendChild(quantity);
+        newProduct.appendChild(newItem);
+        
+        contenedorProducto.appendChild(newProduct);
+    }
+    
+}
+
+function eliminarProducto(id, seccion) {
+    const plato = document.querySelector(`#${seccion}-${id}`)
+    plato.remove()
 }
 
 function filterPlato(categoria) {
@@ -73,8 +139,8 @@ function filterPlato(categoria) {
     });
 }
 
-function cantidad(id, section, op) {
-    const contador = document.querySelector(`#cantidad-${section}-${id}`)
+function cantidad(id, seccion, op) {
+    const contador = document.querySelector(`#cantidad-${seccion}-${id}`)
     if (op === 'add') {
         contador.value = parseInt(contador.value) + 1
     }else {
@@ -86,18 +152,12 @@ function cantidad(id, section, op) {
     
 }
 
-/* function postSolicitud() {
-    fetch("http://127.0.0.1:8000/puestos/camarero/", {
-        method: "POST",
-        body: JSON.stringify({
-            csrfmiddlewaretoken: document.querySelector("#csrf").value,
-            userId: 1,
-            title: "Fix my bugs",
-            completed: false
-        }),
-        headers: {
-            "Content-type": "application/json; charset=UTF-8"
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelector("#formulario").addEventListener('submit', function(event) {
+        const mesa = document.querySelector("#input-mesa-id")
+        if (mesa.value === "") {
+            alert("Debe seleccionar una mesa")
+            event.preventDefault();
         }
     });
-
-} */
+});

@@ -11,9 +11,10 @@
             {% for bebida in bebidas %}
             <tr>
                 <td>
+                    <!-- onClick="seleccionarProducto('platos', '{{ plato.id }}', '{{ plato.plato.nombre }}', '{{ plato.categoria.nombre }}')" -->
                     <button 
                         type="button"
-                        onClick="seleccionarProducto('bebida-{{ bebida.id }}')"
+                        onClick="seleccionarProducto('bebidas', '{{ bebida.id }}', '{{ bebida.nombre }}', '{{ bebida.contiene_alcohol }}')"
                         class="btn btn-outline-light me-2">
                         {{ bebida.id }}
                     </button>

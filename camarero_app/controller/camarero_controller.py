@@ -34,7 +34,8 @@ class CamareroController:
             elif 'borrar-mesa' in peticion:
                 print(peticion)
             elif 'solicitar-cocina' in peticion:
-                print(peticion)
+                
+                pass
         
         except MultiValueDictKeyError:
             logger.error(f'Error al obtener la peticion en CamareroController.peticiones: {peticion}')
