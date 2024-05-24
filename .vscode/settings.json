@@ -1,0 +1,16 @@
+{
+    "workbench.colorCustomizations": {
+        "minimap.background": "#00000000",
+        "scrollbar.shadow": "#00000000"
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "cSpell.ignoreWords": [
+        "resto"
+    ],
+    "cSpell.words": [
+        "gurja",
+        "resto",	
+        "cocina",
+        "camarero",
+    ]
+}
