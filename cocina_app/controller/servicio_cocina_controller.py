@@ -1,3 +1,4 @@
+from django.http import HttpRequest
 from cocina_app.service.servicio_cocina_service import ServicioCocinaService
 import logging
 
@@ -7,6 +8,10 @@ from django.utils import timezone as jango
 utc_dt = jango.now()
 logger = logging.getLogger(__name__)
 class ServicioCocinaController:
+  
+  def peticiones(self, req: HttpRequest):
+    return self.respuesta()
+
   def get_servicio_cocina_by_id(self, id: int):
     return ServicioCocinaService.get_servicio_cocina_by_id(id)
   def get_servicio_by_camarero(self, camarero):
@@ -20,12 +25,16 @@ class ServicioCocinaController:
   def crear_servicio(self, mesa, camarero, plato, servido: bool = None , hora: datetime = utc_dt):
     return ServicioCocinaService.crear_servicio(mesa, camarero, plato, servido, hora)
   
-  def crear_actualizar_servicio(
-    self,
-    id: int,
-    mesa_camarero,
-    plato,
-    servido: bool = None ,
-    date: datetime = utc_dt
-    ):
+  def crear_actualizar_servicio(self, id: int, mesa_camarero, plato, servido: bool = None , date: datetime = utc_dt):
     return ServicioCocinaService.crear_actualizar_servicio(id, plato, servido, mesa_camarero, date)
+  
+  def get_servicio_mesa_cantidad_pedidos(self):
+    return ServicioCocinaService.get_servicio_mesa_cantidad_pedidos()
+
+  def respuesta(self, error: str = None):
+    pendientes = self.get_servicio_mesa_cantidad_pedidos()
+    diccionario = {
+        'error': error,
+        'pendientes': pendientes,
+    }
+    return diccionario

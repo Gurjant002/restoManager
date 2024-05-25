@@ -1,11 +1,12 @@
 from django.db import IntegrityError
 from django.db.models import Count, Max
 from cocina_app.models import Servicio_Cocina
+from restoManager_app.models import Plato
+from camarero_app.models import Camarero_Mesa
 import logging
 from datetime import datetime
-from django.utils import timezone as jango
 
-utc_dt = jango.now()
+utc_dt = datetime.now()
 
 logger = logging.getLogger(__name__)
 class ServicioCocinaService:
@@ -88,9 +89,21 @@ class ServicioCocinaService:
 
     def get_agrupaciones(self):
         try:
-            agrupaciones = Servicio_Cocina.objects.values('plato', 'servido', 'camarero_mesa').annotate(total=Count('id'), tiempo=Max('hora_dia'))
+            agrupaciones = list(Servicio_Cocina.objects.values('plato', 'servido', 'camarero_mesa')
+                                .annotate(total=Count('id'), tiempo=Max('hora_dia')))
+            for agrupacion in agrupaciones:
+                agrupacion['plato'] = Plato.objects.get(pk=agrupacion['plato'])
+                agrupacion['camarero_mesa'] = Camarero_Mesa.objects.get(pk=agrupacion['camarero_mesa'])
+                # agrupacion['camarero_mesa'] = camarero_mesa
             return agrupaciones
-        
         except Exception as e:
             logger.error(f'Error en ServicioCocinaService.get_agrupaciones: {e}')
+            return 'Ha ocurrido un error inesperado.'
+        
+    def get_servicio_mesa_cantidad_pedidos():
+        try:
+            pedidos_total_mesa = Servicio_Cocina.objects.values('plato__nombre').annotate(pedidosTotal=Count('plato__nombre')).order_by('pedidosTotal')
+            return pedidos_total_mesa
+        except Exception as e:
+            logger.error(f'Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: {e}')
             return 'Ha ocurrido un error inesperado.'

@@ -35,6 +35,15 @@
     </div>
     <div class="row mt-3 rounded">
         <div class="col">
+            {% if error %}
+            <div id="error-msg" class="alert alert-danger my-3" style="display: none;">
+                <strong>Error: {{ error }}</strong><span id="error-text"></span>
+            </div>
+            {% elif warning %}
+            <div id="error-msg" class="alert alert-warning my-3" style="display: none;">
+                <strong>Atención: {{ warning }}</strong><span id="error-text"></span>
+            </div>
+            {% endif %}
             <button type="submit" name='solicitar-cocina' class="btn btn-info">Solicitar</button>
         </div>
     </div>
@@ -42,17 +51,17 @@
 
 <hr>
 
-<div class="row my-0 bg-light text-dark rounded mb-5">
-    <div class="row rounded my-1">
-        <div class="col">
-            <h3>Tus pedidos</h3>
-        </div>
+<div class="row rounded my-1 bg-light text-dark">
+    <div class="col">
+        <h3>Tus pedidos</h3>
     </div>
+</div>
     {% for pedido in pedidos %}
-        <div class="row rounded my-1">
+        <div class="row rounded my-1 bg-light text-dark">
             <div class="col">
-                <h4 class="my-0">Mesa: {{ pedido.camarero_mesa }}</h4>
-                <p class="my-0">Platos: {{ pedido.plato }} #{{ pedido.total }}</p>
+                <h4 class="my-0">Mesa: {{ pedido.camarero_mesa.numero_mesa }}</h4>
+                <p class="my-0">Platos: {{ pedido.plato }}</p>
+                <p class="my-0">Cantidad:  #{{ pedido.total }}</p>
                 <p class="my-0">
                     Servido: 
                     {% if pedido.servido == None %}
@@ -64,6 +73,6 @@
                     {% endif %}
                 </p>
                 <p class="my-0">Tiempo: {{ pedido.tiempo|date:"H:i" }}</p>
+            </div>
         </div>
-    {% endfor %}
-</div>
+{% endfor %}

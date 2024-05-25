@@ -44,6 +44,7 @@ class CamareroController:
                 print(peticion)
                 
             elif 'solicitar-cocina' in peticion:
+                print("home")
                 id_mesa = int(peticion.get('mesa-seleccionada'))
                 id_platos = peticion.getlist('platos')
                 id_bebidas = peticion.getlist('bebidas')
@@ -97,12 +98,16 @@ class CamareroController:
         agrupaciones = self.servicioCocinaService.get_agrupaciones()
         return agrupaciones
 
+    def lista_platos(self):
+        platos = PlatoCategoriaService().get_lista_relacion_plato_categoria()
+        return platos
+
     def respuestas(self, error: str = None, warning: str = None, nota = None) -> dict:
         usuario = self.req.user
         mesas = self.get_mesas()
         ubicaciones = UbicacionController().get_ubicaciones()
         camarero = CamareroService().get_camarero_by_user(usuario)
-        platos = PlatoCategoriaService().get_lista_relacion_plato_categoria()
+        platos = self.lista_platos()
         bebidas = BebidaService().get_bebidas()
         tapas = self.categoriaService.get_categorias()
 
@@ -111,6 +116,7 @@ class CamareroController:
         nota, error = self.chech_isinstance(nota)
 
         pedidos = self.agrupacion_pedidos()
+        pedidos, error = self.chech_isinstance(pedidos)
 
         diccionario = {
             'error': error,
