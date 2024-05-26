@@ -26,7 +26,7 @@ class RelacionController:
             id_relacion=int(btn_update.split("_")[2])
         except:
             id_relacion=0
-            print("ERROR EN EL ID DE LA RELACION")
+            logger.error("ERROR EN EL ID DE LA RELACION")
         nombre_plato=req.POST.get("nombre-plato")
         numero_menu=req.POST.get("numero-menu")
         nombre_categoria=req.POST.get("categoria")
@@ -39,13 +39,10 @@ class RelacionController:
 
         # CREAR
         if req.POST.get('new-plato-btn'):
-            print("CREAR")
             return self.crear_relacion(nombre_plato, numero_menu, nombre_categoria, estado, descripcion)
 
         # ACTUALIZA 
         elif req.POST.get('update-plate-btn'):
-            print("ACTUALIZA")
-            
             rel=self.get_relacion_by_id(id_relacion)
             
             plato=rel[rel.count()-1].plato
@@ -57,7 +54,6 @@ class RelacionController:
         
         # ELIMINAR
         elif req.POST.get('eliminar-btn'):
-            print("ELIMINAR")
             relacion = self.get_relacion_by_id(int(eliminar))
             plato = relacion[relacion.count()-1].plato
             categoria = relacion[relacion.count()-1].categoria
@@ -82,7 +78,6 @@ class RelacionController:
                     numero_menu = num[num.count()-1].numero_menu + 1
             relacion=self.__relacion_service.crear_relacion(plato, numero_menu, categoria, estado)
             resultado = "> Nuevo plato y categoria creada."
-            print("relacion_controller > crear_relacion > NUEVA RELACION")
         else:
             resultado = "El plato", nombre_plato, " en la categoria",nombre_categoria,"ya existe"
         logging.info(resultado)
@@ -94,11 +89,9 @@ class RelacionController:
 
     def get_relacion_by_plato_and_categoria(self, plato: Plato, categoria: Categoria) -> Plato_Categoria | None:
         relacion=self.__relacion_service.get_relacion_by_plato_and_categoria(plato, categoria)
-        print("get_relacion_by_plato_and_categoria > relacion:", relacion)
         return relacion
 
     def get_relacion_by_numero_menu(self, numero_menu: int):
-        print("> NUMERO MENU ", numero_menu)
         relacion = self.__relacion_service.get_relacion_by_numero_menu(numero_menu)
         return relacion
 

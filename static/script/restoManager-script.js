@@ -48,7 +48,6 @@ function editarPlato(params) {
     inptId.style.display = 'none'
     inptId.value = campoId.innerText 
 
-    // console.log(campoEstado.innerText);
 }
 
 function editarBebida(params) {
@@ -143,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const viewportHeight = window.visualViewport.height;
         const windowHeight = window.innerHeight;
         
-        console.log(windowHeight);
+
         for (let i = 0; i < footer.length; i++) {
             if (windowHeight < 400) { // Ajuste para el tamaño de la barra de navegación
                 // El teclado está abierto
@@ -152,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // El teclado está cerrado
                 footer[i].style.display = 'block';
             }
-            console.log(footer[i]);
+
         }
     }
 
@@ -162,4 +161,39 @@ document.addEventListener('DOMContentLoaded', function() {
         // Fallback para navegadores sin visualViewport API
         window.addEventListener('resize', adjustFooter);
     }
+});
+
+document.addEventListener('htmx:afterRequest', function (event) {
+    // Verifica si la solicitud HTMX fue a la vista 'pedidos'
+    // if (event.detail.xhr.responseURL === "/puestos/cocina/pedidos") {
+        // Obtiene los datos de la respuesta JSON
+        var datos = JSON.parse(event.detail.xhr.response);
+        // Actualiza el contenido de la página con los datos recibidos
+        var html = '';
+        datos.pedidos_lista.forEach(function(pedido){
+            html += `
+            <div class="col-lg-3">
+                <div class="card mb-3">
+                    <div class="card-header bg-dark text-light">
+                        Mesa #${pedido.mesa} [${pedido.mesa_ubicacion}]
+                    </div>
+                    <div class="card-body p-3">
+                        <p class="card-text">Total pedidos: #${pedido.pedidosTotal}</p>
+                        <p class="card-text">Hora: ${new Date(pedido.tiempo).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</p>
+                        <form class="text-center" action="/puestos/cocina/listar" method="GET">
+                            <button type="submit" name="listar_mesa" value="${pedido.mesa_id}" class="btn btn-primary w-100 mt-2">Ver detalles</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            `;
+        });
+        document.getElementById('card-pedidos').innerHTML = html;
+    /* } else if (event.detail.xhr.responseURL === "/puestos/cocina/cambiar-estado") {
+        // Obtiene los datos de la respuesta JSON
+        var datos = JSON.parse(event.detail.xhr.response);
+        // Actualiza el contenido de la página con los datos recibidos
+        var html = '';
+        console.log(datos);
+    } */
 });

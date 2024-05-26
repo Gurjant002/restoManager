@@ -26,15 +26,13 @@ class PlatoCategoriaService:
     def get_relacion_by_id(self, id: int) -> Plato_Categoria | None:
         relacio=Plato_Categoria.objects.filter(id=id)
         if relacio.count() == 0:
-            print("service.get_relacion_by_id> VACIO")
+            log.warning("service.get_relacion_by_id> VACIO")
             return None
         return relacio
 
     # ! Este metodo lanza un error.
     def get_relacion_by_numero_menu(self, numero_menu: int) -> Plato_Categoria:
-        print("service.get_relacion_by_numero_menu> NUMERO MENU ",numero_menu)
         relacion=Plato_Categoria.objects.filter(id=33)
-        print(relacion)
         return relacion
 
     def get_relacion_by_plato_and_categoria(self, plato: Plato, categorio: Categoria) -> Plato_Categoria | None:

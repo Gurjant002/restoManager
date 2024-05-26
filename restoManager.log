@@ -171,3 +171,116 @@
 [25/May/2024 15:07:10] ERROR [cocina_app.service.servicio_cocina_service:108] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: QuerySet.annotate() received non-expression(s): numero_mesa.
 [25/May/2024 15:07:12] ERROR [cocina_app.service.servicio_cocina_service:108] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: QuerySet.annotate() received non-expression(s): numero_mesa.
 [25/May/2024 15:07:12] ERROR [cocina_app.service.servicio_cocina_service:108] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: QuerySet.annotate() received non-expression(s): numero_mesa.
+[25/May/2024 17:11:58] ERROR [cocina_app.service.servicio_cocina_service:108] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: type object 'Plato' has no attribute 'split'
+[25/May/2024 17:12:03] ERROR [cocina_app.service.servicio_cocina_service:108] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: type object 'Plato' has no attribute 'split'
+[25/May/2024 17:12:08] ERROR [cocina_app.service.servicio_cocina_service:108] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'DeferredAttribute' object has no attribute 'split'
+[25/May/2024 17:12:13] ERROR [cocina_app.service.servicio_cocina_service:108] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'DeferredAttribute' object has no attribute 'split'
+[25/May/2024 17:12:18] ERROR [cocina_app.service.servicio_cocina_service:108] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'DeferredAttribute' object has no attribute 'split'
+[25/May/2024 17:18:37] ERROR [cocina_app.service.servicio_cocina_service:115] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: name 'Min' is not defined
+[25/May/2024 17:18:40] ERROR [cocina_app.service.servicio_cocina_service:115] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: name 'Min' is not defined
+[25/May/2024 17:18:45] ERROR [cocina_app.service.servicio_cocina_service:115] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: name 'Min' is not defined
+[25/May/2024 17:18:50] ERROR [cocina_app.service.servicio_cocina_service:115] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: name 'Min' is not defined
+[25/May/2024 22:15:02] ERROR [cocina_app.service.servicio_cocina_service:116] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__id'
+[25/May/2024 22:15:07] ERROR [cocina_app.service.servicio_cocina_service:116] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'id'
+[25/May/2024 22:15:13] ERROR [cocina_app.service.servicio_cocina_service:116] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: Cannot resolve keyword '' into field. Choices are: camarero_mesa, camarero_mesa_id, hora_dia, id, plato, plato_id, servido
+[25/May/2024 22:25:37] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:25:42] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:25:47] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:25:52] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:25:57] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:26:02] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:26:07] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:26:12] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:26:17] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:26:22] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:26:27] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:26:32] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:26:37] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:26:38] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:26:39] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:26:44] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:26:49] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:26:54] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:26:59] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:27:04] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:27:09] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:27:14] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:27:19] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:27:24] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:27:29] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:27:34] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:27:39] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:27:41] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:27:41] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:27:46] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:27:51] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:27:56] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:28:01] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:28:06] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:28:11] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:28:16] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:28:21] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:28:31] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:28:32] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:28:37] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:28:37] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:28:37] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:28:42] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:28:47] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:28:52] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:28:57] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:29:02] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:29:07] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:29:09] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:29:09] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:29:14] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:29:19] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:29:23] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:29:25] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:30:15] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:30:15] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:30:52] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:30:52] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:38:28] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion__id'
+[25/May/2024 22:38:29] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion__id'
+[25/May/2024 22:38:34] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion__id'
+[25/May/2024 23:49:30] ERROR [cocina_app.service.servicio_cocina_service:112] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: Cannot resolve keyword 'lugar' into field. Choices are: camarero, camarero_id, id, numero_mesa, servicio_barra, servicio_cocina, ubicacion, ubicacion_id
+[25/May/2024 23:54:39] ERROR [cocina_app.service.servicio_cocina_service:112] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: Cannot resolve keyword 'lugar' into field. Choices are: camarero, camarero_id, id, numero_mesa, servicio_barra, servicio_cocina, ubicacion, ubicacion_id
+[26/May/2024 00:20:35] ERROR [cocina_app.service.servicio_cocina_service:112] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: Cannot resolve keyword 'lugar' into field. Choices are: camarero, camarero_id, id, numero_mesa, servicio_barra, servicio_cocina, ubicacion, ubicacion_id
+[26/May/2024 00:25:19] ERROR [cocina_app.service.servicio_cocina_service:112] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: Cannot resolve keyword 'lugar' into field. Choices are: camarero, camarero_id, id, numero_mesa, servicio_barra, servicio_cocina, ubicacion, ubicacion_id
+[26/May/2024 00:25:50] ERROR [cocina_app.service.servicio_cocina_service:112] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: Cannot resolve keyword 'lugar' into field. Choices are: camarero, camarero_id, id, numero_mesa, servicio_barra, servicio_cocina, ubicacion, ubicacion_id
+[26/May/2024 00:33:26] ERROR [cocina_app.service.servicio_cocina_service:115] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: 'dict' object has no attribute 'append'
+[26/May/2024 00:33:35] ERROR [cocina_app.service.servicio_cocina_service:115] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: 'dict' object has no attribute 'append'
+[26/May/2024 00:33:37] ERROR [cocina_app.service.servicio_cocina_service:115] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: 'dict' object has no attribute 'append'
+[26/May/2024 00:33:39] ERROR [cocina_app.service.servicio_cocina_service:115] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: 'dict' object has no attribute 'append'
+[26/May/2024 00:33:46] ERROR [cocina_app.service.servicio_cocina_service:115] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: 'dict' object has no attribute 'append'
+[26/May/2024 00:33:48] ERROR [cocina_app.service.servicio_cocina_service:115] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: 'dict' object has no attribute 'append'
+[26/May/2024 00:34:35] ERROR [cocina_app.service.servicio_cocina_service:115] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: 'dict' object has no attribute 'append'
+[26/May/2024 00:35:18] ERROR [cocina_app.service.servicio_cocina_service:119] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: list indices must be integers or slices, not str
+[26/May/2024 13:26:19] ERROR [cocina_app.service.servicio_cocina_service:119] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: list indices must be integers or slices, not str
+[26/May/2024 13:26:53] ERROR [cocina_app.service.servicio_cocina_service:119] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: list indices must be integers or slices, not str
+[26/May/2024 13:27:21] ERROR [cocina_app.service.servicio_cocina_service:120] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: list indices must be integers or slices, not str
+[26/May/2024 13:27:38] ERROR [cocina_app.service.servicio_cocina_service:120] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: list indices must be integers or slices, not str
+[26/May/2024 13:31:37] ERROR [cocina_app.service.servicio_cocina_service:119] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: list indices must be integers or slices, not str
+[26/May/2024 15:03:05] ERROR [cocina_app.service.servicio_cocina_service:122] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: list() takes no keyword arguments
+[26/May/2024 15:10:00] ERROR [cocina_app.service.servicio_cocina_service:140] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__id'
+[26/May/2024 17:31:12] ERROR [cocina_app.service.servicio_cocina_service:135] Error en ServicioCocinaService.cambiar_estado: Servicio_Cocina matching query does not exist.
+[26/May/2024 17:31:33] WARNING [cocina_app.service.servicio_cocina_service:129] No se encontro ningun servicio de cocina con este 10
+[26/May/2024 17:39:38] WARNING [cocina_app.service.servicio_cocina_service:129] No se encontro ningun servicio de cocina con este 10
+[26/May/2024 17:53:17] WARNING [cocina_app.service.servicio_cocina_service:129] No se encontro ningun servicio de cocina con este 5
+[26/May/2024 17:53:35] WARNING [cocina_app.service.servicio_cocina_service:129] No se encontro ningun servicio de cocina con este 5
+[26/May/2024 17:53:51] WARNING [cocina_app.service.servicio_cocina_service:129] No se encontro ningun servicio de cocina con este 5
+[26/May/2024 17:54:58] WARNING [cocina_app.service.servicio_cocina_service:129] No se encontro ningun servicio de cocina con este 5
+[26/May/2024 17:55:10] WARNING [cocina_app.service.servicio_cocina_service:129] No se encontro ningun servicio de cocina con este 5
+[26/May/2024 17:55:18] WARNING [cocina_app.service.servicio_cocina_service:129] No se encontro ningun servicio de cocina con este 5
+[26/May/2024 17:56:04] WARNING [cocina_app.service.servicio_cocina_service:129] No se encontro ningun servicio de cocina con este 5
+[26/May/2024 18:02:47] ERROR [cocina_app.service.servicio_cocina_service:122] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: Cannot resolve keyword 'servicio_cocina' into field. Choices are: camarero_mesa, camarero_mesa_id, hora_dia, id, plato, plato_id, servido
+[26/May/2024 18:02:49] ERROR [cocina_app.service.servicio_cocina_service:122] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: Cannot resolve keyword 'servicio_cocina' into field. Choices are: camarero_mesa, camarero_mesa_id, hora_dia, id, plato, plato_id, servido
+[26/May/2024 18:03:33] ERROR [cocina_app.service.servicio_cocina_service:122] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: Cannot resolve keyword 'servicio_cocina' into field. Choices are: camarero_mesa, camarero_mesa_id, hora_dia, id, plato, plato_id, servido
+[26/May/2024 18:06:08] WARNING [cocina_app.service.servicio_cocina_service:129] No se encontro ningun servicio de cocina con este 5
+[26/May/2024 18:08:30] WARNING [cocina_app.service.servicio_cocina_service:129] No se encontro ningun servicio de cocina con este 10
+[26/May/2024 18:10:23] ERROR [cocina_app.service.servicio_cocina_service:135] Error en ServicioCocinaService.cambiar_estado: ['“false”: el valor debe ser Verdadero, Falso o Nulo.']
+[26/May/2024 18:11:16] ERROR [cocina_app.service.servicio_cocina_service:135] Error en ServicioCocinaService.cambiar_estado: ['“false”: el valor debe ser Verdadero, Falso o Nulo.']
+[26/May/2024 18:11:43] ERROR [cocina_app.service.servicio_cocina_service:135] Error en ServicioCocinaService.cambiar_estado: ['“false”: el valor debe ser Verdadero, Falso o Nulo.']
+[26/May/2024 18:38:18] ERROR [cocina_app.service.servicio_cocina_service:135] Error en ServicioCocinaService.cambiar_estado: ['“None”: el valor debe ser Verdadero, Falso o Nulo.']
+[26/May/2024 21:05:38] ERROR [cocina_app.service.servicio_cocina_service:135] Error en ServicioCocinaService.cambiar_estado: ['“Null”: el valor debe ser Verdadero, Falso o Nulo.']

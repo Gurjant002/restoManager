@@ -10,31 +10,7 @@
                 <th colspan="3" class="text-center">Descripcion</th>
             </tr>
         </thead>
-        <tbody id="contenido-plato"  hx-get="{% url 'camarero_platos' %}" hx-trigger="load, every 5s">
-            
-            <!-- {% for plato in platos %}
-            <tr id="tabla-platos">
-                <td>
-                    <button 
-                        type="button"
-                        name='seleccionar-plato'
-                        value='{{plato.id}}'
-                        onClick="seleccionarProducto('platos', '{{ plato.id }}', '{{ plato.plato.nombre }}', '{{ plato.categoria.nombre }}')"
-                        class="btn btn-outline-light me-2">
-                        {{ plato.numero_menu }}
-                    </button>
-                </td>
-                <td>
-                    {{ plato.plato.nombre }}
-                </td>
-                <td>
-                    {{ plato.categoria.nombre }}
-                </td>
-            </tr>
-            <tr id="tabla-platos">
-                <td colspan="3">{{ plato.plato.descripcion }}</td>
-            </tr>
-            {% endfor %} -->
+        <tbody id="contenido-plato" hx-get="{% url 'camarero_platos' %}" hx-trigger="load, every 5s">
         </tbody>
     </table>
 </div>

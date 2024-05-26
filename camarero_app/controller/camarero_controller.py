@@ -44,7 +44,6 @@ class CamareroController:
                 print(peticion)
                 
             elif 'solicitar-cocina' in peticion:
-                print("home")
                 id_mesa = int(peticion.get('mesa-seleccionada'))
                 id_platos = peticion.getlist('platos')
                 id_bebidas = peticion.getlist('bebidas')

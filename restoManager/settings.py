@@ -31,13 +31,15 @@ ALLOWED_HOSTS = ["192.168.1.14", "localhost", "127.0.0.1"]
 # Application definition
 
 INSTALLED_APPS = [
+    'daphne',
+    'channels',
+    'channels_redis',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'channels',
     'restoManager_app',
     'cocina_app',
     'camarero_app',
@@ -79,6 +81,14 @@ TEMPLATES = [
 WSGI_APPLICATION = 'restoManager.wsgi.application'
 ASGI_APPLICATION = 'restoManager.asgi.application'
 
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [('localhost', 6379)],
+        },
+    },
+}
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
@@ -142,6 +152,8 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+import logging
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -155,7 +167,8 @@ LOGGING = {
         'console': {
             'level': 'DEBUG',
             'class': 'logging.StreamHandler',
-            'formatter': 'verbose'
+            'formatter': 'verbose',
+            'filters': ['warning_filter', 'error_filter', 'info_filter'],
         },
         'file': {
             'level': 'DEBUG',
@@ -185,6 +198,63 @@ LOGGING = {
             'handlers': ['console', 'file'],
             'level': 'DEBUG',
         },
-    }
+    },
+    'filters': {
+        'warning_filter': {
+            '()': 'django.utils.log.CallbackFilter',
+            'callback': lambda r: r.levelno == logging.WARNING,
+        },
+        'error_filter': {
+            '()': 'django.utils.log.CallbackFilter',
+            'callback': lambda r: r.levelno == logging.ERROR,
+        },
+        'info_filter': {
+            '()': 'django.utils.log.CallbackFilter',
+            'callback': lambda r: r.levelno == logging.INFO,
+        },
+    },
+    'filters': {
+        'warning_filter': {
+            '()': 'django.utils.log.CallbackFilter',
+            'callback': lambda r: r.levelno == logging.WARNING,
+        },
+        'error_filter': {
+            '()': 'django.utils.log.CallbackFilter',
+            'callback': lambda r: r.levelno == logging.ERROR,
+        },
+        'info_filter': {
+            '()': 'django.utils.log.CallbackFilter',
+            'callback': lambda r: r.levelno == logging.INFO,
+        },
+    },
+    'filters': {
+        'warning_filter': {
+            '()': 'django.utils.log.CallbackFilter',
+            'callback': lambda r: r.levelno == logging.WARNING,
+        },
+        'error_filter': {
+            '()': 'django.utils.log.CallbackFilter',
+            'callback': lambda r: r.levelno == logging.ERROR,
+        },
+        'info_filter': {
+            '()': 'django.utils.log.CallbackFilter',
+            'callback': lambda r: r.levelno == logging.INFO,
+        },
+    },
+    'filters': {
+        'warning_filter': {
+            '()': 'django.utils.log.CallbackFilter',
+            'callback': lambda r: r.levelno == logging.WARNING,
+        },
+        'error_filter': {
+            '()': 'django.utils.log.CallbackFilter',
+            'callback': lambda r: r.levelno == logging.ERROR,
+        },
+        'info_filter': {
+            '()': 'django.utils.log.CallbackFilter',
+            'callback': lambda r: r.levelno == logging.INFO,
+        },
+    },
 }
+
 

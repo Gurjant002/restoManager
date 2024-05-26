@@ -1,3 +1,4 @@
 django
-channels
 mysqlclient
+channels[daphne]
+channels_redis

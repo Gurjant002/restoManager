@@ -1,25 +1,12 @@
-{% extends 'index.html' %}
+{% extends 'cocina/index.html' %}
+{% block title %} Cocina {% endblock %}
 {% block content %}
 {% include 'global/header.html' %}
 <div class="container pb-5 my-5">
     <div class="panel_insertar bg-dark rounded row mb-3">
         <h1 id="titulo-seccion-superior" class="text-light">Pendientes.</h1>
     </div>
-    <div class="row">
-        {% for mesa in pendientes %}
-        <div class="col-lg-3">
-            <div class="card mb-3">
-                <div class="card-body">
-                    <h5 class="card-title text-dark">Mesa: #{{ mesa.camarero_mesa.numero_mesa }}</h5>
-                    <p class="card-text">{{ mesa.pedidosTotal }}</p>
-                </div>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
-
-    <div class="panel_listado bg-dark rounded row">
-        <h1 class="text-light">Mesa X</h1>
+    <div class="row overflow-auto" id="card-pedidos" hx-get="{% url 'pedidos' %}" hx-trigger="load, every 3s">
     </div>
 </div>
 {% endblock content %}

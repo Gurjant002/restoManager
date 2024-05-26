@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 
 
 def crear_alerta():
-    ahora = datetime.now()
+    ahora = datetime.utcnow()
     tiempo = ahora.strftime("%H:%M")
     return tiempo
 
