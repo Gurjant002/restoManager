@@ -168,6 +168,7 @@ document.addEventListener('htmx:afterRequest', function (event) {
     // if (event.detail.xhr.responseURL === "/puestos/cocina/pedidos") {
         // Obtiene los datos de la respuesta JSON
         var datos = JSON.parse(event.detail.xhr.response);
+        console.log(datos);
         // Actualiza el contenido de la página con los datos recibidos
         var html = '';
         datos.pedidos_lista.forEach(function(pedido){

@@ -16,13 +16,13 @@
     <script src="https://unpkg.com/htmx.org/dist/ext/ws.js"></script>
 </head>
 
-<body hx-ext="ws" ws-connect="/ws/test/">
+<body>
+    
     <div  style="min-height:calc(90vh - 140px);">
         {% block content %}
-        {% include 'lista_pedidos' %}
         {% endblock content %}
-            
     </div>
+
     <footer class="container-fluid position-static fixed-bottom mt-5 bg-dark text-white bg-warning m-0 w-100 responsive-footer eliminar-on-teclado" style="height:auto;">
         {% include 'global/footer.html' %}
     </footer>

@@ -16,7 +16,7 @@ class ServicioCocinaController:
     if 'listar_mesa' in req.GET:
       id_mesa = int(req.GET['listar_mesa'])
       pedidos = self.get_agrupaciones_by_camarero_mesa_id(id_mesa)
-      return self.respuesta(listar_pedidos_x_mesa = pedidos)
+      return self.respuesta(platos = pedidos)
     elif 'cambiar-estado' in req.POST:
       id = int(req.POST['cambiar-estado'].split('-')[0])
       estado = req.POST['cambiar-estado'].split('-')[1]
@@ -58,10 +58,15 @@ class ServicioCocinaController:
         element_to_check = False
     return element_to_check, error
 
-  def respuesta(self, error: str = None, listar_pedidos_x_mesa = None):
-    listar_pedidos_x_mesa, error = self.chech_isinstance(listar_pedidos_x_mesa)
+  def respuesta(self, error: str = None, platos = None):
+    mesas = self.get_servicio_mesa_cantidad_pedidos()
+    mesas, error = self.chech_isinstance(mesas)
+    
+    platos, error = self.chech_isinstance(platos)
+    
     diccionario = {
         'error': error,
-        'listar_pedidos_x_mesa': listar_pedidos_x_mesa,
+        'mesas': mesas,
+        'platos': platos
     }
     return diccionario
