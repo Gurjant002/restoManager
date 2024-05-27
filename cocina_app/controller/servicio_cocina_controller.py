@@ -16,7 +16,8 @@ class ServicioCocinaController:
     if 'listar_mesa' in req.GET:
       id_mesa = int(req.GET['listar_mesa'])
       pedidos = self.get_agrupaciones_by_camarero_mesa_id(id_mesa)
-      return self.respuesta(platos = pedidos)
+      print(pedidos)
+      return self.respuesta(listar_pedidos_x_mesa = pedidos)
     elif 'cambiar-estado' in req.POST:
       id = int(req.POST['cambiar-estado'].split('-')[0])
       estado = req.POST['cambiar-estado'].split('-')[1]
