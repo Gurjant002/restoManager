@@ -1,4 +1,2 @@
-django
-mysqlclient
-channels[daphne]
-channels_redis
+django==5.0.6
+mysqlclient==2.2.4

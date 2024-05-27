@@ -289,3 +289,4 @@
 [27/May/2024 13:24:49] ERROR [cocina_app.service.servicio_cocina_service:135] Error en ServicioCocinaService.cambiar_estado: ['“Null”: el valor debe ser Verdadero, Falso o Nulo.']
 [27/May/2024 13:38:52] INFO [restoManager_app.service.categoria.categoria_services:23] 1
 [27/May/2024 13:38:52] INFO [restoManager_app.service.relacion.relacion_plato_categoria_service:52] service.actualizar_relacion> ACTUALIZANDO RELACION
+[27/May/2024 21:10:09] WARNING [login.views:27] There is no superuser registered in the system
