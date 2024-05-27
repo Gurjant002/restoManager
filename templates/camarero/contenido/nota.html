@@ -1,4 +1,5 @@
-<form method="POST" id="formulario">
+
+<form id="formulario" hx-ext="ws" ws-connect="ws/" ws-send>
     {% csrf_token %}
     <div class="row bg-light text-dark my-3 rounded">
         <div class="col">
@@ -56,6 +57,8 @@
         <h3>Tus pedidos</h3>
     </div>
 </div>
+    {% if pedidos %}
+    
     {% for pedido in pedidos %}
         <div class="row rounded my-1 bg-light text-dark">
             <div class="col">
@@ -66,13 +69,14 @@
                     Servido: 
                     {% if pedido.servido == None %}
                         Preparandose
-                    {% elif pedido.servido == True %}
+                        {% elif pedido.servido == True %}
                         Servido
-                    {% else %}
+                        {% else %}
                         Recoge
                     {% endif %}
                 </p>
                 <p class="my-0">Tiempo: {{ pedido.tiempo|date:"H:i" }}</p>
             </div>
         </div>
-{% endfor %}
+    {% endfor %}        
+{% endif %}

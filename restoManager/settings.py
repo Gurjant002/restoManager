@@ -32,8 +32,6 @@ ALLOWED_HOSTS = ["192.168.1.14", "localhost", "127.0.0.1"]
 
 INSTALLED_APPS = [
     'daphne',
-    'channels',
-    'channels_redis',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -78,17 +76,10 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'restoManager.wsgi.application'
+# WSGI_APPLICATION = 'restoManager.wsgi.application'
+
 ASGI_APPLICATION = 'restoManager.asgi.application'
 
-CHANNEL_LAYERS = {
-    'default': {
-        'BACKEND': 'channels_redis.core.RedisChannelLayer',
-        'CONFIG': {
-            "hosts": [('localhost', 6379)],
-        },
-    },
-}
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
