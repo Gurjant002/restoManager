@@ -17,3 +17,4 @@ class PedidosConsumer(AsyncWebsocketConsumer):
   def disconnect(self, close_code):
     print("disconnect")
     self.close
+
