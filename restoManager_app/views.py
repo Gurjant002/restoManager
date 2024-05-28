@@ -2,7 +2,6 @@ from django.http import HttpRequest
 from django.shortcuts import render
 from datetime import datetime
 from django.contrib.auth.decorators import login_required
-from asgiref.sync import sync_to_async
 
 # from restoManager_app.models import Plato_Categoria
 from .controller.relacion.relacion_plato_categoria_controller import RelacionController
@@ -21,7 +20,7 @@ def crear_alerta():
     tiempo = ahora.strftime("%H:%M")
     return tiempo
 
-@sync_to_async
+ 
 @login_required
 def platos(request: HttpRequest):
     diccionario = {}
@@ -51,28 +50,28 @@ def platos(request: HttpRequest):
     # logger.info(diccionario)
     return render(request, "restoManager_app/secciones/platos.html", diccionario)
 
-@sync_to_async
+ 
 @login_required
 def bebidas(request: HttpRequest):
     bebida_controller = BebidaController(request)
     diccionario = bebida_controller.peticiones()
     return render(request, "restoManager_app/secciones/bebidas.html", diccionario)
 
-@sync_to_async
+ 
 @login_required
 def categorias(request: HttpRequest):
     categoria_controller = CategoriaController(request);
     diccionario = categoria_controller.peticiones()
     return render(request, "restoManager_app/secciones/categorias.html", diccionario)
 
-@sync_to_async
+ 
 @login_required
 def ubicaciones(request: HttpRequest):
     ubicaciones_controller = UbicacionController(request)
     diccionario = ubicaciones_controller.peticiones()
     return render(request, "restoManager_app/secciones/ubicaciones.html", diccionario)
 
-@sync_to_async
+ 
 @login_required
 def trabajadores(request: HttpRequest):
     trabajadores_controller = TrabajadorController(request)
@@ -84,7 +83,7 @@ def camareros(request: HttpRequest):
     diccionario = camareros_controller.peticiones()
     return render(request, "restoManager_app/secciones/trabajadores/camareros.html", diccionario)
 
-@sync_to_async
+ 
 @login_required
 def home(request: HttpRequest):
     return render(request, "restoManager_app/config.html")

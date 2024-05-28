@@ -304,3 +304,4 @@
 [27/May/2024 11:07:42] ERROR [cocina_app.service.servicio_cocina_service:100] Error en ServicioCocinaService.get_agrupaciones: Plato matching query does not exist.
 [27/May/2024 11:07:43] ERROR [cocina_app.service.servicio_cocina_service:100] Error en ServicioCocinaService.get_agrupaciones: Plato matching query does not exist.
 [27/May/2024 11:10:33] ERROR [cocina_app.service.servicio_cocina_service:100] Error en ServicioCocinaService.get_agrupaciones: Plato matching query does not exist.
+[27/May/2024 21:10:09] WARNING [login.views:27] There is no superuser registered in the system
