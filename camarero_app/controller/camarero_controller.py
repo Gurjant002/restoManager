@@ -30,6 +30,7 @@ class CamareroController:
         self.categoriaService = CategoriaService()
         self.relacionPlatoCategoria = PlatoCategoriaService()
         self.plato = PlatoService()
+        self.error = None
 
     def peticiones(self) -> dict:
         peticion = self.req.POST
@@ -86,12 +87,11 @@ class CamareroController:
         return self.camareroMesaController.get_relaciones()
 
     def chech_isinstance(self, element_to_check):
-        error = ''
         if isinstance(element_to_check, str):
-            error = element_to_check
+            self.error = element_to_check
             element_to_check = False
         
-        return element_to_check, error
+        return element_to_check
 
     def agrupacion_pedidos(self):
         agrupaciones = self.servicioCocinaService.get_agrupaciones()
@@ -102,23 +102,35 @@ class CamareroController:
         return platos
 
     def respuestas(self, error: str = None, warning: str = None, nota = None) -> dict:
+        self.error = error
         usuario = self.req.user
         mesas = self.get_mesas()
         ubicaciones = UbicacionController().get_ubicaciones()
-        camarero = RolService().get_camarero_by_user(usuario)
+        
+        camarero = self.camareroService.get_rol_by_user_rol(usuario, "Camarero")
+        if isinstance(camarero, str):
+            camarero = self.camareroService.get_rol_by_user_rol(usuario, "Administrador")
+            
         platos = self.lista_platos()
         bebidas = BebidaService().get_bebidas()
         tapas = self.categoriaService.get_categorias()
 
-        camarero, error = self.chech_isinstance(camarero)
-        mesas, error = self.chech_isinstance(mesas)
-        nota, error = self.chech_isinstance(nota)
+        if self.error is not None:
+            camarero = self.chech_isinstance(camarero)
+        elif error is not None:
+            self.error = error
+        elif error is not None:
+            self.error = error
+        elif error is not None:
+            mesas = self.chech_isinstance(mesas)
+        elif error is not None:
+            nota = self.chech_isinstance(nota)
 
         pedidos = self.agrupacion_pedidos()
-        pedidos, error = self.chech_isinstance(pedidos)
+        pedidos = self.chech_isinstance(pedidos)
 
         diccionario = {
-            'error': error,
+            'error': self.error,
             'warning': warning,
             'es_camarero': camarero,
             'mesas': mesas,

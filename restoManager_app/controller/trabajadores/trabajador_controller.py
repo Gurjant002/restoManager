@@ -67,22 +67,24 @@ class TrabajadorController:
                 if self.get_trabajadores().filter(username=usuario).exists():
                     logger.error("El usuario ya existe")
                     return self.response(error="El usuario ya existe")
-
-                self.crear_administrador(usuario, nombre, apellido, email, password1, rol, is_Superuser)
+                
+                self.error = self.crear_usuario(usuario, nombre, apellido, email, password1, rol)
             except Exception as e:
                 logger.error(f"Error al registrar administrador: {e}")
                 error = f"Algo salio mal, vuelva a intenterlo."
                 return self.response(error=error)
         return self.response()
 
-    def crear_administrador(self, usuario: str, nombre: str, apellido: str, email: str, password: str, rol: bool, is_Superuser: bool):
-        return self._trabajadorService.crear_administrador(usuario, nombre, apellido, email, password, rol, is_Superuser)
-
-
     def crear_usuario(self, usuario: str, nombre: str, apellido: str, email: str, password: str, rol: str):
         if rol == "Administrador":
             is_Superuser = True
-            return self._trabajadorService.crear_trabajador(usuario, nombre, apellido, email, password, is_Superuser)
+            trabajador = self._trabajadorService.crear_trabajador(usuario, nombre, apellido, email, password, is_Superuser)
+            if isinstance(trabajador, str):
+                self.error = trabajador
+                return
+            else:
+                if rol in ['Camarero', 'Cocinero', 'Cajero', 'Barman', 'Administrador']:
+                    self._rolService.crear_rol(rol, trabajador)
         else:
             is_Superuser = False
             trabajador = self._trabajadorService.crear_trabajador(usuario, nombre, apellido, email, password, is_Superuser)
@@ -90,14 +92,14 @@ class TrabajadorController:
                 self.error = trabajador
                 return
             else:
-                if rol in ['Camarero', 'Cocinero', 'Cajero', 'Barman']:
+                if rol in ['Camarero', 'Cocinero', 'Cajero', 'Barman', 'Administrador']:
                     self._rolService.crear_rol(rol, trabajador)
     
     def get_trabajadores(self):
         return self._trabajadorService.get_trabajadores()
 
     def response(self, error: str = None, warning: str = None) -> dict:
-        if error:
+        if not isinstance(error, str):
             self.error = error
         
         diccionario = {
