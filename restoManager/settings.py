@@ -31,7 +31,6 @@ ALLOWED_HOSTS = ["192.168.1.14", "localhost", "127.0.0.1"]
 # Application definition
 
 INSTALLED_APPS = [
-    'daphne',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -76,10 +75,7 @@ TEMPLATES = [
     },
 ]
 
-# WSGI_APPLICATION = 'restoManager.wsgi.application'
-
-ASGI_APPLICATION = 'restoManager.asgi.application'
-
+WSGI_APPLICATION = 'restoManager.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases

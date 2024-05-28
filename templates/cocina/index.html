@@ -17,12 +17,13 @@
     <!-- <script src="https://unpkg.com/htmx.org@0.9.12"></script> -->
 </head>
 
-<body">
+<body>
+    
     <div  style="min-height:calc(90vh - 140px);">
         {% block content %}
         {% endblock content %}
-            
     </div>
+
     <footer class="container-fluid position-static fixed-bottom mt-5 bg-dark text-white bg-warning m-0 w-100 responsive-footer eliminar-on-teclado" style="height:auto;">
         {% include 'global/footer.html' %}
     </footer>

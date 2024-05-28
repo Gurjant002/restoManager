@@ -15,23 +15,3 @@ def cocina(request: HttpRequest):
     cocina = ServicioCocinaController()
     diccionario = cocina.peticiones(request)
     return render(request, 'cocina/pedidos.html', diccionario)
-
-@sync_to_async
-@login_required
-def mesas_pedidos(request):
-    cocina = ServicioCocinaController()
-    lista = cocina.get_servicio_mesa_cantidad_pedidos()
-    diccionario = {
-        'pedidos_lista':lista
-        }
-    return JsonResponse(diccionario)
-
-""" @sync_to_async
-@login_required
-def cambiar_estado(request: HttpRequest):
-    cocina = ServicioCocinaController()
-    id = int(request.POST['cambiar-estado'].split('-')[0])
-    estado = request.POST['cambiar-estado'].split('-')[1]
-    diccionario = cocina.cambiar_estado_servicio(id, estado)
-    return render('puesto/cocina/',diccionario)
- """

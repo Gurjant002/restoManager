@@ -284,6 +284,11 @@
 [26/May/2024 18:11:43] ERROR [cocina_app.service.servicio_cocina_service:135] Error en ServicioCocinaService.cambiar_estado: ['“false”: el valor debe ser Verdadero, Falso o Nulo.']
 [26/May/2024 18:38:18] ERROR [cocina_app.service.servicio_cocina_service:135] Error en ServicioCocinaService.cambiar_estado: ['“None”: el valor debe ser Verdadero, Falso o Nulo.']
 [26/May/2024 21:05:38] ERROR [cocina_app.service.servicio_cocina_service:135] Error en ServicioCocinaService.cambiar_estado: ['“Null”: el valor debe ser Verdadero, Falso o Nulo.']
+[27/May/2024 13:16:39] ERROR [cocina_app.service.servicio_cocina_service:122] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: Plato matching query does not exist.
+[27/May/2024 13:17:19] ERROR [cocina_app.service.servicio_cocina_service:122] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: Plato matching query does not exist.
+[27/May/2024 13:24:49] ERROR [cocina_app.service.servicio_cocina_service:135] Error en ServicioCocinaService.cambiar_estado: ['“Null”: el valor debe ser Verdadero, Falso o Nulo.']
+[27/May/2024 13:38:52] INFO [restoManager_app.service.categoria.categoria_services:23] 1
+[27/May/2024 13:38:52] INFO [restoManager_app.service.relacion.relacion_plato_categoria_service:52] service.actualizar_relacion> ACTUALIZANDO RELACION
 [27/May/2024 08:53:35] ERROR [cocina_app.service.servicio_cocina_service:100] Error en ServicioCocinaService.get_agrupaciones: Plato matching query does not exist.
 [27/May/2024 08:59:20] ERROR [cocina_app.service.servicio_cocina_service:122] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: Plato matching query does not exist.
 [27/May/2024 09:02:24] ERROR [cocina_app.service.servicio_cocina_service:122] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: Plato matching query does not exist.
