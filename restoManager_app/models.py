@@ -89,17 +89,16 @@ class Plato_Categoria(models.Model):
         verbose_name = 'Plato_Categoria'
         verbose_name_plural = 'Plato_Categorias'
 
-class Camarero(models.Model):
+class Rol(models.Model):
     user = models.OneToOneField(User, on_delete=models.DO_NOTHING, blank=True, null=True)
+    rol = models.CharField(max_length=30, blank=True, null=True)
 
     def __str__(self):
         return self.user.username
     
-    def get_camareros():
-        return Camarero.objects.all()
 
     class Meta:
-        db_table = 'camarero'
+        db_table = 'rol'
         managed = True
-        verbose_name = 'Camarero'
-        verbose_name_plural = 'Camareros'
+        verbose_name = 'Rol'
+        verbose_name_plural = 'Roles'

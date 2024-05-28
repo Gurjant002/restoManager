@@ -83,34 +83,33 @@
         </tr>
         {% if ubicaciones %}
         {% for item in ubicaciones %}
-        <tr class="text-white" id="fila-{{ item.id }}">
-          <!-- <td id="campo-id-{{ item.id }}">{{ item.id}}</td> -->
-          <td id="campo-lugar-{{ item.id }}">{{ item.lugar }}</td>
-          <form method="POST">
-            {% csrf_token %}
-            <td class="text-center">
-              <button
-                class="btn btn-info m-1"
-                type="button"
-                id="editar|{{ item.id}}"
-                name="update"
-                onclick="editarUbicacion('{{ item.id }}')"
-              >
-                Editar
-              </button>
-              <button
-                class="btn btn-danger m-1"
-                type="submit"
-                value="{{ item.id}}"
-                name="eliminar"
-                data-bs-toggle="tooltip"
-                data-bs-placement="top"
-                title="Se aconseja desactivar la ubicacion, en vez de borrarlo, permanentemente."
-              >
-                Eliminar
-              </button>
-            </td>
-          </form>
+          <tr class="text-white" id="fila-{{ item.id }}">
+            <td id="campo-lugar-{{ item.id }}">{{ item.lugar }}</td>
+            <form method="POST">
+              {% csrf_token %}
+              <td class="text-center">
+                <button
+                  class="btn btn-info m-1"
+                  type="button"
+                  id="editar|{{ item.id}}"
+                  name="update"
+                  onclick="editarUbicacion('{{ item.id }}')"
+                >
+                  Editar
+                </button>
+                <button
+                  class="btn btn-danger m-1"
+                  type="submit"
+                  value="{{ item.id}}"
+                  name="eliminar"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="Se aconseja desactivar la ubicacion, en vez de borrarlo, permanentemente."
+                >
+                  Eliminar
+                </button>
+              </td>
+            </form>
         </tr>
         {% endfor %}
         {% endif %}

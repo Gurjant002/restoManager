@@ -14,7 +14,7 @@ def cocina(request: HttpRequest):
     diccionario = cocina.peticiones(request)
     return render(request, 'cocina/pedidos.html', diccionario)
 
-@sync_to_async
+
 @login_required
 def mesas_pedidos(request):
     cocina = ServicioCocinaController()
@@ -24,7 +24,7 @@ def mesas_pedidos(request):
         }
     return JsonResponse(diccionario)
 
-""" @sync_to_async
+""" 
 @login_required
 def cambiar_estado(request: HttpRequest):
     cocina = ServicioCocinaController()

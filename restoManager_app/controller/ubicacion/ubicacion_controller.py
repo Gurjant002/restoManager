@@ -60,6 +60,7 @@ class UbicacionController:
         lista = self._ubicacion_service.get_ubicaciones()
         if isinstance(lista, str):
             errorMessage = lista
+            lista = None
         diccionario = {
             'ubicaciones': lista,
             'error': errorMessage,

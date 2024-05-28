@@ -1,6 +1,6 @@
 from django.http import HttpRequest
 from django.utils.datastructures import MultiValueDictKeyError
-from restoManager_app.service.trabajadores.camarero_service import CamareroService
+from restoManager_app.service.trabajadores.rol_service import RolService
 
 # Mesa
 from restoManager_app.controller.ubicacion.ubicacion_controller import UbicacionController
@@ -23,7 +23,7 @@ class CamareroController:
     req: HttpRequest
     def __init__(self, request: HttpRequest = None):
         self.req = request
-        self.camareroService = CamareroService()
+        self.camareroService = RolService()
         self.camareroMesaController = CamareroMesaController()
         self.servicioCocinaService = ServicioCocinaService()
         self.ubicacionController = UbicacionController()
@@ -78,7 +78,7 @@ class CamareroController:
         return error
 
     def crear_mesa(self, numero_mesa: int, camarero_id, ubicacion_id: int):
-        camarero = self.camareroService.get_camarero_by_user(camarero_id)
+        camarero = self.camareroService.get_rol_by_user_rol(camarero_id, "Camarero")
         ubicacion = self.ubicacionController.get_ubicacion_by_id(ubicacion_id)
         return self.camareroMesaController.crear_mesa(numero_mesa, camarero, ubicacion)
 
@@ -105,7 +105,7 @@ class CamareroController:
         usuario = self.req.user
         mesas = self.get_mesas()
         ubicaciones = UbicacionController().get_ubicaciones()
-        camarero = CamareroService().get_camarero_by_user(usuario)
+        camarero = RolService().get_camarero_by_user(usuario)
         platos = self.lista_platos()
         bebidas = BebidaService().get_bebidas()
         tapas = self.categoriaService.get_categorias()

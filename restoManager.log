@@ -305,3 +305,173 @@
 [27/May/2024 11:07:43] ERROR [cocina_app.service.servicio_cocina_service:100] Error en ServicioCocinaService.get_agrupaciones: Plato matching query does not exist.
 [27/May/2024 11:10:33] ERROR [cocina_app.service.servicio_cocina_service:100] Error en ServicioCocinaService.get_agrupaciones: Plato matching query does not exist.
 [27/May/2024 21:10:09] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:07:11] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:07:50] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:07:57] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:07:59] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:08:07] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:08:08] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:09:52] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:10:33] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:12:27] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:15:23] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:16:46] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:16:48] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:18:11] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:18:54] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:18:56] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:21:14] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:23:18] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:24:36] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:25:15] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:25:16] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:26:06] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:26:55] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:29:32] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:31:03] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:31:13] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:32:31] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:32:40] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:32:48] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:32:48] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:33:06] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:33:07] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:33:25] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:33:34] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:33:50] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:34:06] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:34:50] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:34:52] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:34:59] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:35:00] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:35:02] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:35:41] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:35:59] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:36:07] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:36:13] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:38:04] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:38:15] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:38:16] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:40:16] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:40:28] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:40:29] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:40:35] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:40:40] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:40:47] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:41:02] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:41:03] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:41:53] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:45:26] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:45:42] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:45:44] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:45:50] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:45:51] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:45:52] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:46:00] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:46:02] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:46:11] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:46:27] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:46:28] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:46:39] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:46:46] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:46:53] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:48:05] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:48:06] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:48:16] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:49:18] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:49:25] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:49:37] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:49:49] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:50:07] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:50:08] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 08:01:48] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 08:01:54] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 08:23:46] WARNING [login.views:31] There is no superuser registered in the system
+[28/May/2024 08:28:27] WARNING [login.views:33] There is no superuser registered in the system
+[28/May/2024 08:28:39] WARNING [login.views:33] There is no superuser registered in the system
+[28/May/2024 08:29:01] WARNING [login.views:33] There is no superuser registered in the system
+[28/May/2024 08:29:27] WARNING [login.views:33] There is no superuser registered in the system
+[28/May/2024 08:31:37] WARNING [login.views:33] There is no superuser registered in the system
+[28/May/2024 08:32:46] WARNING [login.views:33] There is no superuser registered in the system
+[28/May/2024 08:33:59] WARNING [login.views:34] There is no superuser registered in the system
+[28/May/2024 08:34:26] WARNING [login.views:34] There is no superuser registered in the system
+[28/May/2024 08:36:04] WARNING [login.views:34] There is no superuser registered in the system
+[28/May/2024 08:36:13] WARNING [login.views:34] There is no superuser registered in the system
+[28/May/2024 08:36:56] WARNING [login.views:34] There is no superuser registered in the system
+[28/May/2024 08:38:16] WARNING [login.views:34] No hay superusuario en el sistema
+[28/May/2024 08:40:02] WARNING [login.views:34] No hay superusuario en el sistema
+[28/May/2024 08:40:15] WARNING [login.views:34] No hay superusuario en el sistema
+[28/May/2024 08:44:32] WARNING [login.views:34] No hay superusuario en el sistema
+[28/May/2024 08:45:10] ERROR [restoManager_app.controller.trabajadores.trabajador_controller:69] Error al registrar administrador: 'NoneType' object has no attribute 'capitalize'
+[28/May/2024 08:46:40] ERROR [restoManager_app.controller.trabajadores.trabajador_controller:69] Error al registrar administrador: expected string or bytes-like object
+[28/May/2024 08:48:06] ERROR [restoManager_app.controller.trabajadores.trabajador_controller:55] Las contraseñas no coinciden
+[28/May/2024 08:49:08] ERROR [restoManager_app.controller.trabajadores.trabajador_controller:58] La contraseña no es valida: Debe contener al menos 1 mayuscula, 1 minuscula, 1 numero y 1 caracter especial
+[28/May/2024 08:53:05] ERROR [restoManager_app.controller.trabajadores.trabajador_controller:58] La contraseña no es valida: 
+ - Debe contener al menos 1 mayuscula
+ - 1 minuscula
+ - 1 numero
+ - 1 caracter especial
+ Una longitud minima de 10 caracteres
+[28/May/2024 08:55:28] ERROR [restoManager_app.controller.trabajadores.trabajador_controller:58] La contraseña no es valida: Debe contener al menos 1 mayuscula, 1 minuscula, 1 numero, 1 caracter especial y una longitud minima de 10 caracteres
+[28/May/2024 08:57:19] WARNING [login.views:34] No hay superusuario en el sistema
+[28/May/2024 08:58:25] WARNING [login.views:34] No hay superusuario en el sistema
+[28/May/2024 08:58:43] WARNING [login.views:34] No hay superusuario en el sistema
+[28/May/2024 08:59:11] WARNING [login.views:34] No hay superusuario en el sistema
+[28/May/2024 08:59:16] WARNING [login.views:34] No hay superusuario en el sistema
+[28/May/2024 08:59:51] WARNING [login.views:34] No hay superusuario en el sistema
+[28/May/2024 09:00:44] WARNING [login.views:34] No hay superusuario en el sistema
+[28/May/2024 09:01:41] WARNING [login.views:34] No hay superusuario en el sistema
+[28/May/2024 09:03:10] WARNING [login.views:34] No hay superusuario en el sistema
+[28/May/2024 09:03:55] WARNING [login.views:34] No hay superusuario en el sistema
+[28/May/2024 09:04:15] WARNING [login.views:34] No hay superusuario en el sistema
+[28/May/2024 09:08:08] WARNING [login.views:34] No hay superusuario en el sistema
+[28/May/2024 09:08:14] WARNING [login.views:34] No hay superusuario en el sistema
+[28/May/2024 09:08:15] WARNING [login.views:34] No hay superusuario en el sistema
+[28/May/2024 09:09:33] WARNING [login.views:34] No hay superusuario en el sistema
+[28/May/2024 09:10:55] ERROR [restoManager_app.controller.trabajadores.trabajador_controller:64] El usuario ya existe
+[28/May/2024 10:35:40] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 10:35:40] ERROR [restoManager_app.service.trabajadores.camarero_service:25] No se encontro el camarero 'gurjant'
+[28/May/2024 10:36:08] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 10:36:08] ERROR [restoManager_app.service.trabajadores.camarero_service:25] No se encontro el camarero 'gurjant'
+[28/May/2024 10:36:25] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 10:36:35] WARNING [restoManager_app.service.trabajadores.camarero_service:14] No se encontraron camareros
+[28/May/2024 10:39:01] ERROR [restoManager_app.controller.relacion.relacion_plato_categoria_controller:29] ERROR EN EL ID DE LA RELACION
+[28/May/2024 10:39:01] INFO [restoManager_app.controller.categoria.categoria_controller:46] Tagliatela
+[28/May/2024 10:39:01] INFO [restoManager_app.views:36] New Relation Created.
+[28/May/2024 10:39:46] ERROR [restoManager_app.controller.relacion.relacion_plato_categoria_controller:29] ERROR EN EL ID DE LA RELACION
+[28/May/2024 10:39:46] INFO [restoManager_app.controller.categoria.categoria_controller:46] Pizza
+[28/May/2024 10:39:46] INFO [restoManager_app.views:36] New Relation Created.
+[28/May/2024 11:54:37] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 11:54:57] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 11:55:07] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 11:55:10] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 11:55:17] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 11:56:16] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 11:56:18] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 11:57:53] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 11:59:23] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 12:00:59] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 12:02:56] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 12:06:15] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 12:07:09] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 12:07:43] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 12:08:09] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 12:08:51] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 12:09:22] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 12:09:45] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 12:09:49] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 12:09:58] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 12:10:40] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 12:11:17] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 12:11:34] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 12:11:54] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 12:12:13] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 12:12:18] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 12:15:25] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 12:20:56] ERROR [restoManager_app.service.ubicacion.ubicacion_services:39] No se puedo crear la ubicacion 'Hola' porque ya existe
+[28/May/2024 12:24:47] WARNING [restoManager_app.service.trabajadores.camarero_service:14] No se encontraron camareros
+[28/May/2024 13:20:05] ERROR [restoManager_app.controller.trabajadores.trabajador_controller:34] Las contraseñas no coinciden
+[28/May/2024 13:21:20] ERROR [restoManager_app.controller.trabajadores.trabajador_controller:34] Las contraseñas no coinciden
+[28/May/2024 13:21:54] ERROR [restoManager_app.controller.trabajadores.trabajador_controller:34] Las contraseñas no coinciden
+[28/May/2024 13:24:39] ERROR [restoManager_app.controller.trabajadores.trabajador_controller:34] Las contraseñas no coinciden
+[28/May/2024 13:25:20] ERROR [restoManager_app.controller.trabajadores.trabajador_controller:37] La contraseña no es valida: Debe contener al menos 1 mayuscula, 1 minuscula, 1 numero, 1 caracter especial y una longitud minima de 10 caracteres

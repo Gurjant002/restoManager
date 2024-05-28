@@ -1,14 +1,14 @@
 <div>
-    <div class="p-2 my-3 m-auto bg-dark rounded panel-nav w-50 responsive">
+    <div class="p-2 my-3 m-auto bg-dark rounded panel-nav w-75 responsive">
         <div class=" d-flex">
-            <a href="/"
+            <a href="{% url 'home' %}"
                 class="list-group-item list-group-item-action btn-outline-light bg-dark text-white me-2">Home</a>
             <a href="#" class="list-group-item list-group-item-action panel_nav_opc btn-outline-light bg-dark text-white me-2"
                 data-bs-toggle="collapse" data-bs-target="#apartado1" aria-expanded="false"
                 aria-controls="apartado1">Puestos</a>
-            <a href="#" class="list-group-item list-group-item-action panel_nav_opc btn-outline-light bg-dark text-white me-2"
+            <!-- <a href="#" class="list-group-item list-group-item-action panel_nav_opc btn-outline-light bg-dark text-white me-2"
                 data-bs-toggle="collapse" data-bs-target="#apartado2" aria-expanded="false"
-                aria-controls="apartado2">Apartado</a>
+                aria-controls="apartado2">Apartado</a> -->
             <a href="#" class="list-group-item list-group-item-action panel_nav_opc btn-outline-light bg-dark text-white me-2"
                 data-bs-toggle="collapse" data-bs-target="#administrar" aria-expanded="false"
                 aria-controls="administrar">Administrar</a>
@@ -43,24 +43,19 @@
                     class="list-group-item mt-1 list-group-item-action btn-outline-light bg-dark text-white me-2">Categoria</a>
                 <a href="{% url 'admin_ubicaciones' %}"
                     class="list-group-item mt-1 list-group-item-action btn-outline-light bg-dark text-white me-2">Ubicacion</a>
-                <a href="#"
-                    class="list-group-item mt-1 list-group-item-action btn-outline-light bg-dark text-white me-2"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#trabajadores"
-                    aria-expanded="false"
-                    aria-controls="trabajadores">
-                    Trabajadores</a>
+                <a href="{% url 'admin_trabajadores' %}"
+                    class="list-group-item mt-1 list-group-item-action btn-outline-light bg-dark text-white me-2">Trabajadores</a>
                 <a href="{% url 'admin_config' %}"
                     class="list-group-item mt-1 list-group-item-action btn-outline-light bg-dark text-white me-2">Configuración</a>
             </div>
         </div>
-        <div class="collapse" id="trabajadores">
+        <!-- <div class="collapse" id="trabajadores">
             <div class="d-flex">
                 <a href="{% url 'admin_camareros' %}"
                     class="list-group-item mt-1 list-group-item-action btn-outline-light bg-dark text-white me-2">Camarero</a>
                 <a href="{% url 'admin_trabajadores' %}"
                     class="list-group-item mt-1 list-group-item-action btn-outline-light bg-dark text-white me-2">Trabajadores</a>
             </div>
-        </div>
+        </div> -->
     </div>
 </div>

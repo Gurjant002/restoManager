@@ -44,10 +44,11 @@
             <div class="form-floating mb-3 d-flex flex-row">
               <input
                 type="text"
-                class="form-control"
+                class="form-control text-capitalize"
                 id="floatingName"
                 required="true"
                 name="nombre"
+                
                 placeholder="Nombre del usuario"
               />
               <label for="floatingName" class="text-dark">Nombre</label>
@@ -59,7 +60,7 @@
             <div class="form-floating mb-3 d-flex flex-row">
               <input
                 type="text"
-                class="form-control"
+                class="form-control text-capitalize"
                 id="floatingSrname"
                 required="true"
                 name="apellido"
@@ -133,16 +134,18 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-auto">
-          <div class="form-floating">
-              <select class="form-select" id="floatingEsTrabajadore" name="is_staff">
-                  <option value="0">No</option>
-                  <option value="1" selected>Si</option>
-              </select>
-              <label for="floatingEsTrabajadore" class="text-dark">Trabajador</label>
-          </div>
       </div>
-      </div>
+      <div class="col-sm-auto">
+            <div class="form-floating d-flex flex-row">
+                <select class="form-control" id="rol" name="rol" placeholder="" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="Administrador">Administrador</option>
+                    <option value="Camarero">Camarero</option>
+                    <option value="Cocinero">Cocinero</option>
+                </select>
+                <label for="rol" class="text-dark">Rol</label>
+            </div>
+        </div>
       <div class="row m-3">
         <div class="col-sm">
           <button
@@ -171,15 +174,14 @@
           <th>Apellido</th>
           <th>Email</th>
           <th>F. Inicio</th>
-          <th>Utiima sesion</th>
+          <th>Ultima sesion</th>
           <th>Acciones</th>
         </tr>
         {% if trabajadores %}
         {% for trabajador in trabajadores %}
         <tr class="text-white" id="fila-{{ trabajador.id }}">
           <td id="campo-id-{{trabajador.id}}">{{trabajador.id}}</td>
-          <td id="campo-usuario-{{trabajador.id}}" class="{% if trabajador.is_superuser %} bg-success {% elif trabajador.is_staff %} bg-warning {% endif %}">{{ trabajador.username }}</td>
-          <!-- <td id="campo-password-{{trabajador.id}}">{{trabajador.password}}</td> -->
+          <td id="campo-usuario-{{trabajador.id}}" class="{% if trabajador.is_superuser %} bg-success{% endif %}">{{ trabajador.username }}</td>
           <td id="campo-nombre-{{trabajador.id}}">{{trabajador.first_name}}</td>
           <td id="campo-apellido-{{trabajador.id}}">{{trabajador.last_name}}</td>
           <td id="campo-email-{{trabajador.id}}">{{trabajador.email}}</td>

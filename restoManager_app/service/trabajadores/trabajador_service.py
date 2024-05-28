@@ -7,12 +7,20 @@ class TrabajadorService:
     def __init__(self):
         self._trabajadores = User()
 
-    def crear_trabajador(self, usuario: str, nombre: str, apellido: str, email: str, password: str, is_staff: bool):
+    def crear_trabajador(self, usuario: str, nombre: str, apellido: str, email: str, password: str, is_Superuser: bool):
         try:
-            self._trabajadores = User.objects.create_user(password=password, email=email, first_name=nombre, last_name=apellido, username=usuario, is_staff=is_staff)
+            self._trabajadores = User.objects.create_user(password=password, email=email, first_name=nombre, last_name=apellido, username=usuario, is_superuser=is_Superuser, is_staff=True)
         except Exception as e:
             logger.error(f"Error al crear trabajador: {e}")
             return f"Error al crear trabajador: {e}"
+        return self._trabajadores
+    
+    def crear_administrador(self, usuario: str, nombre: str, apellido: str, email: str, password: str, is_staff: bool, is_Superuser: bool):
+        try:
+            self._trabajadores = User.objects.create_user(password=password, email=email, first_name=nombre, last_name=apellido, username=usuario, is_staff=is_staff, is_superuser=is_Superuser)
+        except Exception as e:
+            logger.error(f"Error al crear administrador: {e}")
+            return f"Error al crear administrador: {e}"
         return self._trabajadores
 
     def get_trabajador_by_id(self, id_trabajador: int) -> User:

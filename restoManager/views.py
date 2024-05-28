@@ -10,3 +10,6 @@ def home(request: HttpRequest):
 @login_required
 def puestos(request: HttpRequest):
     return render(request, "restoManager/puestos.html", {})
+
+def about(request: HttpRequest):
+    return render(request, "restoManager/about.html", {})

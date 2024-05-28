@@ -6,7 +6,7 @@
 #   * Remove `managed = False` lines if you wish to allow Django to create, modify, and delete the table
 # Feel free to rename the models, but don't rename db_table values or field names.
 from django.db import models
-from restoManager_app.models import Camarero, Ubicacion, Plato, Bebida
+from restoManager_app.models import Ubicacion, Plato, Bebida
 from camarero_app.models import Camarero_Mesa
 import datetime
 

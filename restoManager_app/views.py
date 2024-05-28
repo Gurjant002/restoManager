@@ -9,7 +9,7 @@ from .controller.bebida.bebida_controller import BebidaController
 from .controller.categoria.categoria_controller import CategoriaController
 from .controller.ubicacion.ubicacion_controller import UbicacionController
 from .controller.trabajadores.trabajador_controller import TrabajadorController
-from .controller.trabajadores.camarero_controller import CamareroController
+from .controller.trabajadores.rol_controller import CamareroController
 
 import logging
 logger = logging.getLogger(__name__)
