@@ -11,20 +11,15 @@
     <div class="bg-dark p-2 border-bottom border-secondary border-3">
         <div class="d-flex justify-content-between">
             <button type="button" class="position-relative btn btn-outline-light bg-dark" data-bs-toggle="collapse" id="mesa" data-bs-target="#mesas-collapse" aria-expanded="false" aria-controls="mesas-collapse">Mesas</button>
-            <h3 class="text-dark bg-white mb-0 mt-2 pl-2 rounded w-75" id="mesa-seleccionada">{% if nota.camarero_mesa.numero_mesa %}#{{ nota.camarero_mesa.numero_mesa }}: {{ nota.camarero_mesa.camarero.user.first_name }} {% else %} No se ha seleccionado una mesa aun {% endif %} </h3>
+            <h3 class="text-dark bg-white mb-0 mt-2 pl-2 rounded w-75" id="mesa-seleccionada">{% if nota.camarero_mesa.numero_mesa %}#{{ nota.camarero_mesa.numero_mesa }}: {{ nota.camarero_mesa.camarero.user.first_name }} {% else %} Mesa {% endif %} </h3>
         </div>
         <div class="collapse " id="mesas-collapse">
             {% include 'camarero/contenido/mesas.html' %}
         </div>
     </div>
     <div class="bg-dark p-2 border-bottom border-secondary border-3">
-        <div class="d-flex justify-content-end">
+        <div class="d-flex justify-content-start">
             <button type="button" class="position-relative btn btn-outline-light bg-dark" data-bs-toggle="collapse" id="plato" data-bs-target="#platos-collapse" aria-expanded="false" aria-controls="platos-collapse">Platos</button>
-            <div class="overflow-auto bg-interior rounded ms-auto w-50 h-100">
-                <div class="btn-group p-1" role="group" aria-label="Horizontal button group">
-                    {% include 'camarero/contenido/filtro_categorias.html' %}
-                </div>
-            </div>
         </div>
         <div class="collapse " id="platos-collapse">
             {% include 'camarero/contenido/platos.html' %}
@@ -36,6 +31,11 @@
         </div>
         <div class="collapse" id="bebidas-collapse">
             {% include 'camarero/contenido/bebidas.html' %}
+        </div>
+    </div>
+    <div class="bg-dark p-2 border-bottom border-secondary border-3">
+        <div class="d-flex w-100">
+            <a href="{% url 'home' %}" class="position-relative btn btn-outline-light bg-dark w-100" >Home</a>
         </div>
     </div>
     <div class="container fixed-bottom mt-5 bg-dark text-white bg-warning" id="notas">

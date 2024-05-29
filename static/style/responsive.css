@@ -1,26 +1,34 @@
-@media (max-width: 767px ) {
+/* @media (max-width: 767px ) {
     .responsive {
         overflow: auto;
         width: 200px;
     }
 
-}
+} */
 
-@media screen and (max-width: 830px) {
+/* @media screen and (max-width: 830px) {
     .responsive {
         overflow: auto;
         width: 200px;
     }
-}
+} */
 
 @media screen and (max-height: 500px) {
     .responsive {
         overflow: auto;
-    }
-}
-
-@media screen and (max-height: 500px) {
-    .responsive-footer {
         display: none;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .responsive {
+        overflow: auto;
+        width: 100% !important;
+    }
+
+    .flex-responsive {
+        display: flex;
+        flex-wrap: wrap !important;
     }
 }

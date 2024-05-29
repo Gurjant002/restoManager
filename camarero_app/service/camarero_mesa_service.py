@@ -48,7 +48,6 @@ class CamareroMesaService:
         if not numero_mesa or not rol or not ubicacion:
             logger.error(f"Ha habido un problema al recibir los parametros: {numero_mesa}, {rol}, {ubicacion}")
             return 'Error all obtener parametros: Ponga se en contacto con el administrador.'
-        
         try:
             Camarero_Mesa.objects.create(numero_mesa=numero_mesa, rol=rol, ubicacion=ubicacion)
         except Exception as e:

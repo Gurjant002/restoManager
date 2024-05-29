@@ -47,7 +47,7 @@ class CamareroController:
             if 'add-mesa' in peticion:
                 numero_mesa = int(peticion.get('numero-mesa'))
                 lugar = int(peticion.get('lugar'))
-                camarero = int(peticion.get('camarero'))
+                camarero = self.req.user.id
                 errores = self.crear_mesa(numero_mesa, camarero, lugar)
             if 'borrar-mesa' in peticion:
                 print(peticion)
@@ -91,7 +91,7 @@ class CamareroController:
     
 
     def crear_mesa(self, numero_mesa: int, camarero_id, ubicacion_id: int):
-        camarero = self.rolService.get_rol_by_user_rol(camarero_id, 'Cocinero')
+        camarero = self.rolService.get_rol_by_user_rol(camarero_id, 'Camarero')
         if isinstance(camarero, str) or camarero is None:
             camarero = self.rolService.get_rol_by_user_rol(camarero_id, 'Administrador')
         if isinstance(camarero, str):
@@ -120,7 +120,7 @@ class CamareroController:
         return self.servicioCocinaController.get_agrupaciones_by_camarero_mesa_id(id_camarero_mesa)
 
     def lista_platos(self):
-        platos = PlatoCategoriaService().get_lista_relacion_plato_categoria()
+        platos = PlatoCategoriaService().get_lista_relacion_plato_categoria_por_habilitado()
         return platos
 
     def respuestas(self, error: str = None, warning: str = None, nota = None) -> dict:
@@ -130,12 +130,11 @@ class CamareroController:
         ubicaciones = UbicacionController().get_ubicaciones()
         
         camarero = self.rolService.get_rol_by_user_rol(usuario, "Administrador")
-        if isinstance(camarero, str):
+        if isinstance(camarero, str) or camarero is None:
             camarero = self.rolService.get_rol_by_user_rol(usuario, "Camarero")
-            
+
         platos = self.lista_platos()
         bebidas = BebidaService().get_bebidas()
-        tapas = self.categoriaService.get_categorias()
 
         if self.error == '' or self.error is None:
             camarero = self.check_isinstance(camarero)
@@ -160,7 +159,6 @@ class CamareroController:
             'platos': platos,
             'bebidas': bebidas,
             'nota': nota,
-            'tapas': tapas,
             'pedidos': pedidos_mesas,
         }
         return diccionario

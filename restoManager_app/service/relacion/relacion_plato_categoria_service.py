@@ -14,6 +14,14 @@ class PlatoCategoriaService:
         except Exception as e:
             log.error('Algo salio mal al obtener las relaciones', exc_info=True)
             return 'Algo salio mal al obtener las relaciones'
+
+    def get_lista_relacion_plato_categoria_por_habilitado(self, habilitado: bool = True) -> Plato_Categoria | None:
+        try:
+            relacion = Plato_Categoria.objects.filter(habilitado=habilitado)
+            return relacion
+        except Exception as e:
+            log.error('Algo salio mal al obtener las relaciones', exc_info=True)
+            return 'Algo salio mal al obtener las relaciones'
     
     def get_relacion_by_plato(self, plato: Plato) -> Plato_Categoria:
         relacion=Plato_Categoria.filter(plato=plato).first
