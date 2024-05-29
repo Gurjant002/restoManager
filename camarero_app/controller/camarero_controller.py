@@ -39,15 +39,20 @@ class CamareroController:
         peticion = self.req.POST
         errores = ''
         try:
+            if 'cambiar-estado' in peticion:
+                id = int(peticion['cambiar-estado'].split('-')[0])
+                estado = peticion['cambiar-estado'].split('-')[1]
+                self.error = self.servicioCocinaController.cambiar_estado_servicio(id, estado)
+                
             if 'add-mesa' in peticion:
                 numero_mesa = int(peticion.get('numero-mesa'))
                 lugar = int(peticion.get('lugar'))
                 camarero = int(peticion.get('camarero'))
                 errores = self.crear_mesa(numero_mesa, camarero, lugar)
-            elif 'borrar-mesa' in peticion:
+            if 'borrar-mesa' in peticion:
                 print(peticion)
                 
-            elif 'solicitar-cocina' in peticion:
+            if 'solicitar-cocina' in peticion:
                 id_mesa = int(peticion.get('mesa-seleccionada'))
                 id_platos = peticion.getlist('platos')
                 id_bebidas = peticion.getlist('bebidas')
@@ -82,6 +87,8 @@ class CamareroController:
         for plato in platos:
             error = self.servicioCocinaService.crear_servicio(instancia_mesa, plato, servido)
         return error
+    
+    
 
     def crear_mesa(self, numero_mesa: int, camarero_id, ubicacion_id: int):
         camarero = self.rolService.get_rol_by_user_rol(camarero_id, 'Cocinero')

@@ -84,9 +84,10 @@
                                 </td>
                             {% elif plato.servido == False %}
                                 <td>
-                                    <a href="{% url 'camarero_home' %}" class="badge bg-warning">Preparado</a>
-                                    <!-- <span class="">
-                                    </span> -->
+                                    <form method="post">
+                                        {% csrf_token %}
+                                        <button type="submit" name="cambiar-estado" value="{{ plato.id }}-True" class="badge bg-warning btn btn-warning">Preparado</button>
+                                    </form>
                                 </td>
                             {% else %}
                                 <td>

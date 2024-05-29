@@ -4,9 +4,9 @@ from cocina_app.models import Servicio_Cocina
 from restoManager_app.models import Plato
 from camarero_app.models import Camarero_Mesa
 import logging
-from datetime import datetime
+from django.utils import timezone
 
-utc_dt = datetime.utcnow()
+utc_dt = timezone.now()
 
 logger = logging.getLogger(__name__)
 class ServicioCocinaService:
@@ -54,7 +54,7 @@ class ServicioCocinaService:
             logger.error(f'Error en ServicioCocinaService.get_servicio_by_hora: {e}')
             return 'Ha ocurrido un error inesperado.'
 
-    def crear_servicio(self, mesa_camarero= None, plato = None, servido: bool = None , date: datetime = utc_dt):
+    def crear_servicio(self, mesa_camarero= None, plato = None, servido: bool = None , date: timezone = utc_dt):
         try:
             return Servicio_Cocina.objects.create( plato=plato, servido=servido, camarero_mesa=mesa_camarero, hora_dia=date)
         except IntegrityError:
@@ -70,7 +70,7 @@ class ServicioCocinaService:
         plato,
         servido: bool = None ,
         mesa_camarero = None,
-        date: datetime = utc_dt
+        date: timezone = timezone.now()
         ):
         try:
             servicio: Servicio_Cocina = Servicio_Cocina.objects.get(id=id)
@@ -135,7 +135,6 @@ class ServicioCocinaService:
                 return 'No se encontro ningun servicio de cocina'
             servicio.servido = servido
             servicio.save()
-            return 'Servicio de cocina actualizado'
         except Exception as e:
             logger.error(f'Error en ServicioCocinaService.cambiar_estado: {e}')
             return 'Ha ocurrido un error inesperado.'
