@@ -1,0 +1,26 @@
+@media (max-width: 767px ) {
+    .responsive {
+        overflow: auto;
+        width: 200px;
+    }
+
+}
+
+@media screen and (max-width: 830px) {
+    .responsive {
+        overflow: auto;
+        width: 200px;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    .responsive {
+        overflow: auto;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    .responsive-footer {
+        display: none;
+    }
+}

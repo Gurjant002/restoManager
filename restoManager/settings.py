@@ -25,8 +25,8 @@ SECRET_KEY = 'django-insecure-!e0h&6kud$@4++fg258hr1+zderq5l1^24z)@ik_z8(dmseq0%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ["192.168.1.14", "localhost", "127.0.0.1"]
+# ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'restoManager_app',
     'cocina_app',
+    'camarero_app',
+    'login',
+    'restoManager',
 ]
 
 MIDDLEWARE = [
@@ -52,11 +55,14 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'restoManager.urls'
+import os
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['C:/Users/gurja/OneDrive/workstation/restoManager/templates'],
+        'DIRS': [os.path.join(BASE_DIR, 'restoManager/templates'),'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -71,7 +77,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'restoManager.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
@@ -82,8 +87,8 @@ DATABASES = {
         
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'restomanager',
-        'USER': 'root',
-        'PASSWORD': 'root',
+        'USER': 'restoManagerSql',
+        'PASSWORD': 'restoManager245',
         'HOST': 'localhost',
         'PORT': '3306',
 
@@ -113,7 +118,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-ES'
 
 TIME_ZONE = 'UTC'
 
@@ -133,3 +138,110 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+import logging
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s',
+            'datefmt': '%d/%b/%Y %H:%M:%S',
+        },
+    },
+    'handlers': {
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose',
+            'filters': ['warning_filter', 'error_filter', 'info_filter'],
+        },
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'restoManager.log',
+            'formatter': 'verbose'
+        },
+    },
+    'loggers': {
+        'restoManager_app': {
+            'handlers': ['console', 'file'],
+            'level': 'DEBUG',
+        },
+        'cocina_app': {
+            'handlers': ['console', 'file'],
+            'level': 'DEBUG',
+        },
+        'camarero_app': {
+            'handlers': ['console', 'file'],
+            'level': 'DEBUG',
+        },
+        'restomanager': {
+            'handlers': ['console', 'file'],
+            'level': 'DEBUG',
+        },
+        'login': {
+            'handlers': ['console', 'file'],
+            'level': 'DEBUG',
+        },
+    },
+    'filters': {
+        'warning_filter': {
+            '()': 'django.utils.log.CallbackFilter',
+            'callback': lambda r: r.levelno == logging.WARNING,
+        },
+        'error_filter': {
+            '()': 'django.utils.log.CallbackFilter',
+            'callback': lambda r: r.levelno == logging.ERROR,
+        },
+        'info_filter': {
+            '()': 'django.utils.log.CallbackFilter',
+            'callback': lambda r: r.levelno == logging.INFO,
+        },
+    },
+    'filters': {
+        'warning_filter': {
+            '()': 'django.utils.log.CallbackFilter',
+            'callback': lambda r: r.levelno == logging.WARNING,
+        },
+        'error_filter': {
+            '()': 'django.utils.log.CallbackFilter',
+            'callback': lambda r: r.levelno == logging.ERROR,
+        },
+        'info_filter': {
+            '()': 'django.utils.log.CallbackFilter',
+            'callback': lambda r: r.levelno == logging.INFO,
+        },
+    },
+    'filters': {
+        'warning_filter': {
+            '()': 'django.utils.log.CallbackFilter',
+            'callback': lambda r: r.levelno == logging.WARNING,
+        },
+        'error_filter': {
+            '()': 'django.utils.log.CallbackFilter',
+            'callback': lambda r: r.levelno == logging.ERROR,
+        },
+        'info_filter': {
+            '()': 'django.utils.log.CallbackFilter',
+            'callback': lambda r: r.levelno == logging.INFO,
+        },
+    },
+    'filters': {
+        'warning_filter': {
+            '()': 'django.utils.log.CallbackFilter',
+            'callback': lambda r: r.levelno == logging.WARNING,
+        },
+        'error_filter': {
+            '()': 'django.utils.log.CallbackFilter',
+            'callback': lambda r: r.levelno == logging.ERROR,
+        },
+        'info_filter': {
+            '()': 'django.utils.log.CallbackFilter',
+            'callback': lambda r: r.levelno == logging.INFO,
+        },
+    },
+}
+
+

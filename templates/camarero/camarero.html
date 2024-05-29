@@ -1,0 +1,81 @@
+{% extends 'camarero/index.html' %}
+
+
+{% block title %}
+    Camarero
+{% endblock title %}
+{% block content %}
+{% if es_camarero %}
+<div class="container-fluid w-100 p-0 m-0 overflow-auto contenedor-camarero">
+
+    <div class="bg-dark p-2 border-bottom border-secondary border-3">
+        <div class="d-flex justify-content-between">
+            <button type="button" class="position-relative btn btn-outline-light bg-dark" data-bs-toggle="collapse" id="mesa" data-bs-target="#mesas-collapse" aria-expanded="false" aria-controls="mesas-collapse">Mesas</button>
+            <h3 class="text-dark bg-white mb-0 mt-2 pl-2 rounded w-75" id="mesa-seleccionada">{% if nota.camarero_mesa.numero_mesa %}#{{ nota.camarero_mesa.numero_mesa }}: {{ nota.camarero_mesa.camarero.user.first_name }} {% else %} No se ha seleccionado una mesa aun {% endif %} </h3>
+        </div>
+        <div class="collapse " id="mesas-collapse">
+            {% include 'camarero/contenido/mesas.html' %}
+        </div>
+    </div>
+    <div class="bg-dark p-2 border-bottom border-secondary border-3">
+        <div class="d-flex justify-content-end">
+            <button type="button" class="position-relative btn btn-outline-light bg-dark" data-bs-toggle="collapse" id="plato" data-bs-target="#platos-collapse" aria-expanded="false" aria-controls="platos-collapse">Platos</button>
+            <div class="overflow-auto bg-interior rounded ms-auto w-50 h-100">
+                <div class="btn-group p-1" role="group" aria-label="Horizontal button group">
+                    {% include 'camarero/contenido/filtro_categorias.html' %}
+                </div>
+            </div>
+        </div>
+        <div class="collapse " id="platos-collapse">
+            {% include 'camarero/contenido/platos.html' %}
+        </div>
+    </div>
+    <div class="bg-dark p-2 border-bottom border-secondary border-3">
+        <div class="d-flex justify-content-between">
+            <button type="button" class="position-relative btn btn-outline-light bg-dark" data-bs-toggle="collapse" id="bebida" data-bs-target="#bebidas-collapse" aria-expanded="false" aria-controls="bebidas-collapse">Bebidas</button>
+        </div>
+        <div class="collapse" id="bebidas-collapse">
+            {% include 'camarero/contenido/bebidas.html' %}
+        </div>
+    </div>
+    <div class="container fixed-bottom mt-5 bg-dark text-white bg-warning" id="notas">
+        <div class="panel overflow-auto" id="resizable-panel">
+            <div class="resizer position-sticky max text-center rounded my-1 top-0" style="background-color: rgb(72, 72, 72);" id="resizer">
+            </div>
+            <div class="container-fluid">
+                {% include 'camarero/contenido/nota.html' %}
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="d-flex justify-content-center align-items-center mt-5" style="height: 100px;">
+        <div class="alert alert-danger text-center" role="alert">
+            <h4 class="alert-heading">¡Ups!</h4>
+            <p>{{ error }}</p>
+            <a href="javascript:history.back()" class="btn btn-info mt-2"><i class="bi bi-arrow-left-short"></i> Volver Atrás</a>
+        </div>
+    </div>
+    {% endif %}
+</div>
+{% if error %}
+  <div class="alert alert-danger text-center" role="alert">
+    <h4 class="alert-heading">¡Ups!</h4>
+    <p>{{ error }}</p>
+    <a href="javascript:history.back()" class="btn btn-info mt-2"><i class="bi bi-arrow-left-short"></i> Volver Atrás</a>
+</div>
+{% endif %}
+<script>
+    function editarUbicacion(id) {
+      var lugar = document.getElementById("campo-lugar-" + id).textContent;
+      document.getElementById("floatingUbicacion").value = lugar;
+      document.getElementById("btn_update_ubicacion").style.display = "block";
+      document.getElementById("btn-submit").style.display = "none";
+      document.getElementById("btn_update_ubicacion").value = id;
+    }
+  </script>
+{% endblock content %}
+
+<!-- 
+    
+
+ -->

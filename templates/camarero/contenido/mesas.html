@@ -1,0 +1,63 @@
+<div class="d-grid my-3 gap-2">
+    <button type="button" class="btn btn-primary" onclick="addMesas()">Añadir</button>
+</div>
+<div class="mt-2 p-2 border border-secondary rounded">
+    <table class="table table-striped table-dark table-bordered">
+        <thead>
+            <tr>
+                <th class="w-auto">Num#</th>
+                <th>Lugar</th>
+                <th>Asignacion</th>
+            </tr>
+        </thead>
+        <tbody>
+            <form method="post">
+                {% csrf_token %}
+                <tr class="d-none d-block" id="mesa-nueva">
+                    <td class="w-25"><input type="number" class="form-control" name="numero-mesa" onfocusin="toggleNotas('none')" onfocusout="toggleNotas('block')" /></td>
+                    <td>
+                        <select class="form-select" name="lugar">
+                            {% for lugar in ubicaciones %}
+                            <option value="{{ lugar.id }}">{{ lugar.lugar }}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                    <td>{{ user.first_name }} <input hidden name="camarero" value="{{ user.id }}"></td>
+                </tr>
+                <tr class="d-none d-block" id="mesa-nueva">
+                    <td colspan="3"><button type="submit" class="btn btn-primary w-100" name="add-mesa">Submit</button></td>
+                </tr>
+            </form>
+            {% if mesas %}
+                {% for mesa in mesas %}
+                    <tr>
+                        <td>
+                            <button 
+                                type="button"
+                                name="mesa-seleccionada"
+                                value="{{ mesa.id }}"
+                                onclick="selectMesa('{{ mesa.id }}', '{{ mesa.numero_mesa }}', '{{ mesa.ubicacion.lugar }}', '{{ mesa.camarero.user.first_name }}')"
+                                class="btn btn-outline-light me-2">
+                                {{ mesa.numero_mesa }}
+                            </button>
+                        </td>
+                        <td>
+                            {{ mesa.ubicacion.lugar }}
+                        </td>
+                        <td>
+                            <div class="d-flex justify-content-between align-align-items-center">
+                                {{ mesa.camarero.user.first_name }}
+                                <form method="post" style="display: inline;">
+                                    {% csrf_token %}
+                                    <button type="submit" name="borrar-mesa" value="{{ mesa.id }}" class="btn btn-danger btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Borrar Mesa">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+            {% endif %}
+        </tbody>
+    </table>
+</div>

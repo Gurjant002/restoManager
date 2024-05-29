@@ -1,0 +1,47 @@
+{% extends 'index.html' %}
+
+{% block title %} Home {% endblock %}
+{% block content %}
+
+    {% include 'global/header.html' %}
+    <div class="container pb-5 mt-5">
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-4">
+            <div class="col h-100">
+                <div class="card h-100">
+                    <div class="card-header  text-light bg-dark">
+                        <h5 class="card-title">Administrar</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                        <a href="{% url 'admin_home' %}" class="btn btn-primary">Administrar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col h-100">
+                <div class="card h-100">
+                    <div class="card-header  text-light bg-dark">
+                        <h5 class="card-title">Puestos</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">En este apartado podras seleccionar tu puesto de trabajo</p>
+                        <a href="{% url 'puestos' %}" class="btn btn-primary">Acceder</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col h-100">
+                <div class="card h-100">
+                    <div class="card-header  text-light bg-dark">
+                        <h5 class="card-title">Sobre Nosotros</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">En este apartado podras seleccionar tu puesto de trabajo</p>
+                        <a href="{% url 'about' %}" class="btn btn-primary">Acceder</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

@@ -774,6 +774,782 @@
 [29/May/2024 11:02:14] ERROR [cocina_app.service.servicio_cocina_service:155] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: Cannot resolve keyword 'camare' into field. Choices are: camarero_mesa, camarero_mesa_id, hora_dia, id, plato, plato_id, servido
 [29/May/2024 12:13:09] ERROR [cocina_app.service.servicio_cocina_service:138] Error en ServicioCocinaService.cambiar_estado: ['“Null”: el valor debe ser Verdadero, Falso o Nulo.']
 [29/May/2024 12:14:26] ERROR [cocina_app.service.servicio_cocina_service:138] Error en ServicioCocinaService.cambiar_estado: ['“Null”: el valor debe ser Verdadero, Falso o Nulo.']
+[18/May/2024 16:31:09] ERROR [restoManager_app.service.ubicacion.ubicacion_services:38] No se puedo crear la ubicacion 'Salon Planta 0' porque ya existe
+[18/May/2024 17:30:17] INFO [restoManager_app.views:51] {'lista': None, 'lista_platos': [], 'lista_categoria': []}
+[18/May/2024 17:33:16] INFO [restoManager_app.views:51] {'lista': None, 'lista_platos': [], 'lista_categoria': []}
+[18/May/2024 17:33:16] INFO [restoManager_app.views:51] {'lista': None, 'lista_platos': [], 'lista_categoria': []}
+[18/May/2024 17:33:16] INFO [restoManager_app.views:51] {'lista': None, 'lista_platos': [], 'lista_categoria': []}
+[18/May/2024 17:45:51] INFO [restoManager_app.views:51] {'lista': None, 'lista_platos': [], 'lista_categoria': []}
+[18/May/2024 17:55:26] INFO [restoManager_app.views:51] {'lista': None, 'lista_platos': [], 'lista_categoria': []}
+[18/May/2024 17:55:36] INFO [restoManager_app.views:51] {'lista': None, 'lista_platos': [], 'lista_categoria': []}
+[18/May/2024 17:59:39] INFO [restoManager_app.views:51] {'lista': None, 'lista_platos': [], 'lista_categoria': []}
+[18/May/2024 18:00:48] INFO [restoManager_app.views:51] {'lista': None, 'lista_platos': [], 'lista_categoria': []}
+[18/May/2024 18:05:53] INFO [restoManager_app.views:51] {'lista': None, 'lista_platos': [], 'lista_categoria': []}
+[18/May/2024 18:06:04] INFO [restoManager_app.views:51] {'lista': None, 'lista_platos': [], 'lista_categoria': []}
+[18/May/2024 19:54:47] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[18/May/2024 19:55:24] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[18/May/2024 19:55:42] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[18/May/2024 19:56:13] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 00:36:43] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 00:41:47] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 01:16:30] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 01:17:01] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 01:21:40] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 01:23:21] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 01:23:40] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:13:53] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:14:29] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:14:31] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:14:32] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:15:05] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:15:11] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:15:36] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:15:53] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:17:06] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:18:13] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:19:16] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:20:26] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:20:36] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:21:38] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:28:43] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:29:25] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:29:57] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:39:12] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:39:15] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:40:52] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:41:22] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:42:10] INFO [restoManager_app.controller.categoria.categoria_controller:46] Tapa
+[19/May/2024 12:42:10] INFO [restoManager_app.views:38] New Relation Created.
+[19/May/2024 12:43:17] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 12:44:19] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 23:10:39] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 23:10:40] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 23:11:28] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 23:23:54] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 23:23:58] ERROR [restoManager_app.service.trabajadores.camarero_service:24] Error al crear el camarero: Cannot assign "1": "Camarero.id_user" must be a "User" instance.
+[19/May/2024 23:23:58] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 23:28:39] ERROR [restoManager_app.service.trabajadores.camarero_service:24] Error al crear el camarero: Cannot assign "1": "Camarero.id_user" must be a "User" instance.
+[19/May/2024 23:28:39] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 23:34:06] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 23:41:13] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 23:41:16] ERROR [restoManager_app.service.trabajadores.camarero_service:24] Error al crear el camarero: Cannot assign "1": "Camarero.id_user" must be a "User" instance.
+[19/May/2024 23:41:16] WARNING [restoManager_app.service.trabajadores.camarero_service:13] No se encontraron camareros
+[19/May/2024 23:41:51] ERROR [restoManager_app.service.trabajadores.camarero_service:24] Error al crear el camarero: Cannot assign "1": "Camarero.id_user" must be a "User" instance.
+[19/May/2024 23:42:22] ERROR [restoManager_app.service.trabajadores.camarero_service:24] Error al crear el camarero: Cannot assign "1": "Camarero.id_user" must be a "User" instance.
+[19/May/2024 23:43:19] ERROR [restoManager_app.service.trabajadores.camarero_service:24] Error al crear el camarero: Cannot assign "1": "Camarero.id_user" must be a "User" instance.
+[19/May/2024 23:56:48] ERROR [restoManager_app.service.trabajadores.camarero_service:24] Error al crear el camarero: (1062, "Duplicate entry '1' for key 'camarero.camarero_id_user_id_9d2d8d40_uniq'")
+[19/May/2024 23:58:45] ERROR [restoManager_app.service.trabajadores.camarero_service:25] Error al crear el camarero: (1062, "Duplicate entry '1' for key 'camarero.camarero_id_user_id_9d2d8d40_uniq'")
+[19/May/2024 23:59:01] ERROR [restoManager_app.service.trabajadores.camarero_service:25] Error al crear el camarero: (1062, "Duplicate entry '1' for key 'camarero.camarero_id_user_id_9d2d8d40_uniq'")
+[19/May/2024 23:59:29] ERROR [restoManager_app.service.trabajadores.camarero_service:25] Error al crear el camarero: (1062, "Duplicate entry '1' for key 'camarero.camarero_id_user_id_9d2d8d40_uniq'")
+[19/May/2024 23:59:53] ERROR [restoManager_app.service.trabajadores.camarero_service:25] Error al crear el camarero: (1062, "Duplicate entry '1' for key 'camarero.camarero_id_user_id_9d2d8d40_uniq'")
+[20/May/2024 00:00:06] ERROR [restoManager_app.service.trabajadores.camarero_service:25] Error al crear el camarero: (1062, "Duplicate entry '1' for key 'camarero.camarero_id_user_id_9d2d8d40_uniq'")
+[20/May/2024 00:22:55] WARNING [restoManager_app.service.trabajadores.camarero_service:14] No se encontraron camareros
+[20/May/2024 00:23:00] ERROR [restoManager_app.service.trabajadores.camarero_service:28] Error al crear el camarero: Camarero() got unexpected keyword arguments: 'id_user'
+[20/May/2024 00:23:00] WARNING [restoManager_app.service.trabajadores.camarero_service:14] No se encontraron camareros
+[20/May/2024 00:24:55] ERROR [restoManager_app.service.trabajadores.camarero_service:28] Error al crear el camarero: Camarero() got unexpected keyword arguments: 'id_user'
+[20/May/2024 00:25:11] WARNING [restoManager_app.service.trabajadores.camarero_service:14] No se encontraron camareros
+[20/May/2024 00:25:18] ERROR [restoManager_app.service.trabajadores.camarero_service:25] Error al crear el camarero: (1062, "Duplicate entry '1' for key 'camarero.camarero_id_user_id_9d2d8d40_uniq'")
+[20/May/2024 00:25:42] WARNING [restoManager_app.service.trabajadores.camarero_service:14] No se encontraron camareros
+[20/May/2024 00:47:39] ERROR [restoManager_app.service.trabajadores.camarero_service:25] No se encontro el camarero 'ramon'
+[20/May/2024 00:48:49] ERROR [restoManager_app.service.trabajadores.camarero_service:25] No se encontro el camarero 'ramon'
+[20/May/2024 00:50:18] ERROR [restoManager_app.service.trabajadores.camarero_service:25] No se encontro el camarero 'ramon'
+[20/May/2024 00:50:43] ERROR [restoManager_app.service.trabajadores.camarero_service:25] No se encontro el camarero 'ramon'
+[20/May/2024 01:58:32] ERROR [camarero_app.service.camarero_mesa_service:46] Ocurrio un error inesperado. (1452, 'Cannot add or update a child row: a foreign key constraint fails (`restomanager`.`camarero_mesa`, CONSTRAINT `camarero_app_camarer_camarero_id_860174ee_fk_restoMana` FOREIGN KEY (`camarero_id`) REFERENCES `camarero` (`id`))')
+[20/May/2024 02:14:19] ERROR [camarero_app.service.camarero_mesa_service:46] Ocurrio un error inesperado. (1452, 'Cannot add or update a child row: a foreign key constraint fails (`restomanager`.`camarero_mesa`, CONSTRAINT `camarero_app_camarer_camarero_id_860174ee_fk_restoMana` FOREIGN KEY (`camarero_id`) REFERENCES `camarero` (`id`))')
+[20/May/2024 02:15:30] ERROR [camarero_app.service.camarero_mesa_service:46] Ocurrio un error inesperado. (1452, 'Cannot add or update a child row: a foreign key constraint fails (`restomanager`.`camarero_mesa`, CONSTRAINT `camarero_app_camarer_camarero_id_860174ee_fk_restoMana` FOREIGN KEY (`camarero_id`) REFERENCES `camarero` (`id`))')
+[20/May/2024 02:15:51] ERROR [camarero_app.service.camarero_mesa_service:46] Ocurrio un error inesperado. (1452, 'Cannot add or update a child row: a foreign key constraint fails (`restomanager`.`camarero_mesa`, CONSTRAINT `camarero_app_camarer_camarero_id_860174ee_fk_restoMana` FOREIGN KEY (`camarero_id`) REFERENCES `camarero` (`id`))')
+[20/May/2024 02:19:47] ERROR [camarero_app.service.camarero_mesa_service:46] Ocurrio un error inesperado. Cannot assign "<QuerySet [<Ubicacion: Lugar: Salon Planta 0>]>": "Camarero_Mesa.ubicacion" must be a "Ubicacion" instance.
+[20/May/2024 02:22:24] ERROR [camarero_app.service.camarero_mesa_service:46] Ocurrio un error inesperado. Cannot assign "<QuerySet [<Ubicacion: Lugar: Salon Planta 0>]>": "Camarero_Mesa.ubicacion" must be a "Ubicacion" instance.
+[20/May/2024 02:24:06] ERROR [camarero_app.service.camarero_mesa_service:46] Ocurrio un error inesperado. QuerySet.create() takes 1 positional argument but 4 were given
+[20/May/2024 02:26:59] ERROR [camarero_app.service.camarero_mesa_service:46] Ocurrio un error inesperado. QuerySet.create() takes 1 positional argument but 4 were given
+[20/May/2024 19:45:08] INFO [restoManager_app.views:37] New Relation Created.
+[20/May/2024 19:45:52] INFO [restoManager_app.views:37] New Relation Created.
+[20/May/2024 19:46:50] INFO [restoManager_app.controller.bebida.bebida_controller:36] Nombre bebida: Coca Cola, Alcohol: 0, Estado: 1, Descripcion: Refresco
+[20/May/2024 19:46:50] INFO [restoManager_app.controller.bebida.bebida_controller:41] Nombre Categoria: Coca Cola, Descripcion: Refresco, Contiene Alcohol: 0, Estado: 1
+[20/May/2024 19:47:03] INFO [restoManager_app.controller.bebida.bebida_controller:36] Nombre bebida: Coca Cola Zero, Alcohol: 0, Estado: 1, Descripcion: Refresco
+[20/May/2024 19:47:03] INFO [restoManager_app.controller.bebida.bebida_controller:41] Nombre Categoria: Coca Cola Zero, Descripcion: Refresco, Contiene Alcohol: 0, Estado: 1
+[20/May/2024 19:47:23] INFO [restoManager_app.controller.bebida.bebida_controller:36] Nombre bebida: Coca Cola Zero Zero, Alcohol: 0, Estado: 1, Descripcion: Refresco
+[20/May/2024 19:47:23] INFO [restoManager_app.controller.bebida.bebida_controller:41] Nombre Categoria: Coca Cola Zero Zero, Descripcion: Refresco, Contiene Alcohol: 0, Estado: 1
+[20/May/2024 19:47:44] INFO [restoManager_app.controller.bebida.bebida_controller:36] Nombre bebida: Estrella Galicia 3, Alcohol: 1, Estado: 1, Descripcion: Cerveza
+[20/May/2024 19:47:44] INFO [restoManager_app.controller.bebida.bebida_controller:41] Nombre Categoria: Estrella Galicia 3, Descripcion: Cerveza, Contiene Alcohol: 1, Estado: 1
+[20/May/2024 19:48:05] INFO [restoManager_app.controller.bebida.bebida_controller:36] Nombre bebida: Estrella Galicia 5, Alcohol: 1, Estado: 1, Descripcion: Cerveza
+[20/May/2024 19:48:05] INFO [restoManager_app.controller.bebida.bebida_controller:41] Nombre Categoria: Estrella Galicia 5, Descripcion: Cerveza, Contiene Alcohol: 1, Estado: 1
+[21/May/2024 22:02:41] INFO [camarero_app.controller.camarero_controller:33] mesa seleccionada: <QuerySet [<Camarero_Mesa: camarero: gurjant ubicacion: Lugar: Salon Planta 0 numero_mesa: 2>]>
+[22/May/2024 11:18:52] WARNING [restoManager_app.service.trabajadores.camarero_service:14] No se encontraron camareros
+[22/May/2024 11:18:58] WARNING [restoManager_app.service.trabajadores.camarero_service:14] No se encontraron camareros
+[22/May/2024 11:19:09] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[22/May/2024 11:19:09] ERROR [restoManager_app.service.trabajadores.camarero_service:25] No se encontro el camarero 'gurjant'
+[22/May/2024 11:19:29] WARNING [restoManager_app.service.trabajadores.camarero_service:14] No se encontraron camareros
+[22/May/2024 11:19:49] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[22/May/2024 11:20:30] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[22/May/2024 11:31:04] INFO [restoManager_app.controller.categoria.categoria_controller:46] Tapa
+[22/May/2024 11:31:04] INFO [restoManager_app.views:37] New Relation Created.
+[22/May/2024 11:31:23] INFO [restoManager_app.views:37] New Relation Created.
+[22/May/2024 11:32:00] INFO [restoManager_app.views:37] New Relation Created.
+[22/May/2024 11:33:33] INFO [restoManager_app.controller.categoria.categoria_controller:46] Pizza
+[22/May/2024 11:33:33] INFO [restoManager_app.views:37] New Relation Created.
+[22/May/2024 11:33:58] INFO [restoManager_app.controller.categoria.categoria_controller:46] Tagliatela
+[22/May/2024 11:33:58] INFO [restoManager_app.views:37] New Relation Created.
+[22/May/2024 12:42:42] ERROR [cocina_app.service.servicio_cocina_service:67] No se puedo crear el servicio de cocina porque ya existe
+[22/May/2024 12:43:12] ERROR [cocina_app.service.servicio_cocina_service:67] No se puedo crear el servicio de cocina porque ya existe
+[22/May/2024 12:43:59] ERROR [cocina_app.service.servicio_cocina_service:67] No se puedo crear el servicio de cocina porque ya existe
+[22/May/2024 12:48:07] ERROR [cocina_app.service.servicio_cocina_service:67] No se puedo crear el servicio de cocina porque ya existe
+[22/May/2024 13:03:11] ERROR [cocina_app.service.servicio_cocina_service:67] No se puedo crear el servicio de cocina porque ya existe
+[22/May/2024 13:09:30] ERROR [cocina_app.service.servicio_cocina_service:67] No se puedo crear el servicio de cocina porque ya existe
+[22/May/2024 23:56:54] INFO [restoManager_app.controller.categoria.categoria_controller:46] Pizza
+[22/May/2024 23:56:54] INFO [restoManager_app.views:37] New Relation Created.
+[22/May/2024 23:57:07] INFO [restoManager_app.controller.categoria.categoria_controller:46] Spagetti
+[22/May/2024 23:57:07] INFO [restoManager_app.views:37] New Relation Created.
+[23/May/2024 06:59:29] INFO [restoManager_app.controller.bebida.bebida_controller:36] Nombre bebida: Coca Cola, Alcohol: 0, Estado: 1, Descripcion: 
+[23/May/2024 06:59:29] INFO [restoManager_app.controller.bebida.bebida_controller:41] Nombre Categoria: Coca Cola, Descripcion: , Contiene Alcohol: 0, Estado: 1
+[23/May/2024 06:59:37] INFO [restoManager_app.controller.bebida.bebida_controller:36] Nombre bebida: Coca Cola 0, Alcohol: 0, Estado: 1, Descripcion: 
+[23/May/2024 06:59:37] INFO [restoManager_app.controller.bebida.bebida_controller:41] Nombre Categoria: Coca Cola 0, Descripcion: , Contiene Alcohol: 0, Estado: 1
+[23/May/2024 06:59:44] INFO [restoManager_app.controller.bebida.bebida_controller:36] Nombre bebida: Coca Cola 0.0, Alcohol: 0, Estado: 1, Descripcion: 
+[23/May/2024 06:59:44] INFO [restoManager_app.controller.bebida.bebida_controller:41] Nombre Categoria: Coca Cola 0.0, Descripcion: , Contiene Alcohol: 0, Estado: 1
+[23/May/2024 06:59:58] INFO [restoManager_app.controller.bebida.bebida_controller:36] Nombre bebida: Estrella Galicia Tercio, Alcohol: 1, Estado: 1, Descripcion: 
+[23/May/2024 06:59:58] INFO [restoManager_app.controller.bebida.bebida_controller:41] Nombre Categoria: Estrella Galicia Tercio, Descripcion: , Contiene Alcohol: 1, Estado: 1
+[23/May/2024 07:00:13] INFO [restoManager_app.controller.bebida.bebida_controller:36] Nombre bebida: Estrella Galicia Quinto, Alcohol: 1, Estado: 1, Descripcion: 
+[23/May/2024 07:00:13] INFO [restoManager_app.controller.bebida.bebida_controller:41] Nombre Categoria: Estrella Galicia Quinto, Descripcion: , Contiene Alcohol: 1, Estado: 1
+[24/May/2024 18:50:13] ERROR [cocina_app.service.servicio_cocina_service:73] Error en ServicioCocinaService.crear_servicio: Cannot assign "[<QuerySet [<Plato: Finquer De Pollo>]>, <QuerySet [<Plato: Carbonara>]>]": "Servicio_Cocina.plato" must be a "Plato" instance.
+[24/May/2024 19:03:26] ERROR [cocina_app.service.servicio_cocina_service:73] Error en ServicioCocinaService.crear_servicio: Cannot assign "<QuerySet [<Plato: Finguer de Queso>]>": "Servicio_Cocina.plato" must be a "Plato" instance.
+[24/May/2024 22:22:29] ERROR [cocina_app.service.servicio_cocina_service:73] Error en ServicioCocinaService.crear_servicio: Cannot assign "<QuerySet [<Plato: Finquer De Pollo>]>": "Servicio_Cocina.plato" must be a "Plato" instance.
+[24/May/2024 22:25:40] ERROR [cocina_app.service.servicio_cocina_service:73] Error en ServicioCocinaService.crear_servicio: Cannot assign "<QuerySet [<Plato: Finquer De Pollo>]>": "Servicio_Cocina.plato" must be a "Plato" instance.
+[24/May/2024 22:34:43] ERROR [cocina_app.service.servicio_cocina_service:62] Error en ServicioCocinaService.crear_servicio: Cannot assign "<QuerySet [<Plato: Finquer De Pollo>]>": "Servicio_Cocina.plato" must be a "Plato" instance.
+[24/May/2024 22:35:45] ERROR [cocina_app.service.servicio_cocina_service:62] Error en ServicioCocinaService.crear_servicio: Cannot assign "<bound method QuerySet.first of <QuerySet [<Plato: Finquer De Pollo>]>>": "Servicio_Cocina.plato" must be a "Plato" instance.
+[24/May/2024 23:22:12] ERROR [cocina_app.service.servicio_cocina_service:94] Error en ServicioCocinaService.get_agrupaciones: Cannot resolve keyword 'mesa_camarero' into field. Choices are: camarero_mesa, camarero_mesa_id, hora_dia, id, plato, plato_id, servido
+[25/May/2024 00:47:25] ERROR [cocina_app.service.servicio_cocina_service:94] Error en ServicioCocinaService.get_agrupaciones: Cannot resolve keyword 'datetime' into field. Choices are: camarero_mesa, camarero_mesa_id, hora_dia, id, plato, plato_id, servido, total
+[25/May/2024 00:47:47] ERROR [cocina_app.service.servicio_cocina_service:94] Error en ServicioCocinaService.get_agrupaciones: Cannot resolve keyword '' into field. Choices are: camarero_mesa, camarero_mesa_id, hora_dia, id, plato, plato_id, servido, total
+[25/May/2024 02:15:48] ERROR [cocina_app.service.servicio_cocina_service:102] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: Cannot resolve keyword 'mesa' into field. Choices are: camarero_mesa, camarero_mesa_id, hora_dia, id, plato, plato_id, servido
+[25/May/2024 02:16:15] ERROR [cocina_app.service.servicio_cocina_service:102] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: Cannot resolve keyword 'mesa' into field. Choices are: camarero_mesa, camarero_mesa_id, hora_dia, id, plato, plato_id, servido
+[25/May/2024 02:29:11] ERROR [cocina_app.service.servicio_cocina_service:102] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: Cannot resolve keyword 'camarero_mesa.' into field. Choices are: camarero_mesa, camarero_mesa_id, hora_dia, id, plato, plato_id, servido
+[25/May/2024 11:02:43] INFO [restoManager_app.views:37] New Relation Created.
+[25/May/2024 11:05:02] INFO [restoManager_app.views:37] New Relation Created.
+[25/May/2024 11:18:33] INFO [restoManager_app.controller.categoria.categoria_controller:46] Pasta Al Horno
+[25/May/2024 11:18:33] INFO [restoManager_app.views:37] New Relation Created.
+[25/May/2024 11:20:07] INFO [restoManager_app.controller.categoria.categoria_controller:46] Bocadillo
+[25/May/2024 11:20:07] INFO [restoManager_app.views:37] New Relation Created.
+[25/May/2024 11:21:13] INFO [restoManager_app.views:37] New Relation Created.
+[25/May/2024 11:34:09] INFO [restoManager_app.views:37] New Relation Created.
+[25/May/2024 12:22:51] INFO [restoManager_app.views:37] New Relation Created.
+[25/May/2024 13:19:45] INFO [restoManager_app.views:37] New Relation Created.
+[25/May/2024 14:17:26] INFO [restoManager_app.views:37] New Relation Created.
+[25/May/2024 14:36:12] ERROR [cocina_app.service.servicio_cocina_service:94] Error en ServicioCocinaService.get_agrupaciones: Cannot resolve keyword 'nombre' into field. Choices are: camarero, camarero_id, id, numero_mesa, servicio_barra, servicio_cocina, ubicacion, ubicacion_id
+[25/May/2024 14:37:53] ERROR [cocina_app.service.servicio_cocina_service:94] Error en ServicioCocinaService.get_agrupaciones: Cannot resolve keyword 'nombre' into field. Choices are: camarero, camarero_id, id, numero_mesa, servicio_barra, servicio_cocina, ubicacion, ubicacion_id
+[25/May/2024 14:38:26] ERROR [cocina_app.service.servicio_cocina_service:94] Error en ServicioCocinaService.get_agrupaciones: Cannot resolve keyword 'camarero_mesa_numero_mesa' into field. Choices are: camarero_mesa, camarero_mesa_id, hora_dia, id, plato, plato_id, servido
+[25/May/2024 14:39:15] ERROR [cocina_app.service.servicio_cocina_service:94] Error en ServicioCocinaService.get_agrupaciones: Cannot call select_related() after .values() or .values_list()
+[25/May/2024 14:39:27] ERROR [cocina_app.service.servicio_cocina_service:94] Error en ServicioCocinaService.get_agrupaciones: Cannot call select_related() after .values() or .values_list()
+[25/May/2024 14:39:28] ERROR [cocina_app.service.servicio_cocina_service:94] Error en ServicioCocinaService.get_agrupaciones: Cannot call select_related() after .values() or .values_list()
+[25/May/2024 14:41:23] ERROR [cocina_app.service.servicio_cocina_service:95] Error en ServicioCocinaService.get_agrupaciones: Cannot call select_related() after .values() or .values_list()
+[25/May/2024 15:05:50] ERROR [cocina_app.service.servicio_cocina_service:108] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: name 'F' is not defined
+[25/May/2024 15:05:51] ERROR [cocina_app.service.servicio_cocina_service:108] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: name 'F' is not defined
+[25/May/2024 15:06:41] ERROR [cocina_app.service.servicio_cocina_service:108] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: QuerySet.annotate() received non-expression(s): camarero_mesa__numero_mesa.
+[25/May/2024 15:06:47] ERROR [cocina_app.service.servicio_cocina_service:108] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: QuerySet.annotate() received non-expression(s): camarero_mesa__numero_mesa.
+[25/May/2024 15:07:10] ERROR [cocina_app.service.servicio_cocina_service:108] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: QuerySet.annotate() received non-expression(s): numero_mesa.
+[25/May/2024 15:07:12] ERROR [cocina_app.service.servicio_cocina_service:108] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: QuerySet.annotate() received non-expression(s): numero_mesa.
+[25/May/2024 15:07:12] ERROR [cocina_app.service.servicio_cocina_service:108] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: QuerySet.annotate() received non-expression(s): numero_mesa.
+[25/May/2024 17:11:58] ERROR [cocina_app.service.servicio_cocina_service:108] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: type object 'Plato' has no attribute 'split'
+[25/May/2024 17:12:03] ERROR [cocina_app.service.servicio_cocina_service:108] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: type object 'Plato' has no attribute 'split'
+[25/May/2024 17:12:08] ERROR [cocina_app.service.servicio_cocina_service:108] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'DeferredAttribute' object has no attribute 'split'
+[25/May/2024 17:12:13] ERROR [cocina_app.service.servicio_cocina_service:108] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'DeferredAttribute' object has no attribute 'split'
+[25/May/2024 17:12:18] ERROR [cocina_app.service.servicio_cocina_service:108] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'DeferredAttribute' object has no attribute 'split'
+[25/May/2024 17:18:37] ERROR [cocina_app.service.servicio_cocina_service:115] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: name 'Min' is not defined
+[25/May/2024 17:18:40] ERROR [cocina_app.service.servicio_cocina_service:115] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: name 'Min' is not defined
+[25/May/2024 17:18:45] ERROR [cocina_app.service.servicio_cocina_service:115] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: name 'Min' is not defined
+[25/May/2024 17:18:50] ERROR [cocina_app.service.servicio_cocina_service:115] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: name 'Min' is not defined
+[25/May/2024 22:15:02] ERROR [cocina_app.service.servicio_cocina_service:116] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__id'
+[25/May/2024 22:15:07] ERROR [cocina_app.service.servicio_cocina_service:116] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'id'
+[25/May/2024 22:15:13] ERROR [cocina_app.service.servicio_cocina_service:116] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: Cannot resolve keyword '' into field. Choices are: camarero_mesa, camarero_mesa_id, hora_dia, id, plato, plato_id, servido
+[25/May/2024 22:25:37] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:25:42] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:25:47] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:25:52] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:25:57] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:26:02] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:26:07] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:26:12] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:26:17] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:26:22] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:26:27] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:26:32] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:26:37] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:26:38] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:26:39] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:26:44] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:26:49] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:26:54] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:26:59] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:27:04] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:27:09] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:27:14] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:27:19] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:27:24] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:27:29] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:27:34] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:27:39] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:27:41] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:27:41] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:27:46] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:27:51] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:27:56] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:28:01] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:28:06] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:28:11] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:28:16] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:28:21] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:28:31] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:28:32] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:28:37] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:28:37] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:28:37] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:28:42] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:28:47] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:28:52] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:28:57] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:29:02] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:29:07] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:29:09] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:29:09] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:29:14] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:29:19] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:29:23] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:29:25] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:30:15] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:30:15] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:30:52] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:30:52] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion'
+[25/May/2024 22:38:28] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion__id'
+[25/May/2024 22:38:29] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion__id'
+[25/May/2024 22:38:34] ERROR [cocina_app.service.servicio_cocina_service:117] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__ubicacion__id'
+[25/May/2024 23:49:30] ERROR [cocina_app.service.servicio_cocina_service:112] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: Cannot resolve keyword 'lugar' into field. Choices are: camarero, camarero_id, id, numero_mesa, servicio_barra, servicio_cocina, ubicacion, ubicacion_id
+[25/May/2024 23:54:39] ERROR [cocina_app.service.servicio_cocina_service:112] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: Cannot resolve keyword 'lugar' into field. Choices are: camarero, camarero_id, id, numero_mesa, servicio_barra, servicio_cocina, ubicacion, ubicacion_id
+[26/May/2024 00:20:35] ERROR [cocina_app.service.servicio_cocina_service:112] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: Cannot resolve keyword 'lugar' into field. Choices are: camarero, camarero_id, id, numero_mesa, servicio_barra, servicio_cocina, ubicacion, ubicacion_id
+[26/May/2024 00:25:19] ERROR [cocina_app.service.servicio_cocina_service:112] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: Cannot resolve keyword 'lugar' into field. Choices are: camarero, camarero_id, id, numero_mesa, servicio_barra, servicio_cocina, ubicacion, ubicacion_id
+[26/May/2024 00:25:50] ERROR [cocina_app.service.servicio_cocina_service:112] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: Cannot resolve keyword 'lugar' into field. Choices are: camarero, camarero_id, id, numero_mesa, servicio_barra, servicio_cocina, ubicacion, ubicacion_id
+[26/May/2024 00:33:26] ERROR [cocina_app.service.servicio_cocina_service:115] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: 'dict' object has no attribute 'append'
+[26/May/2024 00:33:35] ERROR [cocina_app.service.servicio_cocina_service:115] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: 'dict' object has no attribute 'append'
+[26/May/2024 00:33:37] ERROR [cocina_app.service.servicio_cocina_service:115] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: 'dict' object has no attribute 'append'
+[26/May/2024 00:33:39] ERROR [cocina_app.service.servicio_cocina_service:115] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: 'dict' object has no attribute 'append'
+[26/May/2024 00:33:46] ERROR [cocina_app.service.servicio_cocina_service:115] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: 'dict' object has no attribute 'append'
+[26/May/2024 00:33:48] ERROR [cocina_app.service.servicio_cocina_service:115] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: 'dict' object has no attribute 'append'
+[26/May/2024 00:34:35] ERROR [cocina_app.service.servicio_cocina_service:115] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: 'dict' object has no attribute 'append'
+[26/May/2024 00:35:18] ERROR [cocina_app.service.servicio_cocina_service:119] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: list indices must be integers or slices, not str
+[26/May/2024 13:26:19] ERROR [cocina_app.service.servicio_cocina_service:119] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: list indices must be integers or slices, not str
+[26/May/2024 13:26:53] ERROR [cocina_app.service.servicio_cocina_service:119] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: list indices must be integers or slices, not str
+[26/May/2024 13:27:21] ERROR [cocina_app.service.servicio_cocina_service:120] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: list indices must be integers or slices, not str
+[26/May/2024 13:27:38] ERROR [cocina_app.service.servicio_cocina_service:120] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: list indices must be integers or slices, not str
+[26/May/2024 13:31:37] ERROR [cocina_app.service.servicio_cocina_service:119] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: list indices must be integers or slices, not str
+[26/May/2024 15:03:05] ERROR [cocina_app.service.servicio_cocina_service:122] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: list() takes no keyword arguments
+[26/May/2024 15:10:00] ERROR [cocina_app.service.servicio_cocina_service:140] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'camarero_mesa__id'
+[26/May/2024 17:31:12] ERROR [cocina_app.service.servicio_cocina_service:135] Error en ServicioCocinaService.cambiar_estado: Servicio_Cocina matching query does not exist.
+[26/May/2024 17:31:33] WARNING [cocina_app.service.servicio_cocina_service:129] No se encontro ningun servicio de cocina con este 10
+[26/May/2024 17:39:38] WARNING [cocina_app.service.servicio_cocina_service:129] No se encontro ningun servicio de cocina con este 10
+[26/May/2024 17:53:17] WARNING [cocina_app.service.servicio_cocina_service:129] No se encontro ningun servicio de cocina con este 5
+[26/May/2024 17:53:35] WARNING [cocina_app.service.servicio_cocina_service:129] No se encontro ningun servicio de cocina con este 5
+[26/May/2024 17:53:51] WARNING [cocina_app.service.servicio_cocina_service:129] No se encontro ningun servicio de cocina con este 5
+[26/May/2024 17:54:58] WARNING [cocina_app.service.servicio_cocina_service:129] No se encontro ningun servicio de cocina con este 5
+[26/May/2024 17:55:10] WARNING [cocina_app.service.servicio_cocina_service:129] No se encontro ningun servicio de cocina con este 5
+[26/May/2024 17:55:18] WARNING [cocina_app.service.servicio_cocina_service:129] No se encontro ningun servicio de cocina con este 5
+[26/May/2024 17:56:04] WARNING [cocina_app.service.servicio_cocina_service:129] No se encontro ningun servicio de cocina con este 5
+[26/May/2024 18:02:47] ERROR [cocina_app.service.servicio_cocina_service:122] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: Cannot resolve keyword 'servicio_cocina' into field. Choices are: camarero_mesa, camarero_mesa_id, hora_dia, id, plato, plato_id, servido
+[26/May/2024 18:02:49] ERROR [cocina_app.service.servicio_cocina_service:122] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: Cannot resolve keyword 'servicio_cocina' into field. Choices are: camarero_mesa, camarero_mesa_id, hora_dia, id, plato, plato_id, servido
+[26/May/2024 18:03:33] ERROR [cocina_app.service.servicio_cocina_service:122] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: Cannot resolve keyword 'servicio_cocina' into field. Choices are: camarero_mesa, camarero_mesa_id, hora_dia, id, plato, plato_id, servido
+[26/May/2024 18:06:08] WARNING [cocina_app.service.servicio_cocina_service:129] No se encontro ningun servicio de cocina con este 5
+[26/May/2024 18:08:30] WARNING [cocina_app.service.servicio_cocina_service:129] No se encontro ningun servicio de cocina con este 10
+[26/May/2024 18:10:23] ERROR [cocina_app.service.servicio_cocina_service:135] Error en ServicioCocinaService.cambiar_estado: ['“false”: el valor debe ser Verdadero, Falso o Nulo.']
+[26/May/2024 18:11:16] ERROR [cocina_app.service.servicio_cocina_service:135] Error en ServicioCocinaService.cambiar_estado: ['“false”: el valor debe ser Verdadero, Falso o Nulo.']
+[26/May/2024 18:11:43] ERROR [cocina_app.service.servicio_cocina_service:135] Error en ServicioCocinaService.cambiar_estado: ['“false”: el valor debe ser Verdadero, Falso o Nulo.']
+[26/May/2024 18:38:18] ERROR [cocina_app.service.servicio_cocina_service:135] Error en ServicioCocinaService.cambiar_estado: ['“None”: el valor debe ser Verdadero, Falso o Nulo.']
+[26/May/2024 21:05:38] ERROR [cocina_app.service.servicio_cocina_service:135] Error en ServicioCocinaService.cambiar_estado: ['“Null”: el valor debe ser Verdadero, Falso o Nulo.']
+[27/May/2024 13:16:39] ERROR [cocina_app.service.servicio_cocina_service:122] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: Plato matching query does not exist.
+[27/May/2024 13:17:19] ERROR [cocina_app.service.servicio_cocina_service:122] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: Plato matching query does not exist.
+[27/May/2024 13:24:49] ERROR [cocina_app.service.servicio_cocina_service:135] Error en ServicioCocinaService.cambiar_estado: ['“Null”: el valor debe ser Verdadero, Falso o Nulo.']
+[27/May/2024 13:38:52] INFO [restoManager_app.service.categoria.categoria_services:23] 1
+[27/May/2024 13:38:52] INFO [restoManager_app.service.relacion.relacion_plato_categoria_service:52] service.actualizar_relacion> ACTUALIZANDO RELACION
+[27/May/2024 08:53:35] ERROR [cocina_app.service.servicio_cocina_service:100] Error en ServicioCocinaService.get_agrupaciones: Plato matching query does not exist.
+[27/May/2024 08:59:20] ERROR [cocina_app.service.servicio_cocina_service:122] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: Plato matching query does not exist.
+[27/May/2024 09:02:24] ERROR [cocina_app.service.servicio_cocina_service:122] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: Plato matching query does not exist.
+[27/May/2024 09:06:14] ERROR [cocina_app.service.servicio_cocina_service:122] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: Plato matching query does not exist.
+[27/May/2024 11:01:00] ERROR [cocina_app.service.servicio_cocina_service:100] Error en ServicioCocinaService.get_agrupaciones: Plato matching query does not exist.
+[27/May/2024 11:01:48] ERROR [cocina_app.service.servicio_cocina_service:100] Error en ServicioCocinaService.get_agrupaciones: Plato matching query does not exist.
+[27/May/2024 11:02:41] ERROR [cocina_app.service.servicio_cocina_service:100] Error en ServicioCocinaService.get_agrupaciones: Plato matching query does not exist.
+[27/May/2024 11:03:19] ERROR [cocina_app.service.servicio_cocina_service:100] Error en ServicioCocinaService.get_agrupaciones: Plato matching query does not exist.
+[27/May/2024 11:03:22] ERROR [cocina_app.service.servicio_cocina_service:100] Error en ServicioCocinaService.get_agrupaciones: Plato matching query does not exist.
+[27/May/2024 11:05:12] ERROR [cocina_app.service.servicio_cocina_service:100] Error en ServicioCocinaService.get_agrupaciones: Plato matching query does not exist.
+[27/May/2024 11:05:22] ERROR [cocina_app.service.servicio_cocina_service:100] Error en ServicioCocinaService.get_agrupaciones: Plato matching query does not exist.
+[27/May/2024 11:06:52] ERROR [cocina_app.service.servicio_cocina_service:100] Error en ServicioCocinaService.get_agrupaciones: Plato matching query does not exist.
+[27/May/2024 11:07:42] ERROR [cocina_app.service.servicio_cocina_service:100] Error en ServicioCocinaService.get_agrupaciones: Plato matching query does not exist.
+[27/May/2024 11:07:43] ERROR [cocina_app.service.servicio_cocina_service:100] Error en ServicioCocinaService.get_agrupaciones: Plato matching query does not exist.
+[27/May/2024 11:10:33] ERROR [cocina_app.service.servicio_cocina_service:100] Error en ServicioCocinaService.get_agrupaciones: Plato matching query does not exist.
+[27/May/2024 21:10:09] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:07:11] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:07:50] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:07:57] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:07:59] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:08:07] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:08:08] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:09:52] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:10:33] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:12:27] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:15:23] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:16:46] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:16:48] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:18:11] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:18:54] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:18:56] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:21:14] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:23:18] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:24:36] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:25:15] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:25:16] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:26:06] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:26:55] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:29:32] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:31:03] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:31:13] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:32:31] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:32:40] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:32:48] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:32:48] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:33:06] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:33:07] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:33:25] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:33:34] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:33:50] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:34:06] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:34:50] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:34:52] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:34:59] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:35:00] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:35:02] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:35:41] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:35:59] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:36:07] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:36:13] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:38:04] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:38:15] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:38:16] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:40:16] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:40:28] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:40:29] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:40:35] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:40:40] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:40:47] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:41:02] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:41:03] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:41:53] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:45:26] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:45:42] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:45:44] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:45:50] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:45:51] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:45:52] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:46:00] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:46:02] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:46:11] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:46:27] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:46:28] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:46:39] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:46:46] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:46:53] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:48:05] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:48:06] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:48:16] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:49:18] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:49:25] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:49:37] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:49:49] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:50:07] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 07:50:08] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 08:01:48] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 08:01:54] WARNING [login.views:27] There is no superuser registered in the system
+[28/May/2024 08:23:46] WARNING [login.views:31] There is no superuser registered in the system
+[28/May/2024 08:28:27] WARNING [login.views:33] There is no superuser registered in the system
+[28/May/2024 08:28:39] WARNING [login.views:33] There is no superuser registered in the system
+[28/May/2024 08:29:01] WARNING [login.views:33] There is no superuser registered in the system
+[28/May/2024 08:29:27] WARNING [login.views:33] There is no superuser registered in the system
+[28/May/2024 08:31:37] WARNING [login.views:33] There is no superuser registered in the system
+[28/May/2024 08:32:46] WARNING [login.views:33] There is no superuser registered in the system
+[28/May/2024 08:33:59] WARNING [login.views:34] There is no superuser registered in the system
+[28/May/2024 08:34:26] WARNING [login.views:34] There is no superuser registered in the system
+[28/May/2024 08:36:04] WARNING [login.views:34] There is no superuser registered in the system
+[28/May/2024 08:36:13] WARNING [login.views:34] There is no superuser registered in the system
+[28/May/2024 08:36:56] WARNING [login.views:34] There is no superuser registered in the system
+[28/May/2024 08:38:16] WARNING [login.views:34] No hay superusuario en el sistema
+[28/May/2024 08:40:02] WARNING [login.views:34] No hay superusuario en el sistema
+[28/May/2024 08:40:15] WARNING [login.views:34] No hay superusuario en el sistema
+[28/May/2024 08:44:32] WARNING [login.views:34] No hay superusuario en el sistema
+[28/May/2024 08:45:10] ERROR [restoManager_app.controller.trabajadores.trabajador_controller:69] Error al registrar administrador: 'NoneType' object has no attribute 'capitalize'
+[28/May/2024 08:46:40] ERROR [restoManager_app.controller.trabajadores.trabajador_controller:69] Error al registrar administrador: expected string or bytes-like object
+[28/May/2024 08:48:06] ERROR [restoManager_app.controller.trabajadores.trabajador_controller:55] Las contraseñas no coinciden
+[28/May/2024 08:49:08] ERROR [restoManager_app.controller.trabajadores.trabajador_controller:58] La contraseña no es valida: Debe contener al menos 1 mayuscula, 1 minuscula, 1 numero y 1 caracter especial
+[28/May/2024 08:53:05] ERROR [restoManager_app.controller.trabajadores.trabajador_controller:58] La contraseña no es valida: 
+ - Debe contener al menos 1 mayuscula
+ - 1 minuscula
+ - 1 numero
+ - 1 caracter especial
+ Una longitud minima de 10 caracteres
+[28/May/2024 08:55:28] ERROR [restoManager_app.controller.trabajadores.trabajador_controller:58] La contraseña no es valida: Debe contener al menos 1 mayuscula, 1 minuscula, 1 numero, 1 caracter especial y una longitud minima de 10 caracteres
+[28/May/2024 08:57:19] WARNING [login.views:34] No hay superusuario en el sistema
+[28/May/2024 08:58:25] WARNING [login.views:34] No hay superusuario en el sistema
+[28/May/2024 08:58:43] WARNING [login.views:34] No hay superusuario en el sistema
+[28/May/2024 08:59:11] WARNING [login.views:34] No hay superusuario en el sistema
+[28/May/2024 08:59:16] WARNING [login.views:34] No hay superusuario en el sistema
+[28/May/2024 08:59:51] WARNING [login.views:34] No hay superusuario en el sistema
+[28/May/2024 09:00:44] WARNING [login.views:34] No hay superusuario en el sistema
+[28/May/2024 09:01:41] WARNING [login.views:34] No hay superusuario en el sistema
+[28/May/2024 09:03:10] WARNING [login.views:34] No hay superusuario en el sistema
+[28/May/2024 09:03:55] WARNING [login.views:34] No hay superusuario en el sistema
+[28/May/2024 09:04:15] WARNING [login.views:34] No hay superusuario en el sistema
+[28/May/2024 09:08:08] WARNING [login.views:34] No hay superusuario en el sistema
+[28/May/2024 09:08:14] WARNING [login.views:34] No hay superusuario en el sistema
+[28/May/2024 09:08:15] WARNING [login.views:34] No hay superusuario en el sistema
+[28/May/2024 09:09:33] WARNING [login.views:34] No hay superusuario en el sistema
+[28/May/2024 09:10:55] ERROR [restoManager_app.controller.trabajadores.trabajador_controller:64] El usuario ya existe
+[28/May/2024 10:35:40] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 10:35:40] ERROR [restoManager_app.service.trabajadores.camarero_service:25] No se encontro el camarero 'gurjant'
+[28/May/2024 10:36:08] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 10:36:08] ERROR [restoManager_app.service.trabajadores.camarero_service:25] No se encontro el camarero 'gurjant'
+[28/May/2024 10:36:25] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 10:36:35] WARNING [restoManager_app.service.trabajadores.camarero_service:14] No se encontraron camareros
+[28/May/2024 10:39:01] ERROR [restoManager_app.controller.relacion.relacion_plato_categoria_controller:29] ERROR EN EL ID DE LA RELACION
+[28/May/2024 10:39:01] INFO [restoManager_app.controller.categoria.categoria_controller:46] Tagliatela
+[28/May/2024 10:39:01] INFO [restoManager_app.views:36] New Relation Created.
+[28/May/2024 10:39:46] ERROR [restoManager_app.controller.relacion.relacion_plato_categoria_controller:29] ERROR EN EL ID DE LA RELACION
+[28/May/2024 10:39:46] INFO [restoManager_app.controller.categoria.categoria_controller:46] Pizza
+[28/May/2024 10:39:46] INFO [restoManager_app.views:36] New Relation Created.
+[28/May/2024 11:54:37] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 11:54:57] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 11:55:07] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 11:55:10] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 11:55:17] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 11:56:16] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 11:56:18] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 11:57:53] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 11:59:23] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 12:00:59] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 12:02:56] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 12:06:15] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 12:07:09] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 12:07:43] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 12:08:09] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 12:08:51] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 12:09:22] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 12:09:45] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 12:09:49] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 12:09:58] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 12:10:40] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 12:11:17] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 12:11:34] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 12:11:54] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 12:12:13] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 12:12:18] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 12:15:25] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 12:20:56] ERROR [restoManager_app.service.ubicacion.ubicacion_services:39] No se puedo crear la ubicacion 'Hola' porque ya existe
+[28/May/2024 12:24:47] WARNING [restoManager_app.service.trabajadores.camarero_service:14] No se encontraron camareros
+[28/May/2024 13:20:05] ERROR [restoManager_app.controller.trabajadores.trabajador_controller:34] Las contraseñas no coinciden
+[28/May/2024 13:21:20] ERROR [restoManager_app.controller.trabajadores.trabajador_controller:34] Las contraseñas no coinciden
+[28/May/2024 13:21:54] ERROR [restoManager_app.controller.trabajadores.trabajador_controller:34] Las contraseñas no coinciden
+[28/May/2024 13:24:39] ERROR [restoManager_app.controller.trabajadores.trabajador_controller:34] Las contraseñas no coinciden
+[28/May/2024 13:25:20] ERROR [restoManager_app.controller.trabajadores.trabajador_controller:37] La contraseña no es valida: Debe contener al menos 1 mayuscula, 1 minuscula, 1 numero, 1 caracter especial y una longitud minima de 10 caracteres
+[28/May/2024 17:26:55] WARNING [login.views:36] No hay superusuario en el sistema
+[28/May/2024 17:28:10] ERROR [restoManager_app.service.trabajadores.trabajador_service:22] Error al crear administrador: ['“Administrador”: el valor debe ser Verdadero o Falso.']
+[28/May/2024 17:28:13] WARNING [login.views:36] No hay superusuario en el sistema
+[28/May/2024 17:28:38] ERROR [restoManager_app.service.trabajadores.trabajador_service:22] Error al crear administrador: ['“Administrador”: el valor debe ser Verdadero o Falso.']
+[28/May/2024 17:30:13] WARNING [login.views:36] No hay superusuario en el sistema
+[28/May/2024 17:31:04] WARNING [login.views:36] No hay superusuario en el sistema
+[28/May/2024 17:31:52] ERROR [restoManager_app.service.trabajadores.trabajador_service:22] Error al crear administrador: ['“Administrador”: el valor debe ser Verdadero o Falso.']
+[28/May/2024 18:05:02] ERROR [restoManager_app.controller.trabajadores.trabajador_controller:73] Error al registrar administrador: TrabajadorController.crear_usuario() takes 7 positional arguments but 8 were given
+[28/May/2024 18:06:30] ERROR [restoManager_app.controller.trabajadores.trabajador_controller:73] Error al registrar administrador: TrabajadorController.crear_usuario() takes 7 positional arguments but 8 were given
+[28/May/2024 18:06:56] ERROR [restoManager_app.controller.trabajadores.trabajador_controller:73] Error al registrar administrador: TrabajadorController.crear_usuario() takes 7 positional arguments but 8 were given
+[28/May/2024 18:11:29] WARNING [login.views:36] No hay superusuario en el sistema
+[28/May/2024 18:36:21] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 19:53:08] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 19:53:38] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 19:53:56] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 19:54:14] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 19:54:39] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'gurjant'
+[28/May/2024 19:54:56] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 19:55:16] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'gurjant'
+[28/May/2024 19:55:49] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 19:55:53] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'gurjant'
+[28/May/2024 19:57:43] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 19:57:46] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'gurjant'
+[28/May/2024 19:57:49] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 19:57:53] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'gurjant'
+[28/May/2024 19:58:10] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 19:58:18] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'gurjant'
+[28/May/2024 19:59:04] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 19:59:09] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'gurjant'
+[28/May/2024 20:00:06] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 20:00:08] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'gurjant'
+[28/May/2024 20:00:28] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 20:00:30] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'gurjant'
+[28/May/2024 20:02:40] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 20:02:42] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'gurjant'
+[28/May/2024 20:03:01] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 20:03:05] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'gurjant'
+[28/May/2024 20:03:19] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 20:03:24] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'gurjant'
+[28/May/2024 20:03:43] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 20:03:46] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'gurjant'
+[28/May/2024 20:04:54] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 20:04:56] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'gurjant'
+[28/May/2024 20:15:09] WARNING [login.views:36] No hay superusuario en el sistema
+[28/May/2024 20:15:41] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 20:15:41] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'gurjant'
+[28/May/2024 20:15:43] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 20:15:43] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'gurjant'
+[28/May/2024 20:18:15] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 20:18:15] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'gurjant'
+[28/May/2024 20:20:51] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[28/May/2024 20:20:51] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[28/May/2024 20:20:51] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:12:42] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:12:42] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:12:42] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:12:52] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:12:52] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'gurjant'
+[29/May/2024 01:15:09] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:15:09] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'gurjant'
+[29/May/2024 01:15:13] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:15:13] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:15:13] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:32:34] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:32:34] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:32:34] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:34:22] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:34:22] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:34:22] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:34:59] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Cocinero' para el usuario 'gurjant'
+[29/May/2024 01:35:03] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Cocinero' para el usuario 'gurjant'
+[29/May/2024 01:36:29] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Cocinero' para el usuario 'gurjant'
+[29/May/2024 01:36:55] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:36:55] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:36:55] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:36:59] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:36:59] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:36:59] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:37:05] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:37:05] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:37:05] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:37:13] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Cocinero' para el usuario 'gurjant'
+[29/May/2024 01:38:32] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Cocinero' para el usuario 'gurjant'
+[29/May/2024 01:38:45] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Cocinero' para el usuario 'gurjant'
+[29/May/2024 01:39:02] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:39:02] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:39:02] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:40:47] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:40:47] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:40:47] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:40:52] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Cocinero' para el usuario 'gurjant'
+[29/May/2024 01:40:54] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Cocinero' para el usuario 'gurjant'
+[29/May/2024 01:41:07] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Cocinero' para el usuario 'gurjant'
+[29/May/2024 01:42:48] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Cocinero' para el usuario 'gurjant'
+[29/May/2024 01:43:43] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Cocinero' para el usuario 'gurjant'
+[29/May/2024 01:44:52] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Cocinero' para el usuario 'gurjant'
+[29/May/2024 01:44:58] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:44:58] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:44:58] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:46:32] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:46:32] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:46:32] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:46:33] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:46:33] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:46:33] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:46:35] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:46:35] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:46:35] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:47:06] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:47:06] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:47:06] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:47:17] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:47:19] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:47:28] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:48:26] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:48:27] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:48:32] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:49:00] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Cocinero' para el usuario 'gurjant'
+[29/May/2024 01:50:04] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Cocinero' para el usuario 'gurjant'
+[29/May/2024 01:50:57] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:50:57] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:50:57] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:51:02] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:51:02] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:51:02] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:51:05] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Cocinero' para el usuario 'gurjant'
+[29/May/2024 01:53:59] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:53:59] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:53:59] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:54:33] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:54:33] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:54:33] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:54:40] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:54:40] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:54:40] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:54:41] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:54:41] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:54:41] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:54:54] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:54:54] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:54:54] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:57:23] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:57:23] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:57:23] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:57:24] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:57:24] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:57:24] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:57:29] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:57:29] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:57:29] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:57:30] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:57:30] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:57:30] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:57:45] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:57:45] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:57:45] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:57:45] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:57:45] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:57:45] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:58:04] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:58:04] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:58:04] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 02:00:14] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 02:03:13] ERROR [restoManager_app.controller.relacion.relacion_plato_categoria_controller:29] ERROR EN EL ID DE LA RELACION
+[29/May/2024 02:03:13] INFO [restoManager_app.controller.categoria.categoria_controller:46] Pizza
+[29/May/2024 02:03:13] INFO [restoManager_app.views:36] New Relation Created.
+[29/May/2024 02:03:28] ERROR [restoManager_app.controller.relacion.relacion_plato_categoria_controller:29] ERROR EN EL ID DE LA RELACION
+[29/May/2024 02:03:28] INFO [restoManager_app.controller.categoria.categoria_controller:46] Spagetti
+[29/May/2024 02:03:28] INFO [restoManager_app.views:36] New Relation Created.
+[29/May/2024 02:04:17] ERROR [restoManager_app.controller.relacion.relacion_plato_categoria_controller:29] ERROR EN EL ID DE LA RELACION
+[29/May/2024 02:04:17] INFO [restoManager_app.controller.categoria.categoria_controller:46] Tapa
+[29/May/2024 02:04:17] INFO [restoManager_app.views:36] New Relation Created.
+[29/May/2024 02:05:21] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 02:05:54] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario '5'
+[29/May/2024 02:05:54] ERROR [camarero_app.service.camarero_mesa_service:49] Ocurrio un error inesperado. Cannot assign ""El rol de 'Camarero' no existe para el usuario '5"": "Camarero_Mesa.camarero" must be a "Rol" instance.
+[29/May/2024 02:17:31] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario '5'
+[29/May/2024 02:17:31] ERROR [camarero_app.service.camarero_mesa_service:49] Ocurrio un error inesperado. Cannot assign ""El rol de 'Camarero' no existe para el usuario '5"": "Camarero_Mesa.camarero" must be a "Rol" instance.
+[29/May/2024 02:18:29] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario '5'
+[29/May/2024 02:18:40] ERROR [camarero_app.service.camarero_mesa_service:49] Ocurrio un error inesperado. Cannot assign ""El rol de 'Camarero' no existe para el usuario '5"": "Camarero_Mesa.camarero" must be a "Rol" instance.
+[29/May/2024 06:30:33] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'gurjant'
+[29/May/2024 06:30:33] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'gurjant'
+[29/May/2024 06:30:38] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Cocinero' para el usuario 'gurjant'
+[29/May/2024 06:30:38] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'gurjant'
+[29/May/2024 06:32:01] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario '2'
+[29/May/2024 06:32:01] ERROR [camarero_app.service.camarero_mesa_service:49] Ocurrio un error inesperado. Cannot assign ""El rol de 'Camarero' no existe para el usuario '2"": "Camarero_Mesa.camarero" must be a "Rol" instance.
+[29/May/2024 06:36:54] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario '2'
+[29/May/2024 06:36:54] ERROR [camarero_app.service.camarero_mesa_service:49] Ocurrio un error inesperado. Cannot assign ""El rol de 'Camarero' no existe para el usuario '2"": "Camarero_Mesa.rol" must be a "Rol" instance.
+[29/May/2024 06:36:54] ERROR [camarero_app.service.camarero_mesa_service:17] Ocurrio un error inesperado. (1054, "Unknown column 'camarero_mesa.rol_id' in 'field list'")
+[29/May/2024 06:37:24] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario '2'
+[29/May/2024 06:37:24] ERROR [camarero_app.service.camarero_mesa_service:49] Ocurrio un error inesperado. Cannot assign ""El rol de 'Camarero' no existe para el usuario '2"": "Camarero_Mesa.rol" must be a "Rol" instance.
+[29/May/2024 06:37:24] ERROR [camarero_app.service.camarero_mesa_service:17] Ocurrio un error inesperado. (1054, "Unknown column 'camarero_mesa.rol_id' in 'field list'")
+[29/May/2024 06:37:29] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario '2'
+[29/May/2024 06:37:29] ERROR [camarero_app.service.camarero_mesa_service:49] Ocurrio un error inesperado. Cannot assign ""El rol de 'Camarero' no existe para el usuario '2"": "Camarero_Mesa.rol" must be a "Rol" instance.
+[29/May/2024 06:37:29] ERROR [camarero_app.service.camarero_mesa_service:17] Ocurrio un error inesperado. (1054, "Unknown column 'camarero_mesa.rol_id' in 'field list'")
+[29/May/2024 06:37:59] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario '2'
+[29/May/2024 06:37:59] ERROR [camarero_app.service.camarero_mesa_service:49] Ocurrio un error inesperado. Cannot assign ""El rol de 'Camarero' no existe para el usuario '2"": "Camarero_Mesa.rol" must be a "Rol" instance.
+[29/May/2024 06:38:42] ERROR [camarero_app.service.camarero_mesa_service:17] Ocurrio un error inesperado. (1054, "Unknown column 'camarero_mesa.rol_id' in 'field list'")
+[29/May/2024 06:39:22] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario '2'
+[29/May/2024 06:39:22] ERROR [camarero_app.service.camarero_mesa_service:49] Ocurrio un error inesperado. Cannot assign ""El rol de 'Camarero' no existe para el usuario '2"": "Camarero_Mesa.rol" must be a "Rol" instance.
+[29/May/2024 06:39:26] ERROR [camarero_app.service.camarero_mesa_service:17] Ocurrio un error inesperado. (1054, "Unknown column 'camarero_mesa.rol_id' in 'field list'")
+[29/May/2024 06:40:14] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario '2'
+[29/May/2024 06:40:14] ERROR [camarero_app.service.camarero_mesa_service:49] Ocurrio un error inesperado. Cannot assign ""El rol de 'Camarero' no existe para el usuario '2"": "Camarero_Mesa.rol" must be a "Rol" instance.
+[29/May/2024 06:42:13] ERROR [camarero_app.service.camarero_mesa_service:17] Ocurrio un error inesperado. (1054, "Unknown column 'camarero_mesa.rol_id' in 'field list'")
+[29/May/2024 06:43:18] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario '2'
+[29/May/2024 06:43:18] ERROR [camarero_app.service.camarero_mesa_service:49] Ocurrio un error inesperado. Cannot assign ""El rol de 'Camarero' no existe para el usuario '2"": "Camarero_Mesa.rol" must be a "Rol" instance.
+[29/May/2024 06:43:18] ERROR [camarero_app.service.camarero_mesa_service:17] Ocurrio un error inesperado. (1054, "Unknown column 'camarero_mesa.rol_id' in 'field list'")
+[29/May/2024 06:57:18] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Cocinero' para el usuario '2'
+[29/May/2024 06:57:18] ERROR [camarero_app.service.camarero_mesa_service:49] Ocurrio un error inesperado. (1054, "Unknown column 'rol_id' in 'field list'")
+[29/May/2024 06:57:18] ERROR [camarero_app.service.camarero_mesa_service:17] Ocurrio un error inesperado. (1054, "Unknown column 'camarero_mesa.rol_id' in 'field list'")
+[29/May/2024 06:57:56] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Cocinero' para el usuario '2'
+[29/May/2024 06:57:56] ERROR [camarero_app.service.camarero_mesa_service:49] Ocurrio un error inesperado. (1054, "Unknown column 'rol_id' in 'field list'")
+[29/May/2024 06:57:56] ERROR [camarero_app.service.camarero_mesa_service:17] Ocurrio un error inesperado. (1054, "Unknown column 'camarero_mesa.rol_id' in 'field list'")
+[29/May/2024 06:58:51] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Cocinero' para el usuario '2'
+[29/May/2024 07:00:18] ERROR [camarero_app.service.camarero_mesa_service:49] Ocurrio un error inesperado. (1054, "Unknown column 'rol_id' in 'field list'")
+[29/May/2024 07:00:28] ERROR [camarero_app.service.camarero_mesa_service:17] Ocurrio un error inesperado. (1054, "Unknown column 'camarero_mesa.rol_id' in 'field list'")
+[29/May/2024 07:04:10] ERROR [camarero_app.service.camarero_mesa_service:17] Ocurrio un error inesperado. (1054, "Unknown column 'camarero_mesa.rol_id' in 'field list'")
+[29/May/2024 07:08:20] ERROR [camarero_app.service.camarero_mesa_service:17] Ocurrio un error inesperado. (1054, "Unknown column 'camarero_mesa.rol_id' in 'field list'")
+[29/May/2024 07:10:35] ERROR [camarero_app.service.camarero_mesa_service:49] Ocurrio un error inesperado. (1054, "Unknown column 'rol_id' in 'field list'")
+[29/May/2024 07:10:35] ERROR [camarero_app.service.camarero_mesa_service:17] Ocurrio un error inesperado. (1054, "Unknown column 'camarero_mesa.rol_id' in 'field list'")
+[29/May/2024 07:13:43] ERROR [camarero_app.service.camarero_mesa_service:47] Ha habido un problema al recibir los parametros: 1, <QuerySet []>, Lugar: Adios
+[29/May/2024 07:13:43] ERROR [camarero_app.service.camarero_mesa_service:17] Ocurrio un error inesperado. (1054, "Unknown column 'camarero_mesa.rol_id' in 'field list'")
+[29/May/2024 07:15:15] ERROR [camarero_app.service.camarero_mesa_service:17] Ocurrio un error inesperado. (1054, "Unknown column 'camarero_mesa.rol_id' in 'field list'")
+[29/May/2024 07:39:48] ERROR [camarero_app.service.camarero_mesa_service:15] Ocurrio un error inesperado. (1054, "Unknown column 'camarero_mesa.rol_id' in 'field list'")
+[29/May/2024 07:40:56] ERROR [camarero_app.service.camarero_mesa_service:15] Ocurrio un error inesperado. (1054, "Unknown column 'camarero_mesa.rol_id' in 'field list'")
+[29/May/2024 07:41:50] ERROR [camarero_app.service.camarero_mesa_service:15] Ocurrio un error inesperado. (1054, "Unknown column 'camarero_mesa.rol_id' in 'field list'")
+[29/May/2024 07:53:05] ERROR [camarero_app.service.camarero_mesa_service:19] Ocurrio un error desconocido. (1054, "Unknown column 'camarero_mesa.rol_id' in 'field list'")
+[29/May/2024 07:54:05] ERROR [camarero_app.service.camarero_mesa_service:19] Ocurrio un error desconocido. (1054, "Unknown column 'camarero_mesa.rol_id' in 'field list'")
+[29/May/2024 07:56:46] ERROR [camarero_app.service.camarero_mesa_service:12] No se encontraron relaciones
+[29/May/2024 07:57:09] ERROR [camarero_app.service.camarero_mesa_service:12] No se encontraron relaciones
+[29/May/2024 07:58:48] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[29/May/2024 07:58:50] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[29/May/2024 07:58:55] ERROR [camarero_app.service.camarero_mesa_service:49] Ha habido un problema al recibir los parametros: 1, None, Lugar: Adios
+[29/May/2024 07:58:55] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[29/May/2024 08:00:36] ERROR [camarero_app.service.camarero_mesa_service:49] Ha habido un problema al recibir los parametros: 1, None, Lugar: Adios
+[29/May/2024 08:00:39] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[29/May/2024 08:02:04] ERROR [camarero_app.service.camarero_mesa_service:49] Ha habido un problema al recibir los parametros: 1, None, Lugar: Adios
+[29/May/2024 08:02:04] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[29/May/2024 08:44:39] ERROR [cocina_app.service.servicio_cocina_service:102] Error en ServicioCocinaService.get_agrupaciones: 'camarero_mesa'
+[29/May/2024 08:54:03] ERROR [cocina_app.service.servicio_cocina_service:43] Error en ServicioCocinaService.get_servicio_by_mesa: Cannot resolve keyword 'mesa' into field. Choices are: camarero_mesa, camarero_mesa_id, hora_dia, id, plato, plato_id, servido
+[29/May/2024 08:54:03] ERROR [cocina_app.service.servicio_cocina_service:43] Error en ServicioCocinaService.get_servicio_by_mesa: Cannot resolve keyword 'mesa' into field. Choices are: camarero_mesa, camarero_mesa_id, hora_dia, id, plato, plato_id, servido
+[29/May/2024 08:55:23] ERROR [cocina_app.service.servicio_cocina_service:43] Error en ServicioCocinaService.get_servicio_by_mesa: Cannot resolve keyword 'mesa' into field. Choices are: camarero_mesa, camarero_mesa_id, hora_dia, id, plato, plato_id, servido
+[29/May/2024 08:55:26] ERROR [cocina_app.service.servicio_cocina_service:43] Error en ServicioCocinaService.get_servicio_by_mesa: Cannot resolve keyword 'mesa' into field. Choices are: camarero_mesa, camarero_mesa_id, hora_dia, id, plato, plato_id, servido
+[29/May/2024 08:59:05] ERROR [cocina_app.service.servicio_cocina_service:43] Error en ServicioCocinaService.get_servicio_by_mesa: Cannot resolve keyword 'mesa' into field. Choices are: camarero_mesa, camarero_mesa_id, hora_dia, id, plato, plato_id, servido
+[29/May/2024 08:59:43] ERROR [cocina_app.service.servicio_cocina_service:43] Error en ServicioCocinaService.get_servicio_by_mesa: Cannot resolve keyword 'mesa' into field. Choices are: camarero_mesa, camarero_mesa_id, hora_dia, id, plato, plato_id, servido
+[29/May/2024 09:00:01] ERROR [cocina_app.service.servicio_cocina_service:43] Error en ServicioCocinaService.get_servicio_by_mesa: Cannot resolve keyword 'mesa' into field. Choices are: camarero_mesa, camarero_mesa_id, hora_dia, id, plato, plato_id, servido
+[29/May/2024 09:00:21] ERROR [cocina_app.service.servicio_cocina_service:43] Error en ServicioCocinaService.get_servicio_by_mesa: Cannot resolve keyword 'mesa' into field. Choices are: camarero_mesa, camarero_mesa_id, hora_dia, id, plato, plato_id, servido
+[29/May/2024 09:02:22] ERROR [cocina_app.service.servicio_cocina_service:43] Error en ServicioCocinaService.get_servicio_by_mesa: get() returned more than one Servicio_Cocina -- it returned more than 20!
+[29/May/2024 09:02:53] ERROR [cocina_app.service.servicio_cocina_service:43] Error en ServicioCocinaService.get_servicio_by_mesa: Servicio_Cocina matching query does not exist.
+[29/May/2024 09:03:15] WARNING [cocina_app.service.servicio_cocina_service:39] No se encontro ningun servicio de cocina de esta rol: user gurjant con rol Administrador ubicacion: Lugar: Hola numero_mesa: 1
+[29/May/2024 09:05:13] WARNING [cocina_app.service.servicio_cocina_service:39] No se encontro ningun servicio de cocina de esta rol: user gurjant con rol Administrador ubicacion: Lugar: Hola numero_mesa: 1
+[29/May/2024 09:06:07] WARNING [cocina_app.service.servicio_cocina_service:39] No se encontro ningun servicio de cocina de esta rol: user gurjant con rol Administrador ubicacion: Lugar: Hola numero_mesa: 1
+[29/May/2024 09:06:26] WARNING [cocina_app.service.servicio_cocina_service:39] No se encontro ningun servicio de cocina de esta rol: user gurjant con rol Administrador ubicacion: Lugar: Hola numero_mesa: 1
+[29/May/2024 09:06:28] WARNING [cocina_app.service.servicio_cocina_service:39] No se encontro ningun servicio de cocina de esta rol: user gurjant con rol Administrador ubicacion: Lugar: Hola numero_mesa: 1
+[29/May/2024 09:07:02] WARNING [cocina_app.service.servicio_cocina_service:39] No se encontro ningun servicio de cocina de esta rol: user gurjant con rol Administrador ubicacion: Lugar: Hola numero_mesa: 1
+[29/May/2024 09:07:10] WARNING [cocina_app.service.servicio_cocina_service:39] No se encontro ningun servicio de cocina de esta rol: user gurjant con rol Administrador ubicacion: Lugar: Hola numero_mesa: 1
+[29/May/2024 09:07:12] WARNING [cocina_app.service.servicio_cocina_service:39] No se encontro ningun servicio de cocina de esta rol: user gurjant con rol Administrador ubicacion: Lugar: Hola numero_mesa: 1
+[29/May/2024 09:08:30] WARNING [cocina_app.service.servicio_cocina_service:39] No se encontro ningun servicio de cocina de esta rol: user gurjant con rol Administrador ubicacion: Lugar: Hola numero_mesa: 1
+[29/May/2024 09:08:44] WARNING [cocina_app.service.servicio_cocina_service:39] No se encontro ningun servicio de cocina de esta rol: user gurjant con rol Administrador ubicacion: Lugar: Hola numero_mesa: 1
+[29/May/2024 09:09:11] WARNING [cocina_app.service.servicio_cocina_service:39] No se encontro ningun servicio de cocina de esta rol: user gurjant con rol Administrador ubicacion: Lugar: Hola numero_mesa: 1
+[29/May/2024 09:09:14] WARNING [cocina_app.service.servicio_cocina_service:39] No se encontro ningun servicio de cocina de esta rol: user gurjant con rol Administrador ubicacion: Lugar: Hola numero_mesa: 1
+[29/May/2024 09:09:41] WARNING [cocina_app.service.servicio_cocina_service:39] No se encontro ningun servicio de cocina de esta rol: user gurjant con rol Administrador ubicacion: Lugar: Hola numero_mesa: 1
+[29/May/2024 09:09:47] WARNING [cocina_app.service.servicio_cocina_service:39] No se encontro ningun servicio de cocina de esta rol: user gurjant con rol Administrador ubicacion: Lugar: Hola numero_mesa: 1
+[29/May/2024 09:09:48] WARNING [cocina_app.service.servicio_cocina_service:39] No se encontro ningun servicio de cocina de esta rol: user gurjant con rol Administrador ubicacion: Lugar: Hola numero_mesa: 1
+[29/May/2024 09:09:49] WARNING [cocina_app.service.servicio_cocina_service:39] No se encontro ningun servicio de cocina de esta rol: user gurjant con rol Administrador ubicacion: Lugar: Hola numero_mesa: 1
+[29/May/2024 09:09:54] WARNING [cocina_app.service.servicio_cocina_service:39] No se encontro ningun servicio de cocina de esta rol: user gurjant con rol Administrador ubicacion: Lugar: Hola numero_mesa: 1
+[29/May/2024 09:09:54] WARNING [cocina_app.service.servicio_cocina_service:39] No se encontro ningun servicio de cocina de esta rol: user gurjant con rol Administrador ubicacion: Lugar: Hola numero_mesa: 1
+[29/May/2024 09:10:03] WARNING [cocina_app.service.servicio_cocina_service:39] No se encontro ningun servicio de cocina de esta rol: user gurjant con rol Administrador ubicacion: Lugar: Hola numero_mesa: 1
+[29/May/2024 09:11:49] WARNING [cocina_app.service.servicio_cocina_service:39] No se encontro ningun servicio de cocina de esta rol: user gurjant con rol Administrador ubicacion: Lugar: Hola numero_mesa: 1
+[29/May/2024 09:12:20] WARNING [cocina_app.service.servicio_cocina_service:39] No se encontro ningun servicio de cocina de esta rol: user gurjant con rol Administrador ubicacion: Lugar: Hola numero_mesa: 1
+[29/May/2024 09:20:50] ERROR [cocina_app.service.servicio_cocina_service:167] Error en ServicioCocinaService.get_pedidos_mesas: Cannot resolve keyword 'tiempo' into field. Choices are: camarero_mesa, camarero_mesa_id, hora_dia, id, plato, plato_id, servido
+[29/May/2024 09:21:21] ERROR [cocina_app.service.servicio_cocina_service:167] Error en ServicioCocinaService.get_pedidos_mesas: Cannot resolve keyword 'tiempo' into field. Choices are: camarero_mesa, camarero_mesa_id, hora_dia, id, plato, plato_id, servido
+[29/May/2024 09:22:59] ERROR [cocina_app.service.servicio_cocina_service:167] Error en ServicioCocinaService.get_pedidos_mesas: Cannot resolve keyword 'plato' into field. Choices are: id, numero_mesa, rol, rol_id, servicio_barra, servicio_cocina, ubicacion, ubicacion_id
+[29/May/2024 09:33:58] ERROR [cocina_app.service.servicio_cocina_service:167] Error en ServicioCocinaService.get_pedidos_mesas: Cannot resolve keyword 'servido' into field. Choices are: id, numero_mesa, rol, rol_id, servicio_barra, servicio_cocina, ubicacion, ubicacion_id
+[29/May/2024 09:34:14] ERROR [cocina_app.service.servicio_cocina_service:167] Error en ServicioCocinaService.get_pedidos_mesas: Cannot resolve keyword 'servido' into field. Choices are: id, numero_mesa, rol, rol_id, servicio_barra, servicio_cocina, ubicacion, ubicacion_id
+[29/May/2024 09:34:37] ERROR [cocina_app.service.servicio_cocina_service:167] Error en ServicioCocinaService.get_pedidos_mesas: Cannot resolve keyword 'servido' into field. Choices are: id, numero_mesa, rol, rol_id, servicio_barra, servicio_cocina, ubicacion, ubicacion_id
+[29/May/2024 10:04:55] ERROR [cocina_app.service.servicio_cocina_service:162] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: Cannot compute Sum('plato_total'): 'plato_total' is an aggregate
+[29/May/2024 10:05:16] ERROR [cocina_app.service.servicio_cocina_service:162] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: Cannot compute Sum('plato_total'): 'plato_total' is an aggregate
+[29/May/2024 10:05:26] ERROR [cocina_app.service.servicio_cocina_service:162] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: Cannot compute Sum('plato_total'): 'plato_total' is an aggregate
+[29/May/2024 10:06:25] ERROR [cocina_app.service.servicio_cocina_service:162] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: Cannot compute Sum('plato_total'): 'plato_total' is an aggregate
+[29/May/2024 10:07:04] ERROR [cocina_app.service.servicio_cocina_service:162] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: Cannot compute Sum('plato_total'): 'plato_total' is an aggregate
+[29/May/2024 10:07:55] ERROR [cocina_app.service.servicio_cocina_service:162] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: Cannot compute Sum('plato_total'): 'plato_total' is an aggregate
+[29/May/2024 10:08:21] ERROR [cocina_app.service.servicio_cocina_service:162] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: Cannot compute Sum('plato_total'): 'plato_total' is an aggregate
+[29/May/2024 10:08:32] ERROR [cocina_app.service.servicio_cocina_service:162] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: Cannot compute Sum('plato_total'): 'plato_total' is an aggregate
+[29/May/2024 10:10:12] ERROR [cocina_app.service.servicio_cocina_service:162] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: Cannot compute Sum('plato_total'): 'plato_total' is an aggregate
+[29/May/2024 10:10:51] ERROR [cocina_app.service.servicio_cocina_service:162] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: Cannot compute Sum('plato_total'): 'plato_total' is an aggregate
+[29/May/2024 10:11:12] ERROR [cocina_app.service.servicio_cocina_service:162] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: Cannot compute Sum('plato_total'): 'plato_total' is an aggregate
+[29/May/2024 10:11:45] ERROR [cocina_app.service.servicio_cocina_service:162] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: Cannot compute Sum('plato_total'): 'plato_total' is an aggregate
+[29/May/2024 10:37:14] ERROR [cocina_app.service.servicio_cocina_service:162] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: Cannot compute Sum('plato_total'): 'plato_total' is an aggregate
+[29/May/2024 10:37:32] ERROR [cocina_app.service.servicio_cocina_service:162] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: Cannot compute Sum('plato_total'): 'plato_total' is an aggregate
+[29/May/2024 10:38:12] ERROR [cocina_app.service.servicio_cocina_service:162] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: Cannot compute Sum('plato_total'): 'plato_total' is an aggregate
+[29/May/2024 10:39:18] ERROR [cocina_app.service.servicio_cocina_service:162] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: Cannot resolve keyword 'plato_total' into field. Choices are: camarero_mesa, camarero_mesa_id, hora_dia, id, plato, plato_id, servido
+[29/May/2024 10:40:05] ERROR [cocina_app.service.servicio_cocina_service:162] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'tiempo'
+[29/May/2024 10:40:05] ERROR [cocina_app.service.servicio_cocina_service:162] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'tiempo'
+[29/May/2024 11:00:47] ERROR [cocina_app.service.servicio_cocina_service:155] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: too many values to unpack (expected 2)
+[29/May/2024 11:01:00] ERROR [cocina_app.service.servicio_cocina_service:155] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: too many values to unpack (expected 2)
+[29/May/2024 11:01:01] ERROR [cocina_app.service.servicio_cocina_service:155] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: too many values to unpack (expected 2)
+[29/May/2024 11:02:14] ERROR [cocina_app.service.servicio_cocina_service:155] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: Cannot resolve keyword 'camare' into field. Choices are: camarero_mesa, camarero_mesa_id, hora_dia, id, plato, plato_id, servido
+[29/May/2024 12:13:09] ERROR [cocina_app.service.servicio_cocina_service:138] Error en ServicioCocinaService.cambiar_estado: ['“Null”: el valor debe ser Verdadero, Falso o Nulo.']
+[29/May/2024 12:14:26] ERROR [cocina_app.service.servicio_cocina_service:138] Error en ServicioCocinaService.cambiar_estado: ['“Null”: el valor debe ser Verdadero, Falso o Nulo.']
 [29/May/2024 18:10:16] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
 [29/May/2024 18:11:47] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
 [29/May/2024 18:12:17] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.

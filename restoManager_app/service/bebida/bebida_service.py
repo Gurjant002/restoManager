@@ -12,11 +12,11 @@ class BebidaService:
         bebidas = Bebida.objects.all()
         return bebidas
 
-    def get_bebida_by_id(self, id_bebida) -> list:
+    def get_bebida_by_id(self, id_bebida: str) -> list:
         bebida = Bebida.objects.filter(id=id_bebida).first()
         return bebida
 
-    def crear_bebida(self, nombre_bebida, contiene_alcohol, estado, descripcion) -> list:
+    def crear_bebida(self, nombre_bebida: str, contiene_alcohol: int, estado: int, descripcion: str) -> list:
         bebida = Bebida.objects.create(
             nombre=nombre_bebida,
             contiene_alcohol=contiene_alcohol,
@@ -25,7 +25,7 @@ class BebidaService:
             )
         return bebida
     
-    def actualizar_bebida(self, id_bebida, nombre_bebida, contiene_alcohol, estado, descripcion) -> list:
+    def actualizar_bebida(self, id_bebida: str, nombre_bebida: str, contiene_alcohol: int, estado: int, descripcion: str) -> list:
         bebida = Bebida.objects.filter(id=id_bebida).update(
             nombre=nombre_bebida,
             contiene_alcohol=contiene_alcohol,

@@ -1,0 +1,79 @@
+{% extends 'index.html' %}
+
+{% block title %}
+    Registrar
+{% endblock title %}
+
+{% block content %}
+{% include "global/header.html" %}
+<div class="container bg-dark my-5 p-3 rounded">
+    <h1 class="my-2 text-center text-light">
+        ¡Te damos la bienvenida a RestoManager!
+    </h1>
+    <form method="post" class="col-md-6 mx-auto">
+        {% csrf_token %}
+        {% if error %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+        {% elif warning %}
+            <div class="alert alert-warning" role="alert">
+                {{ warning }}
+            </div>
+        {% endif %}
+        <div class="my-3 row w-auto">
+            <div class="col-sm">
+                <div class="form-floating d-flex flex-row">
+                    <input type="text" class="form-control text-capitalize" id="floatingNombre" name="first_name" placeholder="Gurjant" required>
+                    <label for="floatingNombre" class="text-dark">Nombre</label>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="form-floating d-flex flex-row">
+                    <input type="text" class="form-control text-capitalize" id="floatingApellido" name="last_name" placeholder="Singh" required>
+                    <label for="floatingApellido" class="text-dark">Apellido/s</label>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="form-floating d-flex flex-row">
+                    <input type="text" class="form-control" id="floatingUsername" name="username" placeholder="Gurjant245" required>
+                    <label for="floatingUsername" class="text-dark">Usuario</label>
+                </div>
+            </div>
+        </div>
+        <div class="my-3 row">
+            <div class="col-lg">
+                <div class="form-floating d-flex flex-row">
+                    <input type="email" class="form-control" id="correo_electronico" name="email" placeholder="gurjant@gmail.com" required>
+                    <label for="correo_electronico" class="text-dark">Correo electrónico</label>
+                </div>
+            </div>
+        </div>
+        <div class="my-3 row">
+            <div class="col-md">
+                <label class="text-light">Contraseña</label>
+                <div class="form-floating d-flex flex-row">
+                    <div class="input-group">
+                        <input type="password" class="form-control" id="contraseña1" name="password1" placeholder="********" required>
+                        <button class="btn btn-secondary" type="button" id="verContraseña1"><i class="bi bi-eye-fill"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md">
+                <label class="text-light">Confirmar contraseña</label>
+                <div class="form-floating d-flex flex-row">
+                    <div class="input-group">
+                        <input type="password" class="form-control" id="contraseña2" name="password2" placeholder="********" required>
+                        <button class="btn btn-secondary" type="button" id="verContraseña2"><i class="bi bi-eye-fill"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="terminos_condiciones" name="terminos_condiciones" placeholder="" required>
+            <label class="form-check-label text-light" for="terminos_condiciones">He leído y acepto los términos y condiciones de uso.</label>
+        </div>
+        <button type="submit" name="registrar_admin" class="mt-3 btn btn-primary btn-block">Registrarse</button>
+    </form>
+</div>
+{% endblock content %}
