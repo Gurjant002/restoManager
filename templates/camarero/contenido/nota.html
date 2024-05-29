@@ -69,23 +69,24 @@
                             <th scope="col">Tiempo</th>
                         </tr>
                     </thead>
+                    
                     <tbody>
                         {% for plato in pedido.platos %}
                         <tr>
                             <td>
                                 <p class="my-0">{{ plato.plato }}</p>
                             </td>
-                            {% if pedido.camarero_mesa.servido == None %}
+                            {% if plato.servido == None %}
                                 <td>
                                     <span class="badge bg-danger">
                                         No preparado
                                     </span>
                                 </td>
-                            {% elif pedido.camarero_mesa.servido == False %}
+                            {% elif plato.servido == False %}
                                 <td>
-                                    <span class="badge bg-warning">
-                                        Preparado
-                                    </span>
+                                    <a href="{% url 'camarero_home' %}" class="badge bg-warning">Preparado</a>
+                                    <!-- <span class="">
+                                    </span> -->
                                 </td>
                             {% else %}
                                 <td>

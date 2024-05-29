@@ -23,13 +23,13 @@ class ServicioCocinaController:
       if 'listar_mesa' in req.GET:
         id_mesa = int(req.GET['listar_mesa'])
         pedidos = self.get_agrupaciones_by_camarero_mesa_id(id_mesa)
-        return self.respuesta(platos = pedidos)
-      elif 'cambiar-estado' in req.POST:
+      
+      if 'cambiar-estado' in req.POST:
         id = int(req.POST['cambiar-estado'].split('-')[0])
         estado = req.POST['cambiar-estado'].split('-')[1]
         error = self.cambiar_estado_servicio(id, estado)
         return self.respuesta(error=error)
-      return self.respuesta()
+      return self.respuesta(platos=pedidos)
     except Exception as e:
       return self.respuesta(error=f'Error en peticiones: {e}')
 

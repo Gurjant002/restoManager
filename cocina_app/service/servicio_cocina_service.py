@@ -127,6 +127,8 @@ class ServicioCocinaService:
 
     def cambiar_estado(self, id: int, servido: bool):
         try:
+            if servido == 'Null':
+                servido = None
             servicio: Servicio_Cocina = Servicio_Cocina.objects.filter(id=id).first()
             if not servicio:
                 logger.warning(f'No se encontro ningun servicio de cocina con este {id}')

@@ -772,3 +772,5 @@
 [29/May/2024 11:01:00] ERROR [cocina_app.service.servicio_cocina_service:155] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: too many values to unpack (expected 2)
 [29/May/2024 11:01:01] ERROR [cocina_app.service.servicio_cocina_service:155] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: too many values to unpack (expected 2)
 [29/May/2024 11:02:14] ERROR [cocina_app.service.servicio_cocina_service:155] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: Cannot resolve keyword 'camare' into field. Choices are: camarero_mesa, camarero_mesa_id, hora_dia, id, plato, plato_id, servido
+[29/May/2024 12:13:09] ERROR [cocina_app.service.servicio_cocina_service:138] Error en ServicioCocinaService.cambiar_estado: ['“Null”: el valor debe ser Verdadero, Falso o Nulo.']
+[29/May/2024 12:14:26] ERROR [cocina_app.service.servicio_cocina_service:138] Error en ServicioCocinaService.cambiar_estado: ['“Null”: el valor debe ser Verdadero, Falso o Nulo.']

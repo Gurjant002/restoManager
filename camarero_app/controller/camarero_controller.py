@@ -143,9 +143,7 @@ class CamareroController:
                 pedidos_mesas.append(self.get_pedidos_mesas(mesa.id))
         if self.error is None or self.error == '':
             pedidos_mesas = self.check_isinstance(pedidos_mesas)
-
-        print(pedidos_mesas)
-
+        
         diccionario = {
             'error': self.error,
             'warning': warning,
