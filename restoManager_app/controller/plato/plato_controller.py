@@ -1,5 +1,5 @@
 from django.http import HttpRequest
-from datetime import datetime
+from django.utils import timezone
 
 from ...models import Categoria, Plato, Plato_Categoria
 from ...service.plato.plato_services import *

@@ -1,6 +1,6 @@
 from django.http import HttpRequest
 from django.shortcuts import render
-from datetime import datetime
+from django.utils import timezone
 from django.contrib.auth.decorators import login_required
 
 # from restoManager_app.models import Plato_Categoria
@@ -16,7 +16,7 @@ logger = logging.getLogger(__name__)
 
 
 def crear_alerta():
-    ahora = datetime.utcnow()
+    ahora = timezone.now()
     tiempo = ahora.strftime("%H:%M")
     return tiempo
 

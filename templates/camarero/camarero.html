@@ -47,23 +47,25 @@
             </div>
         </div>
     </div>
+    {% if error %}
+        <div class="d-flex justify-content-center align-items-center mt-5" style="height: 100px;">
+            <div class="alert alert-danger text-center" role="alert">
+                <h4 class="alert-heading">¡Ups!</h4>
+                <p>{{ error }}</p>
+                <!-- <a href="javascript:history.back()" class="btn btn-info mt-2"><i class="bi bi-arrow-left-short"></i> Volver Atrás</a> -->
+            </div>
+        </div>
+    {% endif %}
     {% else %}
     <div class="d-flex justify-content-center align-items-center mt-5" style="height: 100px;">
         <div class="alert alert-danger text-center" role="alert">
             <h4 class="alert-heading">¡Ups!</h4>
-            <p>{{ error }}</p>
+            <p>¡Uste no es camarero!</p>
             <a href="javascript:history.back()" class="btn btn-info mt-2"><i class="bi bi-arrow-left-short"></i> Volver Atrás</a>
         </div>
     </div>
     {% endif %}
 </div>
-{% if error %}
-  <div class="alert alert-danger text-center" role="alert">
-    <h4 class="alert-heading">¡Ups!</h4>
-    <p>{{ error }}</p>
-    <a href="javascript:history.back()" class="btn btn-info mt-2"><i class="bi bi-arrow-left-short"></i> Volver Atrás</a>
-</div>
-{% endif %}
 <script>
     function editarUbicacion(id) {
       var lugar = document.getElementById("campo-lugar-" + id).textContent;
@@ -74,8 +76,3 @@
     }
   </script>
 {% endblock content %}
-
-<!-- 
-    
-
- -->

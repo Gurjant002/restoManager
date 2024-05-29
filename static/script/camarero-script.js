@@ -155,7 +155,8 @@ function cantidad(id, seccion, op) {
 document.addEventListener("DOMContentLoaded", function() {
     document.querySelector("#formulario").addEventListener('submit', function(event) {
         const mesa = document.querySelector("#input-mesa-id")
-        if (mesa.value === "") {
+        const mesaNumero = document.querySelector("#mesa-seleccionada")
+        if (!mesaNumero.value) {
             alert("Debe seleccionar una mesa")
             event.preventDefault();
         }

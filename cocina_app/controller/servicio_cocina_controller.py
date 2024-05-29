@@ -3,10 +3,9 @@ from cocina_app.service.servicio_cocina_service import ServicioCocinaService
 from restoManager_app.service.trabajadores.rol_service import RolService
 import logging
 
-from datetime import datetime
-from django.utils import timezone as jango
+from django.utils import timezone
 #
-utc_dt = jango.now()
+utc_dt = timezone.now()
 logger = logging.getLogger(__name__)
 
 class ServicioCocinaController:
@@ -15,21 +14,21 @@ class ServicioCocinaController:
     self.rolService = RolService()
     self.request = request
     self.error = None
-
+    self.listarMesa = None
+    self.platos = None
 
   def peticiones(self, req: HttpRequest):
-    pedidos = None
     try:
-      if 'listar_mesa' in req.GET:
-        id_mesa = int(req.GET['listar_mesa'])
-        pedidos = self.get_agrupaciones_by_camarero_mesa_id(id_mesa)
-      
       if 'cambiar-estado' in req.POST:
         id = int(req.POST['cambiar-estado'].split('-')[0])
         estado = req.POST['cambiar-estado'].split('-')[1]
-        error = self.cambiar_estado_servicio(id, estado)
-        return self.respuesta(error=error)
-      return self.respuesta(platos=pedidos)
+        self.error = self.cambiar_estado_servicio(id, estado)
+      if 'listar_mesa' in req.GET or 'listar_mesa' in req.POST:
+        id_mesa = int(req.GET['listar_mesa'])
+        self.listarMesa = id_mesa
+        self.platos = self.get_agrupaciones_by_camarero_mesa_id(id_mesa)
+        
+      return self.respuesta()
     except Exception as e:
       return self.respuesta(error=f'Error en peticiones: {e}')
 
@@ -41,12 +40,12 @@ class ServicioCocinaController:
   def get_servicio_by_mesa(self, mesa):
     return self.servicioCocina.get_servicio_by_mesa(mesa)
       
-  def get_servicio_by_hora(self, hora: datetime):
+  def get_servicio_by_hora(self, hora: timezone):
     return self.servicioCocina.get_servicio_by_hora(hora)
-  def crear_servicio(self, mesa, camarero, plato, servido: bool = None , hora: datetime = utc_dt):
+  def crear_servicio(self, mesa, camarero, plato, servido: bool = None , hora: timezone = utc_dt):
     return self.servicioCocina.crear_servicio(mesa, camarero, plato, servido, hora)
   
-  def crear_actualizar_servicio(self, id: int, mesa_camarero, plato, servido: bool = None , date: datetime = utc_dt):
+  def crear_actualizar_servicio(self, id: int, mesa_camarero, plato, servido: bool = None , date: timezone = utc_dt):
     return self.servicioCocina.crear_actualizar_servicio(id, plato, servido, mesa_camarero, date)
   
   def get_servicio_mesa_cantidad_pedidos(self):
@@ -65,7 +64,7 @@ class ServicioCocinaController:
         element_to_check = False
     return element_to_check
 
-  def respuesta(self, error: str = None, platos = None):
+  def respuesta(self, error: str = None):
     usuario = self.request.user
     mesas = self.get_servicio_mesa_cantidad_pedidos()
     
@@ -76,14 +75,15 @@ class ServicioCocinaController:
     if self.error is None or self.error == '':
       mesas = self.check_isinstance(mesas)
     if self.error is None or self.error == '':
-      platos = self.check_isinstance(platos)
+      self.platos = self.check_isinstance(self.platos)
     if self.error is None or self.error == '':
       cocinero = self.check_isinstance(cocinero)
     
     diccionario = {
         'error': self.error,
         'mesas': mesas,
-        'platos': platos,
+        'platos': self.platos,
         'es_cocinero': cocinero,
+        'listar_mesa': self.listarMesa
     }
     return diccionario
