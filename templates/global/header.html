@@ -1,0 +1,23 @@
+<!-- <div class="container-fluid bg-dark p-4 text-white">
+    <h1 onclick="goHome()" role="button" class="w-25"><strong>RestoManager</strong></h1>
+</div> -->
+
+ <div class="container-fluid bg-dark p-4 text-white">
+    <div class="row d-flex align-content-between">
+        <div class="col-md">
+            <h1 onclick="goHome()" role="button" class="w-25"><strong>RestoManager</strong></h1>
+        </div>
+
+        <div class="col-md text-end">
+            {% if user.is_authenticated %}
+                <p class="text-light">Bienvenido, {{ user.first_name }} {{ user.last_name }}</p>
+                <form method="post">
+                    {% csrf_token %}
+                    <button type="submit" formaction="{% url 'logout' %}" class="btn btn-outline-light">Cerrar sesión</button>
+                </form>
+            {% else %}
+                <a href="{% url 'login' %}" class="btn btn-outline-light">Iniciar sesión</a>
+            {% endif %}
+        </div>
+    </div>
+</div>

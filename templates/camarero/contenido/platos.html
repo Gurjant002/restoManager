@@ -1,0 +1,54 @@
+<div class="mt-2 p-2 border border-secondary rounded">
+    <table class="table table-striped table-dark table-bordered">
+        <thead>
+            <tr>
+                <th class="w-auto">Num#</th>
+                <th>Nombre</th>
+                <th>Categoria</th>
+            </tr>
+            <tr>
+                <th colspan="3" class="text-center">Descripcion</th>
+            </tr>
+        </thead>
+        <tbody id="contenido-plato" hx-get="{% url 'camarero_platos' %}" hx-trigger="load, every 5s">
+        </tbody>
+    </table>
+</div>
+<script>
+    document.addEventListener('htmx:afterRequest', function (event) {
+        // Verifica si la solicitud HTMX fue a la vista 'camarero_platos'
+        // if (event.detail.xhr.responseURL === "{% url 'camarero_platos' %}") {
+            // Obtiene los datos de la respuesta JSON
+            var datos = JSON.parse(event.detail.xhr.response);
+            // Actualiza el contenido de la página con los datos recibidos
+            var html = '';
+            datos.forEach(function(plato){
+                html += `
+                <tr id="tabla-platos">
+                    <td>
+                        <button 
+                            type="button"
+                            name='seleccionar-plato'
+                            value='${plato.id}'
+                            onClick="seleccionarProducto('platos', '${plato.id}', '${plato.nombre}', '${plato.categoria}')"
+                            class="btn btn-outline-light me-2">
+                            ${plato.numero_menu}
+                        </button>
+                    </td>
+                    <td>
+                        ${plato.nombre}
+                    </td>
+                    <td>
+                        ${plato.categoria}
+                    </td>
+                </tr>
+                <tr id="tabla-platos">
+                    <td colspan="3">${plato.descripcion}</td>
+                </tr>
+                `;
+            });
+            document.getElementById('contenido-plato').innerHTML = html;
+        }
+    // }
+    );
+</script>

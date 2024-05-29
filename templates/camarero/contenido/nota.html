@@ -1,0 +1,107 @@
+
+<form method="post">
+    {% csrf_token %}
+    <div class="row bg-light text-dark my-3 rounded">
+        <div class="col">
+            <h3 class="my-0 text-break" id="mesa-seleccionada">No hay Mesa seleccionada</h3>
+            <input type="hidden" name="mesa-seleccionada" id="input-mesa-id" required>
+        </div>
+    </div>
+    <div class="row my-3 rounded">
+        <div class="col">
+            <div class="row text-break bg-light text-dark rounded">
+                <h3 class="my-0" id="plato-seleccionado">Platos</h3>
+            </div>
+            <div class="row mt-1">
+                <div class="col">
+                    <ul id="lista-platos" class="list-group mb-1">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col">
+            <div class="row text-break bg-light text-dark rounded">
+                <h3 class="m-0">Bebidas</h3>
+            </div>
+            <div class="row mt-1">
+                <div class="col">
+                    <ul id="lista-bebidas" class="list-group mb-1">
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-3 rounded">
+        <div class="col">
+            {% if error %}
+            <div id="error-msg" class="alert alert-danger my-3" style="display: none;">
+                <strong>Error: {{ error }}</strong><span id="error-text"></span>
+            </div>
+            {% elif warning %}
+            <div id="error-msg" class="alert alert-warning my-3" style="display: none;">
+                <strong>Atención: {{ warning }}</strong><span id="error-text"></span>
+            </div>
+            {% endif %}
+            <button type="submit" name='solicitar-cocina' class="btn btn-info">Solicitar</button>
+        </div>
+    </div>
+</form>
+
+<hr>
+
+{% if pedidos %}
+{% for pedido in pedidos %}
+    <div class="row rounded my-1 bg-light text-dark">
+        <div class="col">
+            <h3>Mesa: {{ pedido.camarero_mesa.numero_mesa }} - {{ pedido.camarero_mesa.ubicacion__lugar }}</h3>
+        </div>
+    </div>
+        <div class="row rounded my-1 bg-light text-dark">
+            <div class="col">
+                <table class="table table-borderless">
+                    <thead>
+                        <tr>
+                            <th scope="col">Platos</th>
+                            <th scope="col">Servido</th>
+                            <th scope="col">Tiempo</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        {% for plato in pedido.platos %}
+                        <tr>
+                            <td>
+                                <p class="my-0">{{ plato.plato }}</p>
+                            </td>
+                            {% if plato.servido == None %}
+                                <td>
+                                    <span class="badge bg-danger">
+                                        No preparado
+                                    </span>
+                                </td>
+                            {% elif plato.servido == False %}
+                                <td>
+                                    <a href="{% url 'camarero_home' %}" class="badge bg-warning">Preparado</a>
+                                    <!-- <span class="">
+                                    </span> -->
+                                </td>
+                            {% else %}
+                                <td>
+                                    <span class="badge bg-success">
+                                        Servido
+                                    </span>
+                                </td>
+                            {% endif %}
+                            </td>
+                            <td>{{ plato.tiempo|date:"H:i" }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    {% endfor %}        
+{% endif %}

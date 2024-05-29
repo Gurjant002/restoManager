@@ -1,0 +1,178 @@
+{% extends "index.html" %}
+
+{% block title %} About {% endblock %}
+
+{% block content %}
+{% include "global/header.html" %}
+
+{% if messages %}
+  {% for message in messages %}
+    {% if message.tags == 'success' %}
+      <div class="ml-2 my-2 w-50 m-auto mb-4 alert alert-success d-flex align-items-center" role="alert">
+        <svg
+          class="d-none"
+          width="24"
+          height="24"
+          role="img"
+          aria-label="Success:">
+          <use xlink:href="#check-circle-fill" />
+        </svg>
+        <div>{{ message }}</div>
+      </div>
+    {% else %}
+      <div class="ml-2 w-75 m-auto mb-4 alert alert-danger d-flex align-items-center" role="alert">
+        <svg
+          class="d-none"
+          width="24"
+          height="24"
+          role="img"
+          aria-label="Danger:">
+          <use xlink:href="#exclamation-triangle-fill" />
+        </svg>
+        <div>{{ message }}</div>
+      </div>
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+<main class="container mt-1">
+  {% include "global/panel_nav.html" %}
+
+  <section class="row mt-5">
+    <div class="col-md-12">
+      <h2>Acerca de RestoManager</h2>
+      <p>RestoManager es una aplicación web diseñada para facilitar la gestión de restaurantes. Ofrece una interfaz intuitiva y fácil de usar para que los propietarios y gerentes de restaurantes puedan llevar un control eficiente de sus operaciones.</p>
+    </div>
+  </section>
+
+  <section class="row mt-5">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header text-light bg-dark">
+          <h5 class="card-title">Gestión de mesas</h5>
+        </div>
+        <div class="card-body">
+          <p class="card-text">RestoManager te permite gestionar tus mesas de forma eficiente, asignando reservas, controlando la disponibilidad y optimizando el espacio de tu restaurante.</p>
+        </div>
+        <div class="card-footer text-muted">
+          Esta caracteristica esta en desarrollo.
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header text-light bg-dark">
+          <h5 class="card-title">Menú digital</h5>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Crea un menú digital atractivo e interactivo para que tus clientes puedan visualizar tus platos y bebidas de forma clara y atractiva.</p>
+        </div>
+        <div class="card-footer text-muted">
+          Esta caracteristica esta en desarrollo.
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header text-light bg-dark">
+          <h5 class="card-title">Toma de comandas</h5>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Facilita la toma de comandas a tus camareros con una interfaz intuitiva y rápida. Reduce los errores y agiliza el servicio.</p>
+        </div>
+        <div class="card-footer text-muted">
+          Esta caracteristica ya esta en uso.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="row mt-5">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header text-light bg-dark">
+          <h5 class="card-title">Facturación</h5>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Genera facturas de forma rápida y precisa. RestoManager te permite gestionar diferentes métodos de pago y controlar tus ingresos.</p>
+        </div>
+        <div class="card-footer text-muted">
+          Esta caracteristica esta en desarrollo.
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header text-light bg-dark">
+          <h5 class="card-title">Informes</h5>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Obtén informes detallados sobre tus ventas, productos más vendidos, clientes y otros aspectos relevantes de tu negocio.</p>
+        </div>
+        <div class="card-footer text-muted">
+          Esta caracteristica esta en desarrollo.
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header text-light bg-dark">
+          <h5 class="card-title">Control de stock</h5>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Controla el stock de tus productos de forma eficiente. RestoManager te avisa cuando tus productos están a punto de agotarse.</p>
+        </div>
+        <div class="card-footer text-muted">
+          Esta caracteristica esta en desarrollo.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="row mt-5">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header text-light bg-dark">
+          <h5 class="card-title">Gestión de empleados</h5>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Gestiona los perfiles de tus empleados, asigna roles y permisos, y controla su rendimiento.</p>
+        </div>
+        <div class="card-footer text-muted">
+          Esta caracteristica esta en desarrollo.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="row mt-5">
+    <div class="col-md-12">
+      <h2>Beneficios</h2>
+      <ul>
+        <li>Ahorro de tiempo</li>
+        <li>Reducción de errores</li>
+        <li>Mejora de la eficiencia</li>
+        <li>Mayor rentabilidad</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="row mt-5">
+    <div class="col-md-12">
+      <h2>¿Por qué elegir RestoManager?</h2>
+      <p>RestoManager es la solución ideal para los restaurantes que buscan una herramienta completa y fácil de usar para gestionar sus operaciones. Con RestoManager, podrás mejorar la eficiencia de tu restaurante, aumentar tus ventas y ofrecer un mejor servicio a tus clientes.</p>
+    </div>
+  </section>
+
+  <section class="row mt-5">
+    <div class="col-md-12">
+      <h2>Contáctanos</h2>
+      <p>Si estás interesado en obtener más información sobre RestoManager, no dudes en ponerte en contacto con nosotros. Estaremos encantados de ayudarte a mejorar la gestión de tu restaurante.</p>
+      <ul>
+        <li>Teléfono: +34 666 30 94 40</li>
+        <li>Email: gurjant.at.work@gmail.com</li>
+      </ul>
+    </div>
+  </section>
+</main>
+{% endblock %}

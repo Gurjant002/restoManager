@@ -11,11 +11,11 @@ class PlatoService:
         return self._platos.objects.all()
 
     def get_plato_by_name(self, nombre_plato:str) -> Plato:
-        plato = Plato.objects.filter(nombre=nombre_plato).first()
+        plato: Plato = Plato.objects.filter(nombre=nombre_plato).first()
         return plato
     
     def get_plato_by_id(self, id_plato) -> Plato:
-        plato = self._platos.filter(id=id_plato)
+        plato = Plato.objects.filter(id=id_plato).first()
         return plato
 
     def crear_plato(self, nombrePlato: str, descripcion: str) -> Plato:

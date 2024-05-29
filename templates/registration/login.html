@@ -1,0 +1,46 @@
+{% extends 'index.html' %}
+
+{% block title %}
+    LogIn
+{% endblock title %}
+    
+{% block content %}
+    {% include 'global/header.html' %}
+    <div class="w-50 bg-dark text-light p-3 m-auto mt-5 rounded login-responsive">
+        <h1 class="text-center mb-3">LogIn</h1>
+        {% if messages %}
+          {% for message in messages %}
+          <div class="ml-2 w-75 m-auto mb-4 alert alert-danger d-flex align-items-center" role="alert">
+            <svg
+              class="d-none"
+              width="24"
+              height="24"
+              role="img"
+              aria-label="Danger:"
+            >
+              <use xlink:href="#exclamation-triangle-fill" />
+            </svg>
+            <div>{{ message }}</div>
+          </div>
+          {% endfor %}
+        {% endif %}
+        <form action="{% url 'login' %}" method="post">
+            {% csrf_token %}
+            <div class="form-floating">
+                <div class="form-floating mb-3 d-flex flex-row">
+                    <input type="text" class="form-control" id="floatingUsuario" required="true" name="usuario"
+                        placeholder="Usuario">
+                    <label for="floatingUsuario" class="text-dark">Usuario</label>
+                </div>
+            </div>
+            <div class="form-floating">
+                <div class="form-floating mb-3 d-flex flex-row">
+                    <input type="password" class="form-control" id="floatingPassword" required="true" name="password"
+                        placeholder="Password">
+                    <label for="floatingPassword" class="text-dark">Contraseña</label>
+                </div>
+            </div>
+            <button type="submit" name="iniciar_sesion" class="btn btn-primary">Ingresar</button>
+        </form>
+    </div>
+{% endblock content %}

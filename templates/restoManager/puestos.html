@@ -1,0 +1,55 @@
+{% extends 'index.html' %}
+
+{% block title %} Home {% endblock %}
+{% block content %}
+
+    {% include 'global/header.html' %}
+    <div class="container pb-5 my-5 overflow-auto">
+        <div class="row row-cols-2 mb-5 row-cols-md-3 row-cols-lg-5 g-4">
+            <div class="col h-100">
+                <div class="card h-100">
+                    <div class="card-header bg-dark text-light">
+                        <h5 class="card-title">Camarero</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Atienda y sirva a las mesas, tome notas de los pedidos de cada mesa.</p>
+                        <a href="{% url 'camarero_home' %}" class="btn btn-primary">Acceder</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col h-100">
+                <div class="card h-100">
+                    <div class="card-header bg-dark text-light">
+                        <h5 class="card-title">Cocina</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Atienda y sirva a las mesas, tome notas de los pedidos de cada mesa.</p>
+                        <a href="{% url 'cocina' %}" class="btn btn-primary">Acceder</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col h-100">
+                <div class="card h-100">
+                    <div class="card-header bg-dark text-light">
+                        <h5 class="card-title">Cajero</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Atienda y sirva a las mesas, tome notas de los pedidos de cada mesa.</p>
+                        <a href="#" class="btn btn-primary">Acceder</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col h-100">
+                <div class="card h-100">
+                    <div class="card-header bg-dark text-light">
+                        <h5 class="card-title">Bar-Man</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Atienda y sirva a las mesas, tome notas de los pedidos de cada mesa.</p>
+                        <a href="#" class="btn btn-primary">Acceder</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

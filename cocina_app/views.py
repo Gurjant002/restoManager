@@ -1,36 +1,26 @@
+# Cocina_App
+from django.http import HttpRequest, JsonResponse
 from django.shortcuts import render
-# Create your views here.
+from django.contrib.auth.decorators import login_required
 
-from cocina_app.models import *
+from cocina_app.controller.servicio_cocina_controller import ServicioCocinaController
 
-def mesas(request):
-    # query = ServiEjemplo.objects.all()
-    diccionario = {}
-    # diccionario["mesas"] = query
+import logging
+ 
+logger = logging.getLogger(__name__)
 
-    # mesas = []
-    # for i in query:
-    #     num = i.mesaID
-    #     mesas.append(num)
-    
-    # mesas = list(dict.fromkeys(mesas))
-    # for i in mesas:
-    #     diccionario["query"+str(i)] = ServiEjemplo.objects.filter(mesaID = i)
-    # print(diccionario)
-    variables = {}
-    variables["diccionario"] = diccionario
-    return render(request, "cocina/secciones/mesas.html", variables)
+@login_required
+def cocina(request: HttpRequest):
+    cocina = ServicioCocinaController(request)
+    diccionario = cocina.peticiones(request)
+    return render(request, 'cocina/pedidos.html', diccionario)
 
 
-""" def activarPlatos(request):
-    return render(request)
-
-def activarPlatos(request):
-    return render(request)
-
-def activarPlatos(request):
-    return render(request)
-"""
-
-def avisos(request):
-    return render(request, "cocina/secciones/avisos.html")
+@login_required
+def mesas_pedidos(request):
+    cocina = ServicioCocinaController()
+    lista = cocina.get_servicio_mesa_cantidad_pedidos()
+    diccionario = {
+        'pedidos_lista':lista
+        }
+    return JsonResponse(diccionario)

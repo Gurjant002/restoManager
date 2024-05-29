@@ -1,0 +1,33 @@
+<div class="mt-2 p-2 border border-secondary rounded">
+    <table class="table table-striped table-dark table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for bebida in bebidas %}
+            <tr>
+                <td>
+                    <!-- onClick="seleccionarProducto('platos', '{{ plato.id }}', '{{ plato.plato.nombre }}', '{{ plato.categoria.nombre }}')" -->
+                    <button 
+                        type="button"
+                        onClick="seleccionarProducto('bebidas', '{{ bebida.id }}', '{{ bebida.nombre }}', '{{ bebida.contiene_alcohol }}')"
+                        class="btn btn-outline-light me-2">
+                        {{ bebida.id }}
+                    </button>
+                </td>
+                <td class="overflow-hidden">
+                    <p id="campo-alcohol-{{ item.id }}"
+                        class="p-2 w-auto text-center rounded mb-2 {% if bebida.contiene_alcohol %}bg-warning text-dark{% else %}bg-success text-white{% endif %}">
+                        {{ bebida.nombre }}
+                    </p>
+                </td>
+                <td class="overflow-hidden"><p class="overflow-hidden">{{ bebida.descripcion }}</p></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
