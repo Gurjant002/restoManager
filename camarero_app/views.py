@@ -16,7 +16,7 @@ def home(request: HttpRequest):
 
 @login_required
 def platos(request: HttpRequest):
-    camarero = CamareroController()
+    camarero = CamareroController(request)
     platos = camarero.lista_platos()
     datos = []
     for plato in platos:

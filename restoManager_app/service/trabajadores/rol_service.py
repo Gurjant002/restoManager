@@ -30,7 +30,7 @@ class RolService:
         
     def get_rol_by_user_rol(self, usuario: int, rol: str):
         try:
-            return Rol.objects.get(user=usuario, rol=rol)
+            return Rol.objects.filter(user=usuario, rol=rol).first()
         except Rol.DoesNotExist:
             logger.error(f"No se encontro el rol '{rol}' para el usuario '{usuario}'")
             return f"El rol de '{rol}' no existe para el usuario '{usuario}"

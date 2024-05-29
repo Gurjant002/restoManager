@@ -1,4 +1,6 @@
+from django.db import IntegrityError
 from camarero_app.models import Camarero_Mesa
+
 import logging
 logger = logging.getLogger(__name__)
 
@@ -7,15 +9,15 @@ class CamareroMesaService:
         try:
             relaciones = Camarero_Mesa.objects.all()
             if not relaciones:
-                return "No se encontro ninguna relacion"
-            
+                logger.error('No se han encontrado ninguna mesa asignada a ningun camarero.')
+                return 'No se han encontrado ninguna mesa asignada a ningun camarero. Intenta crear una mesa.'
             return relaciones
-        except Camarero_Mesa.DoesNotExist:
-            logger.error("No se encontro ninguna relacion")
-            return None
-        except Exception as e:
+        except (Camarero_Mesa.DoesNotExist, IntegrityError, ValueError) as e:
             logger.error(f'Ocurrio un error inesperado. {e}')
             return 'Ocurrio un error inesperado.'
+        except Exception as e:
+            logger.error(f'Ocurrio un error desconocido. {e}')
+            return 'Ocurrio un error desconocido.'
 
     def get_relacion_by_id(self, id_relacion: int):
         try:
@@ -31,20 +33,24 @@ class CamareroMesaService:
             logger.error(f'Ocurrio un error inesperado. {e}')
             return 'Ocurrio un error inesperado.'
 
-    def get_relacion_by_camarero(self, camarero):
+    def get_relacion_by_rol(self, rol):
         try:
-            relacion = Camarero_Mesa.objects.filter(camarero=camarero)
+            relacion = Camarero_Mesa.objects.filter(rol=rol)
             return relacion
         except Camarero_Mesa.DoesNotExist:
-            logger.error(f"No se encontro la relacion '{camarero}'")
-            return f"No se encontro la relacion '{camarero}'"
+            logger.error(f"No se encontro la relacion '{rol}'")
+            return f"No se encontro la relacion '{rol}'"
         except Exception as e:
             logger.error(f'Ocurrio un error inesperado. {e}')
             return 'Ocurrio un error inesperado.'
 
-    def crear_relacion(self, numero_mesa: int, camarero, ubicacion):
+    def crear_relacion(self, numero_mesa: int, rol, ubicacion):
+        if not numero_mesa or not rol or not ubicacion:
+            logger.error(f"Ha habido un problema al recibir los parametros: {numero_mesa}, {rol}, {ubicacion}")
+            return 'Error all obtener parametros: Ponga se en contacto con el administrador.'
+        
         try:
-            Camarero_Mesa.objects.create(numero_mesa=numero_mesa, camarero=camarero, ubicacion=ubicacion)
+            Camarero_Mesa.objects.create(numero_mesa=numero_mesa, rol=rol, ubicacion=ubicacion)
         except Exception as e:
             logger.error(f'Ocurrio un error inesperado. {e}')
             return 'Ocurrio un error inesperado.'

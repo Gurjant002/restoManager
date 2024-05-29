@@ -4,32 +4,35 @@
 {% include 'global/header.html' %}
 {% if es_cocinero %}
     <div class="container pb-5 my-5">
+        {% if error == None %}
         <div class="panel_insertar bg-dark rounded row mb-3">
             <h1 id="titulo-seccion-superior" class="text-light">Pendientes.</h1>
         </div>
         <div class="row overflow-auto" id="card-pedidos">
             <!-- <div class="row overflow-auto" id="card-pedidos" hx-get="{% url 'cocina' %}" hx-trigger="load, every 3s"> -->
+        {% if mesas %}
+          
             {% for pedido in mesas   %}
-            
             <div class="col-lg-3">
                 <div class="card mb-3">
                     <div class="card-header bg-dark text-light">
-                        Mesa #{{pedido.mesa_id}} [{{pedido.mesa_ubicacion}}]
+                        Mesa #{{pedido.camarero_mesa__numero_mesa}} [{{pedido.camarero_mesa__ubicacion__lugar}}]
                     </div>
                     <div class="card-body p-3">
-                        <p class="card-text">Total pedidos: #{{pedido.pedidosTotal}}</p>
-                        <p class="card-text">Hora: {{pedido.tiempo}}</p>
+                        <p class="card-text">Total pedidos: #{{pedido.pedidos_total_plato}}</p>
                         <form class="text-center" method="GET">
-                            <button type="submit" name="listar_mesa" value="{{pedido.mesa_id}}" class="btn btn-primary w-100 mt-2">Ver detalles</button>
+                            <button type="submit" name="listar_mesa" value="{{pedido.camarero_mesa}}" class="btn btn-primary w-100 mt-2">Ver detalles</button>
                         </form>
+                    </div>
+                    <div class="card-footer">
+                        <p class="card-subtitle">{{pedido.hora_dia}}</p>
                     </div>
                 </div>
             </div>
             {% endfor %}
+        {% endif %}
         </div>
-        {% if error %}
-        <p>{{ error }}</p>
-        {% elif platos %}
+        {% if platos %}
         <div class="panel_listado bg-dark rounded row">
             <h1 class="text-light">Mesa {{ platos.camarero_mesa.numero_mesa }} - {{ platos.camarero_mesa.ubicacion__lugar }}</h1>
         </div>
@@ -87,16 +90,18 @@
                     </div>
                 {% endfor %}
             </div>
+            {% endif %}
         </div>
+        {% else %}
+            <div class="d-flex justify-content-center align-items-center mt-5" style="height: 100px;">
+                <div class="alert alert-danger text-center" role="alert">
+                    <h4 class="alert-heading">¡Ups!</h4>
+                    <p>{{ error }}</p>
+                    <a href="javascript:history.back()" class="btn btn-info mt-2"><i class="bi bi-arrow-left-short"></i> Volver Atrás</a>
+                </div>
+            </div>
         {% endif %}
     </div>
 {% else %}
-<div class="d-flex justify-content-center align-items-center mt-5" style="height: 100px;">
-    <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">¡Ups!</h4>
-        <p>{{ error }}</p>
-        <a href="javascript:history.back()" class="btn btn-info mt-2"><i class="bi bi-arrow-left-short"></i> Volver Atrás</a>
-    </div>
-</div>
 {% endif %}
 {% endblock content %}

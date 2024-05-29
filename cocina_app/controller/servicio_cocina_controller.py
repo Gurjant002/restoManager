@@ -19,18 +19,19 @@ class ServicioCocinaController:
 
   def peticiones(self, req: HttpRequest):
     pedidos = None
-    if 'listar_mesa' in req.GET:
-      id_mesa = int(req.GET['listar_mesa'])
-      pedidos = self.get_agrupaciones_by_camarero_mesa_id(id_mesa)
-      print(pedidos)
-      return self.respuesta(listar_pedidos_x_mesa = pedidos)
-    elif 'cambiar-estado' in req.POST:
-      id = int(req.POST['cambiar-estado'].split('-')[0])
-      estado = req.POST['cambiar-estado'].split('-')[1]
-      print('cambiar-estado', id)
-      error = self.cambiar_estado_servicio(id, estado)
-      return self.respuesta(error=error)
-    return self.respuesta()
+    try:
+      if 'listar_mesa' in req.GET:
+        id_mesa = int(req.GET['listar_mesa'])
+        pedidos = self.get_agrupaciones_by_camarero_mesa_id(id_mesa)
+        return self.respuesta(platos = pedidos)
+      elif 'cambiar-estado' in req.POST:
+        id = int(req.POST['cambiar-estado'].split('-')[0])
+        estado = req.POST['cambiar-estado'].split('-')[1]
+        error = self.cambiar_estado_servicio(id, estado)
+        return self.respuesta(error=error)
+      return self.respuesta()
+    except Exception as e:
+      return self.respuesta(error=f'Error en peticiones: {e}')
 
   def get_servicio_cocina_by_id(self, id: int):
     return self.servicioCocina.get_servicio_cocina_by_id(id)
@@ -67,8 +68,9 @@ class ServicioCocinaController:
   def respuesta(self, error: str = None, platos = None):
     usuario = self.request.user
     mesas = self.get_servicio_mesa_cantidad_pedidos()
+    
     cocinero = self.rolService.get_rol_by_user_rol(usuario, 'Cocinero')
-    if isinstance(cocinero, str):
+    if isinstance(cocinero, str) or cocinero is None:
       cocinero = self.rolService.get_rol_by_user_rol(usuario, 'Administrador')
     
     if self.error is None or self.error == '':

@@ -1,5 +1,5 @@
-from django.db import IntegrityError
-from django.db.models import Count, Max, Min
+from django.db import IntegrityError, models
+from django.db.models import Count, Max, Min, Sum
 from cocina_app.models import Servicio_Cocina
 from restoManager_app.models import Plato
 from camarero_app.models import Camarero_Mesa
@@ -34,7 +34,7 @@ class ServicioCocinaService:
     
     def get_servicio_by_mesa(self, mesa):
         try:
-            servicio = Servicio_Cocina.objects.get(mesa=mesa)
+            servicio = Servicio_Cocina.objects.filter(camarero_mesa=mesa)
             if not servicio:
                 logger.warning(f'No se encontro ningun servicio de cocina de esta {mesa}')
                 return 'No se encontro ningun servicio de cocina'
@@ -89,8 +89,11 @@ class ServicioCocinaService:
 
     def get_agrupaciones(self):
         try:
-            agrupaciones = list(Servicio_Cocina.objects.values('plato', 'servido', 'camarero_mesa')
-                                .annotate(total=Count('id'), tiempo=Max('hora_dia')))
+            agrupaciones = list(
+                Servicio_Cocina.objects
+                .values('plato', 'servido', 'camarero_mesa')
+                .annotate(total=Count('id'), tiempo=Max('hora_dia'))
+                )
             for agrupacion in agrupaciones:
                 agrupacion['plato'] = Plato.objects.get(pk=agrupacion['plato'])
                 agrupacion['camarero_mesa'] = Camarero_Mesa.objects.get(pk=agrupacion['camarero_mesa'])
@@ -137,17 +140,17 @@ class ServicioCocinaService:
 
     def get_servicio_mesa_cantidad_pedidos(self):
         try:
-            agrupaciones = Servicio_Cocina.objects.values('camarero_mesa__numero_mesa', 'camarero_mesa__ubicacion__lugar', 'camarero_mesa__id').annotate(total=Count('plato'), tiempo=Min('hora_dia')).order_by('hora_dia')
-            pedidos_total_mesa = []
-            for agrupacion in agrupaciones:
-                pedidos_total_mesa.append({
-                    'mesa_id': agrupacion['camarero_mesa__id'],
-                    'mesa': agrupacion['camarero_mesa__numero_mesa'],
-                    'mesa_ubicacion': agrupacion['camarero_mesa__ubicacion__lugar'],
-                    'pedidosTotal': agrupacion['total'],
-                    'tiempo': agrupacion['tiempo']
-                })
-            return pedidos_total_mesa
+            agrupacion_platos_mesa = list(
+                Servicio_Cocina.objects
+                .values('camarero_mesa', 'camarero_mesa__numero_mesa', 'camarero_mesa__ubicacion__lugar')
+                .annotate(
+                    pedidos_total_plato=Count('plato'),
+                    hora_dia=Min('hora_dia')
+                )
+                .order_by('camarero_mesa__numero_mesa')
+                )
+            return agrupacion_platos_mesa
         except Exception as e:
             logger.error(f'Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: {e}')
             return 'Ha ocurrido un error inesperado.'
+

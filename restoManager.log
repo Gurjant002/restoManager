@@ -654,3 +654,121 @@
 [29/May/2024 02:17:31] ERROR [camarero_app.service.camarero_mesa_service:49] Ocurrio un error inesperado. Cannot assign ""El rol de 'Camarero' no existe para el usuario '5"": "Camarero_Mesa.camarero" must be a "Rol" instance.
 [29/May/2024 02:18:29] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario '5'
 [29/May/2024 02:18:40] ERROR [camarero_app.service.camarero_mesa_service:49] Ocurrio un error inesperado. Cannot assign ""El rol de 'Camarero' no existe para el usuario '5"": "Camarero_Mesa.camarero" must be a "Rol" instance.
+[29/May/2024 06:30:33] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'gurjant'
+[29/May/2024 06:30:33] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'gurjant'
+[29/May/2024 06:30:38] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Cocinero' para el usuario 'gurjant'
+[29/May/2024 06:30:38] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'gurjant'
+[29/May/2024 06:32:01] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario '2'
+[29/May/2024 06:32:01] ERROR [camarero_app.service.camarero_mesa_service:49] Ocurrio un error inesperado. Cannot assign ""El rol de 'Camarero' no existe para el usuario '2"": "Camarero_Mesa.camarero" must be a "Rol" instance.
+[29/May/2024 06:36:54] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario '2'
+[29/May/2024 06:36:54] ERROR [camarero_app.service.camarero_mesa_service:49] Ocurrio un error inesperado. Cannot assign ""El rol de 'Camarero' no existe para el usuario '2"": "Camarero_Mesa.rol" must be a "Rol" instance.
+[29/May/2024 06:36:54] ERROR [camarero_app.service.camarero_mesa_service:17] Ocurrio un error inesperado. (1054, "Unknown column 'camarero_mesa.rol_id' in 'field list'")
+[29/May/2024 06:37:24] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario '2'
+[29/May/2024 06:37:24] ERROR [camarero_app.service.camarero_mesa_service:49] Ocurrio un error inesperado. Cannot assign ""El rol de 'Camarero' no existe para el usuario '2"": "Camarero_Mesa.rol" must be a "Rol" instance.
+[29/May/2024 06:37:24] ERROR [camarero_app.service.camarero_mesa_service:17] Ocurrio un error inesperado. (1054, "Unknown column 'camarero_mesa.rol_id' in 'field list'")
+[29/May/2024 06:37:29] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario '2'
+[29/May/2024 06:37:29] ERROR [camarero_app.service.camarero_mesa_service:49] Ocurrio un error inesperado. Cannot assign ""El rol de 'Camarero' no existe para el usuario '2"": "Camarero_Mesa.rol" must be a "Rol" instance.
+[29/May/2024 06:37:29] ERROR [camarero_app.service.camarero_mesa_service:17] Ocurrio un error inesperado. (1054, "Unknown column 'camarero_mesa.rol_id' in 'field list'")
+[29/May/2024 06:37:59] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario '2'
+[29/May/2024 06:37:59] ERROR [camarero_app.service.camarero_mesa_service:49] Ocurrio un error inesperado. Cannot assign ""El rol de 'Camarero' no existe para el usuario '2"": "Camarero_Mesa.rol" must be a "Rol" instance.
+[29/May/2024 06:38:42] ERROR [camarero_app.service.camarero_mesa_service:17] Ocurrio un error inesperado. (1054, "Unknown column 'camarero_mesa.rol_id' in 'field list'")
+[29/May/2024 06:39:22] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario '2'
+[29/May/2024 06:39:22] ERROR [camarero_app.service.camarero_mesa_service:49] Ocurrio un error inesperado. Cannot assign ""El rol de 'Camarero' no existe para el usuario '2"": "Camarero_Mesa.rol" must be a "Rol" instance.
+[29/May/2024 06:39:26] ERROR [camarero_app.service.camarero_mesa_service:17] Ocurrio un error inesperado. (1054, "Unknown column 'camarero_mesa.rol_id' in 'field list'")
+[29/May/2024 06:40:14] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario '2'
+[29/May/2024 06:40:14] ERROR [camarero_app.service.camarero_mesa_service:49] Ocurrio un error inesperado. Cannot assign ""El rol de 'Camarero' no existe para el usuario '2"": "Camarero_Mesa.rol" must be a "Rol" instance.
+[29/May/2024 06:42:13] ERROR [camarero_app.service.camarero_mesa_service:17] Ocurrio un error inesperado. (1054, "Unknown column 'camarero_mesa.rol_id' in 'field list'")
+[29/May/2024 06:43:18] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario '2'
+[29/May/2024 06:43:18] ERROR [camarero_app.service.camarero_mesa_service:49] Ocurrio un error inesperado. Cannot assign ""El rol de 'Camarero' no existe para el usuario '2"": "Camarero_Mesa.rol" must be a "Rol" instance.
+[29/May/2024 06:43:18] ERROR [camarero_app.service.camarero_mesa_service:17] Ocurrio un error inesperado. (1054, "Unknown column 'camarero_mesa.rol_id' in 'field list'")
+[29/May/2024 06:57:18] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Cocinero' para el usuario '2'
+[29/May/2024 06:57:18] ERROR [camarero_app.service.camarero_mesa_service:49] Ocurrio un error inesperado. (1054, "Unknown column 'rol_id' in 'field list'")
+[29/May/2024 06:57:18] ERROR [camarero_app.service.camarero_mesa_service:17] Ocurrio un error inesperado. (1054, "Unknown column 'camarero_mesa.rol_id' in 'field list'")
+[29/May/2024 06:57:56] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Cocinero' para el usuario '2'
+[29/May/2024 06:57:56] ERROR [camarero_app.service.camarero_mesa_service:49] Ocurrio un error inesperado. (1054, "Unknown column 'rol_id' in 'field list'")
+[29/May/2024 06:57:56] ERROR [camarero_app.service.camarero_mesa_service:17] Ocurrio un error inesperado. (1054, "Unknown column 'camarero_mesa.rol_id' in 'field list'")
+[29/May/2024 06:58:51] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Cocinero' para el usuario '2'
+[29/May/2024 07:00:18] ERROR [camarero_app.service.camarero_mesa_service:49] Ocurrio un error inesperado. (1054, "Unknown column 'rol_id' in 'field list'")
+[29/May/2024 07:00:28] ERROR [camarero_app.service.camarero_mesa_service:17] Ocurrio un error inesperado. (1054, "Unknown column 'camarero_mesa.rol_id' in 'field list'")
+[29/May/2024 07:04:10] ERROR [camarero_app.service.camarero_mesa_service:17] Ocurrio un error inesperado. (1054, "Unknown column 'camarero_mesa.rol_id' in 'field list'")
+[29/May/2024 07:08:20] ERROR [camarero_app.service.camarero_mesa_service:17] Ocurrio un error inesperado. (1054, "Unknown column 'camarero_mesa.rol_id' in 'field list'")
+[29/May/2024 07:10:35] ERROR [camarero_app.service.camarero_mesa_service:49] Ocurrio un error inesperado. (1054, "Unknown column 'rol_id' in 'field list'")
+[29/May/2024 07:10:35] ERROR [camarero_app.service.camarero_mesa_service:17] Ocurrio un error inesperado. (1054, "Unknown column 'camarero_mesa.rol_id' in 'field list'")
+[29/May/2024 07:13:43] ERROR [camarero_app.service.camarero_mesa_service:47] Ha habido un problema al recibir los parametros: 1, <QuerySet []>, Lugar: Adios
+[29/May/2024 07:13:43] ERROR [camarero_app.service.camarero_mesa_service:17] Ocurrio un error inesperado. (1054, "Unknown column 'camarero_mesa.rol_id' in 'field list'")
+[29/May/2024 07:15:15] ERROR [camarero_app.service.camarero_mesa_service:17] Ocurrio un error inesperado. (1054, "Unknown column 'camarero_mesa.rol_id' in 'field list'")
+[29/May/2024 07:39:48] ERROR [camarero_app.service.camarero_mesa_service:15] Ocurrio un error inesperado. (1054, "Unknown column 'camarero_mesa.rol_id' in 'field list'")
+[29/May/2024 07:40:56] ERROR [camarero_app.service.camarero_mesa_service:15] Ocurrio un error inesperado. (1054, "Unknown column 'camarero_mesa.rol_id' in 'field list'")
+[29/May/2024 07:41:50] ERROR [camarero_app.service.camarero_mesa_service:15] Ocurrio un error inesperado. (1054, "Unknown column 'camarero_mesa.rol_id' in 'field list'")
+[29/May/2024 07:53:05] ERROR [camarero_app.service.camarero_mesa_service:19] Ocurrio un error desconocido. (1054, "Unknown column 'camarero_mesa.rol_id' in 'field list'")
+[29/May/2024 07:54:05] ERROR [camarero_app.service.camarero_mesa_service:19] Ocurrio un error desconocido. (1054, "Unknown column 'camarero_mesa.rol_id' in 'field list'")
+[29/May/2024 07:56:46] ERROR [camarero_app.service.camarero_mesa_service:12] No se encontraron relaciones
+[29/May/2024 07:57:09] ERROR [camarero_app.service.camarero_mesa_service:12] No se encontraron relaciones
+[29/May/2024 07:58:48] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[29/May/2024 07:58:50] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[29/May/2024 07:58:55] ERROR [camarero_app.service.camarero_mesa_service:49] Ha habido un problema al recibir los parametros: 1, None, Lugar: Adios
+[29/May/2024 07:58:55] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[29/May/2024 08:00:36] ERROR [camarero_app.service.camarero_mesa_service:49] Ha habido un problema al recibir los parametros: 1, None, Lugar: Adios
+[29/May/2024 08:00:39] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[29/May/2024 08:02:04] ERROR [camarero_app.service.camarero_mesa_service:49] Ha habido un problema al recibir los parametros: 1, None, Lugar: Adios
+[29/May/2024 08:02:04] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[29/May/2024 08:44:39] ERROR [cocina_app.service.servicio_cocina_service:102] Error en ServicioCocinaService.get_agrupaciones: 'camarero_mesa'
+[29/May/2024 08:54:03] ERROR [cocina_app.service.servicio_cocina_service:43] Error en ServicioCocinaService.get_servicio_by_mesa: Cannot resolve keyword 'mesa' into field. Choices are: camarero_mesa, camarero_mesa_id, hora_dia, id, plato, plato_id, servido
+[29/May/2024 08:54:03] ERROR [cocina_app.service.servicio_cocina_service:43] Error en ServicioCocinaService.get_servicio_by_mesa: Cannot resolve keyword 'mesa' into field. Choices are: camarero_mesa, camarero_mesa_id, hora_dia, id, plato, plato_id, servido
+[29/May/2024 08:55:23] ERROR [cocina_app.service.servicio_cocina_service:43] Error en ServicioCocinaService.get_servicio_by_mesa: Cannot resolve keyword 'mesa' into field. Choices are: camarero_mesa, camarero_mesa_id, hora_dia, id, plato, plato_id, servido
+[29/May/2024 08:55:26] ERROR [cocina_app.service.servicio_cocina_service:43] Error en ServicioCocinaService.get_servicio_by_mesa: Cannot resolve keyword 'mesa' into field. Choices are: camarero_mesa, camarero_mesa_id, hora_dia, id, plato, plato_id, servido
+[29/May/2024 08:59:05] ERROR [cocina_app.service.servicio_cocina_service:43] Error en ServicioCocinaService.get_servicio_by_mesa: Cannot resolve keyword 'mesa' into field. Choices are: camarero_mesa, camarero_mesa_id, hora_dia, id, plato, plato_id, servido
+[29/May/2024 08:59:43] ERROR [cocina_app.service.servicio_cocina_service:43] Error en ServicioCocinaService.get_servicio_by_mesa: Cannot resolve keyword 'mesa' into field. Choices are: camarero_mesa, camarero_mesa_id, hora_dia, id, plato, plato_id, servido
+[29/May/2024 09:00:01] ERROR [cocina_app.service.servicio_cocina_service:43] Error en ServicioCocinaService.get_servicio_by_mesa: Cannot resolve keyword 'mesa' into field. Choices are: camarero_mesa, camarero_mesa_id, hora_dia, id, plato, plato_id, servido
+[29/May/2024 09:00:21] ERROR [cocina_app.service.servicio_cocina_service:43] Error en ServicioCocinaService.get_servicio_by_mesa: Cannot resolve keyword 'mesa' into field. Choices are: camarero_mesa, camarero_mesa_id, hora_dia, id, plato, plato_id, servido
+[29/May/2024 09:02:22] ERROR [cocina_app.service.servicio_cocina_service:43] Error en ServicioCocinaService.get_servicio_by_mesa: get() returned more than one Servicio_Cocina -- it returned more than 20!
+[29/May/2024 09:02:53] ERROR [cocina_app.service.servicio_cocina_service:43] Error en ServicioCocinaService.get_servicio_by_mesa: Servicio_Cocina matching query does not exist.
+[29/May/2024 09:03:15] WARNING [cocina_app.service.servicio_cocina_service:39] No se encontro ningun servicio de cocina de esta rol: user gurjant con rol Administrador ubicacion: Lugar: Hola numero_mesa: 1
+[29/May/2024 09:05:13] WARNING [cocina_app.service.servicio_cocina_service:39] No se encontro ningun servicio de cocina de esta rol: user gurjant con rol Administrador ubicacion: Lugar: Hola numero_mesa: 1
+[29/May/2024 09:06:07] WARNING [cocina_app.service.servicio_cocina_service:39] No se encontro ningun servicio de cocina de esta rol: user gurjant con rol Administrador ubicacion: Lugar: Hola numero_mesa: 1
+[29/May/2024 09:06:26] WARNING [cocina_app.service.servicio_cocina_service:39] No se encontro ningun servicio de cocina de esta rol: user gurjant con rol Administrador ubicacion: Lugar: Hola numero_mesa: 1
+[29/May/2024 09:06:28] WARNING [cocina_app.service.servicio_cocina_service:39] No se encontro ningun servicio de cocina de esta rol: user gurjant con rol Administrador ubicacion: Lugar: Hola numero_mesa: 1
+[29/May/2024 09:07:02] WARNING [cocina_app.service.servicio_cocina_service:39] No se encontro ningun servicio de cocina de esta rol: user gurjant con rol Administrador ubicacion: Lugar: Hola numero_mesa: 1
+[29/May/2024 09:07:10] WARNING [cocina_app.service.servicio_cocina_service:39] No se encontro ningun servicio de cocina de esta rol: user gurjant con rol Administrador ubicacion: Lugar: Hola numero_mesa: 1
+[29/May/2024 09:07:12] WARNING [cocina_app.service.servicio_cocina_service:39] No se encontro ningun servicio de cocina de esta rol: user gurjant con rol Administrador ubicacion: Lugar: Hola numero_mesa: 1
+[29/May/2024 09:08:30] WARNING [cocina_app.service.servicio_cocina_service:39] No se encontro ningun servicio de cocina de esta rol: user gurjant con rol Administrador ubicacion: Lugar: Hola numero_mesa: 1
+[29/May/2024 09:08:44] WARNING [cocina_app.service.servicio_cocina_service:39] No se encontro ningun servicio de cocina de esta rol: user gurjant con rol Administrador ubicacion: Lugar: Hola numero_mesa: 1
+[29/May/2024 09:09:11] WARNING [cocina_app.service.servicio_cocina_service:39] No se encontro ningun servicio de cocina de esta rol: user gurjant con rol Administrador ubicacion: Lugar: Hola numero_mesa: 1
+[29/May/2024 09:09:14] WARNING [cocina_app.service.servicio_cocina_service:39] No se encontro ningun servicio de cocina de esta rol: user gurjant con rol Administrador ubicacion: Lugar: Hola numero_mesa: 1
+[29/May/2024 09:09:41] WARNING [cocina_app.service.servicio_cocina_service:39] No se encontro ningun servicio de cocina de esta rol: user gurjant con rol Administrador ubicacion: Lugar: Hola numero_mesa: 1
+[29/May/2024 09:09:47] WARNING [cocina_app.service.servicio_cocina_service:39] No se encontro ningun servicio de cocina de esta rol: user gurjant con rol Administrador ubicacion: Lugar: Hola numero_mesa: 1
+[29/May/2024 09:09:48] WARNING [cocina_app.service.servicio_cocina_service:39] No se encontro ningun servicio de cocina de esta rol: user gurjant con rol Administrador ubicacion: Lugar: Hola numero_mesa: 1
+[29/May/2024 09:09:49] WARNING [cocina_app.service.servicio_cocina_service:39] No se encontro ningun servicio de cocina de esta rol: user gurjant con rol Administrador ubicacion: Lugar: Hola numero_mesa: 1
+[29/May/2024 09:09:54] WARNING [cocina_app.service.servicio_cocina_service:39] No se encontro ningun servicio de cocina de esta rol: user gurjant con rol Administrador ubicacion: Lugar: Hola numero_mesa: 1
+[29/May/2024 09:09:54] WARNING [cocina_app.service.servicio_cocina_service:39] No se encontro ningun servicio de cocina de esta rol: user gurjant con rol Administrador ubicacion: Lugar: Hola numero_mesa: 1
+[29/May/2024 09:10:03] WARNING [cocina_app.service.servicio_cocina_service:39] No se encontro ningun servicio de cocina de esta rol: user gurjant con rol Administrador ubicacion: Lugar: Hola numero_mesa: 1
+[29/May/2024 09:11:49] WARNING [cocina_app.service.servicio_cocina_service:39] No se encontro ningun servicio de cocina de esta rol: user gurjant con rol Administrador ubicacion: Lugar: Hola numero_mesa: 1
+[29/May/2024 09:12:20] WARNING [cocina_app.service.servicio_cocina_service:39] No se encontro ningun servicio de cocina de esta rol: user gurjant con rol Administrador ubicacion: Lugar: Hola numero_mesa: 1
+[29/May/2024 09:20:50] ERROR [cocina_app.service.servicio_cocina_service:167] Error en ServicioCocinaService.get_pedidos_mesas: Cannot resolve keyword 'tiempo' into field. Choices are: camarero_mesa, camarero_mesa_id, hora_dia, id, plato, plato_id, servido
+[29/May/2024 09:21:21] ERROR [cocina_app.service.servicio_cocina_service:167] Error en ServicioCocinaService.get_pedidos_mesas: Cannot resolve keyword 'tiempo' into field. Choices are: camarero_mesa, camarero_mesa_id, hora_dia, id, plato, plato_id, servido
+[29/May/2024 09:22:59] ERROR [cocina_app.service.servicio_cocina_service:167] Error en ServicioCocinaService.get_pedidos_mesas: Cannot resolve keyword 'plato' into field. Choices are: id, numero_mesa, rol, rol_id, servicio_barra, servicio_cocina, ubicacion, ubicacion_id
+[29/May/2024 09:33:58] ERROR [cocina_app.service.servicio_cocina_service:167] Error en ServicioCocinaService.get_pedidos_mesas: Cannot resolve keyword 'servido' into field. Choices are: id, numero_mesa, rol, rol_id, servicio_barra, servicio_cocina, ubicacion, ubicacion_id
+[29/May/2024 09:34:14] ERROR [cocina_app.service.servicio_cocina_service:167] Error en ServicioCocinaService.get_pedidos_mesas: Cannot resolve keyword 'servido' into field. Choices are: id, numero_mesa, rol, rol_id, servicio_barra, servicio_cocina, ubicacion, ubicacion_id
+[29/May/2024 09:34:37] ERROR [cocina_app.service.servicio_cocina_service:167] Error en ServicioCocinaService.get_pedidos_mesas: Cannot resolve keyword 'servido' into field. Choices are: id, numero_mesa, rol, rol_id, servicio_barra, servicio_cocina, ubicacion, ubicacion_id
+[29/May/2024 10:04:55] ERROR [cocina_app.service.servicio_cocina_service:162] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: Cannot compute Sum('plato_total'): 'plato_total' is an aggregate
+[29/May/2024 10:05:16] ERROR [cocina_app.service.servicio_cocina_service:162] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: Cannot compute Sum('plato_total'): 'plato_total' is an aggregate
+[29/May/2024 10:05:26] ERROR [cocina_app.service.servicio_cocina_service:162] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: Cannot compute Sum('plato_total'): 'plato_total' is an aggregate
+[29/May/2024 10:06:25] ERROR [cocina_app.service.servicio_cocina_service:162] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: Cannot compute Sum('plato_total'): 'plato_total' is an aggregate
+[29/May/2024 10:07:04] ERROR [cocina_app.service.servicio_cocina_service:162] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: Cannot compute Sum('plato_total'): 'plato_total' is an aggregate
+[29/May/2024 10:07:55] ERROR [cocina_app.service.servicio_cocina_service:162] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: Cannot compute Sum('plato_total'): 'plato_total' is an aggregate
+[29/May/2024 10:08:21] ERROR [cocina_app.service.servicio_cocina_service:162] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: Cannot compute Sum('plato_total'): 'plato_total' is an aggregate
+[29/May/2024 10:08:32] ERROR [cocina_app.service.servicio_cocina_service:162] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: Cannot compute Sum('plato_total'): 'plato_total' is an aggregate
+[29/May/2024 10:10:12] ERROR [cocina_app.service.servicio_cocina_service:162] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: Cannot compute Sum('plato_total'): 'plato_total' is an aggregate
+[29/May/2024 10:10:51] ERROR [cocina_app.service.servicio_cocina_service:162] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: Cannot compute Sum('plato_total'): 'plato_total' is an aggregate
+[29/May/2024 10:11:12] ERROR [cocina_app.service.servicio_cocina_service:162] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: Cannot compute Sum('plato_total'): 'plato_total' is an aggregate
+[29/May/2024 10:11:45] ERROR [cocina_app.service.servicio_cocina_service:162] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: Cannot compute Sum('plato_total'): 'plato_total' is an aggregate
+[29/May/2024 10:37:14] ERROR [cocina_app.service.servicio_cocina_service:162] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: Cannot compute Sum('plato_total'): 'plato_total' is an aggregate
+[29/May/2024 10:37:32] ERROR [cocina_app.service.servicio_cocina_service:162] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: Cannot compute Sum('plato_total'): 'plato_total' is an aggregate
+[29/May/2024 10:38:12] ERROR [cocina_app.service.servicio_cocina_service:162] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: Cannot compute Sum('plato_total'): 'plato_total' is an aggregate
+[29/May/2024 10:39:18] ERROR [cocina_app.service.servicio_cocina_service:162] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: Cannot resolve keyword 'plato_total' into field. Choices are: camarero_mesa, camarero_mesa_id, hora_dia, id, plato, plato_id, servido
+[29/May/2024 10:40:05] ERROR [cocina_app.service.servicio_cocina_service:162] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'tiempo'
+[29/May/2024 10:40:05] ERROR [cocina_app.service.servicio_cocina_service:162] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: 'tiempo'
+[29/May/2024 11:00:47] ERROR [cocina_app.service.servicio_cocina_service:155] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: too many values to unpack (expected 2)
+[29/May/2024 11:01:00] ERROR [cocina_app.service.servicio_cocina_service:155] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: too many values to unpack (expected 2)
+[29/May/2024 11:01:01] ERROR [cocina_app.service.servicio_cocina_service:155] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: too many values to unpack (expected 2)
+[29/May/2024 11:02:14] ERROR [cocina_app.service.servicio_cocina_service:155] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: Cannot resolve keyword 'camare' into field. Choices are: camarero_mesa, camarero_mesa_id, hora_dia, id, plato, plato_id, servido

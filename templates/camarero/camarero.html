@@ -57,4 +57,25 @@
     </div>
     {% endif %}
 </div>
+{% if error %}
+  <div class="alert alert-danger text-center" role="alert">
+    <h4 class="alert-heading">¡Ups!</h4>
+    <p>{{ error }}</p>
+    <a href="javascript:history.back()" class="btn btn-info mt-2"><i class="bi bi-arrow-left-short"></i> Volver Atrás</a>
+</div>
+{% endif %}
+<script>
+    function editarUbicacion(id) {
+      var lugar = document.getElementById("campo-lugar-" + id).textContent;
+      document.getElementById("floatingUbicacion").value = lugar;
+      document.getElementById("btn_update_ubicacion").style.display = "block";
+      document.getElementById("btn-submit").style.display = "none";
+      document.getElementById("btn_update_ubicacion").value = id;
+    }
+  </script>
 {% endblock content %}
+
+<!-- 
+    
+
+ -->
