@@ -33,7 +33,7 @@ class RolService:
             return Rol.objects.get(user=usuario, rol=rol)
         except Rol.DoesNotExist:
             logger.error(f"No se encontro el rol '{rol}' para el usuario '{usuario}'")
-            return f"No tienes ningun rol asignado, debes avisar al administrador."
+            return f"El rol de '{rol}' no existe para el usuario '{usuario}"
         except Exception as e:
             logger.error(f"Ocurrio un error al obtener el rol '{rol}' para el usuario '{usuario}': {str(e)}")
             return f"Ocurrio un error al obtener el rol '{rol}' para el usuario '{usuario}'"

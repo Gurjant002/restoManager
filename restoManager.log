@@ -528,3 +528,128 @@
 [28/May/2024 20:20:51] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
 [28/May/2024 20:20:51] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
 [28/May/2024 20:20:51] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:12:42] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:12:42] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:12:42] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:12:52] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:12:52] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'gurjant'
+[29/May/2024 01:15:09] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:15:09] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'gurjant'
+[29/May/2024 01:15:13] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:15:13] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:15:13] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:32:34] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:32:34] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:32:34] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:34:22] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:34:22] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:34:22] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:34:59] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Cocinero' para el usuario 'gurjant'
+[29/May/2024 01:35:03] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Cocinero' para el usuario 'gurjant'
+[29/May/2024 01:36:29] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Cocinero' para el usuario 'gurjant'
+[29/May/2024 01:36:55] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:36:55] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:36:55] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:36:59] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:36:59] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:36:59] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:37:05] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:37:05] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:37:05] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:37:13] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Cocinero' para el usuario 'gurjant'
+[29/May/2024 01:38:32] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Cocinero' para el usuario 'gurjant'
+[29/May/2024 01:38:45] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Cocinero' para el usuario 'gurjant'
+[29/May/2024 01:39:02] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:39:02] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:39:02] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:40:47] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:40:47] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:40:47] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:40:52] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Cocinero' para el usuario 'gurjant'
+[29/May/2024 01:40:54] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Cocinero' para el usuario 'gurjant'
+[29/May/2024 01:41:07] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Cocinero' para el usuario 'gurjant'
+[29/May/2024 01:42:48] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Cocinero' para el usuario 'gurjant'
+[29/May/2024 01:43:43] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Cocinero' para el usuario 'gurjant'
+[29/May/2024 01:44:52] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Cocinero' para el usuario 'gurjant'
+[29/May/2024 01:44:58] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:44:58] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:44:58] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:46:32] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:46:32] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:46:32] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:46:33] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:46:33] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:46:33] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:46:35] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:46:35] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:46:35] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:47:06] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:47:06] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:47:06] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:47:17] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:47:19] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:47:28] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:48:26] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:48:27] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:48:32] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:49:00] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Cocinero' para el usuario 'gurjant'
+[29/May/2024 01:50:04] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Cocinero' para el usuario 'gurjant'
+[29/May/2024 01:50:57] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:50:57] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:50:57] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:51:02] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:51:02] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:51:02] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:51:05] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Cocinero' para el usuario 'gurjant'
+[29/May/2024 01:53:59] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:53:59] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:53:59] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:54:33] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:54:33] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:54:33] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:54:40] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:54:40] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:54:40] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:54:41] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:54:41] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:54:41] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:54:54] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:54:54] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:54:54] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:57:23] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:57:23] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:57:23] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:57:24] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:57:24] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:57:24] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:57:29] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:57:29] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:57:29] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:57:30] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:57:30] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:57:30] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:57:45] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:57:45] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:57:45] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:57:45] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:57:45] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:57:45] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 01:58:04] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 01:58:04] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Administrador' para el usuario 'ram'
+[29/May/2024 01:58:04] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario 'ram'
+[29/May/2024 02:00:14] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 02:03:13] ERROR [restoManager_app.controller.relacion.relacion_plato_categoria_controller:29] ERROR EN EL ID DE LA RELACION
+[29/May/2024 02:03:13] INFO [restoManager_app.controller.categoria.categoria_controller:46] Pizza
+[29/May/2024 02:03:13] INFO [restoManager_app.views:36] New Relation Created.
+[29/May/2024 02:03:28] ERROR [restoManager_app.controller.relacion.relacion_plato_categoria_controller:29] ERROR EN EL ID DE LA RELACION
+[29/May/2024 02:03:28] INFO [restoManager_app.controller.categoria.categoria_controller:46] Spagetti
+[29/May/2024 02:03:28] INFO [restoManager_app.views:36] New Relation Created.
+[29/May/2024 02:04:17] ERROR [restoManager_app.controller.relacion.relacion_plato_categoria_controller:29] ERROR EN EL ID DE LA RELACION
+[29/May/2024 02:04:17] INFO [restoManager_app.controller.categoria.categoria_controller:46] Tapa
+[29/May/2024 02:04:17] INFO [restoManager_app.views:36] New Relation Created.
+[29/May/2024 02:05:21] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[29/May/2024 02:05:54] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario '5'
+[29/May/2024 02:05:54] ERROR [camarero_app.service.camarero_mesa_service:49] Ocurrio un error inesperado. Cannot assign ""El rol de 'Camarero' no existe para el usuario '5"": "Camarero_Mesa.camarero" must be a "Rol" instance.
+[29/May/2024 02:17:31] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario '5'
+[29/May/2024 02:17:31] ERROR [camarero_app.service.camarero_mesa_service:49] Ocurrio un error inesperado. Cannot assign ""El rol de 'Camarero' no existe para el usuario '5"": "Camarero_Mesa.camarero" must be a "Rol" instance.
+[29/May/2024 02:18:29] ERROR [restoManager_app.service.trabajadores.rol_service:35] No se encontro el rol 'Camarero' para el usuario '5'

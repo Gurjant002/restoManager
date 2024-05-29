@@ -23,7 +23,7 @@ class CamareroController:
     req: HttpRequest
     def __init__(self, request: HttpRequest = None):
         self.req = request
-        self.camareroService = RolService()
+        self.rolService = RolService()
         self.camareroMesaController = CamareroMesaController()
         self.servicioCocinaService = ServicioCocinaService()
         self.ubicacionController = UbicacionController()
@@ -79,14 +79,14 @@ class CamareroController:
         return error
 
     def crear_mesa(self, numero_mesa: int, camarero_id, ubicacion_id: int):
-        camarero = self.camareroService.get_rol_by_user_rol(camarero_id, "Camarero")
+        camarero = self.rolService.get_rol_by_user_rol(camarero_id, "Camarero")
         ubicacion = self.ubicacionController.get_ubicacion_by_id(ubicacion_id)
         return self.camareroMesaController.crear_mesa(numero_mesa, camarero, ubicacion)
 
     def get_mesas(self):
         return self.camareroMesaController.get_relaciones()
 
-    def chech_isinstance(self, element_to_check):
+    def check_isinstance(self, element_to_check):
         if isinstance(element_to_check, str):
             self.error = element_to_check
             element_to_check = False
@@ -107,27 +107,27 @@ class CamareroController:
         mesas = self.get_mesas()
         ubicaciones = UbicacionController().get_ubicaciones()
         
-        camarero = self.camareroService.get_rol_by_user_rol(usuario, "Camarero")
+        camarero = self.rolService.get_rol_by_user_rol(usuario, "Administrador")
         if isinstance(camarero, str):
-            camarero = self.camareroService.get_rol_by_user_rol(usuario, "Administrador")
+            camarero = self.rolService.get_rol_by_user_rol(usuario, "Camarero")
             
         platos = self.lista_platos()
         bebidas = BebidaService().get_bebidas()
         tapas = self.categoriaService.get_categorias()
 
-        if self.error is not None:
-            camarero = self.chech_isinstance(camarero)
-        elif error is not None:
+        if self.error == '' or self.error is None:
+            camarero = self.check_isinstance(camarero)
+        if error is None or self.error == '':
             self.error = error
-        elif error is not None:
+        if error is None or self.error == '':
             self.error = error
-        elif error is not None:
-            mesas = self.chech_isinstance(mesas)
-        elif error is not None:
-            nota = self.chech_isinstance(nota)
+        if error is None or self.error == '':
+            mesas = self.check_isinstance(mesas)
+        if error is None or self.error == '':
+            nota = self.check_isinstance(nota)
 
         pedidos = self.agrupacion_pedidos()
-        pedidos = self.chech_isinstance(pedidos)
+        pedidos = self.check_isinstance(pedidos)
 
         diccionario = {
             'error': self.error,

@@ -1,3 +1,4 @@
+# Cocina_App
 from django.http import HttpRequest, JsonResponse
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
@@ -10,7 +11,7 @@ logger = logging.getLogger(__name__)
 
 @login_required
 def cocina(request: HttpRequest):
-    cocina = ServicioCocinaController()
+    cocina = ServicioCocinaController(request)
     diccionario = cocina.peticiones(request)
     return render(request, 'cocina/pedidos.html', diccionario)
 
@@ -23,13 +24,3 @@ def mesas_pedidos(request):
         'pedidos_lista':lista
         }
     return JsonResponse(diccionario)
-
-""" 
-@login_required
-def cambiar_estado(request: HttpRequest):
-    cocina = ServicioCocinaController()
-    id = int(request.POST['cambiar-estado'].split('-')[0])
-    estado = request.POST['cambiar-estado'].split('-')[1]
-    diccionario = cocina.cambiar_estado_servicio(id, estado)
-    return render('puesto/cocina/',diccionario)
- """

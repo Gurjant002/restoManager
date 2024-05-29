@@ -1,5 +1,6 @@
 from django.http import HttpRequest
 from cocina_app.service.servicio_cocina_service import ServicioCocinaService
+from restoManager_app.service.trabajadores.rol_service import RolService
 import logging
 
 from datetime import datetime
@@ -7,10 +8,15 @@ from django.utils import timezone as jango
 #
 utc_dt = jango.now()
 logger = logging.getLogger(__name__)
+
 class ServicioCocinaController:
-  def __init__(self):
+  def __init__(self, request: HttpRequest = None):
     self.servicioCocina = ServicioCocinaService()
-    
+    self.rolService = RolService()
+    self.request = request
+    self.error = None
+
+
   def peticiones(self, req: HttpRequest):
     pedidos = None
     if 'listar_mesa' in req.GET:
@@ -52,22 +58,30 @@ class ServicioCocinaController:
   def cambiar_estado_servicio(self, id: int, estado: bool):
     return self.servicioCocina.cambiar_estado(id, estado)
 
-  def chech_isinstance(self, element_to_check):
-    error = ''
+  def check_isinstance(self, element_to_check):
     if isinstance(element_to_check, str):
-        error = element_to_check
+        self.error = element_to_check
         element_to_check = False
-    return element_to_check, error
+    return element_to_check
 
   def respuesta(self, error: str = None, platos = None):
+    usuario = self.request.user
     mesas = self.get_servicio_mesa_cantidad_pedidos()
-    mesas, error = self.chech_isinstance(mesas)
+    cocinero = self.rolService.get_rol_by_user_rol(usuario, 'Cocinero')
+    if isinstance(cocinero, str):
+      cocinero = self.rolService.get_rol_by_user_rol(usuario, 'Administrador')
     
-    platos, error = self.chech_isinstance(platos)
+    if self.error is None or self.error == '':
+      mesas = self.check_isinstance(mesas)
+    if self.error is None or self.error == '':
+      platos = self.check_isinstance(platos)
+    if self.error is None or self.error == '':
+      cocinero = self.check_isinstance(cocinero)
     
     diccionario = {
-        'error': error,
+        'error': self.error,
         'mesas': mesas,
-        'platos': platos
+        'platos': platos,
+        'es_cocinero': cocinero,
     }
     return diccionario
