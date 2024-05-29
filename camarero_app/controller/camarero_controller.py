@@ -145,7 +145,7 @@ class CamareroController:
             nota = self.check_isinstance(nota)
         
         pedidos_mesas = []
-        if mesas is not None:
+        if mesas is not None and mesas is not False:
             for mesa in mesas:
                 pedidos_mesas.append(self.get_pedidos_mesas(mesa.id))
         if self.error is None or self.error == '':

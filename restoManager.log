@@ -774,3 +774,24 @@
 [29/May/2024 11:02:14] ERROR [cocina_app.service.servicio_cocina_service:155] Error en ServicioCocinaService.get_servicio_mesa_cantidad_pedidos: Cannot resolve keyword 'camare' into field. Choices are: camarero_mesa, camarero_mesa_id, hora_dia, id, plato, plato_id, servido
 [29/May/2024 12:13:09] ERROR [cocina_app.service.servicio_cocina_service:138] Error en ServicioCocinaService.cambiar_estado: ['“Null”: el valor debe ser Verdadero, Falso o Nulo.']
 [29/May/2024 12:14:26] ERROR [cocina_app.service.servicio_cocina_service:138] Error en ServicioCocinaService.cambiar_estado: ['“Null”: el valor debe ser Verdadero, Falso o Nulo.']
+[29/May/2024 18:10:16] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[29/May/2024 18:11:47] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[29/May/2024 18:12:17] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[29/May/2024 18:13:04] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[29/May/2024 18:13:19] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[29/May/2024 18:14:20] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[29/May/2024 18:14:44] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[29/May/2024 18:15:21] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[29/May/2024 18:16:26] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[29/May/2024 18:18:02] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[29/May/2024 18:19:32] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[29/May/2024 18:19:43] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[29/May/2024 18:31:08] ERROR [cocina_app.service.servicio_cocina_service:125] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: Plato matching query does not exist.
+[29/May/2024 18:32:23] ERROR [cocina_app.service.servicio_cocina_service:125] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: Plato matching query does not exist.
+[29/May/2024 18:32:30] ERROR [cocina_app.service.servicio_cocina_service:125] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: Plato matching query does not exist.
+[29/May/2024 18:35:21] ERROR [cocina_app.service.servicio_cocina_service:125] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: Plato matching query does not exist.
+[29/May/2024 18:36:33] ERROR [cocina_app.service.servicio_cocina_service:125] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: Plato matching query does not exist.
+[29/May/2024 18:40:00] ERROR [cocina_app.service.servicio_cocina_service:126] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: Plato matching query does not exist.
+[29/May/2024 18:41:42] ERROR [cocina_app.service.servicio_cocina_service:127] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: Plato matching query does not exist.
+[29/May/2024 18:43:58] ERROR [cocina_app.service.servicio_cocina_service:127] Error en ServicioCocinaService.get_agrupaciones_by_camarero_mesa: Plato matching query does not exist.
+-

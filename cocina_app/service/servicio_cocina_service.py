@@ -108,8 +108,10 @@ class ServicioCocinaService:
             servicio_Cocina = list(Servicio_Cocina.objects.filter(camarero_mesa=id_camarero_mesa).values('plato', 'servido', 'id').annotate(total=Count('id'), tiempo=Max('hora_dia')))
             agrupacion = []
             for agrupacion_db in servicio_Cocina:
-                agrupacion_db['plato'] = Plato.objects.get(pk=agrupacion_db['plato'])
-                agrupacion.append(agrupacion_db)
+                if agrupacion_db['plato'] is not None:
+                    plato = Plato.objects.get(pk=agrupacion_db['plato'])
+                    agrupacion_db['plato'] = plato
+                    agrupacion.append(agrupacion_db)
 
             camarero_mesa = Camarero_Mesa.objects.get(pk=id_camarero_mesa)
             agrupacion = {
