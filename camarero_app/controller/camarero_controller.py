@@ -1,8 +1,9 @@
 from django.http import HttpRequest
 from django.utils.datastructures import MultiValueDictKeyError
 from cocina_app.controller.servicio_cocina_controller import ServicioCocinaController
-from cocina_app.models import Servicio_Cocina
+from cocina_app.models import Servicio_Cocina, Servicio_Barra
 from restoManager_app.service.trabajadores.rol_service import RolService
+from django.utils import timezone
 
 # Mesa
 from restoManager_app.controller.ubicacion.ubicacion_controller import UbicacionController
@@ -30,6 +31,7 @@ class CamareroController:
         self.servicioCocinaService = ServicioCocinaService()
         self.ubicacionController = UbicacionController()
         self.categoriaService = CategoriaService()
+        self.bebidaService = BebidaService()
         self.relacionPlatoCategoria = PlatoCategoriaService()
         self.plato = PlatoService()
         self.servicioCocinaController = ServicioCocinaController()
@@ -47,7 +49,7 @@ class CamareroController:
             if 'add-mesa' in peticion:
                 numero_mesa = int(peticion.get('numero-mesa'))
                 lugar = int(peticion.get('lugar'))
-                camarero = int(peticion.get('camarero'))
+                camarero = self.req.user.id
                 errores = self.crear_mesa(numero_mesa, camarero, lugar)
             if 'borrar-mesa' in peticion:
                 print(peticion)
@@ -65,16 +67,16 @@ class CamareroController:
                         platos.append(plato)
 
                 for id_bebida in id_bebidas:
-                    cantidad = int(peticion.get(f'catidad-bebidas-{id_bebida}'))
+                    cantidad = int(peticion.get(f'cantidad-bebidas-{id_bebida}'))
                     for i in range(cantidad):
-                        bebida = self.ubicacionController.get_ubicacion_by_id(id_bebida)
+                        bebida = self.bebidaService.get_bebida_by_id(id_bebida)
                         bebidas.append(bebida)
                     
-                if platos:
+                if platos and bebidas:
                     error = self.solicitar_pedido(id_mesa, platos, bebidas)
                     if isinstance(error, Servicio_Cocina):
                         return self.respuestas(error=None)
-                    return self.respuestas(error=error)
+                return self.respuestas(error=error)
         
         except MultiValueDictKeyError:
             logger.error(f'Error al obtener la peticion en CamareroController.peticiones: {peticion}')
@@ -82,16 +84,21 @@ class CamareroController:
 
         return self.respuestas(error=errores)
 
-    def solicitar_pedido(self, mesa_camarero, platos: list, servido: bool = False):
+    def solicitar_pedido(self, mesa_camarero, platos: list, bebidas: list, servido: bool = None):
         instancia_mesa = self.camareroMesaController.get_relacion_by_id(mesa_camarero)
+        bebida_servir = []
         for plato in platos:
             error = self.servicioCocinaService.crear_servicio(instancia_mesa, plato, servido)
+        if isinstance(error, Servicio_Cocina):
+            for bebida in bebidas:
+                bebida_servir.append(Servicio_Barra.objects.create(bebida=bebida, servido=None, camarero_mesa=instancia_mesa, hora_dia=timezone.localtime()))
+
         return error
     
     
 
     def crear_mesa(self, numero_mesa: int, camarero_id, ubicacion_id: int):
-        camarero = self.rolService.get_rol_by_user_rol(camarero_id, 'Cocinero')
+        camarero = self.rolService.get_rol_by_user_rol(camarero_id, 'Camarero')
         if isinstance(camarero, str) or camarero is None:
             camarero = self.rolService.get_rol_by_user_rol(camarero_id, 'Administrador')
         if isinstance(camarero, str):
@@ -120,7 +127,7 @@ class CamareroController:
         return self.servicioCocinaController.get_agrupaciones_by_camarero_mesa_id(id_camarero_mesa)
 
     def lista_platos(self):
-        platos = PlatoCategoriaService().get_lista_relacion_plato_categoria()
+        platos = PlatoCategoriaService().get_lista_relacion_plato_categoria_por_habilitado()
         return platos
 
     def respuestas(self, error: str = None, warning: str = None, nota = None) -> dict:
@@ -130,12 +137,11 @@ class CamareroController:
         ubicaciones = UbicacionController().get_ubicaciones()
         
         camarero = self.rolService.get_rol_by_user_rol(usuario, "Administrador")
-        if isinstance(camarero, str):
+        if isinstance(camarero, str) or camarero is None:
             camarero = self.rolService.get_rol_by_user_rol(usuario, "Camarero")
-            
+
         platos = self.lista_platos()
         bebidas = BebidaService().get_bebidas()
-        tapas = self.categoriaService.get_categorias()
 
         if self.error == '' or self.error is None:
             camarero = self.check_isinstance(camarero)
@@ -143,7 +149,13 @@ class CamareroController:
             mesas = self.check_isinstance(mesas)
         if self.error is None or self.error == '':
             nota = self.check_isinstance(nota)
-        
+        if self.error is None or self.error == '':
+            ubicaciones = self.check_isinstance(ubicaciones)
+
+        if ubicaciones == 'No se encontro ninguna ubicacion':
+            ubicaciones = None
+
+
         pedidos_mesas = []
         if mesas is not None and mesas is not False:
             for mesa in mesas:
@@ -160,7 +172,6 @@ class CamareroController:
             'platos': platos,
             'bebidas': bebidas,
             'nota': nota,
-            'tapas': tapas,
             'pedidos': pedidos_mesas,
         }
         return diccionario

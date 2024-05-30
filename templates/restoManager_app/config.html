@@ -14,10 +14,12 @@
                     <div class="card-header bg-dark text-light">
                         <h5 class="card-title">Platos</h5>
                     </div>
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
+                    <div class="card-body text-break text-justify text-break text-justify">
+                        <p class="card-text mb-0">
+                            En este apartado puedes administrar los platos.
+                            Los puedes crear, eliminar, actualizar, o echarles un vistazo.
+                            Tambien tienes la opcion de desactivarlos para que no apareccan a los de mas trabajadores.
+                        </p>
                         <a href="{% url 'admin_platos' %}" class="btn btn-primary">Platos</a>
                     </div>
                 </div>
@@ -27,10 +29,12 @@
                     <div class="card-header bg-dark text-light">
                         <h5 class="card-title">Bebida</h5>
                     </div>
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
+                    <div class="card-body text-break text-justify">
+                        <p class="card-text">
+                            En este apartado puedes administrar las bebidas.
+                            Las puedes crear, eliminar, actualizar, o echarles un vistazo.
+                            Tambien tienes la opcion de desactivarlas para que no apareccan a los de mas trabajadores.
+                        </p>
                         <a href="{% url 'admin_bebidas' %}" class="btn btn-primary">Bebida</a>
                     </div>
                 </div>
@@ -40,10 +44,10 @@
                     <div class="card-header bg-dark text-light">
                         <h5 class="card-title">Categorias</h5>
                     </div>
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
+                    <div class="card-body text-break text-justify">
+                        <p class="card-text">
+                            En este apartado puedes crear o eliminar categorias, aun asi debes saber que si creas un plato con una categoria nueva, esta se creara aqui tambien. Por tanto, no hace falta primero crear la categoria.
+                        </p>
                         <a href="{% url 'admin_categorias' %}" class="btn btn-primary">Categorias</a>
                     </div>
                 </div>
@@ -53,10 +57,10 @@
                     <div class="card-header bg-dark text-light">
                         <h5 class="card-title">Ubicacion</h5>
                     </div>
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
+                    <div class="card-body text-break text-justify">
+                        <p class="card-text">
+                            Este apartadomente puedes administrar las zonas de trabajo y estas zonas seran visibles por los camareros, ellos podran asignar una mesa en una de tus zonas.
+                        </p>
                         <a href="{% url 'admin_ubicaciones' %}" class="btn btn-primary">Ubicacion</a>
                     </div>
                 </div>
@@ -66,27 +70,27 @@
                     <div class="card-header bg-dark text-light">
                         <h5 class="card-title">Trabajadores</h5>
                     </div>
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
+                    <div class="card-body text-break text-justify">
+                        <p class="card-text">
+                            En este apartado puedes crearles una cuenta a tus trabajadores.
+                        </p>
                         <a href="{% url 'admin_trabajadores' %}" class="btn btn-primary">Trabajadores</a>
                     </div>
                 </div>
             </div>
-            <div class="col">
+            <!-- <div class="col">
                 <div class="card">
                     <div class="card-header bg-dark text-light">
                         <h5 class="card-title">Configuración</h5>
                     </div>
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
+                    <div class="card-body text-break text-justify">
+                        <p class="card-text">
+                            En este apartado puedes configurar el sistema.
+                        </p>
                         <a href="#" class="btn btn-primary">Configuracion</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 {% endblock content %}

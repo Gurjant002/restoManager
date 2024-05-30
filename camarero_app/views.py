@@ -1,6 +1,6 @@
 # Camarero_App
 from django.http import HttpRequest, JsonResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from .controller.camarero_controller import CamareroController
 import logging
@@ -12,7 +12,10 @@ logger = logging.getLogger(__name__)
 def home(request: HttpRequest):
     camarero = CamareroController(request)
     diccionario = camarero.peticiones()
-    return render(request, "camarero/camarero.html", diccionario)
+    if request.method == 'POST':
+        return redirect('camarero_home')
+    else:
+        return render(request, "camarero/camarero.html", diccionario)
 
 @login_required
 def platos(request: HttpRequest):
