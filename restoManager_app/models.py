@@ -1,26 +1,41 @@
-# This is an auto-generated Django model module.
-# You'll have to do the following manually to clean this up:
-#   * Rearrange models' order
-#   * Make sure each model has one field with primary_key=True
-#   * Make sure each ForeignKey and OneToOneField has `on_delete` set to the desired behavior
-#   * Remove `managed = False` lines if you wish to allow Django to create, modify, and delete the table
-# Feel free to rename the models, but don't rename db_table values or field names.
-from django.db import models
-from django.contrib.auth.models import User
+"""
+Este es un módulo de modelo de Django generado automáticamente.
+Tiene que ser limpiado manualmente:
+    * Ordenar los modelos
+    * Asegurarse de que cada modelo tenga un campo con primary_key=True
+    * Asegurarse de que cada ForeignKey y OneToOneField tenga on_delete establecido en el comportamiento deseado
+    * Quitar las líneas 'managed = False' si desea que Django cree, modifique y elimine la tabla
+Feel free to rename the models, but don't rename db_table values or field names.
+"""
 
-class Ubicacion(models.Model):
-    lugar = models.CharField(max_length=30, unique=True)
+from django.contrib.auth.models import User
+from django.db import models
+
+class Categoria(models.Model):
+    """
+    Modelo de la categoría de los platos.
+    """
+    nombre = models.CharField(max_length=100, blank=True, null=True)
 
     def __str__(self):
-        return f'Lugar: {self.lugar}'
+        return self.nombre
+    
+    def get_by_name(self, name:str):
+        return self.objects.filter(nombre=name)
+
+    def get_all_categorias(self):
+        return self.objects.all()
 
     class Meta:
-        db_table = 'ubicacion'
+        db_table = 'categoria'
         managed = True
-        verbose_name = 'Ubicacion'
-        verbose_name_plural = 'Ubicaciones'
+        verbose_name = 'Categoria'
+        verbose_name_plural = 'Categorias'
 
 class Plato(models.Model):
+    """
+    Modelo de los platos.
+    """
     nombre = models.CharField(max_length=100, blank=True, null=True)
     descripcion = models.TextField(blank=True, null=True)
 
@@ -39,25 +54,25 @@ class Plato(models.Model):
         verbose_name = 'Plato'
         verbose_name_plural = 'Platos'
 
-class Categoria(models.Model):
-    nombre = models.CharField(max_length=100, blank=True, null=True)
+class Ubicacion(models.Model):
+    """
+    Modelo de la ubicación de los restaurantes.
+    """
+    lugar = models.CharField(max_length=30, unique=True)
 
     def __str__(self):
-        return self.nombre
-    
-    def get_by_name(self, name:str):
-        return self.objects.filter(nombre=name)
-
-    def get_all_categorias(self):
-        return self.objects.all()
+        return f'Lugar: {self.lugar}'
 
     class Meta:
-        db_table = 'categoria'
+        db_table = 'ubicacion'
         managed = True
-        verbose_name = 'Categoria'
-        verbose_name_plural = 'Categorias'
+        verbose_name = 'Ubicacion'
+        verbose_name_plural = 'Ubicaciones'
 
 class Bebida(models.Model):
+    """
+    Modelo de las bebidas.
+    """
     nombre = models.CharField(max_length=100, blank=True, null=True)
     descripcion = models.TextField()
     contiene_alcohol = models.BooleanField(default=False)
@@ -72,9 +87,10 @@ class Bebida(models.Model):
         verbose_name = 'Bebida'
         verbose_name_plural = 'Bebidas'
 
-# RELACIONES
-
 class Plato_Categoria(models.Model):
+    """
+    Modelo de la relación entre un plato y una categoría.
+    """
     numero_menu = models.IntegerField(unique=True)
     plato = models.ForeignKey(Plato, on_delete=models.CASCADE, blank=True, null=True)
     categoria = models.ForeignKey(Categoria, on_delete=models.DO_NOTHING, blank=True, null=True)
@@ -90,15 +106,18 @@ class Plato_Categoria(models.Model):
         verbose_name_plural = 'Plato_Categorias'
 
 class Rol(models.Model):
+    """
+    Modelo del rol de usuario.
+    """
     user = models.OneToOneField(User, on_delete=models.DO_NOTHING, blank=True, null=True)
     rol = models.CharField(max_length=30, blank=True, null=True)
 
     def __str__(self):
         return f'user {self.user} con rol {self.rol}'
     
-
     class Meta:
         db_table = 'rol'
         managed = True
         verbose_name = 'Rol'
         verbose_name_plural = 'Roles'
+

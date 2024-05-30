@@ -1,3 +1,6 @@
+/**
+ * Alterna la visibilidad de la sección de creación de mesas.
+ */
 function addMesas() {
     const mesaNueva = document.querySelectorAll("#mesa-nueva")
     mesaNueva.forEach(element => {
@@ -6,6 +9,9 @@ function addMesas() {
     });
 }
 
+/**
+ * Evento que se dispara cuando se carga el DOM. Agrega eventos a los elementos de la interfaz de usuario.
+ */
 document.addEventListener('DOMContentLoaded', function() {
     const resizer = document.getElementById('resizer');
     const panel = document.getElementById('resizable-panel');
@@ -15,6 +21,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const resizerHeight = 7.5;
     resizer.style.height = resizerHeight+'px';
 
+    /**
+     * Evento de inicio de tácto. Inicia el proceso de redimensionamiento.
+     * @param {Object} e - Objeto evento.
+     */
     resizer.addEventListener('touchstart', function(e) {
         isResizing = true;
         initialHeight = panel.getBoundingClientRect().height;
@@ -24,6 +34,10 @@ document.addEventListener('DOMContentLoaded', function() {
         document.addEventListener('touchend', onTouchEnd);
     });
 
+    /**
+     * Evento de movimiento de tácto. Calcula la nueva altura del panel y la redimensiona.
+     * @param {Object} e - Objeto evento.
+     */
     function onTouchMove(e) {
         if (!isResizing) return;
         let currentY = e.touches[0].clientY;
@@ -34,6 +48,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    /**
+     * Evento final de tácto. Finaliza el proceso de redimensionamiento.
+     * @param {Object} e - Objeto evento.
+     */
     function onTouchEnd(e) {
         isResizing = false;
         document.removeEventListener('touchmove', onTouchMove);
@@ -53,15 +71,14 @@ function selectMesa(id, numeroMesa, lugar, camarero) {
     });
 
 }
-/* 
-function selectPlato(id, numPlato, nombre, categoria) {
-    const platoSeleccionado = document.querySelector("#plato-seleccionado")
-    platoSeleccionado.innerText = `#${numPlato}: ${nombre}, ${categoria}`
-    platoSeleccionado.value = id
-    platoSeleccionado.tagName = 'plato-seleccionado'
-    
-} */
 
+/**
+ * Selecciona un producto y lo agrega a la lista de productos seleccionados.
+ * @param {string} producto - Nombre de la sección de productos (bebidas o platos).
+ * @param {number} idProducto - ID del producto seleccionado.
+ * @param {string} nombreProdcuto - Nombre del producto seleccionado.
+ * @param {string} categoria - Categoría del producto seleccionado.
+ */
 function seleccionarProducto(producto, idProducto, nombreProdcuto, categoria) {
     const contenedorProducto = document.querySelector(`#lista-${producto}`);
     const productosList = contenedorProducto.querySelector(`#${producto}-${idProducto}`);
@@ -127,11 +144,20 @@ function seleccionarProducto(producto, idProducto, nombreProdcuto, categoria) {
     
 }
 
+/**
+ * Elimina un producto de la lista de productos seleccionados.
+ * @param {string} id - ID del producto a eliminar.
+ * @param {string} seccion - Sección de productos (bebidas o platos).
+ */
 function eliminarProducto(id, seccion) {
     const plato = document.querySelector(`#${seccion}-${id}`)
     plato.remove()
 }
 
+/**
+ * Filtra los platos por categoría.
+ * @param {string} categoria - Categoría de los platos a filtrar.
+ */
 function filterPlato(categoria) {
     const rows = document.querySelectorAll("#tabla-platos")
     rows.forEach(element => {
@@ -139,6 +165,12 @@ function filterPlato(categoria) {
     });
 }
 
+/**
+ * Modifica la cantidad de un producto seleccionado.
+ * @param {string} id - ID del producto seleccionado.
+ * @param {string} seccion - Sección de productos (bebidas o platos).
+ * @param {string} op - Operación a realizar ('add' para aumentar o 'sub' para disminuir).
+ */
 function cantidad(id, seccion, op) {
     const contador = document.querySelector(`#cantidad-${seccion}-${id}`)
     if (op === 'add') {
@@ -152,6 +184,9 @@ function cantidad(id, seccion, op) {
     
 }
 
+/**
+ * Agrega un evento de envío al formulario principal.
+ */
 document.addEventListener("DOMContentLoaded", function() {
     document.querySelector("#formulario").addEventListener('submit', function(event) {
         const mesa = document.querySelector("#input-mesa-id")
@@ -163,7 +198,12 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+/**
+ * Muestra u oculta el campo de notas.
+ * @param {string} display - El valor de la propiedad CSS "display" a aplicar.
+ */
 function toggleNotas(display) {
     const notas = document.getElementById('notas');
     notas.style.display = display ;
 }
+

@@ -39,8 +39,10 @@ class TrabajadorController:
             if not re.search(emailValidador, email):
                 logger.error("El correo no es valido")
                 return self.response(error="El correo no es valido")
-            if self.get_trabajadores().filter(username=usuario).exists():
+            trabajadores = self.get_trabajadores()
+            if any(t.username == usuario for t in trabajadores):
                 logger.error("El usuario ya existe")
+                return self.response(error="El usuario ya existe")
                 return self.response(error="El usuario ya existe")
 
             self.crear_usuario(usuario, nombre, apellido, email, password1, rol)

@@ -1,33 +1,37 @@
 """
-URL configuration for restoManager project.
+Configuración de URL para el proyecto restoManager.
 
-The `urlpatterns` list routes URLs to views. For more information please see:
+La lista `urlpatterns` enruta las URLs a las vistas. Para más información, consulte:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+Ejemplos:
+Vistas basadas en funciones
+    1. Agregue una importación:  from mi_app import views
+    2. Agregue una URL a urlpatterns:  path('', views.home, name='home')
+Vistas basadas en clases
+    1. Agregue una importación:  from otro_app.views import Home
+    2. Agregue una URL a urlpatterns:  path('', Home.as_view(), name='home')
+Incluyendo otro URLconf
+    1. Importe la función include():  from django.urls import include, path
+    2. Agregue una URL a urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
-from django.urls import path, include
-from cocina_app.views import *
+from django.urls import include, path
 
 from restoManager.views import home, puestos, about
+
+from cocina_app.views import *
+from restoManager_app.urls import urlpatterns as restoManager_urls
+from login.urls import urlpatterns as login_urls
 
 urlpatterns = [
     path('home/', home, name='home'),
     path('', about, name='about'),
-    path('config/', include('restoManager_app.urls')),
+    path('config/', include(restoManager_urls)),
     path('puestos/camarero/', include('camarero_app.urls')),
     path('puestos/cocina/', include('cocina_app.urls')),
-    # path('accounts/', include('django.contrib.auth.urls')),
-    path('accounts/', include('login.urls')),
+    path('accounts/', include(login_urls)),
     path('puestos/', puestos, name='puestos'),
     path('admin/', admin.site.urls),
 ]
+

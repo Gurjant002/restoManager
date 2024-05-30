@@ -1,4 +1,11 @@
-// Mostrar/Ocultar contraseña al hacer click en el icono de visibilidad
+/**
+ * Este script muestra u oculta la contraseña al hacer clic en el icono de visibilidad.
+ *
+ * Al cargar la página, se añaden dos eventos de clic a los elementos con los id 'verContraseña1' y 'verContraseña2'.
+ * Al hacer clic en estos elementos, se verifica el tipo de entrada de la contraseña correspondiente.
+ * Si el tipo de entrada es 'password', se cambia a 'text' y se cambia la clase del icono correspondiente.
+ * Si el tipo de entrada es 'text', se cambia a 'password' y se cambia la clase del icono correspondiente.
+ */
 document.addEventListener('DOMContentLoaded', function() {
   const mostrarContraseña1 = document.getElementById('verContraseña1');
   const mostrarContraseña2 = document.getElementById('verContraseña2');

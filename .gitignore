@@ -1,29 +1,39 @@
 # Django #
-# *.log
+
+# Archivos de registro
+*.log
+
+# Archivos de traducción
 *.pot
+
+# Archivos compilados de Python
 *.pyc
 __pycache__
+
+# Base de datos SQLite
 db.sqlite3
+
+# Archivos de multimedia
 media
 
-# Backup files # 
+# Archivos de respaldo
 *.bak 
 
-# If you are using PyCharm # 
-# User-specific stuff
+# Si estás usando PyCharm # 
+# Archivos específicos del usuario
 .idea/**/workspace.xml
 .idea/**/tasks.xml
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
 
-# AWS User-specific
+# Archivos específicos de AWS
 .idea/**/aws.xml
 
-# Generated files
+# Archivos generados
 .idea/**/contentModel.xml
 
-# Sensitive or high-churn files
+# Archivos sensibles o de alto cambio
 .idea/**/dataSources/
 .idea/**/dataSources.ids
 .idea/**/dataSources.local.xml
@@ -36,20 +46,20 @@ media
 .idea/**/gradle.xml
 .idea/**/libraries
 
-# File-based project format
+# Formato de proyecto basado en archivos
 *.iws
 
 # IntelliJ
 out/
 
-# JIRA plugin
+# Plugin de JIRA
 atlassian-ide-plugin.xml
 
 # Python # 
 *.py[cod] 
 *$py.class 
 
-# Distribution / packaging 
+# Distribución / empaquetamiento
 .Python build/ 
 develop-eggs/ 
 dist/ 
@@ -69,11 +79,11 @@ wheels/
 *.manifest 
 *.spec 
 
-# Installer logs 
+# Archivos de registro del instalador
 pip-log.txt 
 pip-delete-this-directory.txt 
 
-# Unit test / coverage reports 
+# Informes de prueba / cobertura
 htmlcov/ 
 .tox/ 
 .coverage 
@@ -85,7 +95,7 @@ coverage.xml
 *.cover 
 .hypothesis/ 
 
-# Jupyter Notebook 
+# Notebook de Jupyter
 .ipynb_checkpoints 
 
 # pyenv 
@@ -94,10 +104,10 @@ coverage.xml
 # celery 
 celerybeat-schedule.* 
 
-# SageMath parsed files 
+# Archivos parseados de SageMath
 *.sage.py 
 
-# Environments 
+# Entornos
 .env 
 .venv 
 env/
@@ -107,7 +117,7 @@ ENV/
 env.bak/ 
 venv.bak/ 
 
-# mkdocs documentation 
+# Documentación de mkdocs
 /site 
 
 # mypy 
@@ -120,10 +130,10 @@ venv.bak/
 *.sublime-workspace 
 *.sublime-project 
 
-# sftp configuration file 
+# Archivo de configuración de sftp
 sftp-config.json 
 
-# Package control specific files Package 
+# Archivos específicos de Package Control
 Control.last-run 
 Control.ca-list 
 Control.ca-bundle 
@@ -139,6 +149,6 @@ GitHub.sublime-settings
 !.vscode/extensions.json 
 .history
 
-# Otros Archivos a ignorar
+# Archivos a ignorar
 *.cpython*.pyc
 *controller.cpython-310.pyc

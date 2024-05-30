@@ -1,3 +1,7 @@
+"""
+Servicio para la gestion de relaciones entre camareros y mesas
+"""
+
 from django.db import IntegrityError
 from camarero_app.models import Camarero_Mesa
 
@@ -5,7 +9,17 @@ import logging
 logger = logging.getLogger(__name__)
 
 class CamareroMesaService:
-    def get_relaciones(self):
+    """
+    Clase para la gestion de relaciones entre camareros y mesas
+    """
+    def get_relaciones(self) -> list:
+        """
+        Devuelve todas las relaciones entre camareros y mesas.
+
+        Devuelve:
+            list: Lista de relaciones entre camareros y mesas.
+                  Si no hay relaciones devuelve un mensaje de error.
+        """
         try:
             relaciones = Camarero_Mesa.objects.all()
             if not relaciones:
@@ -19,7 +33,17 @@ class CamareroMesaService:
             logger.error(f'Ocurrio un error desconocido. {e}')
             return 'Ocurrio un error desconocido.'
 
-    def get_relacion_by_id(self, id_relacion: int):
+    def get_relacion_by_id(self, id_relacion: int) -> object:
+        """
+        Devuelve la relacion entre camarero y mesa segun su id.
+
+        Args:
+            id_relacion (int): El id de la relacion.
+
+        Devuelve:
+            object: La relacion segun su id.
+                    Si no se encuentra la relacion devuelve un mensaje de error.
+        """
         try:
             relacion = Camarero_Mesa.objects.filter(id=id_relacion).first()
             if not relacion:
@@ -33,7 +57,17 @@ class CamareroMesaService:
             logger.error(f'Ocurrio un error inesperado. {e}')
             return 'Ocurrio un error inesperado.'
 
-    def get_relacion_by_rol(self, rol):
+    def get_relacion_by_rol(self, rol: str) -> list:
+        """
+        Devuelve las relaciones entre camarero y mesa segun su rol.
+
+        Args:
+            rol (str): El rol del camarero.
+
+        Devuelve:
+            list: Lista de relaciones entre camarero y mesa segun su rol.
+                  Si no se encuentra la relacion devuelve un mensaje de error.
+        """
         try:
             relacion = Camarero_Mesa.objects.filter(rol=rol)
             return relacion
@@ -44,10 +78,21 @@ class CamareroMesaService:
             logger.error(f'Ocurrio un error inesperado. {e}')
             return 'Ocurrio un error inesperado.'
 
-    def crear_relacion(self, numero_mesa: int, rol, ubicacion):
+    def crear_relacion(self, numero_mesa: int, rol: str, ubicacion: str) -> str:
+        """
+        Crea una relacion entre camarero y mesa.
+
+        Args:
+            numero_mesa (int): El numero de la mesa.
+            rol (str): El rol del camarero.
+            ubicacion (str): La ubicacion de la mesa.
+
+        Devuelve:
+            str: Si hay algun error devuelve un mensaje de error.
+        """
         if not numero_mesa or not rol or not ubicacion:
             logger.error(f"Ha habido un problema al recibir los parametros: {numero_mesa}, {rol}, {ubicacion}")
-            return 'Error all obtener parametros: Ponga se en contacto con el administrador.'
+            return 'Error al obtener parametros: Pongase en contacto con el administrador.'
         try:
             Camarero_Mesa.objects.create(numero_mesa=numero_mesa, rol=rol, ubicacion=ubicacion)
         except Exception as e:
