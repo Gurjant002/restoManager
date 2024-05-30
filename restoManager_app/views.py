@@ -77,12 +77,6 @@ def trabajadores(request: HttpRequest):
     trabajadores_controller = TrabajadorController(request)
     diccionario = trabajadores_controller.peticiones()
     return render(request, "restoManager_app/secciones/trabajadores.html", diccionario)
-
-def camareros(request: HttpRequest):
-    camareros_controller = CamareroController(request)
-    diccionario = camareros_controller.peticiones()
-    return render(request, "restoManager_app/secciones/trabajadores/camareros.html", diccionario)
-
  
 @login_required
 def home(request: HttpRequest):
