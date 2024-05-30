@@ -9,7 +9,7 @@ from restoManager_app.controller.categoria.categoria_controller import Categoria
 from restoManager_app.controller.ubicacion.ubicacion_controller import UbicacionController
 from restoManager_app.controller.trabajadores.trabajador_controller import TrabajadorController
 from restoManager_app.controller.trabajadores.rol_controller import CamareroController
-
+from restoManager_app.service.trabajadores.rol_service import RolService
 import logging
 
 logger = logging.getLogger(__name__)
@@ -26,6 +26,13 @@ def crear_alerta():
     tiempo = ahora.strftime("%H:%M")
     return tiempo
 
+def validar_rol(request: HttpRequest):
+    rolService = RolService()
+    usuario = request.user
+    administrador = rolService.get_rol_by_user_rol(usuario, "Administrador")
+    if isinstance(administrador, str) or administrador is None:
+        administrador = False
+    return administrador
 
 @login_required
 def platos(request: HttpRequest):
@@ -39,7 +46,7 @@ def platos(request: HttpRequest):
         HttpResponse: La respuesta HTTP con la plantilla de la sección de platos.
     """
     diccionario = {}
-    relacionController = RelacionController()
+    relacionController = RelacionController(request)
     if request.method == "POST":
         if request.POST.get('new-plato-btn'):
             result = {}
@@ -61,7 +68,9 @@ def platos(request: HttpRequest):
         diccionario.update(relacionController.get_lista_relacion())
         return render(request, "restoManager_app/secciones/platos.html", diccionario)
 
+    administrador = validar_rol(request)
     diccionario = relacionController.get_lista_relacion()
+    diccionario.update({'administrador': administrador})
     return render(request, "restoManager_app/secciones/platos.html", diccionario)
 
 
@@ -78,6 +87,7 @@ def bebidas(request: HttpRequest):
     """
     bebida_controller = BebidaController(request)
     diccionario = bebida_controller.peticiones()
+    diccionario.update({'administrador': validar_rol(request)})
     return render(request, "restoManager_app/secciones/bebidas.html", diccionario)
 
 
@@ -94,6 +104,7 @@ def categorias(request: HttpRequest):
     """
     categoria_controller = CategoriaController(request)
     diccionario = categoria_controller.peticiones()
+    diccionario.update({'administrador': validar_rol(request)})
     return render(request, "restoManager_app/secciones/categorias.html", diccionario)
 
 
@@ -110,6 +121,7 @@ def ubicaciones(request: HttpRequest):
     """
     ubicaciones_controller = UbicacionController(request)
     diccionario = ubicaciones_controller.peticiones()
+    diccionario.update({'administrador': validar_rol(request)})
     return render(request, "restoManager_app/secciones/ubicaciones.html", diccionario)
 
 
@@ -126,6 +138,7 @@ def trabajadores(request: HttpRequest):
     """
     trabajadores_controller = TrabajadorController(request)
     diccionario = trabajadores_controller.peticiones()
+    diccionario.update({'administrador': validar_rol(request)})
     return render(request, "restoManager_app/secciones/trabajadores.html", diccionario)
  
 @login_required

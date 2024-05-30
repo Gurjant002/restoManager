@@ -4,6 +4,7 @@ from restoManager_app.models import Plato, Categoria, Plato_Categoria
 from ..plato.plato_controller import PlatoController
 from ..categoria.categoria_controller import CategoriaController
 from ...service.relacion.relacion_plato_categoria_service import PlatoCategoriaService
+from...service.trabajadores.rol_service import RolService
 import logging
 
 logger = logging.getLogger(__name__)
@@ -13,11 +14,13 @@ class RelacionController:
     plato_controller: PlatoController
     __categoria_controller: CategoriaController
 
-    def __init__(self):
+    def __init__(self, request: HttpRequest = None):
         self.__relacion_service=PlatoCategoriaService()
         self.plato_controller=PlatoController()
         self.__categoria_controller=CategoriaController()
-    
+        self.rolService=RolService()
+        self.req = request
+
     def tipos_de_peticiones(self, req: HttpRequest) :
         btn_update=req.POST.get("update-plate-btn")
         btn_create=req.POST.get("new-plato-btn")
@@ -97,6 +100,7 @@ class RelacionController:
 
     def get_lista_relacion(self) -> dict:
         lista = self.__relacion_service.get_lista_relacion_plato_categoria()
+
         diccionario = {
             'lista': lista,
             # 'lista_platos': lista,

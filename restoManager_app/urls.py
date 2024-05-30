@@ -11,7 +11,6 @@ from .views import (
     categorias,
     ubicaciones,
     trabajadores,
-    camareros,
 )
 
 urlpatterns = [

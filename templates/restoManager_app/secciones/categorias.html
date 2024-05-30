@@ -5,7 +5,12 @@
 
 {% include 'global/header.html' %}
 {% include 'global/panel_nav.html' %}
-
+{% if administrador == False or administrador == None %}
+        <div class="alert alert-danger text-center" role="alert">
+            <h4 class="alert-heading">¡Ups!</h4>
+            <p>Acceso denegado, usted no es administrador.</p>
+        </div>
+{% else %}
 <div class="container pb-5 mb-5">
     <div class="panel_insertar bg-dark rounded row mb-3">
         <h1 id="titulo-seccion-superior" class="text-light">Nueva Categoria</h1>
@@ -16,7 +21,7 @@
                     <div class="form-floating">
                         <div class="form-floating mb-3 d-flex flex-row">
                             <input type="text" class="form-control" id="floatingCategoria" required="true" name="nombre"
-                                placeholder="Nombre">
+                            placeholder="Nombre">
                             <label for="floatingCategoria" class="text-dark">Nombre de categoria</label>
                         </div>
                     </div>
@@ -25,13 +30,13 @@
             <!-- POSICIONAR LOS BOTONES EN PARALELO CON EL NOMBRE -->
             <div class="p-3">
                 <button class="btn btn-primary" name="new-categoria" id="btn-submit" value="insertar_categoria"
-                    type="submit">Guardar Categoria</button>
+                type="submit">Guardar Categoria</button>
                 <button class="btn btn-primary" name="update-categoria" id="btn_update_categoria" value="update_categoria_"
-                    type="submit" style="display: none;">Actualizar categoria</button>
+                type="submit" style="display: none;">Actualizar categoria</button>
             </div>
         </form>
     </div>
-
+    
     <div class="panel_listado bg-dark rounded row">
         <h1 class="text-light">LISTADO</h1>
         <div class="p-2">
@@ -50,13 +55,13 @@
                     <form method="POST">
                         {% csrf_token %}
                         <td id="boton-editar-{{ item.id }}"><button class="btn btn-info" type="button"
-                                id="editar|{{ item.id}}" name="editar-btn"
-                                onclick="editarCategoria('{{ item.id }}')">Editar</button></td>
-                        <td id="boton-borrar-{{ item.id }}"><button class="btn btn-danger" type="submit"
+                            id="editar|{{ item.id}}" name="editar-btn"
+                            onclick="editarCategoria('{{ item.id }}')">Editar</button></td>
+                            <td id="boton-borrar-{{ item.id }}"><button class="btn btn-danger" type="submit"
                                 value="eliminar|{{ item.id}}" name="eliminar" data-bs-toggle="tooltip"
                                 data-bs-placement="top"
                                 title="Se aconseja desactivar el plato, en vez de borrarlo, permanentemente">Eliminar</button>
-                        </td>
+                            </td>
                     </form>
                 </tr>
                 {% endfor %}
@@ -69,6 +74,5 @@
         </div>
     </div>
 </div>
-
+{% endif %}
 {% endblock content %}
-    

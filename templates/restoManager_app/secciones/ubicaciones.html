@@ -3,54 +3,59 @@
 {% block content %}
 {% include 'global/header.html'%}
 {% include 'global/panel_nav.html'%}
-
-<div class="container pb-5 mt-5">
-  <div class="panel_insertar bg-dark rounded row mb-3">
-    <h1 id="titulo-seccion-superior" class="text-light">Ubicacion</h1>
-    <form method="post">
-      {% csrf_token %}
-      <div class="row">
-        <div class="col-lg">
-          <div class="form-floating">
-            <div class="form-floating mb-3 d-flex flex-row">
-              <input
-                type="text"
-                class="form-control"
-                id="floatingUbicacion"
-                required="true"
-                name="ubicacion"
-                placeholder="Nombre"
-              />
-              <label for="floatingUbicacion" class="text-dark"
-                >Nombre de ubicacion</label
-              >
+{% if administrador == False or administrador == None %}
+        <div class="alert alert-danger text-center" role="alert">
+            <h4 class="alert-heading">¡Ups!</h4>
+            <p>Acceso denegado, usted no es administrador.</p>
+        </div>
+    {% else %}
+    <div class="container pb-5 mt-5">
+      <div class="panel_insertar bg-dark rounded row mb-3">
+        <h1 id="titulo-seccion-superior" class="text-light">Ubicacion</h1>
+        <form method="post">
+          {% csrf_token %}
+          <div class="row">
+            <div class="col-lg">
+              <div class="form-floating">
+                <div class="form-floating mb-3 d-flex flex-row">
+                  <input
+                  type="text"
+                  class="form-control"
+                  id="floatingUbicacion"
+                  required="true"
+                  name="ubicacion"
+                  placeholder="Nombre"
+                  />
+                  <label for="floatingUbicacion" class="text-dark"
+                  >Nombre de ubicacion</label
+                  >
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="p-3">
-        <button
-          class="btn btn-primary"
-          name="crear"
-          id="btn-submit"
-          value="insertar_ubicacion"
-          type="submit"
-        >
-          Guardar Ubicacion
-        </button>
-        <button
+          <div class="p-3">
+            <button
+            class="btn btn-primary"
+            name="crear"
+            id="btn-submit"
+            value="insertar_ubicacion"
+            type="submit"
+            >
+            Guardar Ubicacion
+          </button>
+          <button
           class="btn btn-primary"
           name="update"
           id="btn_update_ubicacion"
           type="submit"
           style="display: none"
-        >
+          >
           Actualizar ubicacion
         </button>
       </div>
     </form>
   </div>
-
+  
   <div class="panel_listado bg-dark rounded row">
     <h1 class="text-light m-3">Listado de ubicaciones</h1>
     {% if error or warning %}
@@ -83,38 +88,39 @@
         </tr>
         {% if ubicaciones %}
         {% for item in ubicaciones %}
-          <tr class="text-white" id="fila-{{ item.id }}">
-            <td id="campo-lugar-{{ item.id }}">{{ item.lugar }}</td>
-            <form method="POST">
-              {% csrf_token %}
-              <td class="text-center">
-                <button
-                  class="btn btn-info m-1"
-                  type="button"
-                  id="editar|{{ item.id}}"
-                  name="update"
-                  onclick="editarUbicacion('{{ item.id }}')"
-                >
-                  Editar
-                </button>
-                <button
-                  class="btn btn-danger m-1"
-                  type="submit"
-                  value="{{ item.id}}"
-                  name="eliminar"
-                  data-bs-toggle="tooltip"
-                  data-bs-placement="top"
-                  title="Se aconseja desactivar la ubicacion, en vez de borrarlo, permanentemente."
-                >
-                  Eliminar
-                </button>
-              </td>
+        <tr class="text-white" id="fila-{{ item.id }}">
+          <td id="campo-lugar-{{ item.id }}">{{ item.lugar }}</td>
+          <form method="POST">
+            {% csrf_token %}
+            <td class="text-center">
+              <button
+              class="btn btn-info m-1"
+              type="button"
+              id="editar|{{ item.id}}"
+              name="update"
+              onclick="editarUbicacion('{{ item.id }}')"
+              >
+              Editar
+            </button>
+            <button
+            class="btn btn-danger m-1"
+            type="submit"
+            value="{{ item.id}}"
+            name="eliminar"
+            data-bs-toggle="tooltip"
+            data-bs-placement="top"
+            title="Se aconseja desactivar la ubicacion, en vez de borrarlo, permanentemente."
+            >
+            Eliminar
+          </button>
+        </td>
             </form>
-        </tr>
-        {% endfor %}
-        {% endif %}
-      </table>
+          </tr>
+          {% endfor %}
+          {% endif %}
+        </table>
     </div>
   </div>
 </div>
+{% endif %}
 {% endblock content %}
