@@ -45,7 +45,7 @@ class TrabajadorController:
 
             self.crear_usuario(usuario, nombre, apellido, email, password1, rol)
 
-        elif "registrar_admin" in peticion:
+        if "registrar_admin" in peticion:
             try:
                 usuario = peticion.get('username')
                 nombre = peticion.get('first_name').capitalize()
@@ -99,7 +99,7 @@ class TrabajadorController:
         return self._trabajadorService.get_trabajadores()
 
     def response(self, error: str = None, warning: str = None) -> dict:
-        if not isinstance(error, str):
+        if isinstance(error, str):
             self.error = error
         
         diccionario = {

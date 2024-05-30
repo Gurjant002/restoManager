@@ -10,7 +10,7 @@
 
     <div class="bg-dark p-2 border-bottom border-secondary border-3">
         <div class="d-flex justify-content-between">
-            <button type="button" class="position-relative btn btn-outline-light bg-dark" data-bs-toggle="collapse" id="mesa" data-bs-target="#mesas-collapse" aria-expanded="false" aria-controls="mesas-collapse">Mesas</button>
+            <button type="button" class="position-relative btn btn-outline-light bg-dark text-white" data-bs-toggle="collapse" id="mesa" data-bs-target="#mesas-collapse" aria-expanded="false" aria-controls="mesas-collapse">Mesas</button>
             <h3 class="text-dark bg-white mb-0 mt-2 pl-2 rounded w-75" id="mesa-seleccionada">{% if nota.camarero_mesa.numero_mesa %}#{{ nota.camarero_mesa.numero_mesa }}: {{ nota.camarero_mesa.camarero.user.first_name }} {% else %} Mesa {% endif %} </h3>
         </div>
         <div class="collapse " id="mesas-collapse">
@@ -19,7 +19,7 @@
     </div>
     <div class="bg-dark p-2 border-bottom border-secondary border-3">
         <div class="d-flex justify-content-start">
-            <button type="button" class="position-relative btn btn-outline-light bg-dark" data-bs-toggle="collapse" id="plato" data-bs-target="#platos-collapse" aria-expanded="false" aria-controls="platos-collapse">Platos</button>
+            <button type="button" class="position-relative btn btn-outline-light bg-dark text-white" data-bs-toggle="collapse" id="plato" data-bs-target="#platos-collapse" aria-expanded="false" aria-controls="platos-collapse">Platos</button>
         </div>
         <div class="collapse " id="platos-collapse">
             {% include 'camarero/contenido/platos.html' %}
@@ -27,7 +27,7 @@
     </div>
     <div class="bg-dark p-2 border-bottom border-secondary border-3">
         <div class="d-flex justify-content-between">
-            <button type="button" class="position-relative btn btn-outline-light bg-dark" data-bs-toggle="collapse" id="bebida" data-bs-target="#bebidas-collapse" aria-expanded="false" aria-controls="bebidas-collapse">Bebidas</button>
+            <button type="button" class="position-relative btn btn-outline-light bg-dark text-white" data-bs-toggle="collapse" id="bebida" data-bs-target="#bebidas-collapse" aria-expanded="false" aria-controls="bebidas-collapse">Bebidas</button>
         </div>
         <div class="collapse" id="bebidas-collapse">
             {% include 'camarero/contenido/bebidas.html' %}
@@ -35,7 +35,7 @@
     </div>
     <div class="bg-dark p-2 border-bottom border-secondary border-3">
         <div class="d-flex w-100">
-            <a href="{% url 'home' %}" class="position-relative btn btn-outline-light bg-dark w-100" >Home</a>
+            <a href="{% url 'home' %}" class="position-relative btn btn-outline-light bg-dark text-white w-100" >Home</a>
         </div>
     </div>
     <div class="container fixed-bottom mt-5 bg-dark text-white bg-warning" id="notas">
