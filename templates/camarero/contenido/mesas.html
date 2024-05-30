@@ -16,9 +16,10 @@
                 <tr class="d-none d-block" id="mesa-nueva">
                     <td class="w-25"><input type="number" class="form-control" name="numero-mesa" onfocusin="toggleNotas('none')" onfocusout="toggleNotas('block')" /></td>
                     <td>
-                        <select class="form-select" name="lugar">
+                        <select class="form-select" name="lugar" required>
+                            <option value="" selected>Eliga un lugar</option>
                             {% for lugar in ubicaciones %}
-                            <option value="{{ lugar.id }}">{{ lugar.lugar }}</option>
+                                <option value="{{ lugar.id }}">{{ lugar.lugar }}</option>
                             {% endfor %}
                         </select>
                     </td>

@@ -1077,3 +1077,122 @@ django.core.exceptions.FieldError: Cannot resolve keyword 'estado' into field. C
 [29/May/2024 20:57:59] ERROR [camarero_app.service.camarero_mesa_service:49] Ha habido un problema al recibir los parametros: 2, None, Lugar: Terraza
 [29/May/2024 20:58:16] ERROR [camarero_app.service.camarero_mesa_service:49] Ha habido un problema al recibir los parametros: 23, None, Lugar: Sala
 [29/May/2024 21:06:54] ERROR [camarero_app.service.camarero_mesa_service:54] Ocurrio un error inesperado. Cannot assign "<SimpleLazyObject: <User: gurjant>>": "Camarero_Mesa.rol" must be a "Rol" instance.
+[29/May/2024 23:42:54] WARNING [login.views:36] No hay superusuario en el sistema
+[29/May/2024 23:44:06] WARNING [login.views:36] No hay superusuario en el sistema
+[29/May/2024 23:54:50] WARNING [login.views:36] No hay superusuario en el sistema
+[29/May/2024 23:55:33] WARNING [login.views:36] No hay superusuario en el sistema
+[30/May/2024 00:01:24] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:01:24] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[30/May/2024 00:03:46] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:03:46] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[30/May/2024 00:06:02] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:06:02] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[30/May/2024 00:06:09] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:06:09] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[30/May/2024 00:06:25] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:06:25] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[30/May/2024 00:07:48] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:07:48] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[30/May/2024 00:07:54] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:07:54] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[30/May/2024 00:08:35] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:08:35] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[30/May/2024 00:08:51] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:08:51] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[30/May/2024 00:08:51] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:08:51] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[30/May/2024 00:08:51] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:08:51] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[30/May/2024 00:08:51] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:08:51] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[30/May/2024 00:10:17] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:10:17] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[30/May/2024 00:10:22] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:10:22] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[30/May/2024 00:10:54] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:10:54] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[30/May/2024 00:11:50] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:11:50] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[30/May/2024 00:11:51] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:11:51] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[30/May/2024 00:12:02] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:12:02] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[30/May/2024 00:12:23] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:12:23] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[30/May/2024 00:13:14] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:13:14] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[30/May/2024 00:13:15] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:13:15] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[30/May/2024 00:15:03] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:15:03] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[30/May/2024 00:15:33] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:15:34] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[30/May/2024 00:17:20] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:17:20] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[30/May/2024 00:17:43] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:17:43] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[30/May/2024 00:19:00] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:19:00] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[30/May/2024 00:19:28] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:19:28] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[30/May/2024 00:20:11] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:20:11] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[30/May/2024 00:20:48] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:20:48] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[30/May/2024 00:21:39] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:21:39] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[30/May/2024 00:25:33] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:25:33] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[30/May/2024 00:25:35] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:25:35] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[30/May/2024 00:25:44] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:25:44] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[30/May/2024 00:26:56] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:26:56] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[30/May/2024 00:27:11] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:27:11] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[30/May/2024 00:28:08] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:28:08] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[30/May/2024 00:28:17] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:28:17] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[30/May/2024 00:28:24] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:28:24] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[30/May/2024 00:30:28] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:30:28] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[30/May/2024 00:33:17] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:33:17] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[30/May/2024 00:34:29] ERROR [restoManager_app.controller.relacion.relacion_plato_categoria_controller:29] ERROR EN EL ID DE LA RELACION
+[30/May/2024 00:34:29] INFO [restoManager_app.controller.categoria.categoria_controller:46] Tapa
+[30/May/2024 00:34:29] INFO [restoManager_app.views:36] New Relation Created.
+[30/May/2024 00:34:44] ERROR [restoManager_app.controller.relacion.relacion_plato_categoria_controller:29] ERROR EN EL ID DE LA RELACION
+[30/May/2024 00:34:44] INFO [restoManager_app.views:36] New Relation Created.
+[30/May/2024 00:35:08] ERROR [restoManager_app.controller.relacion.relacion_plato_categoria_controller:29] ERROR EN EL ID DE LA RELACION
+[30/May/2024 00:35:08] INFO [restoManager_app.controller.categoria.categoria_controller:46] Ensalada
+[30/May/2024 00:35:08] INFO [restoManager_app.views:36] New Relation Created.
+[30/May/2024 00:35:17] ERROR [restoManager_app.controller.relacion.relacion_plato_categoria_controller:29] ERROR EN EL ID DE LA RELACION
+[30/May/2024 00:35:17] INFO [restoManager_app.controller.categoria.categoria_controller:46] Pizza
+[30/May/2024 00:35:17] INFO [restoManager_app.views:36] New Relation Created.
+[30/May/2024 00:35:24] ERROR [restoManager_app.controller.relacion.relacion_plato_categoria_controller:29] ERROR EN EL ID DE LA RELACION
+[30/May/2024 00:35:24] INFO [restoManager_app.views:36] New Relation Created.
+[30/May/2024 00:35:56] ERROR [restoManager_app.controller.relacion.relacion_plato_categoria_controller:29] ERROR EN EL ID DE LA RELACION
+[30/May/2024 00:35:56] INFO [restoManager_app.controller.categoria.categoria_controller:46] Spagetti
+[30/May/2024 00:35:56] INFO [restoManager_app.views:36] New Relation Created.
+[30/May/2024 00:36:41] INFO [restoManager_app.controller.bebida.bebida_controller:36] Nombre bebida: Coca Cola, Alcohol: 0, Estado: 1, Descripcion: 
+[30/May/2024 00:36:41] INFO [restoManager_app.controller.bebida.bebida_controller:41] Nombre Categoria: Coca Cola, Descripcion: , Contiene Alcohol: 0, Estado: 1
+[30/May/2024 00:37:09] INFO [restoManager_app.controller.bebida.bebida_controller:36] Nombre bebida: Estrella Galicia Tercio, Alcohol: 1, Estado: 1, Descripcion: 
+[30/May/2024 00:37:09] INFO [restoManager_app.controller.bebida.bebida_controller:41] Nombre Categoria: Estrella Galicia Tercio, Descripcion: , Contiene Alcohol: 1, Estado: 1
+[30/May/2024 00:37:24] INFO [restoManager_app.controller.bebida.bebida_controller:36] Nombre bebida: Agua 1,5L, Alcohol: 0, Estado: 1, Descripcion: 
+[30/May/2024 00:37:24] INFO [restoManager_app.controller.bebida.bebida_controller:41] Nombre Categoria: Agua 1,5L, Descripcion: , Contiene Alcohol: 0, Estado: 1
+[30/May/2024 00:37:33] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:37:33] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[30/May/2024 00:38:01] INFO [restoManager_app.controller.categoria.categoria_controller:46] Piadina
+[30/May/2024 00:38:06] WARNING [restoManager_app.service.ubicacion.ubicacion_services:11] No se encontro ninguna ubicacion
+[30/May/2024 00:39:02] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:40:44] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 00:41:51] ERROR [camarero_app.service.camarero_mesa_service:12] No se han encontrado ninguna mesa asignada a ningun camarero.
+[30/May/2024 01:05:38] ERROR [cocina_app.service.servicio_cocina_service:64] Error en ServicioCocinaService.crear_servicio: ['“[<Bebida: Nombre Categoria: Coca Cola, Descripcion: , Contiene Alcohol: False, Estado: True>, <Bebida: Nombre Categoria: Estrella Galicia Tercio, Descripcion: , Contiene Alcohol: True, Estado: True>]”: el valor debe ser Verdadero, Falso o Nulo.']
+[30/May/2024 01:05:38] ERROR [cocina_app.service.servicio_cocina_service:64] Error en ServicioCocinaService.crear_servicio: ['“[<Bebida: Nombre Categoria: Coca Cola, Descripcion: , Contiene Alcohol: False, Estado: True>, <Bebida: Nombre Categoria: Estrella Galicia Tercio, Descripcion: , Contiene Alcohol: True, Estado: True>]”: el valor debe ser Verdadero, Falso o Nulo.']
+[30/May/2024 01:05:38] ERROR [cocina_app.service.servicio_cocina_service:64] Error en ServicioCocinaService.crear_servicio: ['“[<Bebida: Nombre Categoria: Coca Cola, Descripcion: , Contiene Alcohol: False, Estado: True>, <Bebida: Nombre Categoria: Estrella Galicia Tercio, Descripcion: , Contiene Alcohol: True, Estado: True>]”: el valor debe ser Verdadero, Falso o Nulo.']
+[30/May/2024 01:05:38] ERROR [cocina_app.service.servicio_cocina_service:64] Error en ServicioCocinaService.crear_servicio: ['“[<Bebida: Nombre Categoria: Coca Cola, Descripcion: , Contiene Alcohol: False, Estado: True>, <Bebida: Nombre Categoria: Estrella Galicia Tercio, Descripcion: , Contiene Alcohol: True, Estado: True>]”: el valor debe ser Verdadero, Falso o Nulo.']
+[30/May/2024 01:09:26] ERROR [cocina_app.service.servicio_cocina_service:64] Error en ServicioCocinaService.crear_servicio: ['“[<Bebida: Nombre Categoria: Estrella Galicia Tercio, Descripcion: , Contiene Alcohol: True, Estado: True>, <Bebida: Nombre Categoria: Coca Cola, Descripcion: , Contiene Alcohol: False, Estado: True>]”: el valor debe ser Verdadero, Falso o Nulo.']
+[30/May/2024 01:09:26] ERROR [cocina_app.service.servicio_cocina_service:64] Error en ServicioCocinaService.crear_servicio: ['“[<Bebida: Nombre Categoria: Estrella Galicia Tercio, Descripcion: , Contiene Alcohol: True, Estado: True>, <Bebida: Nombre Categoria: Coca Cola, Descripcion: , Contiene Alcohol: False, Estado: True>]”: el valor debe ser Verdadero, Falso o Nulo.']

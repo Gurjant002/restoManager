@@ -27,7 +27,7 @@ class Servicio_Cocina(models.Model):
 
 class Servicio_Barra(models.Model):
     bebida = models.ForeignKey(Bebida, on_delete=models.DO_NOTHING)
-    servido = models.BooleanField(default=False)
+    servido = models.BooleanField(default=None, null=True)
     camarero_mesa = models.ForeignKey(Camarero_Mesa, on_delete=models.DO_NOTHING)
     hora_dia = models.DateTimeField()
 
