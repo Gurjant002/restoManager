@@ -152,3 +152,4 @@ GitHub.sublime-settings
 # Archivos a ignorar
 *.cpython*.pyc
 *controller.cpython-310.pyc
+__init__.py
