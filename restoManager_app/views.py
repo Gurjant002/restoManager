@@ -66,11 +66,13 @@ def platos(request: HttpRequest):
             diccionario.update({'resultado_plato_eliminado': result})
 
         diccionario.update(relacionController.get_lista_relacion())
+        
+        diccionario.update({'administrador': validar_rol(request)})
         return render(request, "restoManager_app/secciones/platos.html", diccionario)
 
-    administrador = validar_rol(request)
     diccionario = relacionController.get_lista_relacion()
-    diccionario.update({'administrador': administrador})
+    diccionario.update({'administrador': validar_rol(request)})
+    print(diccionario)
     return render(request, "restoManager_app/secciones/platos.html", diccionario)
 
 
@@ -152,4 +154,6 @@ def home(request: HttpRequest):
     Returns:
         HttpResponse: La respuesta HTTP con la plantilla de la página de configuración.
     """
-    return render(request, "restoManager_app/config.html")
+    diccionario = {}
+    diccionario.update({'administrador': validar_rol(request)})
+    return render(request, "restoManager_app/config.html", diccionario)
