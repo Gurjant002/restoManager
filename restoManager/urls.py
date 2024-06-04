@@ -25,13 +25,13 @@ from restoManager_app.urls import urlpatterns as restoManager_urls
 from login.urls import urlpatterns as login_urls
 
 urlpatterns = [
-    path('home/', home, name='home'),
     path('', about, name='about'),
+    path('home/', home, name='home'),
     path('config/', include(restoManager_urls)),
+    path('puestos/', puestos, name='puestos'),
     path('puestos/camarero/', include('camarero_app.urls')),
     path('puestos/cocina/', include('cocina_app.urls')),
     path('accounts/', include(login_urls)),
-    path('puestos/', puestos, name='puestos'),
     path('admin/', admin.site.urls),
 ]
 

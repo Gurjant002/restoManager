@@ -72,7 +72,6 @@ def platos(request: HttpRequest):
 
     diccionario = relacionController.get_lista_relacion()
     diccionario.update({'administrador': validar_rol(request)})
-    print(diccionario)
     return render(request, "restoManager_app/secciones/platos.html", diccionario)
 
 
