@@ -27,6 +27,15 @@ def crear_alerta():
     return tiempo
 
 def validar_rol(request: HttpRequest):
+    """
+    Valida el rol del usuario que realiza la solicitud.
+
+    Args:
+        request (HttpRequest): El objeto de solicitud HTTP.
+
+    Returns:
+        bool: True si el usuario es un administrador, False de lo contrario.
+    """
     rolService = RolService()
     usuario = request.user
     administrador = rolService.get_rol_by_user_rol(usuario, "Administrador")
