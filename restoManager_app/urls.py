@@ -11,7 +11,6 @@ from .views import (
     categorias,
     ubicaciones,
     trabajadores,
-    camareros,
 )
 
 urlpatterns = [
@@ -21,7 +20,6 @@ urlpatterns = [
     path('categorias/', categorias, name='admin_categorias'),
     path('ubicaciones/', ubicaciones, name='admin_ubicaciones'),
     path('trabajadores/', trabajadores, name='admin_trabajadores'),
-    path('trabajadores/camareros', camareros, name='admin_camareros'),
-    path('categorias/', ubicaciones, name='admin_config'),
+    path('categorias/',ubicaciones, name='admin_config'),
 ]
 

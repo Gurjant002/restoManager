@@ -4,7 +4,12 @@
 
 {% include 'global/header.html' %}
 {% include 'global/panel_nav.html' %}
-
+{% if administrador == False or administrador == None %}
+        <div class="alert alert-danger text-center" role="alert">
+            <h4 class="alert-heading">¡Ups!</h4>
+            <p>Acceso denegado, usted no es administrador.</p>
+        </div>
+{% else %}
 <div class="container pb-5 mt-5">
     <div class="panel_insertar bg-dark rounded row mb-3">
         <h1 id="titulo-seccion-superior" class="text-light">Nuevo Plato</h1>
@@ -17,7 +22,7 @@
                         <div class="form-floating mb-3 d-flex flex-row">
                             <!-- <input type="number" id="id-plato" required="false" name="id-plato" hidden> -->
                             <input type="number" class="form-control" id="floatingNum" required="false"
-                                name="numero-menu" placeholder="Numero">
+                            name="numero-menu" placeholder="Numero">
                             <label for="floatingNum" class="text-dark">Num#</label>
                         </div>
                     </div>
@@ -34,7 +39,7 @@
                 <div class="col-md">
                     <div class="form-floating">
                         <input type="text" class="form-control mb-3" id="floatingCategoria" required="true"
-                            name="categoria" placeholder="Categoria">
+                        name="categoria" placeholder="Categoria">
                         <label for="floatingCategoria" class="text-dark">Categoria</label>
                     </div>
                 </div>
@@ -50,18 +55,18 @@
             </div>
             <div class="form-floating">
                 <textarea class="form-control" placeholder="Descripcion del plato" id="floatingDescripcion"
-                    name="descripcion" maxlength="250" style="height: 100px"></textarea>
+                name="descripcion" maxlength="250" style="height: 100px"></textarea>
                 <label for="floatingDescripcion" class="text-dark">Descripcion</label>
             </div>
             <div class="p-3">
                 <button class="btn btn-primary" name="new-plato-btn" id="btn-submit" value="save_new"
-                    type="submit">Guardar Plato</button>
+                type="submit">Guardar Plato</button>
                 <button class="btn btn-primary" name="update-plate-btn" id="btn-update_plate" value="update_plate_"
-                    type="submit" style="display: none;">Actualizar Plato</button>
+                type="submit" style="display: none;">Actualizar Plato</button>
             </div>
         </form>
     </div>
-
+    
     <!-- LISTADO -->
     <!-- EN ESTE PANEL SE MOSTRARAN TODOS LOS PLATOS LISTADO QUE HAY. -->
     <div class="panel_listado bg-dark rounded row">
@@ -93,29 +98,29 @@
                         {% if elemento.habilitado %}
                         <td>
                             <p id="campo-estado-{{ elemento.id }}"
-                                class="p-2 w-auto text-center rounded mb-2 bg-success text-white">Activado</p>
+                            class="p-2 w-auto text-center rounded mb-2 bg-success text-white">Activado</p>
                         </td>
                         {% else %}
                         <td>
                             <p id="campo-estado-{{ elemento.id }}"
-                                class="p-2 w-auto text-center rounded mb-2 bg-danger text-white">Desactivado</p>
+                            class="p-2 w-auto text-center rounded mb-2 bg-danger text-white">Desactivado</p>
                         </td>
                         {% endif %}
                         <td id="boton-editar-{{ elemento.id }}">
                             <button
-                                class="btn btn-info"
-                                type="button"
-                                id="editar|{{ elemento.id}}"
-                                name="editar-btn"
-                                onclick="editarPlato('fila-{{ elemento.id }}')">
-                                Editar
-                            </button>
-                        </td>
-                        <td id="boton-borrar-{{ elemento.id }}"><button class="btn btn-danger" type="submit"
-                                value="eliminar|{{ elemento.id}}" name="eliminar-btn" data-bs-toggle="tooltip"
-                                data-bs-placement="top"
-                                title="Se aconseja desactivar el plato, en vez de borrarlo, permanentemente">Eliminar</button>
-                        </td>
+                            class="btn btn-info"
+                            type="button"
+                            id="editar|{{ elemento.id}}"
+                            name="editar-btn"
+                            onclick="editarPlato('fila-{{ elemento.id }}')">
+                            Editar
+                        </button>
+                    </td>
+                    <td id="boton-borrar-{{ elemento.id }}"><button class="btn btn-danger" type="submit"
+                        value="eliminar|{{ elemento.id}}" name="eliminar-btn" data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title="Se aconseja desactivar el plato, en vez de borrarlo, permanentemente">Eliminar</button>
+                    </td>
                     </form>
                 </tr>
                 {% endfor %}
@@ -128,4 +133,5 @@
         </div>
     </div>
 </div>
+{% endif %}
 {% endblock %}

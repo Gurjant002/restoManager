@@ -7,6 +7,12 @@
 {% block content %}
     {% include 'global/header.html' %}
     {% include 'global/panel_nav.html' %}
+    {% if administrador == False or administrador == None %}
+        <div class="alert alert-danger text-center" role="alert">
+            <h4 class="alert-heading">¡Ups!</h4>
+            <p>Acceso denegado, usted no es administrador.</p>
+        </div>
+    {% else %}
     <div class="container">
         <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-4">
             <div class="col h-100 mb-4">
@@ -78,19 +84,7 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="col">
-                <div class="card">
-                    <div class="card-header bg-dark text-light">
-                        <h5 class="card-title">Configuración</h5>
-                    </div>
-                    <div class="card-body text-break text-justify">
-                        <p class="card-text">
-                            En este apartado puedes configurar el sistema.
-                        </p>
-                        <a href="#" class="btn btn-primary">Configuracion</a>
-                    </div>
-                </div>
-            </div> -->
         </div>
     </div>
+    {% endif %}
 {% endblock content %}
