@@ -44,7 +44,7 @@ class TrabajadorService:
     def get_trabajadores(self) -> list:
         """Obtiene todos los trabajadores y devuelve una lista"""
         try:
-            return list(User.objects.all())
+            return User.objects.all()
         except Exception as e:
             logger.error(f"Error al obtener trabajadores: {e}")
             return f"Error al obtener trabajadores: {e}"
